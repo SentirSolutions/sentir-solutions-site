@@ -1,21 +1,28 @@
 /* ============================================================
-   Sentir Consulting — Shared Stylesheet
+   Sentir Solutions® — Holding Company Stylesheet
+   Deep Navy + Gold palette — distinct from all four Wholly brands
    ============================================================ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:        #F5F0E8;  /* Cream — background / fills */
+  --bg:        #F5F2EC;  /* Warm white — background / fills */
   --bg-alt:    #FFFFFF;  /* White — base */
-  --dark:      #2C3A2F;  /* Forest Green — primary dominant */
-  --darker:    #1E2A21;  /* Deeper Forest Green — footer */
+  --dark:      #0F1F3D;  /* Deep Navy — primary dominant */
+  --darker:    #070F20;  /* Deeper Navy — footer */
   --text:      #1A1A1A;
   --muted:     #5C5852;
-  --accent:    #B5651D;  /* Copper — accent / contrast */
-  --accent-lt: #D4874A;  /* Copper light — for use on dark green backgrounds */
-  --border:    #DDD6C8;
+  --accent:    #C9A84C;  /* Gold — accent / contrast */
+  --accent-lt: #D4B86A;  /* Gold light — for use on dark navy backgrounds */
+  --border:    #DDD8CE;
   --max:       1100px;
   --nav-h:     64px;
+
+  /* Four Wholly brand colors — used in portfolio brand cards */
+  --fare-accent:  #3A8C4E;   /* WhollyFare green */
+  --ware-accent:  #4A94BB;   /* WhollyWare blue */
+  --paws-accent:  #C47D2E;   /* WhollyPaws amber */
+  --care-accent:  #A45AB0;   /* WhollyCare plum */
 }
 
 html { scroll-behavior: smooth; }
@@ -28,9 +35,6 @@ body {
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
 }
-
-/* ── GOOGLE FONTS IMPORT ── */
-/* Each page links this CSS file after the Google Fonts link tag */
 
 /* ── NAV ── */
 nav {
@@ -59,7 +63,7 @@ nav {
   gap: 0.4rem;
 }
 
-/* || Sentir Consulting wordmark — Forest Green bg: pipe1=white, pipe2=copper */
+/* Sentir Solutions wordmark — Navy bg: pipe1=white, pipe2=gold */
 .mark-pipe1 {
   color: #FFFFFF;
   font-size: 1.2rem;
@@ -69,7 +73,7 @@ nav {
 }
 
 .mark-pipe2 {
-  color: var(--accent-lt); /* copper on green background */
+  color: var(--accent-lt);
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0;
@@ -101,14 +105,14 @@ nav {
 
 .nav-link.cta {
   background: var(--accent);
-  color: #FFFFFF;
-  font-weight: 500;
+  color: var(--dark);
+  font-weight: 600;
   margin-left: 0.5rem;
   padding: 0.45rem 1rem;
   transition: background 0.2s;
 }
 
-.nav-link.cta:hover { background: var(--accent-lt); color: #FFFFFF; }
+.nav-link.cta:hover { background: var(--accent-lt); color: var(--dark); }
 .nav-link.cta.active { background: var(--accent-lt); }
 
 /* ── HERO ── */
@@ -175,10 +179,10 @@ nav {
 .btn-primary {
   display: inline-block;
   background: var(--accent);
-  color: #FFFFFF;
+  color: var(--dark);
   text-decoration: none;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.04em;
   padding: 0.85rem 2rem;
   border-radius: 2px;
@@ -224,7 +228,7 @@ nav {
   font-family: 'Inter', sans-serif;
 }
 
-.btn-outline:hover { background: var(--accent); color: #FFFFFF; }
+.btn-outline:hover { background: var(--accent); color: var(--dark); }
 
 /* ── LAYOUT ── */
 .container {
@@ -338,6 +342,102 @@ p { line-height: 1.85; }
   line-height: 1.5;
 }
 
+/* ── PORTFOLIO BRAND CARDS ── */
+.brand-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.brand-card {
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-card-header {
+  padding: 1.75rem 2rem 1.5rem;
+  color: #FFFFFF;
+}
+
+.brand-card-header h3 {
+  color: #FFFFFF;
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.brand-card-header p {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.brand-card-body {
+  padding: 1.5rem 2rem;
+  flex: 1;
+}
+
+.brand-card-body p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.brand-card-footer {
+  padding: 1rem 2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--muted);
+}
+
+/* Per-brand card header gradients */
+.brand-fare .brand-card-header  { background: linear-gradient(135deg,#1E3A25 0%,#2C3A2F 100%); border-top: 3px solid var(--fare-accent); }
+.brand-ware .brand-card-header  { background: linear-gradient(135deg,#112A40 0%,#1A3D5C 100%); border-top: 3px solid var(--ware-accent); }
+.brand-paws .brand-card-header  { background: linear-gradient(135deg,#3D2208 0%,#5C3A0E 100%); border-top: 3px solid var(--paws-accent); }
+.brand-care .brand-card-header  { background: linear-gradient(135deg,#2E0A3D 0%,#4A1A5C 100%); border-top: 3px solid var(--care-accent); }
+
+/* ── PLATFORM THESIS PILLARS ── */
+.platform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.platform-pillar {
+  padding: 2rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+}
+
+.platform-pillar h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  color: var(--dark);
+}
+
+.platform-pillar p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
 /* ── CALLOUT BOX ── */
 .callout {
   background: var(--dark);
@@ -356,107 +456,4 @@ p { line-height: 1.85; }
 }
 
 .callout blockquote {
-  font-family: 'Fraunces', serif;
-  font-weight: 300;
-  font-size: 1.35rem;
-  line-height: 1.55;
-  font-style: italic;
-}
-
-.callout .callout-note {
-  font-size: 0.82rem;
-  color: #9A9690;
-  margin-top: 1.25rem;
-  line-height: 1.6;
-}
-
-/* ── CONTACT SECTION ── */
-.contact-section {
-  background: var(--dark);
-  color: #FFFFFF;
-  text-align: center;
-  padding: 7rem 2rem;
-}
-
-.contact-email {
-  display: inline-block;
-  font-size: 1rem;
-  color: var(--accent-lt);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(196, 160, 106, 0.3);
-  padding-bottom: 2px;
-  transition: border-color 0.2s;
-  margin-top: 1.5rem;
-}
-
-.contact-email:hover { border-color: var(--accent-lt); }
-
-/* ── FOOTER ── */
-footer {
-  background: var(--darker);
-  color: #5A5A5A;
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.82rem;
-  letter-spacing: 0.02em;
-}
-
-footer a { color: #5A5A5A; text-decoration: none; }
-footer a:hover { color: var(--accent-lt); }
-
-/* ── FADE IN ── */
-.fade-in {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── PAGE HERO (interior pages) ── */
-.page-hero {
-  background: var(--dark);
-  color: #FFFFFF;
-  padding: 5rem 2rem 4.5rem;
-}
-
-.page-hero h1 {
-  font-family: 'Fraunces', serif;
-  font-weight: 300;
-  font-size: clamp(2rem, 4vw, 3rem);
-  line-height: 1.2;
-  color: #FFFFFF;
-  max-width: 700px;
-  margin-bottom: 1rem;
-}
-
-.page-hero h1 em { font-style: italic; color: var(--accent-lt); }
-
-.page-hero p {
-  font-size: 1.05rem;
-  color: #B8B4AF;
-  max-width: 560px;
-  line-height: 1.85;
-}
-
-/* ── RESPONSIVE ── */
-@media (max-width: 900px) {
-  .two-col { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
-  .three-col { grid-template-columns: 1fr !important; }
-  .about-sidebar { position: static !important; }
-}
-
-@media (max-width: 680px) {
-  nav { padding: 0 1.25rem; }
-  .nav-links { gap: 0; }
-  .nav-link { padding: 0.4rem 0.55rem; font-size: 0.75rem; }
-  .nav-link.cta { margin-left: 0.25rem; padding: 0.4rem 0.75rem; }
-  .hero { padding: 4.5rem 1.25rem 3.5rem; }
-  .page-hero { padding: 3.5rem 1.25rem 3rem; }
-  section { padding: 4rem 1.25rem; }
-  .contact-section { padding: 5rem 1.25rem; }
-  .hero-intro { white-space: normal; font-size: 1.15rem; }
-}
+  font-family: 'Fraun
