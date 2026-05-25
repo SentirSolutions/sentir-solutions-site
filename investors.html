@@ -135,6 +135,88 @@
       margin-bottom: 1rem;
     }
     .phase-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
+
+    /* parallel roadmap grid */
+    .track-legend { display: flex; gap: 2rem; margin: 2rem 0 1.5rem; flex-wrap: wrap; }
+    .tl-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--muted); }
+    .tl-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .tl-consult { background: var(--accent); }
+    .tl-wf { background: #3A8C4E; }
+    .tl-brands { background: #B5651D; }
+
+    .parallel-grid {
+      display: grid;
+      grid-template-columns: 120px 1fr 1fr 1fr;
+      gap: 0;
+      border: 1px solid var(--border);
+      margin-top: 1.5rem;
+    }
+    .pg-col-head {
+      padding: 0.75rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .pg-col-head:last-child { border-right: none; }
+    .ph-col { background: transparent; }
+    .c-col { color: #6FCFA0; }
+    .w-col { color: #3A8C4E; }
+    .b-col { color: #C47D2E; }
+
+    .pg-phase {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      padding: 1.25rem 1rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: rgba(255,255,255,0.02);
+    }
+    .pg-phase.active-phase { background: rgba(58,140,78,0.08); }
+    .pg-phase:last-of-type { border-bottom: none; }
+    .ph-num {
+      font-family: 'Fraunces', serif;
+      font-size: 1.6rem;
+      color: var(--accent-lt);
+      line-height: 1;
+    }
+    .ph-time { font-size: 0.75rem; color: var(--muted); line-height: 1.4; }
+
+    .pg-cell {
+      padding: 1.25rem 1rem;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+    .pg-cell:last-child { border-right: none; }
+    .pg-cell p { margin: 0; }
+    .pg-cell strong { color: var(--accent-lt); font-weight: 600; }
+
+    .cell-stripe { height: 3px; margin: -1.25rem -1rem 0.85rem; }
+    .c-stripe { background: var(--accent); }
+    .w-stripe { background: #3A8C4E; }
+    .b-stripe { background: #B5651D; }
+
+    .b-quiet { color: rgba(154,150,144,0.6); font-style: italic; }
+    .b-quiet p { font-size: 0.82rem; }
+    .b-active { }
+
+    .framework-callout {
+      margin-top: 2rem;
+      padding: 1.5rem 1.75rem;
+      border-left: 3px solid #B5651D;
+      background: rgba(181,101,29,0.07);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    .framework-callout strong { color: #C47D2E; }
     .phase-badge {
       display: inline-block;
       font-size: 0.7rem;
@@ -569,56 +651,119 @@
   <!-- ROADMAP -->
   <section id="roadmap" style="background: var(--bg-alt);">
     <div class="container">
-      <p class="section-label">Five-Phase Roadmap</p>
-      <h2>From pilot data<br /><em>to platform scale.</em></h2>
+      <p class="section-label">Platform Roadmap</p>
+      <h2>Three tracks.<br /><em>One direction.</em></h2>
       <div class="divider"></div>
-      <p class="lead">Each phase is gated by proof. No phase is speculative — each one follows directly from what the prior phase proved. Phase 2 requires undeniable Phase 1 data. Phase 3 requires investment. Phases 4 and 5 are funded by the ARR built in Phase 3.</p>
+      <p class="lead">Sentir Solutions runs three parallel tracks simultaneously. Consulting generates real income today &mdash; no outside capital required to reach Phase 2. WhollyFare proves the platform model with real households and real receipts. The Wholly Brands are built on top of the same application framework WhollyFare already built, which means each new vertical is faster and cheaper than the last. The company can walk and chew gum. That is structural, not aspirational.</p>
 
-      <div class="roadmap-grid">
-        <div class="phase-card phase-active">
-          <div class="phase-number">1</div>
-          <h4>Proof of Concept</h4>
-          <p class="phase-timeline">Now — 8 weeks</p>
-          <p>Hislop family pilot, Charlottesville VA. Kroger, Food Lion, Aldi, Harris Teeter. Manual flyer entry + PDF extraction. Goal: undeniable Found Money data from real receipts for a real household.</p>
-          <span class="phase-badge badge-active">● Active — Live</span>
+      <div class="track-legend">
+        <div class="tl-item"><span class="tl-dot tl-consult"></span>Sentir Consulting &mdash; cash engine</div>
+        <div class="tl-item"><span class="tl-dot tl-wf"></span>WhollyFare&reg; &mdash; platform proof</div>
+        <div class="tl-item"><span class="tl-dot tl-brands"></span>Wholly Brands &mdash; derivative builds</div>
+      </div>
+
+      <div class="parallel-grid">
+        <div class="pg-col-head ph-col"></div>
+        <div class="pg-col-head c-col">Sentir Consulting</div>
+        <div class="pg-col-head w-col">WhollyFare&reg;</div>
+        <div class="pg-col-head b-col">Wholly Brands</div>
+
+        <div class="pg-phase active-phase">
+          <span class="ph-num">1</span>
+          <span class="ph-time">Now &mdash; 8 wks</span>
+          <span class="phase-badge badge-active">&bull; Live</span>
+        </div>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>Virginia clients, 2+ active engagements. EBITDA-focused AI strategy. Self-funding the company &mdash; no outside capital needed to operate.</p>
+        </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>Hislop family pilot. 4 Charlottesville stores. Kroger API + PDF extraction + manual entry. Goal: undeniable Found Money from real receipts.</p>
+        </div>
+        <div class="pg-cell b-cell b-quiet">
+          <p>Application framework being built as part of WhollyFare. Constraint engine and household profile system designed for reuse from day one.</p>
         </div>
 
-        <div class="phase-card">
-          <div class="phase-number">2</div>
-          <h4>Pilot Households</h4>
-          <p class="phase-timeline">Months 2–5</p>
-          <p>5–10 pilot households. Meal type selection, pantry tracker, Coupon Vault, Health Guard Dashboard, multi-household accounts, mobile-first UI. Produces the retention and savings data needed for the investment round.</p>
+        <div class="pg-phase">
+          <span class="ph-num">2</span>
+          <span class="ph-time">Months 2&ndash;5</span>
           <span class="phase-badge badge-next">Next</span>
         </div>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>3&ndash;5 active clients. Consulting revenue covers Phase 2 platform burn (~$15K/mo) with margin. No capital consumption.</p>
+        </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>5&ndash;10 pilot households. Health Guard, pantry tracker, Coupon Vault. Retention + savings data built for the seed round conversation.</p>
+        </div>
+        <div class="pg-cell b-cell b-quiet">
+          <p>WhollyWare&trade; spec finalized. Shared constraint engine validated across household types. Build estimated at 6&ndash;8 weeks on top of the framework.</p>
+        </div>
 
-        <div class="phase-card">
-          <div class="phase-number">3</div>
-          <h4>Regional Scale</h4>
-          <p class="phase-timeline">Post-investment, months 6–18</p>
-          <p>React + FastAPI replaces Streamlit. Automated circular parsing. Recipe Library. Price Intelligence. Delivery Hub. Market Insights public data product. Health System B2B licensing. WhollyWare launch.</p>
+        <div class="pg-phase">
+          <span class="ph-num">3</span>
+          <span class="ph-time">Months 6&ndash;18</span>
           <span class="phase-badge badge-future">Post-Seed</span>
         </div>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>Practice scales independently. Client base expands regionally. Can be retained as platform EBITDA or structured as a carve-out &mdash; investor&#39;s choice.</p>
+        </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>React + FastAPI replaces Streamlit. Automated circular parsing. Recipe Library. Price Intelligence. Health System B2B. 1,000+ households. $500K ARR target.</p>
+        </div>
+        <div class="pg-cell b-cell b-active">
+          <div class="cell-stripe b-stripe"></div>
+          <p><strong>WhollyWare&trade; launches.</strong> Household software on the WhollyFare framework &mdash; same constraint engine, same Sincere Strategy rails. Weeks to ship, not quarters.</p>
+        </div>
 
-        <div class="phase-card">
-          <div class="phase-number">4</div>
-          <h4>National</h4>
-          <p class="phase-timeline">Series A, months 18–36</p>
-          <p>15+ grocer chains. 50,000+ households. Preference learning, receipt auto-capture, community features. WhollyPaws launch. $2M+ ARR target. WhollyCare development begins.</p>
+        <div class="pg-phase">
+          <span class="ph-num">4</span>
+          <span class="ph-time">Months 18&ndash;36</span>
           <span class="phase-badge badge-future">Series A</span>
         </div>
-
-        <div class="phase-card">
-          <div class="phase-number">5</div>
-          <h4>Wholesale &amp; Delivery</h4>
-          <p class="phase-timeline">Post-Series A horizon</p>
-          <p>Costco, Sam's Club, BJ's, Amazon Fresh. Bulk-unit math, membership economics, hybrid trip planning. WhollyCare full launch. The platform covers every shelf in every house.</p>
-          <span class="phase-badge badge-future">Horizon</span>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>Profitable on its own. Strategic options: operate as platform differentiator, spin off, or fold into acquisition package. No platform capital required either way.</p>
         </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>15+ grocer chains. 50,000+ households. Preference learning, receipt auto-capture, community features. $2M+ ARR target.</p>
+        </div>
+        <div class="pg-cell b-cell b-active">
+          <div class="cell-stripe b-stripe"></div>
+          <p><strong>WhollyPaws&trade; launches.</strong> Pet wellness vertical on proven framework. <strong>WhollyCare&trade; begins</strong> &mdash; personal care, same architecture, faster build.</p>
+        </div>
+
+        <div class="pg-phase">
+          <span class="ph-num">5</span>
+          <span class="ph-time">Horizon</span>
+          <span class="phase-badge badge-future">Post-A</span>
+        </div>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>A profitable AI consultancy with a 5-year track record is an asset in any acquisition package. Acquirer gets the platform and the practice that proves the Sincere Strategy scales to enterprise.</p>
+        </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>Wholesale + Delivery. Costco, Sam&#39;s Club, Amazon Fresh. Bulk-unit math. Every shelf in every house. The platform covers the full household spend stack.</p>
+        </div>
+        <div class="pg-cell b-cell b-active">
+          <div class="cell-stripe b-stripe"></div>
+          <p><strong>WhollyCare&trade; full launch.</strong> Four Wholly Brands live on one platform. An acquirer buys a portfolio on proven infrastructure &mdash; not four separate products to integrate.</p>
+        </div>
+      </div>
+
+      <div class="framework-callout">
+        <strong>The framework advantage.</strong> WhollyFare&#39;s constraint engine, circular parsing, household profile system, and Sincere Strategy guardrails are fully reusable. Each Wholly Brand is a new vertical on existing infrastructure &mdash; not a new company to build from scratch. Development time drops with every launch. The platform compounds. The moat widens.
       </div>
     </div>
   </section>
 
-  <!-- INVESTMENT STRUCTURE -->
+    <!-- INVESTMENT STRUCTURE -->
   <section>
     <div class="container">
       <p class="section-label">Investment Structure</p>
