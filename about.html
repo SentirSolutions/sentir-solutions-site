@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Founder — Sentir Solutions®</title>
+  <meta name="description" content="Tim Hislop founded Sentir Solutions after a career spanning the grocery floor, food brokerage, and 20+ years of AI and technology strategy. The Wholly platform is the product of both worlds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* ── TIMELINE / NARRATIVE ── */
+    .story-section {
+      padding: 6rem 2rem;
+      background: var(--bg-alt);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 0 3rem;
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    .story-grid::before {
+      content: '';
+      position: absolute;
+      left: 199px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .era-label {
+      padding-top: 0.15rem;
+      text-align: right;
+      padding-right: 2.5rem;
+    }
+
+    .era-label .era-years {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+
+    .era-label .era-title {
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem;
+      color: var(--dark);
+      font-weight: 300;
+      line-height: 1.3;
+    }
+
+    .era-dot {
+      position: absolute;
+      left: 193px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg-alt);
+      margin-top: 0.25rem;
+    }
+
+    .era-content {
+      padding-bottom: 3.5rem;
+      padding-left: 2.5rem;
+    }
+
+    .era-content p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 0.85rem;
+    }
+
+    .era-content p:last-child { margin-bottom: 0; }
+
+    .era-roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .era-role {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.3rem 0.85rem;
+      border-radius: 2px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--muted);
+    }
+
+    /* ── WHY NOW CALLOUT ── */
+    .why-now {
+      background: var(--dark);
+      padding: 6rem 2rem;
+    }
+
+    .insight-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-left: 3px solid var(--accent-lt);
+      padding: 2.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .insight-card p {
+      font-size: 1rem;
+      color: #C0BCB7;
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
+
+    .insight-card p:last-child { margin-bottom: 0; }
+
+    .insight-card strong {
+      color: #FFFFFF;
+      font-weight: 500;
+    }
+
+    /* ── CTA ROW ── */
+    .cta-pair {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 760px) {
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+      .story-grid::before { display: none; }
+      .era-label {
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 0.75rem;
+      }
+      .era-dot { display: none; }
+      .era-content {
+        padding-left: 0;
+        padding-bottom: 2.5rem;
+        border-left: 2px solid var(--border);
+        padding-left: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <span class="mark-pipe1">(</span><span class="mark-pipe2">(</span> Sentir Solutions®
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="brands.html" class="nav-link">Our Brands</a>
+      <a href="mission.html" class="nav-link">Our Mission</a>
+      <a href="about.html" class="nav-link active">The Founder</a>
+      <a href="investors.html" class="nav-link">Investors</a>
+      <a href="https://sentir-consulting.com" class="nav-link cta" target="_blank" rel="noopener">Sentir Consulting ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Sentir Solutions® &nbsp;·&nbsp; Tim Hislop &nbsp;·&nbsp; Founder &amp; CEO</p>
+    <h1>"Built by someone who's stood<br /><em>on both sides of the shelf."</em></h1>
+    <p class="hero-sub">
+      Tim Hislop founded Sentir Solutions after a career that uniquely spans the grocery floor,
+      the food brokerage world, and 20+ years of AI and technology strategy. WhollyFare is the
+      product of both — not an outsider's theory about how households should spend, but an
+      insider's answer to why they're being failed.
+    </p>
+    <div class="hero-actions">
+      <a href="#story" class="btn-primary">The Story</a>
+      <a href="https://sentir-consulting.com" class="btn-ghost" target="_blank" rel="noopener">Work with Tim ↗</a>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <!-- THE STORY -->
+  <section id="story" class="story-section">
+    <div class="container">
+      <p class="section-label fade-in">The Background</p>
+      <h2 class="fade-in">From the stock room<br /><em>to the strategy room.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead fade-in">
+        The Wholly platform wasn't built by someone who read about the grocery industry.
+        It was built by someone who lived it — from the overnight stock shift at 15,
+        to brokering deals into grocery chains in his late twenties, to 20+ years of
+        technology and AI strategy work that gave him the tools to finally fix what he saw.
+      </p>
+
+      <div class="story-grid fade-in">
+
+        <!-- Era 1 -->
+        <div class="era-label">
+          <span class="era-years">Ages 15–23</span>
+          <span class="era-title">On the floor</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot"></div>
+          <div class="era-content">
+            <p>
+              Tim's first grocery job was at First Great American at 15 — a summer shift that
+              turned into a decade-long education in how grocery retail actually works from the
+              inside out. He moved to Grand Union at 16, where he rose from stock clerk to night
+              manager and front-end manager over seven years.
+            </p>
+            <p>
+              He learned the floor: what moves, what margins look like, what gets faced vs.
+              what gets buried, and how pricing decisions flow from the corporate level to the
+              shelf label to the customer's cart — often with very little of that information
+              passing through in any legible form.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">First Great American</span>
+              <span class="era-role">Grand Union — Stock Clerk → Night Manager</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Era 2 -->
+        <div class="era-label">
+          <span class="era-years">Ages 23–26</span>
+          <span class="era-title">Sunshine state</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot"></div>
+          <div class="era-content">
+            <p>
+              After Grand Union, Tim moved to Florida and joined Publix — widely regarded as
+              one of the best-run grocery operations in the country. Night manager work again,
+              this time inside a machine that had refined nearly every operational detail
+              of the grocery experience. He saw what excellence in retail operations looks like
+              when it's executed at scale with genuine customer focus.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">Publix — Night Manager</span>
+              <span class="era-role">Florida</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Era 3 -->
+        <div class="era-label">
+          <span class="era-years">Ages 27–30</span>
+          <span class="era-title">The other side of the shelf</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot"></div>
+          <div class="era-content">
+            <p>
+              At 27, Tim moved into food brokerage — selling product into grocery chains and
+              learning, for the first time, exactly how the vendor side of the shelf worked.
+              What vendors push is not always what families need. What earns shelf space is not
+              always what earns the best value. The incentives are layered, opaque, and rarely
+              aligned with the household making the purchase.
+            </p>
+            <p>
+              This was the education that made everything else click. He had now seen the full
+              loop: what gets produced, how it gets to the shelf, how it gets priced, and how
+              families decide to buy it — or don't.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">Food Broker</span>
+              <span class="era-role">Vendor Sales into Grocery Chains</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Era 4 -->
+        <div class="era-label">
+          <span class="era-years">Age 30+</span>
+          <span class="era-title">The pivot to technology</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot"></div>
+          <div class="era-content">
+            <p>
+              At 30, Tim pivoted into technology and strategy — and spent the next 20+ years
+              helping organizations optimize their operations using emerging technology, including AI.
+              His clients have ranged from small businesses to enterprise organizations to federal
+              government agencies. The through-line: using rigorous technology to eliminate
+              inefficiency, surface better decisions, and implement systems that scale.
+            </p>
+            <p>
+              He founded Sentir Consulting as the vehicle for that work. It is the operating
+              practice that has been running since before the Wholly platform existed — and the
+              revenue that funds its development now.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">Technology &amp; Strategy Consulting</span>
+              <span class="era-role">AI Implementation</span>
+              <span class="era-role">Small Business · Enterprise · Federal Government</span>
+              <span class="era-role">Founder, Sentir Consulting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Era 5 -->
+        <div class="era-label">
+          <span class="era-years">2026</span>
+          <span class="era-title">The insight becomes a product</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot" style="background: var(--dark);"></div>
+          <div class="era-content">
+            <p>
+              After decades in both worlds, the gap was obvious. The tools that help businesses
+              optimize purchasing, constrain by policy, and surface the best deals have never
+              been brought to the household. Grocery stores have sophisticated pricing engines.
+              Families have a paper circular and a gut feeling.
+            </p>
+            <p>
+              WhollyFare is the bridge. And Sentir Solutions is the platform that scales it
+              across every category of household spending — starting with food, and extending
+              to household goods, pet care, and personal care through the Wholly brand family.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">Founder, Sentir Solutions®</span>
+              <span class="era-role">WhollyFare® Phase 1 — Live, Charlottesville VA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY NOW -->
+  <section class="why-now">
+    <div class="container">
+      <p class="section-label light fade-in">Why Now</p>
+      <h2 class="light fade-in">The technology finally<br /><em>matches the vision.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead light fade-in">
+        The insight has existed for decades. The tools to act on it at household scale — affordably,
+        in real time, with real store data — have only recently arrived.
+      </p>
+
+      <div class="insight-card fade-in">
+        <p>
+          <strong>AI has reached the point where constraint engines, price intelligence, and
+          dietary filtering can run in real time.</strong> On real store data. For real families.
+          At subscription prices that save more than they cost.
+        </p>
+        <p>
+          Large language models can extract structured item data from grocery store circulars —
+          PDFs, web scrapes, raw promotional text — and normalize it into a usable pricing
+          engine in minutes. Constraint reasoning that would have required a team of dietitians
+          and programmers a decade ago now runs as a software layer on top of that data.
+        </p>
+        <p>
+          The timing is not an accident. This is a platform that required two things to be true
+          simultaneously: deep operational knowledge of how household retail works, and AI tools
+          capable of running constraint-first optimization at consumer scale. Both are now present.
+          <strong>That convergence is what WhollyFare is.</strong>
+        </p>
+      </div>
+
+      <div class="cta-pair fade-in">
+        <a href="brands.html" class="btn-primary">See the platform</a>
+        <a href="https://sentir-consulting.com" class="btn-ghost" target="_blank" rel="noopener">Work with Tim ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 Sentir Solutions® LLC &nbsp;·&nbsp; Charlottesville, Virginia &nbsp;·&nbsp;
+      <a href="https://sentir-consulting.com">Sentir Consulting</a> &nbsp;·&nbsp;
+      <a href="https://whollyfare.com">WhollyFare®</a> &nbsp;·&nbsp;
+      wholly-ware.com &nbsp;·&nbsp; wholly-paws.com &nbsp;·&nbsp; wholly-care.com
+    </p>
+    <p style="margin-top:0.5rem; opacity:0.5;">The Sincere Strategy® · Zero paid placements · Revenue is subscriptions only</p>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+      { threshold: 0.08 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
