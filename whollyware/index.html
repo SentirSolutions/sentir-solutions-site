@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhollyWare™ — Household Staples, Honestly Priced</title>
+  <meta name="description" content="WhollyWare finds the best prices on paper towels, laundry detergent, cleaning supplies, and every household staple — across every store you actually shop at. Net savings, honestly shown." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --dark:      #071624;
+      --mid:       #0D2236;
+      --rich:      #1A3D5C;
+      --cool:      #2E6B8C;
+      --accent:    #4A94BB;
+      --accent-lt: #7FB8D4;
+      --cta:       #3A7EA8;
+      --cta-lt:    #4A94BB;
+      --bg:        #F3F7FA;
+      --bg-alt:    #FFFFFF;
+      --bg-cool:   #EAF2F8;
+      --border:    #BDD0DF;
+      --border-lt: #D4E4EF;
+      --text:      #0A1C2A;
+      --muted:     #446070;
+      --muted-lt:  #7A9AAA;
+      --max:       1100px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    /* ── NAV ── */
+    nav { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .nav-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .nav-mark svg { width: 18px; height: 18px; }
+    .nav-wordmark { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.15rem; color: #FFFFFF; letter-spacing: 0.01em; }
+    .nav-wordmark sup { font-size: 0.6em; font-family: 'Inter', sans-serif; opacity: 0.7; vertical-align: super; }
+    .nav-links { display: flex; align-items: center; }
+    .nav-link { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; padding: 0.4rem 0.9rem; border-radius: 3px; transition: color 0.2s; white-space: nowrap; }
+    .nav-link:hover { color: #FFFFFF; }
+    .nav-waitlist { background: var(--accent); color: #FFFFFF; font-weight: 600; font-size: 0.82rem; padding: 0.5rem 1.1rem; border-radius: 4px; text-decoration: none; margin-left: 0.75rem; transition: background 0.2s; white-space: nowrap; }
+    .nav-waitlist:hover { background: var(--accent-lt); }
+
+    /* ── HERO ── */
+    .hero { background: linear-gradient(150deg, var(--dark) 0%, var(--mid) 50%, var(--rich) 100%); padding: 5.5rem 2rem 5rem; position: relative; overflow: hidden; }
+    .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 85% 40%, rgba(74,148,187,0.12) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 400px; gap: 4rem; align-items: center; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(74,148,187,0.15); border: 1px solid rgba(74,148,187,0.3); border-radius: 20px; padding: 5px 14px; margin-bottom: 1.5rem; }
+    .hero-eyebrow span { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-lt); }
+    .hero h1 { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.1rem, 4vw, 3.2rem); color: #FFFFFF; line-height: 1.12; margin-bottom: 1.25rem; }
+    .hero h1 em { font-style: italic; color: var(--accent-lt); }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.68); max-width: 480px; line-height: 1.85; margin-bottom: 2rem; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn-cta { display: inline-block; background: var(--accent); color: #FFFFFF; text-decoration: none; font-size: 0.9rem; font-weight: 600; padding: 13px 30px; border-radius: 5px; transition: background 0.2s; }
+    .btn-cta:hover { background: var(--accent-lt); }
+    .btn-ghost { display: inline-block; background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); text-decoration: none; font-size: 0.88rem; padding: 12px 22px; border-radius: 5px; transition: all 0.2s; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.45); color: #FFFFFF; }
+    .hero-tagline { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; color: rgba(255,255,255,0.4); }
+
+    /* Hero card */
+    .hero-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.75rem; }
+    .hero-card-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-lt); margin-bottom: 1.25rem; }
+    .category-row { display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 0.9rem; border-radius: 6px; margin-bottom: 0.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.07); }
+    .cat-left { display: flex; align-items: center; gap: 0.6rem; }
+    .cat-emoji { font-size: 1.1rem; }
+    .cat-name { font-size: 0.85rem; font-weight: 500; color: #FFFFFF; }
+    .cat-stores { font-size: 0.72rem; color: rgba(255,255,255,0.4); }
+    .cat-save { font-size: 0.82rem; font-weight: 600; color: var(--accent-lt); }
+    .hero-card-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 1rem 0; }
+    .total-row { display: flex; justify-content: space-between; align-items: center; }
+    .total-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+    .total-amount { font-family: 'Fraunces', serif; font-size: 1.7rem; font-weight: 300; color: var(--accent-lt); }
+
+    /* ── STAT BAR ── */
+    .stat-bar { background: var(--mid); padding: 1.5rem 2rem; }
+    .stat-bar-inner { max-width: var(--max); margin: 0 auto; display: flex; }
+    .stat-item { flex: 1; text-align: center; padding: 0.5rem 1rem; position: relative; }
+    .stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 15%; bottom: 15%; width: 1px; background: rgba(255,255,255,0.1); }
+    .stat-num { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 300; color: var(--accent-lt); line-height: 1.1; }
+    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; margin-top: 0.2rem; }
+
+    /* ── SECTIONS ── */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+    section { padding: 5rem 2rem; }
+    section.on-white { background: var(--bg-alt); }
+    section.on-cool { background: var(--bg-cool); }
+    section.on-dark { background: var(--dark); }
+
+    .section-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .section-eyebrow.light { color: var(--accent-lt); }
+    h2 { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(1.65rem, 3vw, 2.35rem); color: var(--dark); line-height: 1.15; margin-bottom: 0.6rem; }
+    h2 em { font-style: italic; color: var(--cool); }
+    h2.light { color: #FFFFFF; }
+    h2.light em { color: var(--accent-lt); }
+    .rule { width: 44px; height: 2px; background: var(--accent); margin: 1rem 0 1.75rem; }
+    .rule.light { background: var(--accent-lt); }
+    .lead-text { font-size: 1rem; color: var(--muted); line-height: 1.9; max-width: 580px; margin-bottom: 2.5rem; }
+    .lead-text.light { color: rgba(255,255,255,0.6); }
+
+    /* ── CATEGORIES ── */
+    .category-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+    .cat-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 1.75rem; text-align: center; position: relative; }
+    .cat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
+    .cat-big-icon { font-size: 2.2rem; margin-bottom: 0.85rem; }
+    .cat-card h3 { font-family: 'Fraunces', serif; font-size: 1rem; font-weight: 400; color: var(--dark); margin-bottom: 0.5rem; }
+    .cat-card p { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── FEATURES ── */
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .feature-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 2rem; position: relative; }
+    .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); opacity: 0.6; }
+    .feature-icon { font-size: 1.5rem; margin-bottom: 0.85rem; }
+    .feature-card h3 { font-family: 'Fraunces', serif; font-size: 1.02rem; font-weight: 400; color: var(--dark); margin-bottom: 0.45rem; line-height: 1.3; }
+    .feature-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.8; }
+
+    /* ── STEPS ── */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 2.5rem; position: relative; }
+    .steps::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 12px); right: calc(12.5% + 12px); height: 1px; background: var(--border); z-index: 0; }
+    .step { padding: 0 1.25rem; text-align: center; position: relative; z-index: 1; }
+    .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--bg-alt); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
+    .step-num span { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 300; color: var(--accent); }
+    .step h4 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 0.98rem; color: var(--dark); margin-bottom: 0.5rem; line-height: 1.3; }
+    .step p { font-size: 0.83rem; color: var(--muted); line-height: 1.75; }
+
+    /* ── PRICING ── */
+    .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+    .price-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 2rem; position: relative; }
+    .price-card.featured { border-color: var(--accent); box-shadow: 0 4px 24px rgba(74,148,187,0.14); }
+    .price-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--border); }
+    .price-card.featured::before { background: var(--accent); }
+    .price-tier { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-lt); margin-bottom: 0.85rem; }
+    .price-card.featured .price-tier { color: var(--accent); }
+    .price-amount { font-family: 'Fraunces', serif; font-size: 2.1rem; font-weight: 300; color: var(--dark); line-height: 1; }
+    .price-period { font-size: 0.78rem; color: var(--muted-lt); margin: 0.3rem 0 1rem; }
+    .price-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.75; padding-top: 1rem; border-top: 1px solid var(--border-lt); }
+    .price-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--accent); color: #FFFFFF; padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem; vertical-align: middle; }
+
+    /* ── SINCERE ── */
+    .sincere-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.06); margin-top: 2.5rem; }
+    .sincere-item { padding: 2rem; background: rgba(255,255,255,0.03); }
+    .sincere-icon { font-size: 1.25rem; margin-bottom: 0.75rem; }
+    .sincere-item h4 { font-size: 0.92rem; font-weight: 600; color: #FFFFFF; margin-bottom: 0.4rem; }
+    .sincere-item p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
+
+    /* ── WAITLIST ── */
+    .waitlist-box { max-width: 620px; margin: 0 auto; text-align: center; }
+    .waitlist-box p { font-size: 0.97rem; color: var(--muted); max-width: 440px; margin: 0 auto 2rem; line-height: 1.85; }
+
+    /* ── FOOTER ── */
+    footer { background: #040E18; padding: 3rem 2rem 2rem; }
+    .footer-inner { max-width: var(--max); margin: 0 auto; }
+    .footer-top { display: flex; gap: 3rem; justify-content: space-between; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 1.75rem; }
+    .footer-brand .footer-wordmark { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.2rem; color: #FFFFFF; margin-bottom: 0.6rem; }
+    .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.35); line-height: 1.75; max-width: 240px; }
+    .footer-col h5 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.84rem; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 0.5rem; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--accent-lt); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.22); }
+    .footer-sincere { font-size: 0.75rem; color: rgba(255,255,255,0.18); font-style: italic; }
+
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 960px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .category-grid { grid-template-columns: 1fr 1fr; }
+      .feature-grid { grid-template-columns: 1fr 1fr; }
+      .steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .steps::before { display: none; }
+      .pricing-grid { grid-template-columns: 1fr 1fr; }
+      .sincere-grid { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; gap: 2rem; }
+      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+    @media (max-width: 640px) {
+      .category-grid, .feature-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      nav { padding: 0 1rem; }
+      .nav-links .nav-link { display: none; }
+      .nav-links .nav-waitlist { display: flex; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="#">
+    <div class="nav-mark">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="6,26 24,8 42,26" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="12" y="25" width="24" height="16" rx="1" stroke="white" stroke-width="2.5" fill="none"/>
+        <rect x="19" y="30" width="10" height="11" rx="1" stroke="white" stroke-width="2" fill="none"/>
+      </svg>
+    </div>
+    <span class="nav-wordmark">WhollyWare<sup>™</sup></span>
+  </a>
+  <div class="nav-links">
+    <a href="#categories" class="nav-link">What We Cover</a>
+    <a href="#how-it-works" class="nav-link">How It Works</a>
+    <a href="#pricing" class="nav-link">Pricing</a>
+    <a href="https://sentirsolutions.github.io/sentir-solutions-site/" class="nav-link" target="_blank" rel="noopener">Sentir Solutions</a>
+    <a href="mailto:tim.hislop@gmail.com?subject=WhollyWare%20Waitlist" class="nav-waitlist">Join Waitlist →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">
+        <span>Household price intelligence &nbsp;·&nbsp; Net savings, honestly shown</span>
+      </div>
+      <h1>Prices aren't coming down.<br /><em>Your household bill can.</em></h1>
+      <p class="hero-sub">Paper towels. Laundry detergent. Cleaning supplies. The stuff you buy every week — and never comparison-shop. WhollyWare cross-compares prices across Walmart, Target, Costco, Kroger, and Dollar General. Net savings after gas. Always.</p>
+      <div class="hero-actions">
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyWare%20Waitlist" class="btn-cta">Join the Waitlist →</a>
+        <a href="#how-it-works" class="btn-ghost">See How It Works</a>
+      </div>
+      <p class="hero-tagline">The household staple plan that pays you back.</p>
+    </div>
+
+    <div class="hero-card">
+      <div class="hero-card-label">This Week's Staple Savings</div>
+      <div class="category-row">
+        <div class="cat-left"><span class="cat-emoji">🧻</span><div><div class="cat-name">Paper goods</div><div class="cat-stores">Costco vs. Target</div></div></div>
+        <div class="cat-save">−$4.20</div>
+      </div>
+      <div class="category-row">
+        <div class="cat-left"><span class="cat-emoji">🧺</span><div><div class="cat-name">Laundry</div><div class="cat-stores">Walmart vs. Kroger</div></div></div>
+        <div class="cat-save">−$3.85</div>
+      </div>
+      <div class="category-row">
+        <div class="cat-left"><span class="cat-emoji">🧹</span><div><div class="cat-name">Cleaning supplies</div><div class="cat-stores">Dollar General vs. Target</div></div></div>
+        <div class="cat-save">−$2.10</div>
+      </div>
+      <div class="category-row">
+        <div class="cat-left"><span class="cat-emoji">🪥</span><div><div class="cat-name">Personal care</div><div class="cat-stores">CVS vs. Walmart</div></div></div>
+        <div class="cat-save">−$1.95</div>
+      </div>
+      <div class="hero-card-divider"></div>
+      <div class="total-row">
+        <div>
+          <div class="total-label">Found Money this week</div>
+          <div style="font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:2px;">after gas · 2 stores</div>
+        </div>
+        <div class="total-amount">$12.10</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAT BAR -->
+<div class="stat-bar">
+  <div class="stat-item"><span class="stat-num">12+</span><span class="stat-label">product categories tracked</span></div>
+  <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">major retailers compared</span></div>
+  <div class="stat-item"><span class="stat-num">Net</span><span class="stat-label">savings after gas, always</span></div>
+  <div class="stat-item"><span class="stat-num">Zero</span><span class="stat-label">paid brand placements, ever</span></div>
+</div>
+
+<!-- CATEGORIES -->
+<section id="categories" class="categories-section">
+  <div class="container">
+    <p class="section-label fade-in">What We Track</p>
+    <h2 class="fade-in">Every shelf in your home.<br /><em>Every store in your area.</em></h2>
+    <div class="divider fade-in"></div>
+    <div class="category-grid fade-in">
+      <div class="cat-card">
+        <div class="cat-card-icon">🧻</div>
+        <div class="cat-card-name">Paper & Tissue</div>
+        <div class="cat-card-desc">Paper towels, toilet paper, napkins, tissues — bulk vs. single-pack compared honestly.</div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-icon">🧺</div>
+        <div class="cat-card-name">Laundry</div>
+        <div class="cat-card-desc">Detergent, fabric softener, dryer sheets — unit price per load, not per bottle.</div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-icon">🧹</div>
+        <div class="cat-card-name">Cleaning Supplies</div>
+        <div class="cat-card-desc">All-purpose cleaners, dish soap, sponges, trash bags — across every major retailer.</div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-icon">🪥</div>
+        <div class="cat-card-name">Personal Care</div>
+        <div class="cat-card-desc">Toothpaste, shampoo, deodorant, soap — tracked by your brands, not theirs.</div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-icon">💡</div>
+        <div class="cat-card-name">Household Basics</div>
+        <div class="cat-card-desc">Batteries, light bulbs, storage bags, aluminum foil — the stuff you always need.</div>
+      </div>
+      <div class="cat-card">
+        <div class="cat-card-icon">🧴</div>
+        <div class="cat-card-name">Health Staples</div>
+        <div class="cat-card-desc">Pain relievers, vitamins, bandages — filtered for your household's health constraints.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="steps-section dark">
+  <div class="container">
+    <p class="section-label light fade-in">How It Works</p>
+    <h2 class="light fade-in">Four steps.<br /><em>One honest number.</em></h2>
+    <div class="divider fade-in"></div>
+    <div class="steps fade-in">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Tell us your stores</div>
+        <div class="step-body">Enter your zip code. WhollyWare maps the retailers within your radius — including warehouse clubs if you have a membership.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Set your constraints</div>
+        <div class="step-body">Allergies, dietary restrictions, brand preferences. Health constraints are hard rules — never traded for a lower price.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">See the comparison</div>
+        <div class="step-body">Weekly sale prices pulled for every tracked category. Unit price math done for you — no mental gymnastics in the aisle.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">Get your net number</div>
+        <div class="step-body">Gas cost is subtracted. If driving to Costco costs more than you'd save this week, we tell you. Gross savings is not the number that matters.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing-section">
+  <div class="container">
+    <p class="section-label fade-in">Pricing</p>
+    <h2 class="fade-in">Start free.<br /><em>Pay only for what you use.</em></h2>
+    <div class="divider fade-in"></div>
+    <div class="pricing-grid fade-in">
+
+      <div class="price-card">
+        <div class="price-tier">Free</div>
+        <div class="price-amount">$0</div>
+        <div class="price-period">forever</div>
+        <ul class="price-features">
+          <li>Cross-store price comparison</li>
+          <li>3 product categories</li>
+          <li>Weekly savings estimate</li>
+          <li>Net savings after gas shown</li>
+        </ul>
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyWare%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-tier">Staple Tracker</div>
+        <div class="price-amount">$5<span>/mo</span></div>
+        <div class="price-period">all 12 categories</div>
+        <ul class="price-features">
+          <li>All product categories</li>
+          <li>Weekly staple list by store</li>
+          <li>Price history & trend alerts</li>
+          <li>Pantry stock reminders</li>
+        </ul>
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyWare%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
+      </div>
+
+      <div class="price-card featured">
+        <div class="price-badge">Most Popular</div>
+        <div class="price-tier">Health Guard</div>
+        <div class="price-amount">$12<span>/mo</span></div>
+        <div class="price-period">safety-first filtering</div>
+        <ul class="price-features">
+          <li>Everything in Staple Tracker</li>
+          <li>Allergen & ingredient filtering</li>
+          <li>Hard exclusions — never overridden</li>
+          <li>Per-member household profiles</li>
+          <li>Rejection log shown to you</li>
+        </ul>
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyWare%20Waitlist" class="price-cta">Join Waitlist</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-tier">Full Household</div>
+        <div class="price-amount">$17<span>/mo</span></div>
+        <div class="price-period">complete platform</div>
+        <ul class="price-features">
+          <li>Everything in Health Guard</li>
+          <li>Subscription tracking (Amazon, etc.)</li>
+          <li>Auto-buy recommendations</li>
+          <li>Multi-store trip optimization</li>
+          <li>CSV export & shopping list</li>
+        </ul>
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyWare%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
+      </div>
+
+    </div>
+    <p class="pricing-note">No ads. No sponsored results. No data sales. Revenue is subscriptions only — that's the Sincere Strategy®.</p>
+  </div>
+</section>
+
+<!-- SINCERE STRATEGY -->
+<section class="sincere-section dark">
+  <div class="container">
+    <p class="section-label light fade-in">The Sincere Strategy®</p>
+    <h2 class="light fade-in">Why you can trust<br /><em>what WhollyWare shows you.</em></h2>
+    <div class="divider fade-in"></div>
+    <div class="sincere-grid fade-in">
+      <div class="sincere-item">
+        <div class="sincere-icon">🚫</div>
+        <div class="sincere-title">Zero paid placements</div>
+        <div class="sincere-body">No brand pays to appear in your results. Rankings are purely algorithmic — lowest net cost for your constraints.</div>
+      </div>
+      <div class="sincere-item">
+        <div class="sincere-icon">🛡️</div>
+        <div class="sincere-title">Health before savings</div>
+        <div class="sincere-body">Your allergy profile is a hard filter. A product that fails it is removed — not ranked lower, not shown with a warning label.</div>
+      </div>
+      <div class="sincere-item">
+        <div class="sincere-icon">⛽</div>
+        <div class="sincere-title">Gas is in the math</div>
+        <div class="sincere-body">Driving across town to save $3 on paper towels costs you money. We show you the net number, always.</div>
+      </div>
+      <div class="sincere-item">
+        <div class="sincere-icon">🔍</div>
+        <div class="sincere-title">Radical transparency</div>
+        <div class="sincere-body">Every rejection is logged. You can see exactly why a product didn't appear in your results.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2 class="fade-in">Ready to stop overpaying<br /><em>for the things you buy every week?</em></h2>
+    <p class="cta-sub fade-in">WhollyWare is in development. Join the waitlist for early access.</p>
+    <a href="mailto:tim.hislop@gmail.com?subject=WhollyWare%20Waitlist" class="btn-cta fade-in">Join the Waitlist →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-wordmark">WhollyWare<sup>™</sup></div>
+      <p>Household price intelligence. Net savings after gas. Health constraints always honored. Part of the Sentir Solutions® family.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Platform</h5>
+      <a href="https://sentirsolutions.github.io/sentir-solutions-site/" target="_blank" rel="noopener">Sentir Solutions</a>
+      <a href="https://sentirsolutions.github.io/sentir-solutions-site/brands.html" target="_blank" rel="noopener">Wholly Brands</a>
+      <a href="https://sentirsolutions.github.io/whollyfare-website/" target="_blank" rel="noopener">WhollyFare®</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contact</h5>
+      <a href="mailto:tim.hislop@gmail.com">tim.hislop@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 Sentir Solutions® LLC · Charlottesville, VA</div>
+    <div class="footer-sincere">The Sincere Strategy® — zero paid placements, health before savings, net savings always.</div>
+  </div>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
