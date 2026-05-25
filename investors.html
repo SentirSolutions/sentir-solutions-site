@@ -4,27 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Investors — Sentir Solutions®</title>
-  <meta name="description" content="Investor overview for Sentir Solutions® — the Sincere Strategy platform. WhollyFare Phase 1 pilot data, 5-phase roadmap, and investment thesis. Seed target: $5–15M." />
+  <meta name="description" content="Investor overview for Sentir Solutions® — three entities, one founding principle. Sentir Consulting funds the platform. The Wholly Brands are the end game." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    /* ── INVESTOR STATS ── */
     .investor-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 1.25rem;
       margin-top: 2.5rem;
     }
-
     .inv-stat {
       padding: 1.75rem 1.5rem;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
       border-top: 2px solid var(--accent-lt);
     }
-
     .inv-stat .num {
       font-family: 'Fraunces', serif;
       font-size: 2rem;
@@ -32,44 +29,66 @@
       line-height: 1;
       margin-bottom: 0.5rem;
     }
-
     .inv-stat .lbl {
       font-size: 0.82rem;
       color: #9A9690;
       line-height: 1.6;
     }
 
-    /* ── MOAT CALLOUT ── */
-    .moat-callout {
+    .three-entity {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .entity-card {
       background: var(--bg-alt);
       border: 1px solid var(--border);
-      padding: 2.5rem;
-      margin-top: 2.5rem;
       border-top: 3px solid var(--accent);
+      padding: 2.25rem;
     }
-
-    .moat-callout blockquote {
+    .entity-card.consult { border-top-color: var(--accent); }
+    .entity-card.wholly  { border-top-color: #3A8C4E; }
+    .entity-card.soul    { border-top-color: var(--dark); background: var(--dark); }
+    .entity-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .entity-card.soul .entity-label { color: var(--accent-lt); }
+    .entity-card.wholly .entity-label { color: #3A8C4E; }
+    .entity-card h3 {
       font-family: 'Fraunces', serif;
-      font-weight: 300;
-      font-size: 1.35rem;
-      font-style: italic;
+      font-size: 1.25rem;
+      font-weight: 400;
       color: var(--dark);
-      line-height: 1.55;
-      max-width: 720px;
+      margin-bottom: 0.75rem;
+      line-height: 1.25;
     }
-
-    .moat-callout .attribution {
-      font-size: 0.82rem;
+    .entity-card.soul h3 { color: #FFFFFF; }
+    .entity-card p {
+      font-size: 0.9rem;
       color: var(--muted);
-      margin-top: 1.25rem;
-      letter-spacing: 0.04em;
+      line-height: 1.85;
     }
+    .entity-card.soul p { color: #9A9690; }
 
-    /* ── ROADMAP SECTION ── */
-    .roadmap-section {
-      padding: 6rem 2rem;
-      background: var(--bg-alt);
+    .moat-bar {
+      background: var(--dark);
+      border-left: 4px solid var(--accent);
+      padding: 2rem 2.5rem;
+      margin-top: 3rem;
     }
+    .moat-bar p {
+      font-size: 0.92rem;
+      color: #C0BCB7;
+      line-height: 1.85;
+      max-width: 820px;
+    }
+    .moat-bar strong { color: var(--accent-lt); }
 
     .roadmap-grid {
       display: grid;
@@ -77,14 +96,12 @@
       gap: 1.5rem;
       margin-top: 2.5rem;
     }
-
     .phase-card {
-      background: var(--bg);
+      background: var(--bg-alt);
       border: 1px solid var(--border);
       padding: 2rem;
       position: relative;
     }
-
     .phase-card::before {
       content: '';
       position: absolute;
@@ -92,11 +109,7 @@
       height: 3px;
       background: var(--accent);
     }
-
-    .phase-card.phase-active::before {
-      background: #3A8C4E;
-    }
-
+    .phase-card.phase-active::before { background: #3A8C4E; }
     .phase-number {
       font-family: 'Fraunces', serif;
       font-size: 2.2rem;
@@ -105,11 +118,7 @@
       line-height: 1;
       margin-bottom: 0.75rem;
     }
-
-    .phase-card.phase-active .phase-number {
-      color: #3A8C4E;
-    }
-
+    .phase-card.phase-active .phase-number { color: #3A8C4E; }
     .phase-card h4 {
       font-family: 'Fraunces', serif;
       font-size: 1.1rem;
@@ -117,7 +126,6 @@
       margin-bottom: 0.35rem;
       font-weight: 400;
     }
-
     .phase-timeline {
       font-size: 0.72rem;
       font-weight: 600;
@@ -126,13 +134,7 @@
       color: var(--muted);
       margin-bottom: 1rem;
     }
-
-    .phase-card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.8;
-    }
-
+    .phase-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
     .phase-badge {
       display: inline-block;
       font-size: 0.7rem;
@@ -143,29 +145,9 @@
       border-radius: 2px;
       margin-top: 1rem;
     }
-
-    .badge-active {
-      background: #E8F5E9;
-      border: 1px solid #A5D6A7;
-      color: #2E7D32;
-    }
-
-    .badge-next {
-      background: #FFF8E1;
-      border: 1px solid #FFE082;
-      color: #795548;
-    }
-
-    .badge-future {
-      background: var(--bg-alt);
-      border: 1px solid var(--border);
-      color: var(--muted);
-    }
-
-    /* ── INVESTMENT BREAKDOWN ── */
-    .inv-breakdown {
-      padding: 6rem 2rem;
-    }
+    .badge-active { background: #E8F5E9; border: 1px solid #A5D6A7; color: #2E7D32; }
+    .badge-next   { background: #FFF8E1; border: 1px solid #FFE082; color: #795548; }
+    .badge-future { background: var(--bg-alt); border: 1px solid var(--border); color: var(--muted); }
 
     .round-grid {
       display: grid;
@@ -173,14 +155,12 @@
       gap: 1.5rem;
       margin-top: 2.5rem;
     }
-
     .round-card {
       background: var(--bg-alt);
       border: 1px solid var(--border);
       border-left: 3px solid var(--accent);
       padding: 2rem;
     }
-
     .round-card h4 {
       font-size: 0.72rem;
       font-weight: 600;
@@ -189,7 +169,6 @@
       color: var(--muted);
       margin-bottom: 0.5rem;
     }
-
     .round-card .round-size {
       font-family: 'Fraunces', serif;
       font-size: 1.6rem;
@@ -197,28 +176,13 @@
       line-height: 1.1;
       margin-bottom: 0.75rem;
     }
-
-    .round-card p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.75;
-    }
-
-    /* ── CONTACT ── */
-    .contact-section {
-      background: var(--dark);
-      padding: 6rem 2rem;
-      text-align: center;
-    }
+    .round-card p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
 
     @media (max-width: 900px) {
       .investor-grid  { grid-template-columns: 1fr 1fr; }
+      .three-entity   { grid-template-columns: 1fr; }
       .roadmap-grid   { grid-template-columns: 1fr; }
       .round-grid     { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 600px) {
-      .investor-grid  { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -239,95 +203,99 @@
     </div>
   </nav>
 
-  <!-- HERO (dark) -->
+  <!-- HERO -->
   <section class="hero">
     <p class="hero-eyebrow">Sentir Solutions® &nbsp;·&nbsp; Investor Overview &nbsp;·&nbsp; May 2026</p>
-    <h1>The platform opportunity.<br /><em>By the numbers.</em></h1>
+    <h1>Three entities.<br />One founding principle.<br /><em>No compromises.</em></h1>
     <p class="hero-sub">
-      WhollyFare Phase 1 is running with real households and real receipts in Charlottesville, VA.
-      The pilot produces undeniable Found Money data — the proof point that unlocks Phase 2
-      and the broader Wholly platform portfolio play.
+      This isn't a conglomerate. It's a philosophy with three expressions —
+      a holding company, a consulting practice, and a consumer platform —
+      each one reinforcing the others, each one built on the same unbreakable foundation.
     </p>
     <div class="hero-actions">
-      <a href="#overview" class="btn-primary">Investment Overview</a>
+      <a href="#entities" class="btn-primary">The Portfolio</a>
       <a href="#roadmap" class="btn-ghost">5-Phase Roadmap</a>
     </div>
     <div class="hero-rule"></div>
   </section>
 
-  <!-- KEY STATS (dark) -->
-  <section id="overview" class="dark" style="padding-top: 5rem;">
+  <!-- THE THREE ENTITIES -->
+  <section id="entities">
     <div class="container">
-      <p class="section-label light fade-in">The Numbers</p>
-      <h2 class="light fade-in">Four verticals. One engine.<br /><em>One founding principle.</em></h2>
-      <div class="divider fade-in"></div>
+      <p class="section-label">The Portfolio</p>
+      <h2>Not three separate bets.<br /><em>One compounding strategy.</em></h2>
+      <p class="lead">Sentir Consulting generates revenue today. That revenue funds the Wholly platform. The Wholly platform proves the Sincere Strategy works at scale. That proof makes Sentir Consulting more valuable. Each entity makes the others stronger.</p>
 
-      <div class="investor-grid fade-in">
+      <div class="three-entity">
+
+        <div class="entity-card soul">
+          <div class="entity-label">The Foundation</div>
+          <h3>Sentir Solutions®</h3>
+          <p>The holding company and the soul of everything we build. Sentir Solutions owns the Sincere Strategy® — the founding principle that zero paid placements, radical transparency, and health-first constraints are non-negotiable. Every brand that carries the Sentir name operates under this principle or it doesn't operate at all.</p>
+        </div>
+
+        <div class="entity-card consult">
+          <div class="entity-label">The Engine</div>
+          <h3>Sentir Consulting</h3>
+          <p>AI strategy for businesses that want to grow without gutting the team that got them there. We help owners and operators increase EBITDA, eliminate repetitive tasks, and upskill their trusted workforce — the people who built the business alongside them. We don't come in and replace people. We make them more valuable. That philosophy is the Sincere Strategy applied to business.</p>
+        </div>
+
+        <div class="entity-card wholly">
+          <div class="entity-label">The Actualization</div>
+          <h3>The Wholly Brands</h3>
+          <p>WhollyFare, WhollyWare, WhollyPaws, and WhollyCare are where the Sincere Strategy meets everyone — not just the business owner, not just the enterprise customer, not just the government agency. Every household. Every shelf. Every person who deserves honest software that serves them instead of itself. WhollyFare proved the model. The other three extend it.</p>
+        </div>
+
+      </div>
+
+      <div class="moat-bar">
+        <p><strong>Why competitors can't copy this.</strong> Affiliates, sponsored placements, and data sales are competitors' business model. Ours is a subscription — you pay us because we save you more than we cost. To adopt the Sincere Strategy, a competitor would have to eliminate affiliate revenue, refuse all paid placements, and return user data to the household. That's a business model replacement, not a product update. Their investors won't allow it. <strong>The moat is structural and it's durable.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY STATS -->
+  <section class="dark" style="padding-top: 5rem; padding-bottom: 5rem;">
+    <div class="container">
+      <p class="section-label light">By the Numbers</p>
+      <h2 class="light">The opportunity is large.<br /><em>The proof is real.</em></h2>
+      <div class="divider"></div>
+
+      <div class="investor-grid">
         <div class="inv-stat">
           <div class="num">$1,500+</div>
-          <div class="lbl">Annual household savings projected from Phase 1 pilot data — net of gas costs</div>
+          <div class="lbl">Annual household savings projected from WhollyFare Phase 1 pilot data — net of gas costs</div>
         </div>
         <div class="inv-stat">
           <div class="num">4×</div>
-          <div class="lbl">Verticals addressable with one platform — food, household goods, pet care, personal care</div>
+          <div class="lbl">Consumer verticals addressable with one platform — food, household goods, pet care, personal care</div>
         </div>
         <div class="inv-stat">
           <div class="num">$29/mo</div>
-          <div class="lbl">Full Table tier — full subscription price for a household getting $125/mo in savings</div>
+          <div class="lbl">Full Table subscription price for a household receiving $125+/month in real found savings</div>
         </div>
         <div class="inv-stat">
           <div class="num">$2M+</div>
-          <div class="lbl">ARR target at Phase 4 national scale — 50,000+ households across 15+ grocer chains</div>
+          <div class="lbl">ARR target at Phase 4 national scale — 50,000+ households, 15+ grocer chains</div>
         </div>
-      </div>
-
-      <div class="moat-callout fade-in">
-        <blockquote>
-          "Sentir Solutions is building the Sincere Strategy platform — an allergen-aware,
-          price-optimizing engine for household spending. WhollyFare proved the model.
-          WhollyWare, WhollyPaws, and WhollyCare extend it to every shelf in the house.
-          Same engine. Four markets. One founding principle."
-        </blockquote>
-        <p class="attribution">— Investment thesis, May 2026</p>
-      </div>
-
-      <div style="margin-top:2.5rem; padding:2rem; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-left:3px solid var(--accent-lt);" class="fade-in">
-        <p style="font-size:0.88rem; color:#9A9690; line-height:1.75;">
-          <strong style="color:#FFFFFF; font-weight:500;">Why competitors can't copy this.</strong>
-          Affiliates, sponsored placements, and data sales are competitors' business model.
-          Ours is a household paying us a fair subscription because we save them more than we cost.
-          To adopt the Sincere Strategy, a competitor would have to eliminate affiliate revenue,
-          refuse all paid placements, and return user data to the household.
-          That's a business model replacement — not a product update. Their investors won't allow it.
-          <strong style="color:var(--accent-lt);">The moat is structural and durable.</strong>
-        </p>
       </div>
     </div>
   </section>
 
   <!-- ROADMAP -->
-  <section id="roadmap" class="roadmap-section">
+  <section id="roadmap" style="background: var(--bg-alt);">
     <div class="container">
-      <p class="section-label fade-in">Five-Phase Roadmap</p>
-      <h2 class="fade-in">From pilot data<br /><em>to platform scale.</em></h2>
-      <div class="divider fade-in"></div>
-      <p class="lead fade-in">
-        Each phase is gated by proof. Phase 2 requires undeniable Phase 1 data.
-        Phase 3 requires investment. Phase 4 and 5 are funded by the ARR built in Phase 3.
-        No phase is speculative — each one follows directly from what the prior phase proved.
-      </p>
+      <p class="section-label">Five-Phase Roadmap</p>
+      <h2>From pilot data<br /><em>to platform scale.</em></h2>
+      <div class="divider"></div>
+      <p class="lead">Each phase is gated by proof. No phase is speculative — each one follows directly from what the prior phase proved. Phase 2 requires undeniable Phase 1 data. Phase 3 requires investment. Phases 4 and 5 are funded by the ARR built in Phase 3.</p>
 
-      <div class="roadmap-grid fade-in">
-
+      <div class="roadmap-grid">
         <div class="phase-card phase-active">
           <div class="phase-number">1</div>
           <h4>Proof of Concept</h4>
           <p class="phase-timeline">Now — 8 weeks</p>
-          <p>
-            Hislop family pilot, Charlottesville, VA. Kroger, Food Lion, Aldi, Harris Teeter.
-            Manual flyer entry + PDF extraction via Admin page. Goal: undeniable Found Money data —
-            real receipts proving the model saves real money for a real household.
-          </p>
+          <p>Hislop family pilot, Charlottesville VA. Kroger, Food Lion, Aldi, Harris Teeter. Manual flyer entry + PDF extraction. Goal: undeniable Found Money data from real receipts for a real household.</p>
           <span class="phase-badge badge-active">● Active — Live</span>
         </div>
 
@@ -335,11 +303,7 @@
           <div class="phase-number">2</div>
           <h4>Pilot Households</h4>
           <p class="phase-timeline">Months 2–5</p>
-          <p>
-            5–10 pilot households. Meal type selection, pantry tracker, Coupon Vault,
-            Health Guard Dashboard, multi-household accounts, mobile-first UI.
-            This phase produces the retention and savings data needed for the investment round.
-          </p>
+          <p>5–10 pilot households. Meal type selection, pantry tracker, Coupon Vault, Health Guard Dashboard, multi-household accounts, mobile-first UI. Produces the retention and savings data needed for the investment round.</p>
           <span class="phase-badge badge-next">Next</span>
         </div>
 
@@ -347,11 +311,7 @@
           <div class="phase-number">3</div>
           <h4>Regional Scale</h4>
           <p class="phase-timeline">Post-investment, months 6–18</p>
-          <p>
-            React + FastAPI replaces Streamlit. Automated circular parsing. Recipe Library.
-            Price Intelligence. Delivery Hub (Instacart/Shipt integration). Market Insights
-            public data product. Health System B2B licensing. WhollyWare launch.
-          </p>
+          <p>React + FastAPI replaces Streamlit. Automated circular parsing. Recipe Library. Price Intelligence. Delivery Hub. Market Insights public data product. Health System B2B licensing. WhollyWare launch.</p>
           <span class="phase-badge badge-future">Post-Seed</span>
         </div>
 
@@ -359,11 +319,7 @@
           <div class="phase-number">4</div>
           <h4>National</h4>
           <p class="phase-timeline">Series A, months 18–36</p>
-          <p>
-            15+ grocer chains. 50,000+ households. Preference learning, receipt auto-capture,
-            community and sharing features. WhollyPaws launch. $2M+ ARR target.
-            WhollyCare development begins.
-          </p>
+          <p>15+ grocer chains. 50,000+ households. Preference learning, receipt auto-capture, community features. WhollyPaws launch. $2M+ ARR target. WhollyCare development begins.</p>
           <span class="phase-badge badge-future">Series A</span>
         </div>
 
@@ -371,92 +327,70 @@
           <div class="phase-number">5</div>
           <h4>Wholesale &amp; Delivery</h4>
           <p class="phase-timeline">Post-Series A horizon</p>
-          <p>
-            Costco, Sam's Club, BJ's, Amazon Fresh. Bulk-unit math, membership economics,
-            hybrid trip planning. WhollyCare full launch. The platform covers every shelf
-            in every house — perishables, non-perishables, pet care, personal care.
-          </p>
+          <p>Costco, Sam's Club, BJ's, Amazon Fresh. Bulk-unit math, membership economics, hybrid trip planning. WhollyCare full launch. The platform covers every shelf in every house.</p>
           <span class="phase-badge badge-future">Horizon</span>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- INVESTMENT STRUCTURE -->
-  <section class="inv-breakdown">
+  <section>
     <div class="container">
-      <p class="section-label fade-in">Investment Structure</p>
-      <h2 class="fade-in">Seed through strategic acquisition —<br /><em>a clear path at each stage.</em></h2>
-      <div class="divider fade-in"></div>
+      <p class="section-label">Investment Structure</p>
+      <h2>Seed through strategic acquisition —<br /><em>a clear path at each stage.</em></h2>
+      <div class="divider"></div>
 
-      <div class="round-grid fade-in">
+      <div class="round-grid">
         <div class="round-card">
           <h4>Seed Round</h4>
           <div class="round-size">$5M – $15M</div>
-          <p>
-            Funds Phase 3 regional scale: React + FastAPI rebuild, automated circular parsing,
-            Recipe Library, WhollyWare launch, first regional market expansion beyond Charlottesville.
-            Milestone: $500K ARR and 1,000+ active households.
-          </p>
+          <p>Funds Phase 3 regional scale: React + FastAPI rebuild, automated circular parsing, Recipe Library, WhollyWare launch, first regional expansion beyond Charlottesville. Milestone: $500K ARR and 1,000+ active households.</p>
         </div>
         <div class="round-card">
           <h4>Series A</h4>
           <div class="round-size">$25M – $50M</div>
-          <p>
-            Funds national expansion, WhollyPaws launch, preference learning infrastructure,
-            receipt auto-capture. Deliverable: $2M+ ARR across 50,000+ households.
-            WhollyCare development begins in parallel.
-          </p>
+          <p>Funds national expansion, WhollyPaws launch, preference learning infrastructure, receipt auto-capture. Deliverable: $2M+ ARR across 50,000+ households. WhollyCare development begins in parallel.</p>
         </div>
         <div class="round-card">
           <h4>Strategic Acquisition</h4>
           <div class="round-size">$200M – $500M</div>
-          <p>
-            Natural target for a large grocer chain, a national retailer, or a health system
-            that wants a constraint-first household intelligence platform — and can't build
-            the Sincere Strategy themselves without destroying their existing revenue model.
-          </p>
+          <p>Natural target for a large grocer, national retailer, or health system that wants a constraint-first household intelligence platform — and structurally cannot build the Sincere Strategy themselves without destroying their existing revenue model.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <div class="contact-section">
+  <section class="dark" style="text-align: center;">
     <div class="container">
-      <p class="section-label light" style="justify-content:center; display:flex; margin-bottom:1rem;">Get in Touch</p>
-      <h2 class="light" style="text-align:center; max-width:560px; margin:0 auto 1rem;">
-        Building something this durable<br />takes the right partners.
+      <p class="section-label light" style="text-align:center;">Get in Touch</p>
+      <h2 class="light" style="max-width:600px; margin:0 auto 1rem;">
+        Building something this durable<br /><em>takes the right partners.</em>
       </h2>
-      <p style="color:#9A9690; text-align:center; max-width:480px; margin:0 auto;">
-        If you're an investor, a potential pilot household, or a grocer who wants to understand
-        what radical transparency looks like in practice — we'd like to hear from you.
+      <p style="color:#9A9690; max-width:500px; margin:0 auto 2rem; line-height:1.85;">
+        If you're an investor, a potential pilot household, or a business that wants to
+        understand what the Sincere Strategy looks like in practice — we'd like to hear from you.
       </p>
-      <div style="text-align:center; margin-top:2rem;">
-        <a class="contact-email" href="mailto:tim.hislop@gmail.com">tim.hislop@gmail.com</a>
-      </div>
+      <a href="mailto:tim.hislop@gmail.com" class="btn-primary">tim.hislop@gmail.com</a>
     </div>
-  </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>
-      © 2026 Sentir Solutions® LLC &nbsp;·&nbsp; Charlottesville, Virginia &nbsp;·&nbsp;
-      <a href="https://sentir-consulting.com">Sentir Consulting</a> &nbsp;·&nbsp;
-      <a href="https://whollyfare.com">WhollyFare®</a> &nbsp;·&nbsp;
-      wholly-ware.com &nbsp;·&nbsp; wholly-paws.com &nbsp;·&nbsp; wholly-care.com
-    </p>
-    <p style="margin-top:0.5rem; opacity:0.5;">The Sincere Strategy® · Zero paid placements · Revenue is subscriptions only</p>
+  <footer style="background: var(--darker); color: #9A9690; padding: 2.5rem 2rem; text-align: center; font-size: 0.82rem;">
+    <div class="container">
+      <p style="margin-bottom: 0.5rem;">
+        <strong style="color: #FFFFFF;">Sentir Solutions®</strong> &nbsp;·&nbsp;
+        Sentir Solutions LLC &nbsp;·&nbsp; Charlottesville, Virginia
+      </p>
+      <p>
+        <a href="mission.html" style="color: #9A9690; text-decoration: none; margin: 0 0.75rem;">Our Mission</a>
+        <a href="about.html" style="color: #9A9690; text-decoration: none; margin: 0 0.75rem;">About Us</a>
+        <a href="brands.html" style="color: #9A9690; text-decoration: none; margin: 0 0.75rem;">Our Brands</a>
+        <a href="https://sentir-consulting.com" style="color: #9A9690; text-decoration: none; margin: 0 0.75rem;">Sentir Consulting ↗</a>
+      </p>
+    </div>
   </footer>
-
-  <script>
-    const obs = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
-      { threshold: 0.08 }
-    );
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-  </script>
 
 </body>
 </html>
