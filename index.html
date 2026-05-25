@@ -3,102 +3,316 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sentir Solutions® — Built for your business, your dinner table, and every shelf in between.</title>
-  <meta name="description" content="Sentir Solutions is the holding company behind the Sincere Strategy® platform — four consumer brands built to serve every category of household spending." />
+  <title>Sentir Solutions® — The platform that serves your household the way it always should have been.</title>
+  <meta name="description" content="Sentir Solutions is the holding company behind the Wholly platform — four consumer brands built on one principle. WhollyFare is live. The rest is coming." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    .three-col {
+
+    /* ── ENGINE SECTION ── */
+    .engine-section {
+      background: var(--dark);
+      padding: 6rem 2rem;
+    }
+    .engine-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
+      grid-template-columns: 1fr 400px;
+      gap: 4rem;
+      align-items: start;
       margin-top: 3rem;
     }
-    .pillar-card {
+    .engine-narrative p {
+      font-size: 1rem;
+      color: #C0BCB7;
+      line-height: 1.9;
+      margin-bottom: 1.25rem;
+    }
+    .engine-narrative p:last-child { margin-bottom: 0; }
+    .engine-narrative strong { color: #FFFFFF; font-weight: 500; }
+    .engine-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── FOUND MONEY MOCK CARD ── */
+    .found-money-card {
+      background: #FFFFFF;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+    }
+    .fmc-header {
+      background: #1D5C2E;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .fmc-header-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+    }
+    .fmc-header-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6FCFA0;
+      border: 1px solid rgba(111,207,160,0.4);
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+    }
+    .fmc-body { padding: 1.5rem; }
+    .fmc-week {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #3A8C4E;
+      margin-bottom: 1rem;
+    }
+    .fmc-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid #F0EDE8;
+      font-size: 0.88rem;
+    }
+    .fmc-row:last-of-type { border-bottom: none; }
+    .fmc-store { color: #3D3930; font-weight: 500; }
+    .fmc-detail { color: #8A8480; font-size: 0.78rem; }
+    .fmc-savings { color: #3A8C4E; font-weight: 600; }
+    .fmc-savings.negative { color: #B05A1A; }
+    .fmc-divider { height: 1px; background: #E8E4DE; margin: 1rem 0; }
+    .fmc-total-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.5rem 0;
+    }
+    .fmc-total-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #3D3930;
+    }
+    .fmc-total-amount {
+      font-family: 'Fraunces', serif;
+      font-size: 1.75rem;
+      font-weight: 300;
+      color: #1D5C2E;
+    }
+    .fmc-subtext {
+      font-size: 0.75rem;
+      color: #8A8480;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid #F0EDE8;
+      line-height: 1.65;
+    }
+
+    /* ── PILOT STATS BAR ── */
+    .pilot-stats {
+      background: #F3F0EA;
+      padding: 1.75rem 2rem;
+      border-top: 3px solid #3A8C4E;
+    }
+    .pilot-stats-inner {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .pilot-stat { display: flex; flex-direction: column; gap: 0.2rem; }
+    .pilot-stat-number {
+      font-family: 'Fraunces', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: #1D5C2E;
+      line-height: 1;
+    }
+    .pilot-stat-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6A6660;
+    }
+    .pilot-stat-divider {
+      width: 1px;
+      height: 36px;
+      background: #D6D1C8;
+      flex-shrink: 0;
+    }
+
+    /* ── PLATFORM SECTION ── */
+    .platform-section {
+      padding: 6rem 2rem;
+      background: var(--bg-alt);
+    }
+    .platform-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .platform-card {
       border: 1px solid var(--border);
       border-top: 3px solid var(--accent);
-      background: var(--bg-alt);
-      padding: 2.25rem;
+      background: var(--bg);
+      padding: 2rem;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.85rem;
     }
-    .pillar-card.fare  { border-top-color: #3A8C4E; }
-    .pillar-tag {
-      font-size: 0.72rem;
+    .platform-card.ware { border-top-color: #4A94BB; }
+    .platform-card.paws { border-top-color: #C47D2E; }
+    .platform-card.care { border-top-color: #A45AB0; }
+    .platform-tag {
+      font-size: 0.7rem;
       font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--accent);
+      color: var(--muted);
     }
-    .pillar-card.fare .pillar-tag { color: #3A8C4E; }
-    .pillar-card h3 {
+    .platform-card h3 {
       font-family: 'Fraunces', serif;
-      font-size: 1.35rem;
+      font-size: 1.2rem;
       font-weight: 400;
       color: var(--dark);
       line-height: 1.25;
       margin: 0;
     }
-    .pillar-card p {
-      font-size: 0.93rem;
+    .platform-card p {
+      font-size: 0.9rem;
       color: var(--muted);
-      line-height: 1.85;
+      line-height: 1.8;
       flex: 1;
     }
-    .pillar-link {
-      font-size: 0.85rem;
+    .platform-link {
+      font-size: 0.82rem;
       font-weight: 500;
       color: var(--accent);
       text-decoration: none;
       letter-spacing: 0.03em;
       transition: opacity 0.2s;
     }
-    .pillar-link:hover { opacity: 0.7; }
-    .pillar-card.fare .pillar-link { color: #3A8C4E; }
+    .platform-link:hover { opacity: 0.7; }
 
-    .xyz-rule {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin-top: 0;
-      padding: 2rem 2.5rem;
+    /* ── THREE ENTITIES ── */
+    .entities-section {
       background: var(--dark);
-      color: #FFFFFF;
+      padding: 6rem 2rem;
     }
-    .xyz-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.3rem;
-      flex: 1;
+    .entities-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
     }
-    .xyz-label {
-      font-size: 0.68rem;
+    .entity-card { border-top: 2px solid rgba(255,255,255,0.12); padding-top: 2rem; }
+    .entity-number {
+      font-family: 'Fraunces', serif;
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--accent-lt);
+      opacity: 0.35;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .entity-role {
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--accent-lt);
+      margin-bottom: 0.6rem;
     }
-    .xyz-text {
+    .entity-name {
       font-family: 'Fraunces', serif;
-      font-size: 1.05rem;
-      font-weight: 300;
+      font-size: 1.25rem;
+      font-weight: 400;
       color: #FFFFFF;
-      line-height: 1.35;
+      margin-bottom: 1rem;
+      line-height: 1.3;
     }
-    .xyz-divider {
-      width: 1px;
-      height: 48px;
-      background: rgba(255,255,255,0.15);
-      flex-shrink: 0;
+    .entity-desc {
+      font-size: 0.9rem;
+      color: #9A9690;
+      line-height: 1.85;
     }
 
-    @media (max-width: 860px) {
-      .three-col { grid-template-columns: 1fr; }
-      .xyz-rule { flex-direction: column; gap: 1.25rem; padding: 1.75rem; }
-      .xyz-divider { width: 100%; height: 1px; }
+    /* ── SINCERE CALLOUT ── */
+    .sincere-callout { padding: 6rem 2rem; background: var(--bg); }
+    .sincere-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 3rem;
+      border: 1px solid var(--border);
+    }
+    .sincere-item {
+      padding: 2rem 2.25rem;
+      border-right: 1px solid var(--border);
+    }
+    .sincere-item:last-child { border-right: none; }
+    .sincere-item-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+    .sincere-item p { font-size: 0.92rem; color: var(--muted); line-height: 1.8; }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: #090806;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 300;
+      color: #FFFFFF;
+      line-height: 1.3;
+      max-width: 640px;
+      margin: 0 auto 0.75rem;
+    }
+    .cta-section h2 em { font-style: italic; color: var(--accent-lt); }
+    .cta-section p {
+      color: #9A9690;
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.75;
+    }
+    .cta-pair {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 960px) {
+      .engine-grid    { grid-template-columns: 1fr; }
+      .platform-grid  { grid-template-columns: 1fr; }
+      .entities-grid  { grid-template-columns: 1fr; }
+      .sincere-bar    { grid-template-columns: 1fr; }
+      .sincere-item   { border-right: none; border-bottom: 1px solid var(--border); }
+      .sincere-item:last-child { border-bottom: none; }
+      .pilot-stats-inner { gap: 1.5rem; }
     }
   </style>
 </head>
@@ -112,6 +326,7 @@
     <div class="nav-links">
       <a href="index.html" class="nav-link active">Home</a>
       <a href="brands.html" class="nav-link">Our Brands</a>
+      <a href="whollyfare.html" class="nav-link">WhollyFare®</a>
       <a href="mission.html" class="nav-link">Our Mission</a>
       <a href="about.html" class="nav-link">About Us</a>
       <a href="investors.html" class="nav-link">Investors</a>
@@ -121,90 +336,270 @@
 
   <!-- HERO -->
   <section class="hero">
-    <p class="hero-eyebrow">Sentir Solutions® &nbsp;·&nbsp; A Sincere Company &nbsp;·&nbsp; Charlottesville, Virginia</p>
-    <h1>Built for your business,<br />your dinner table,<br />and <em>every shelf in between.</em></h1>
+    <p class="hero-eyebrow">Sentir Solutions® &nbsp;·&nbsp; Charlottesville, Virginia &nbsp;·&nbsp; Est. 2026</p>
+    <h1>The grocery industry has<br />pricing engines. Families have<br /><em>a paper circular.</em></h1>
     <p class="hero-sub">
-      Sentir Solutions is the platform. Sentir Consulting is how we fund it.
-      The Wholly brands — WhollyFare, WhollyWare, WhollyPaws, and WhollyCare — are what we're building for everyone.
+      We're fixing that. WhollyFare® is live — running a real pilot for real families in Charlottesville, Virginia. Four stores. Real receipts. Eight weeks of Found Money data. It is the proof that the model works. And the model extends to every shelf in your home.
     </p>
     <div class="hero-actions">
-      <a href="brands.html" class="btn-primary">Our Brands</a>
-      <a href="mission.html" class="btn-ghost">Our Mission</a>
+      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" class="btn-primary" target="_blank" rel="noopener">Open WhollyFare® ↗</a>
+      <a href="whollyfare.html" class="btn-ghost">Why WhollyFare First</a>
     </div>
+    <div class="hero-rule"></div>
   </section>
 
-  <!-- X / Y / Z BAR -->
-  <div style="padding: 0 2rem;">
+  <!-- PILOT STATS BAR -->
+  <div class="pilot-stats">
     <div class="container">
-      <div class="xyz-rule">
-        <div class="xyz-item">
-          <span class="xyz-label">The Platform</span>
-          <span class="xyz-text">Sentir Solutions® is the holding company — the Sincere Strategy® engine that powers every brand.</span>
+      <div class="pilot-stats-inner">
+        <div class="pilot-stat">
+          <span class="pilot-stat-number">4</span>
+          <span class="pilot-stat-label">Charlottesville Stores</span>
         </div>
-        <div class="xyz-divider"></div>
-        <div class="xyz-item">
-          <span class="xyz-label">The Fuel</span>
-          <span class="xyz-text">Sentir Consulting is the AI strategy practice that funds platform R&amp;D while the Wholly brands scale.</span>
+        <div class="pilot-stat-divider"></div>
+        <div class="pilot-stat">
+          <span class="pilot-stat-number">8 wks</span>
+          <span class="pilot-stat-label">Real Receipts</span>
         </div>
-        <div class="xyz-divider"></div>
-        <div class="xyz-item">
-          <span class="xyz-label">The End Game</span>
-          <span class="xyz-text">Four consumer brands — WhollyFare, WhollyWare, WhollyPaws, WhollyCare — serving every shelf in the home.</span>
+        <div class="pilot-stat-divider"></div>
+        <div class="pilot-stat">
+          <span class="pilot-stat-number">$0</span>
+          <span class="pilot-stat-label">From Ads or Affiliates</span>
+        </div>
+        <div class="pilot-stat-divider"></div>
+        <div class="pilot-stat">
+          <span class="pilot-stat-number">239+</span>
+          <span class="pilot-stat-label">Items via Kroger API</span>
+        </div>
+        <div class="pilot-stat-divider"></div>
+        <div class="pilot-stat">
+          <span class="pilot-stat-number">Net</span>
+          <span class="pilot-stat-label">Savings Always After Gas</span>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- THREE PILLARS -->
-  <section>
+  <!-- ENGINE SECTION -->
+  <section class="engine-section">
     <div class="container">
-      <p class="section-label">What We're Building</p>
-      <h2>One principle.<br /><em>Every part of your life.</em></h2>
-      <p class="lead">The Sincere Strategy® means zero paid placements, health constraints that are never traded for savings, and radical transparency — always. Here's how it shows up across the portfolio.</p>
+      <p class="section-label light fade-in">The Engine</p>
+      <h2 class="light fade-in">WhollyFare® is live.<br /><em>This is what that means.</em></h2>
+      <div class="divider fade-in"></div>
 
-      <div class="three-col">
-
-        <div class="pillar-card fare">
-          <span class="pillar-tag">Flagship · Active</span>
-          <h3>WhollyFare®</h3>
-          <p>The meal plan that pays you back. Cross-grocer price optimization, allergen-aware filtering, and honest trip costs — net of gas — so you know exactly what you saved.</p>
-          <a href="brands.html" class="pillar-link">See all four brands →</a>
+      <div class="engine-grid fade-in">
+        <div class="engine-narrative">
+          <p>
+            <strong>WhollyFare is not a concept. It is a working product.</strong> Every Wednesday,
+            Tim pulls the week's sale circulars from Kroger, Food Lion, Aldi, and Harris Teeter —
+            automatically via the Kroger API or by extracting PDFs with Claude Vision. The platform
+            builds a constraint-filtered meal plan from what's actually on sale at your actual stores
+            this week.
+          </p>
+          <p>
+            The constraint engine runs before the optimizer. Dietary restrictions, allergen profiles,
+            and health conditions are hard rules — never traded for a better deal. What gets excluded
+            is logged and shown to the household. There are no black boxes. That is the Sincere
+            Strategy applied to food.
+          </p>
+          <p>
+            The output: a five-dinner plan, a per-store shopping list, and a Found Money ledger that
+            shows exactly what you saved — gross savings, minus the cost of the drive. We flag stores
+            where the gas costs more than the savings. We say so, even when it makes the headline
+            number smaller.
+          </p>
+          <p>
+            <strong>This is the proof of concept.</strong> Eight weeks of real receipts from a real
+            Charlottesville household. That data is the argument — for the next three Wholly brands,
+            for the platform thesis, for the investors we're building toward. WhollyFare had to work
+            first. It does.
+          </p>
+          <div class="engine-actions">
+            <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" class="btn-primary" target="_blank" rel="noopener">Open WhollyFare® ↗</a>
+            <a href="whollyfare.html" class="btn-ghost">The full WhollyFare story →</a>
+          </div>
         </div>
 
-        <div class="pillar-card">
-          <span class="pillar-tag">Wholly Platform · Coming Soon</span>
-          <h3>WhollyWare™ &nbsp;·&nbsp; WhollyPaws™ &nbsp;·&nbsp; WhollyCare™</h3>
-          <p>The same sincere engine applied to home goods, pet care, and health &amp; wellness. WhollyFare proved the model. These three extend it to every category of household spending.</p>
-          <a href="brands.html" class="pillar-link">Explore the roadmap →</a>
+        <!-- FOUND MONEY MOCK CARD -->
+        <div>
+          <div class="found-money-card">
+            <div class="fmc-header">
+              <span class="fmc-header-title">Found Money Ledger</span>
+              <span class="fmc-header-badge">● Live</span>
+            </div>
+            <div class="fmc-body">
+              <div class="fmc-week">Week of May 21, 2026 &nbsp;·&nbsp; Charlottesville, VA</div>
+              <div class="fmc-row">
+                <div>
+                  <div class="fmc-store">Kroger Barracks Rd</div>
+                  <div class="fmc-detail">0.8 mi · $0.35 trip cost</div>
+                </div>
+                <div class="fmc-savings">+$14.20</div>
+              </div>
+              <div class="fmc-row">
+                <div>
+                  <div class="fmc-store">Aldi Rio Road</div>
+                  <div class="fmc-detail">2.1 mi · $0.92 trip cost</div>
+                </div>
+                <div class="fmc-savings">+$9.60</div>
+              </div>
+              <div class="fmc-row">
+                <div>
+                  <div class="fmc-store">Food Lion Pantops</div>
+                  <div class="fmc-detail">4.3 mi · $1.89 trip cost</div>
+                </div>
+                <div class="fmc-savings">+$6.45</div>
+              </div>
+              <div class="fmc-row">
+                <div>
+                  <div class="fmc-store">Harris Teeter Barracks</div>
+                  <div class="fmc-detail">0.9 mi · $0.40 trip · skipped</div>
+                </div>
+                <div class="fmc-savings negative">−$0.12</div>
+              </div>
+              <div class="fmc-divider"></div>
+              <div class="fmc-total-row">
+                <span class="fmc-total-label">Net Found Money</span>
+                <span class="fmc-total-amount">$27.99</span>
+              </div>
+              <div class="fmc-subtext">
+                Gross $30.25 · Gas $2.26 · Harris Teeter skipped (savings &lt; trip cost).<br/>
+                vs. HelloFresh: $142 for 5 dinners &nbsp;·&nbsp; WhollyFare: $64.18.
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="pillar-card">
-          <span class="pillar-tag">Operating Practice</span>
-          <h3>Sentir Consulting</h3>
-          <p>AI strategy for small businesses, enterprises, and government agencies. Two decades of applied technology work — the revenue that funds the platform and the expertise that built it.</p>
-          <a href="https://sentir-consulting.com" class="pillar-link" target="_blank" rel="noopener">Visit Sentir Consulting ↗</a>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer style="background: var(--darker); color: #9A9690; padding: 2.5rem 2rem; text-align: center; font-size: 0.82rem;">
+  <!-- PLATFORM BRANDS -->
+  <section class="platform-section">
     <div class="container">
-      <p style="margin-bottom: 0.5rem;">
-        <strong style="color: #FFFFFF;">Sentir Solutions®</strong> &nbsp;·&nbsp;
-        Sentir Solutions LLC &nbsp;·&nbsp; Charlottesville, Virginia
+      <p class="section-label fade-in">The Platform</p>
+      <h2 class="fade-in">WhollyFare proved the model.<br /><em>Three more brands extend it.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead fade-in">
+        The Sincere Strategy is not category-specific. Cross-grocer price intelligence, constraint-first filtering, honest trip costs, and zero paid placements work for household goods, pet care, and personal care the same way they work for groceries. WhollyFare is Phase 1. These are what follows.
       </p>
-      <p>
-        <a href="mission.html" style="color: #9A9690; text-decoration: none; margin: 0 0.75rem;">Our Mission</a>
-        <a href="about.html" style="color: #9A9690; text-decoration: none; margin: 0 0.75rem;">About Us</a>
-        <a href="investors.html" style="color: #9A9690; text-decoration: none; margin: 0 0.75rem;">Investors</a>
-        <a href="https://sentir-consulting.com" style="color: #9A9690; text-decoration: none; margin: 0 0.75rem;">Sentir Consulting ↗</a>
-      </p>
+      <div class="platform-grid fade-in">
+        <div class="platform-card ware">
+          <span class="platform-tag">WhollyWare™ &nbsp;·&nbsp; Coming Soon</span>
+          <h3>Household goods,<br />optimized.</h3>
+          <p>Paper goods, laundry, cleaning supplies, kitchen essentials — cross-store price comparison with unit pricing, trip cost math, and the same zero-placement guarantee. Your household staples, bought at the right price.</p>
+          <a href="https://timhislop-design.github.io/whollyware-app/" class="platform-link" target="_blank" rel="noopener">Explore WhollyWare →</a>
+        </div>
+        <div class="platform-card paws">
+          <span class="platform-tag">WhollyPaws™ &nbsp;·&nbsp; Coming Soon</span>
+          <h3>Pet care with<br />a constraint engine.</h3>
+          <p>Multi-pet profiles, ingredient-safe filtering, vet diet support, unit weight math — because your pet's dietary restrictions are as non-negotiable as your household's. Savings that never compromise safety.</p>
+          <a href="https://timhislop-design.github.io/whollypaws-app/" class="platform-link" target="_blank" rel="noopener">Explore WhollyPaws →</a>
+        </div>
+        <div class="platform-card care">
+          <span class="platform-tag">WhollyCare™ &nbsp;·&nbsp; Coming Soon</span>
+          <h3>Personal care filtered<br />to your ingredients.</h3>
+          <p>Ingredient avoidance, ethical commitments, skin and sensitivity rules — applied to every product across every store. Your rules filter first. The savings engine runs second. Always.</p>
+          <a href="https://timhislop-design.github.io/whollycare-app/" class="platform-link" target="_blank" rel="noopener">Explore WhollyCare →</a>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- THREE ENTITIES -->
+  <section class="entities-section">
+    <div class="container">
+      <p class="section-label light fade-in">How This Works</p>
+      <h2 class="light fade-in">Three entities.<br /><em>One strategy.</em></h2>
+      <div class="divider fade-in"></div>
+      <div class="entities-grid fade-in">
+        <div class="entity-card">
+          <div class="entity-number">01</div>
+          <div class="entity-role">The Soul</div>
+          <div class="entity-name">Sentir Consulting</div>
+          <p class="entity-desc">
+            The AI strategy and operations practice that has been running for two decades. Small businesses, enterprises, federal government — helping owners increase EBITDA and build AI-capable operations without replacing the people who built the business alongside them. Sentir Consulting is the revenue that funds everything else. It funds the platform, the pilot, and the next three brands.
+          </p>
+        </div>
+        <div class="entity-card">
+          <div class="entity-number">02</div>
+          <div class="entity-role">The Engine</div>
+          <div class="entity-name">WhollyFare®</div>
+          <p class="entity-desc">
+            The live proof of concept. A working meal planning platform with real pilot data, real households, and real receipts. The constraint engine. The Kroger API integration. The Found Money ledger. Every architectural decision made here — constraint-first, local-first, net savings always — is the template for the next three Wholly brands. WhollyFare had to work before anything else could be built. It works.
+          </p>
+        </div>
+        <div class="entity-card">
+          <div class="entity-number">03</div>
+          <div class="entity-role">The Actualization</div>
+          <div class="entity-name">The Wholly Platform</div>
+          <p class="entity-desc">
+            WhollyWare, WhollyPaws, WhollyCare — the same sincere engine applied to every category of household spending. The platform thesis: if the Sincere Strategy works for groceries, it works everywhere. The pilot data from WhollyFare is the argument that unlocks the investment, the team, and the national scale the platform is designed to reach.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SINCERE STRATEGY CALLOUT -->
+  <section class="sincere-callout">
+    <div class="container">
+      <p class="section-label fade-in">The Principle</p>
+      <h2 class="fade-in">The Sincere Strategy® is not<br /><em>a marketing position.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead fade-in">
+        It is an operating constraint. Every principle below is also a business rule. Competitors built on ad revenue or affiliate fees cannot adopt these rules without dismantling their own revenue model. That asymmetry is structural. It compounds with every household we serve.
+      </p>
+      <div class="sincere-bar fade-in">
+        <div class="sincere-item">
+          <div class="sincere-item-label">Zero Paid Placements. Ever.</div>
+          <p>Revenue is subscriptions only. No brand can pay to appear in a plan, recommendation, or result — on any Wholly product. If it appears, it earned it on price and suitability alone.</p>
+        </div>
+        <div class="sincere-item">
+          <div class="sincere-item-label">Health Before Savings. Always.</div>
+          <p>Dietary constraints are absolute hard rules. The constraint engine runs before the optimizer. A $0.50 saving never overrides an allergen profile, a health condition, or a household rule.</p>
+        </div>
+        <div class="sincere-item">
+          <div class="sincere-item-label">Net Savings. Never Gross.</div>
+          <p>We show you what you actually kept — after gas, after trip costs. We flag stores where the drive costs more than the savings. We say so, even when it makes our headline number smaller.</p>
+        </div>
+      </div>
+      <div style="margin-top:2rem;" class="fade-in">
+        <a href="mission.html" class="btn-outline">The full Sincere Strategy →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING CTA -->
+  <section class="cta-section">
+    <h2>Built by someone who stood<br />on <em>both sides of the shelf.</em></h2>
+    <p>Two decades on the grocery floor and two decades of AI strategy. The insight has existed for years. The tools to act on it — affordably, in real time, for real families — arrived now.</p>
+    <div class="cta-pair">
+      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" class="btn-primary" target="_blank" rel="noopener">Open WhollyFare® ↗</a>
+      <a href="about.html" class="btn-ghost">About Tim →</a>
+      <a href="investors.html" class="btn-ghost">For Investors →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 Sentir Solutions® LLC &nbsp;·&nbsp; Charlottesville, Virginia &nbsp;·&nbsp;
+      <a href="https://sentir-consulting.com">Sentir Consulting</a> &nbsp;·&nbsp;
+      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app">WhollyFare®</a> &nbsp;·&nbsp;
+      <a href="https://timhislop-design.github.io/whollyware-app/">WhollyWare™</a> &nbsp;·&nbsp;
+      <a href="https://timhislop-design.github.io/whollypaws-app/">WhollyPaws™</a> &nbsp;·&nbsp;
+      <a href="https://timhislop-design.github.io/whollycare-app/">WhollyCare™</a>
+    </p>
+    <p style="margin-top:0.5rem; opacity:0.5;">The Sincere Strategy® · Zero paid placements · Revenue is subscriptions only</p>
   </footer>
+
+  <script>
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+      { threshold: 0.07 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
 
 </body>
 </html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

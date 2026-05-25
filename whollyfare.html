@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WhollyFare® — The Engine — Sentir Solutions®</title>
+  <meta name="description" content="WhollyFare is the live proof of concept for the entire Wholly platform thesis. Cross-grocer meal planning, constraint-first, net savings always. Running in Charlottesville, VA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+
+    /* ── FARE GREEN ACCENT OVERRIDE ── */
+    :root {
+      --fare-dark: #0F2E18;
+      --fare-mid:  #1D5C2E;
+      --fare-accent: #3A8C4E;
+      --fare-lt:   #6FCFA0;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how-section {
+      padding: 6rem 2rem;
+      background: var(--bg-alt);
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 3rem;
+      border: 1px solid var(--border);
+    }
+    .step {
+      padding: 2.25rem;
+      border-right: 1px solid var(--border);
+      position: relative;
+    }
+    .step:last-child { border-right: none; }
+    .step-num {
+      font-family: 'Fraunces', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: var(--fare-lt);
+      opacity: 0.35;
+      line-height: 1;
+      margin-bottom: 1.25rem;
+    }
+    .step h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+      line-height: 1.3;
+    }
+    .step p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* ── CONSTRAINT ENGINE DETAIL ── */
+    .constraint-section {
+      background: var(--fare-dark);
+      padding: 6rem 2rem;
+    }
+    .constraint-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+      align-items: start;
+    }
+    .constraint-narrative p {
+      font-size: 1rem;
+      color: #C0BCB7;
+      line-height: 1.9;
+      margin-bottom: 1.25rem;
+    }
+    .constraint-narrative strong { color: #FFFFFF; font-weight: 500; }
+
+    /* FILTER MOCK */
+    .filter-mock {
+      background: #FFFFFF;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    .fm-header {
+      background: var(--fare-mid);
+      padding: 1rem 1.5rem;
+    }
+    .fm-header-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+    .fm-body { padding: 1.25rem 1.5rem; }
+    .fm-week {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--fare-accent);
+      margin-bottom: 1rem;
+    }
+    .fm-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #F0EDE8;
+      gap: 1rem;
+    }
+    .fm-item:last-of-type { border-bottom: none; }
+    .fm-item-name {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #2D2926;
+    }
+    .fm-item-store {
+      font-size: 0.75rem;
+      color: #8A8480;
+      margin-top: 0.1rem;
+    }
+    .fm-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+    .fm-badge.pass {
+      background: #EAF6EE;
+      color: var(--fare-accent);
+      border: 1px solid #C5E6CE;
+    }
+    .fm-badge.reject {
+      background: #FEF2EC;
+      color: #B05A1A;
+      border: 1px solid #F4C9A8;
+    }
+    .fm-reject-reason {
+      font-size: 0.72rem;
+      color: #B05A1A;
+      margin-top: 0.2rem;
+    }
+    .fm-divider { height: 1px; background: #E8E4DE; margin: 1rem 0; }
+    .fm-summary {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      color: #6A6660;
+    }
+    .fm-summary strong { color: var(--fare-accent); }
+
+    /* ── PROOF SECTION ── */
+    .proof-section {
+      padding: 6rem 2rem;
+      background: var(--bg);
+    }
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    .proof-callout {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--fare-accent);
+      padding: 2.5rem;
+    }
+    .proof-callout h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+    .proof-callout p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      line-height: 1.85;
+    }
+    .proof-callout .proof-stat {
+      font-family: 'Fraunces', serif;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--fare-accent);
+      display: block;
+      margin: 1rem 0 0.5rem;
+    }
+    .proof-callout .proof-stat-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── WHAT IT UNLOCKS ── */
+    .unlocks-section {
+      background: var(--dark);
+      padding: 6rem 2rem;
+    }
+    .unlocks-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .unlock-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-top: 2px solid var(--fare-lt);
+      padding: 2rem;
+    }
+    .unlock-card h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #FFFFFF;
+      margin-bottom: 0.75rem;
+    }
+    .unlock-card p {
+      font-size: 0.88rem;
+      color: #9A9690;
+      line-height: 1.8;
+    }
+    .unlock-tag {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--fare-lt);
+      margin-bottom: 0.6rem;
+    }
+
+    /* ── SINCERE RULES ── */
+    .rules-section {
+      padding: 6rem 2rem;
+      background: var(--bg-alt);
+    }
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .rule-card {
+      display: flex;
+      gap: 1.25rem;
+      align-items: flex-start;
+      padding: 1.75rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+    }
+    .rule-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .rule-text h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 0.4rem;
+    }
+    .rule-text p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: var(--fare-mid);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 300;
+      color: #FFFFFF;
+      line-height: 1.3;
+      max-width: 600px;
+      margin: 0 auto 0.75rem;
+    }
+    .cta-section h2 em { font-style: italic; color: var(--fare-lt); }
+    .cta-section p {
+      color: rgba(255,255,255,0.7);
+      font-size: 1rem;
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.75;
+    }
+    .cta-pair {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-white {
+      display: inline-block;
+      padding: 0.85rem 1.75rem;
+      background: #FFFFFF;
+      color: var(--fare-mid);
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: opacity 0.2s;
+    }
+    .btn-white:hover { opacity: 0.9; }
+    .btn-white-outline {
+      display: inline-block;
+      padding: 0.85rem 1.75rem;
+      background: transparent;
+      color: #FFFFFF;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      border-radius: 2px;
+      border: 1px solid rgba(255,255,255,0.4);
+      transition: border-color 0.2s, opacity 0.2s;
+    }
+    .btn-white-outline:hover { border-color: rgba(255,255,255,0.8); }
+
+    @media (max-width: 900px) {
+      .steps-grid      { grid-template-columns: 1fr 1fr; }
+      .step            { border-bottom: 1px solid var(--border); }
+      .constraint-grid { grid-template-columns: 1fr; }
+      .proof-grid      { grid-template-columns: 1fr; }
+      .unlocks-grid    { grid-template-columns: 1fr; }
+      .rules-grid      { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 540px) {
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <span class="mark-pipe1">(</span><span class="mark-pipe2">(</span> Sentir Solutions®
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="brands.html" class="nav-link">Our Brands</a>
+      <a href="whollyfare.html" class="nav-link active">WhollyFare®</a>
+      <a href="mission.html" class="nav-link">Our Mission</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="investors.html" class="nav-link">Investors</a>
+      <a href="https://sentir-consulting.com" class="nav-link cta" target="_blank" rel="noopener">Sentir Consulting ↗</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">WhollyFare® &nbsp;·&nbsp; The Engine &nbsp;·&nbsp; Live · Charlottesville, VA</p>
+    <h1>"The meal plan<br />that pays<br /><em>you back."</em></h1>
+    <p class="hero-sub">
+      WhollyFare is the first Wholly brand — and the most important one. It is the proof that the Sincere Strategy works in the real world, with real families, at real stores. It had to be built first. It had to work first. It does. Everything else follows from this.
+    </p>
+    <div class="hero-actions">
+      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" class="btn-primary" target="_blank" rel="noopener">Open WhollyFare® ↗</a>
+      <a href="#how" class="btn-ghost">How It Works</a>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="how-section">
+    <div class="container">
+      <p class="section-label fade-in">The Workflow</p>
+      <h2 class="fade-in">From sale circular<br /><em>to dinner table.</em></h2>
+      <div class="divider fade-in"></div>
+      <div class="steps-grid fade-in">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Circulars come in</h4>
+          <p>Every Wednesday, Tim pulls sale data for Kroger (live API, 239+ items), Food Lion, Aldi, and Harris Teeter (PDF extraction via Claude Vision). What's on sale this week at your actual stores — not national averages, not estimates.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Constraints run first</h4>
+          <p>Before a single item reaches the optimizer, the constraint engine filters the full inventory against the household's dietary profile — allergens, diagnoses, lifestyle rules. Hard exclusions. No exceptions. Every rejection is logged.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>The plan is built</h4>
+          <p>Five dinners, assembled from what passes constraints and is actually on sale this week. Protein variety enforced. Meal rationale shown. The Sunday Buy-Off lets households approve, swap, or skip each meal before anything gets locked.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Found Money, honestly</h4>
+          <p>The shopping list breaks down by store. The Found Money Ledger shows gross savings, trip costs (at $0.22/mile), and net savings. If a store's savings don't cover the drive, we flag it and suggest skipping. Gross numbers are never the headline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSTRAINT ENGINE -->
+  <section class="constraint-section">
+    <div class="container">
+      <p class="section-label light fade-in">The Core</p>
+      <h2 class="light fade-in">Safety before savings.<br /><em>Always. Without exception.</em></h2>
+      <div class="divider fade-in"></div>
+      <div class="constraint-grid fade-in">
+        <div class="constraint-narrative">
+          <p>
+            <strong>The constraint engine is not a filter. It is a precondition.</strong> Before the meal planner sees a single sale item, every item in the week's circular has already passed through the household's dietary profile — allergens, health conditions, lifestyle exclusions, member-specific rules.
+          </p>
+          <p>
+            This is not a toggle the user can switch off to see better deals. It is not a preference. It is a hard wall that runs every time, on every item, before any optimization happens. A family member's tree nut allergy is not traded for a cheaper dinner. A CKD patient's potassium restrictions are not relaxed to hit a savings target.
+          </p>
+          <p>
+            <strong>Every rejection is logged and shown.</strong> If chicken breast was excluded because one member has a poultry sensitivity, that is surfaced. If a particular brand was rejected because it contains a listed allergen, the household sees it. Radical transparency is a founding commitment — there are no black boxes in how plans are built.
+          </p>
+          <p>
+            This is also the architectural decision that makes the next three Wholly brands straightforward to build. The same constraint engine that handles dietary profiles handles ingredient exclusions in WhollyCare, vet diet restrictions in WhollyPaws, and any filter a household can define. The engine is the platform. WhollyFare is its first application.
+          </p>
+        </div>
+        <!-- FILTER MOCK -->
+        <div>
+          <div class="filter-mock">
+            <div class="fm-header">
+              <div class="fm-header-title">This Week's Circular — Constraint Review</div>
+            </div>
+            <div class="fm-body">
+              <div class="fm-week">Kroger Barracks Rd &nbsp;·&nbsp; May 21, 2026</div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Salmon Fillet, 1 lb</div>
+                  <div class="fm-item-store">$6.99 sale · Seafood</div>
+                </div>
+                <div>
+                  <div class="fm-badge pass">✓ Pass</div>
+                </div>
+              </div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Chicken Thighs, 3 lb</div>
+                  <div class="fm-item-store">$5.49 sale · Poultry</div>
+                </div>
+                <div>
+                  <div class="fm-badge pass">✓ Pass</div>
+                </div>
+              </div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Planters Mixed Nuts, 16 oz</div>
+                  <div class="fm-item-store">$7.29 sale · Snacks</div>
+                </div>
+                <div>
+                  <div>
+                    <div class="fm-badge reject">✗ Rejected</div>
+                    <div class="fm-reject-reason">Chas: tree nut allergy (profile rule)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Ground Turkey, 1 lb</div>
+                  <div class="fm-item-store">$4.79 sale · Poultry</div>
+                </div>
+                <div>
+                  <div class="fm-badge pass">✓ Pass</div>
+                </div>
+              </div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Dannon Greek Yogurt, 32 oz</div>
+                  <div class="fm-item-store">$5.99 sale · Dairy</div>
+                </div>
+                <div>
+                  <div>
+                    <div class="fm-badge reject">✗ Rejected</div>
+                    <div class="fm-reject-reason">Abby: dairy exclusion (lifestyle rule)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fm-divider"></div>
+              <div class="fm-summary">
+                <span>47 items reviewed</span>
+                <span><strong>39 passed</strong> &nbsp;·&nbsp; 8 rejected</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROOF -->
+  <section class="proof-section">
+    <div class="container">
+      <p class="section-label fade-in">The Data</p>
+      <h2 class="fade-in">Eight weeks of real receipts.<br /><em>The model works.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead fade-in">
+        WhollyFare was not launched with projections. It was launched with a pilot — one household, four stores, Charlottesville, Virginia. The goal was simple: generate undeniable Found Money data before building anything else. Here is what that looks like.
+      </p>
+      <div class="proof-grid fade-in">
+        <div class="proof-callout">
+          <h4>The Charlottesville Pilot</h4>
+          <p>Tim Hislop, Abby, and Chas — three members, four stores, two dietary profiles in the constraint engine. Running since Phase 1 launch, tracked weekly. Real circulars, real receipts, real numbers.</p>
+          <span class="proof-stat">4 stores</span>
+          <span class="proof-stat-label">Kroger · Food Lion · Aldi · Harris Teeter</span>
+        </div>
+        <div class="proof-callout">
+          <h4>Cross-Grocer vs. Single-Store</h4>
+          <p>The savings argument is simple: a meal plan built from four stores' sale circulars, filtered for your household, finds deals no single-store shop can match. The cross-grocer optimizer finds the lowest available price for each ingredient across all four stores — net of the trip cost to get there.</p>
+          <span class="proof-stat">$0</span>
+          <span class="proof-stat-label">Revenue from placements, affiliates, or data</span>
+        </div>
+        <div class="proof-callout">
+          <h4>vs. HelloFresh (every week)</h4>
+          <p>HelloFresh charges approximately $142 for five dinners for a family of three. WhollyFare's plan for the same week costs roughly $64 in groceries — using the same stores you already shop, with your own ingredients, from what's actually on sale. The ledger shows the gap, every week.</p>
+          <span class="proof-stat">~$78</span>
+          <span class="proof-stat-label">Typical weekly delta vs. HelloFresh (net)</span>
+        </div>
+        <div class="proof-callout">
+          <h4>Why Phase 1 matters for investors</h4>
+          <p>Investors in consumer platforms ask one question before any other: does this work in the real world, or only in a deck? Phase 1 exists to answer that question with receipts. Eight weeks of actual data from an actual household. That data is the argument that unlocks Phase 2, Phase 3, and the investment that scales the platform nationally.</p>
+          <span class="proof-stat">239+</span>
+          <span class="proof-stat-label">Items pulled via Kroger API in week one</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT UNLOCKS -->
+  <section class="unlocks-section">
+    <div class="container">
+      <p class="section-label light fade-in">The Platform Thesis</p>
+      <h2 class="light fade-in">If it works for food,<br /><em>it works everywhere.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead light fade-in">
+        WhollyFare's architecture was designed from the start to be a platform, not a product. The constraint engine, the circular ingestion pipeline, the trip cost math, the Found Money ledger — none of these are food-specific. They are infrastructure. Here is what that infrastructure unlocks.
+      </p>
+      <div class="unlocks-grid fade-in">
+        <div class="unlock-card">
+          <div class="unlock-tag">WhollyWare™</div>
+          <h4>Household goods,<br/>same engine.</h4>
+          <p>Paper goods, laundry, cleaning supplies — the same circular ingestion, the same unit price comparison, the same trip cost math. Constraint filtering applied to ingredient exclusions and brand ethics instead of dietary rules. Phase 2.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">WhollyPaws™</div>
+          <h4>Pet care, constraint-first.</h4>
+          <p>Multi-pet profiles, vet diet support, ingredient-safe filtering. The constraint engine handles pet dietary restrictions the same way it handles household member allergens — as hard rules that never bend for savings. Phase 2.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">WhollyCare™</div>
+          <h4>Personal care, filtered<br/>to your ingredients.</h4>
+          <p>Ingredient avoidance, ethical commitments, skin and sensitivity rules — the constraint engine knows your profile. It filters every product at every store against your rules before the savings engine runs. Phase 2.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">Phase 3 · Regional Scale</div>
+          <h4>Automated circular parsing<br/>at scale.</h4>
+          <p>The manual + PDF extraction workflow is a POC scaffold. Phase 3 replaces it with automated circular parsing, direct retail data feeds, and a React + FastAPI backend that scales to 15+ chains and 50,000+ households.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">Phase 4 · Series A</div>
+          <h4>National. 50,000+<br/>households.</h4>
+          <p>Receipt auto-capture, preference learning, delivery hub integration (Instacart, Shipt), community sharing. $2M+ ARR milestone. The platform thesis proven at scale — not just one household in Charlottesville.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">Phase 5 · Wholesale</div>
+          <h4>Costco. Sam's Club.<br/>Amazon Fresh.</h4>
+          <p>Bulk-unit math, membership economics, hybrid trip planning. The Sincere Strategy applied to wholesale — the category where price opacity is highest and household savings are largest. The horizon play.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SINCERE RULES FOR FOOD -->
+  <section class="rules-section">
+    <div class="container">
+      <p class="section-label fade-in">The Commitment</p>
+      <h2 class="fade-in">The Sincere Strategy,<br /><em>applied to your dinner table.</em></h2>
+      <div class="divider fade-in"></div>
+      <div class="rules-grid fade-in">
+        <div class="rule-card">
+          <div class="rule-icon">🚫</div>
+          <div class="rule-text">
+            <h4>Zero paid placements. Ever.</h4>
+            <p>No food brand pays to appear in a WhollyFare plan. No grocer pays to be recommended. If an item appears in your meal plan, it earned its place on price, availability, and suitability — nothing else.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">🛡️</div>
+          <div class="rule-text">
+            <h4>Health constraints are hard rules.</h4>
+            <p>Dietary restrictions, allergen profiles, and health conditions are preconditions, not preferences. The constraint engine runs before optimization. A $0.50 saving never overrides a household rule.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">👁️</div>
+          <div class="rule-text">
+            <h4>Every rejection is shown.</h4>
+            <p>If an item was excluded from your plan, you see exactly why. The rejection log is part of the product, not a hidden internal record. Radical transparency is a founding commitment, not a feature.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">⛽</div>
+          <div class="rule-text">
+            <h4>Net savings. Never gross.</h4>
+            <p>The Found Money Ledger shows gross savings minus trip costs at $0.22/mile. We flag stores where the drive costs more than the savings. We say so. Even when it makes the headline number smaller.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">📍</div>
+          <div class="rule-text">
+            <h4>Local-first. Your stores.</h4>
+            <p>Plans are built from your actual stores' actual sale circulars — this week's data, not national averages. Kroger Barracks Road. Food Lion Pantops. Aldi Rio Road. Harris Teeter Barracks Road. Your town.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">🔒</div>
+          <div class="rule-text">
+            <h4>Your data stays yours.</h4>
+            <p>WhollyFare knows your household's health constraints and buying patterns. That data belongs to your household. It is never sold, never shared, never used for targeting. Ever.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>The proof of concept<br />is <em>running right now.</em></h2>
+    <p>WhollyFare is live on Streamlit Cloud. Sign in, add your stores, enter your household constraints, and get this week's plan. Real circulars. Real savings. Real data.</p>
+    <div class="cta-pair">
+      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" class="btn-white" target="_blank" rel="noopener">Open WhollyFare® ↗</a>
+      <a href="investors.html" class="btn-white-outline">For Investors →</a>
+      <a href="brands.html" class="btn-white-outline">The full platform →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 Sentir Solutions® LLC &nbsp;·&nbsp; Charlottesville, Virginia &nbsp;·&nbsp;
+      <a href="https://sentir-consulting.com">Sentir Consulting</a> &nbsp;·&nbsp;
+      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app">WhollyFare®</a> &nbsp;·&nbsp;
+      <a href="https://timhislop-design.github.io/whollyware-app/">WhollyWare™</a> &nbsp;·&nbsp;
+      <a href="https://timhislop-design.github.io/whollypaws-app/">WhollyPaws™</a> &nbsp;·&nbsp;
+      <a href="https://timhislop-design.github.io/whollycare-app/">WhollyCare™</a>
+    </p>
+    <p style="margin-top:0.5rem; opacity:0.5;">The Sincere Strategy® · Zero paid placements · Revenue is subscriptions only</p>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
+      { threshold: 0.07 }
+    );
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+
+</body>
+</html>
