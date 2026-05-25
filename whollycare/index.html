@@ -189,6 +189,39 @@
       .nav-links .nav-link { display: none; }
       .nav-links .nav-waitlist { display: flex; }
     }
+
+    /* ── PLATFORM DROPDOWN ── */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown-trigger {
+      background: none; border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.75); font-size: 0.82rem; font-family: inherit;
+      cursor: pointer; padding: 0.35rem 0.75rem; border-radius: 6px;
+      transition: background 0.2s, color 0.2s; letter-spacing: 0.02em;
+    }
+    .nav-dropdown-trigger:hover { background: rgba(255,255,255,0.1); color: white; }
+    .nav-dropdown-menu {
+      display: none; position: absolute; top: calc(100% + 10px); right: 0;
+      background: #0e0e1a; border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px; padding: 0.5rem; min-width: 210px;
+      z-index: 200; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+    }
+    .nav-dropdown.open .nav-dropdown-menu { display: block; }
+    .nav-dropdown-menu a {
+      display: block; padding: 0.5rem 0.85rem; color: rgba(255,255,255,0.7);
+      text-decoration: none; font-size: 0.83rem; border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: white; }
+    .nav-dropdown-menu a.current-brand {
+      color: white; font-weight: 600;
+      background: rgba(255,255,255,0.07); cursor: default; pointer-events: none;
+    }
+    .dropdown-group-label {
+      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.28);
+      padding: 0.6rem 0.85rem 0.25rem;
+    }
+    .dropdown-divider { border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0; }
   </style>
 </head>
 <body>
@@ -208,7 +241,19 @@
     <a href="#ingredients" class="nav-link">Ingredients</a>
     <a href="#how-it-works" class="nav-link">How It Works</a>
     <a href="#pricing" class="nav-link">Pricing</a>
-    <a href="https://sentirsolutions.github.io/sentir-solutions-site/" class="nav-link" target="_blank" rel="noopener">Sentir Solutions</a>
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-trigger">Platform ▾</button>
+      <div class="nav-dropdown-menu">
+        <div class="dropdown-group-label">Sentir Solutions</div>
+        <a href="https://sentirsolutions.github.io/sentir-solutions-site/">Sentir Solutions® — Home</a>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-group-label">Wholly Brands</div>
+        <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" target="_blank" rel="noopener">WhollyFare® ↗</a>
+      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollyware/">WhollyWare™</a>
+      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollypaws/">WhollyPaws™</a>
+      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollycare/" class="current-brand">WhollyCare™ ← you are here</a>
+      </div>
+    </div>
     <a href="mailto:tim.hislop@gmail.com?subject=WhollyCare%20Waitlist" class="nav-waitlist">Join Waitlist →</a>
   </div>
 </nav>
@@ -447,5 +492,20 @@
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 </script>
+
+  <script>
+    // Platform dropdown toggle
+    const trigger = document.querySelector('.nav-dropdown-trigger');
+    const dropdown = document.querySelector('.nav-dropdown');
+    if (trigger && dropdown) {
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+      });
+      document.addEventListener('click', function() {
+        dropdown.classList.remove('open');
+      });
+    }
+  </script>
 </body>
 </html>
