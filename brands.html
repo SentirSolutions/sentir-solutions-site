@@ -319,6 +319,16 @@
       <a href="investors.html" class="nav-link">Investors</a>
       <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="nav-link cta" target="_blank" rel="noopener">Sentir Consulting ↗</a>
     </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="brands.html">Our Brands</a>
+    <a href="whollyfare.html">WhollyFare®</a>
+    <a href="mission.html">Our Mission</a>
+    <a href="about.html">About Us</a>
+    <a href="investors.html">Investors</a>
+    <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="mob-cta" target="_blank" rel="noopener">Sentir Consulting ↗</a>
+  </div>
   </nav>
 
   <!-- QUICK JUMP BAR -->
@@ -671,6 +681,24 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  </script>
+  <script>
+    // Mobile nav toggle
+    const _hb = document.getElementById('nav-hamburger');
+    const _mm = document.getElementById('nav-mobile-menu');
+    if (_hb && _mm) {
+      _hb.addEventListener('click', () => {
+        const open = _mm.classList.toggle('open');
+        _hb.setAttribute('aria-expanded', String(open));
+        _hb.textContent = open ? '✕' : '☰';
+      });
+      document.addEventListener('click', e => {
+        if (!e.target.closest('nav') && !e.target.closest('.nav-mobile-menu')) {
+          _mm.classList.remove('open');
+          _hb.textContent = '☰';
+        }
+      });
+    }
   </script>
 </body>
 </html>

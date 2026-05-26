@@ -402,6 +402,16 @@
       </div>
     </div>
     </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+  <div class="nav-mobile-menu" id="nav-mobile-menu">
+    <a href="index.html">Home</a>
+    <a href="brands.html">Our Brands</a>
+    <a href="whollyfare.html">WhollyFare®</a>
+    <a href="mission.html">Our Mission</a>
+    <a href="about.html">About Us</a>
+    <a href="investors.html">Investors</a>
+    <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="mob-cta" target="_blank" rel="noopener">Sentir Consulting ↗</a>
+  </div>
   </nav>
 
   <!-- HERO -->
@@ -428,7 +438,7 @@
         <div class="step">
           <div class="step-num">01</div>
           <h4>Circulars come in</h4>
-          <p>Every Wednesday, Tim pulls sale data for Kroger (live API, 239+ items), Food Lion, Aldi, and Harris Teeter (PDF extraction via Claude Vision). What's on sale this week at your actual stores — not national averages, not estimates.</p>
+          <p>Every Wednesday, Tim pulls sale data from ~10 grocery chains across the Charlottesville region — Kroger via live API (239+ items), and Food Lion, Aldi, Harris Teeter, Giant, Lidl, Walmart, Whole Foods, and Wegmans via Claude Vision PDF extraction. What's on sale this week at your actual stores — not national averages, not estimates.</p>
         </div>
         <div class="step">
           <div class="step-num">02</div>
@@ -548,18 +558,18 @@
       <h2 class="fade-in">Eight weeks of real receipts.<br /><em>The model works.</em></h2>
       <div class="divider fade-in"></div>
       <p class="lead fade-in">
-        WhollyFare was not launched with projections. It was launched with a pilot — one household, four stores, Charlottesville, Virginia. The goal was simple: generate undeniable Found Money data before building anything else. Here is what that looks like.
+        WhollyFare was not launched with projections. It was launched with a pilot — one household, ~10 major grocery chains, Charlottesville, Virginia. The goal was simple: generate undeniable Found Money data before building anything else. Here is what that looks like.
       </p>
       <div class="proof-grid fade-in">
         <div class="proof-callout">
           <h4>The Charlottesville Pilot</h4>
-          <p>Tim Hislop, Abby, and Chas — three members, four stores, two dietary profiles in the constraint engine. Running since Phase 1 launch, tracked weekly. Real circulars, real receipts, real numbers.</p>
-          <span class="proof-stat">4 stores</span>
-          <span class="proof-stat-label">Kroger · Food Lion · Aldi · Harris Teeter</span>
+          <p>Tim Hislop, Abby, and Chas — three members, ~10 grocery chains, two dietary profiles in the constraint engine. Running since Phase 1 launch, tracked weekly. Real circulars, real receipts, real numbers.</p>
+          <span class="proof-stat">~10 chains</span>
+          <span class="proof-stat-label">Kroger · Food Lion · Aldi · Harris Teeter · Giant · Lidl · Walmart · Whole Foods · Wegmans +</span>
         </div>
         <div class="proof-callout">
           <h4>Cross-Grocer vs. Single-Store</h4>
-          <p>The savings argument is simple: a meal plan built from four stores' sale circulars, filtered for your household, finds deals no single-store shop can match. The cross-grocer optimizer finds the lowest available price for each ingredient across all four stores — net of the trip cost to get there.</p>
+          <p>The savings argument is simple: a meal plan built from ~10 stores' sale circulars, filtered for your household, finds deals no single-store shop can match. The cross-grocer optimizer finds the lowest available price for each ingredient across all participating stores — net of the trip cost to get there.</p>
           <span class="proof-stat">$0</span>
           <span class="proof-stat-label">Revenue from placements, affiliates, or data</span>
         </div>
@@ -662,7 +672,7 @@
           <div class="rule-icon">📍</div>
           <div class="rule-text">
             <h4>Local-first. Your stores.</h4>
-            <p>Plans are built from your actual stores' actual sale circulars — this week's data, not national averages. Kroger Barracks Road. Food Lion Pantops. Aldi Rio Road. Harris Teeter Barracks Road. Your town.</p>
+            <p>Plans are built from your actual stores' actual sale circulars — this week's data, not national averages. Kroger Barracks Road. Food Lion Pantops. Aldi Rio Road. Harris Teeter Barracks Road. Giant. Lidl. Walmart. Whole Foods. Wegmans. Your town.</p>
           </div>
         </div>
         <div class="rule-card">
@@ -718,6 +728,24 @@
     document.addEventListener('click', function() {
       document.querySelectorAll('.nav-dropdown').forEach(function(d) { d.classList.remove('open'); });
     });
+  </script>
+  <script>
+    // Mobile nav toggle
+    const _hb = document.getElementById('nav-hamburger');
+    const _mm = document.getElementById('nav-mobile-menu');
+    if (_hb && _mm) {
+      _hb.addEventListener('click', () => {
+        const open = _mm.classList.toggle('open');
+        _hb.setAttribute('aria-expanded', String(open));
+        _hb.textContent = open ? '✕' : '☰';
+      });
+      document.addEventListener('click', e => {
+        if (!e.target.closest('nav') && !e.target.closest('.nav-mobile-menu')) {
+          _mm.classList.remove('open');
+          _hb.textContent = '☰';
+        }
+      });
+    }
   </script>
 </body>
 </html>
