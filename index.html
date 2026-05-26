@@ -4,347 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sentir Solutions® — We build things people can actually trust.</title>
-  <meta name="description" content="Two businesses. One rule. Sentir Consulting serves businesses navigating AI. The Wholly platform serves households navigating their spending. The Sincere Strategy® runs through both — zero paid placements, constraints before optimization, radical transparency." />
+  <meta name="description" content="Two businesses. One rule. The Sincere Strategy® runs through both — zero paid placements, constraints before optimization, radical transparency. Always." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <style>
-
-    /* ── ENGINE SECTION ── */
-    .engine-section {
-      background: var(--dark);
-      padding: 6rem 2rem;
-    }
-    .engine-grid {
-      display: grid;
-      grid-template-columns: 1fr 400px;
-      gap: 4rem;
-      align-items: start;
-      margin-top: 3rem;
-    }
-    .engine-narrative p {
-      font-size: 1rem;
-      color: #C0BCB7;
-      line-height: 1.9;
-      margin-bottom: 1.25rem;
-    }
-    .engine-narrative p:last-child { margin-bottom: 0; }
-    .engine-narrative strong { color: #FFFFFF; font-weight: 500; }
-    .engine-actions {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2.5rem;
-      flex-wrap: wrap;
-    }
-
-    /* ── FOUND MONEY MOCK CARD ── */
-    .found-money-card {
-      background: #FFFFFF;
-      border-radius: 4px;
-      overflow: hidden;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.35);
-    }
-    .fmc-header {
-      background: #1D5C2E;
-      padding: 1.1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .fmc-header-title {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.8);
-    }
-    .fmc-header-badge {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #6FCFA0;
-      border: 1px solid rgba(111,207,160,0.4);
-      padding: 0.2rem 0.6rem;
-      border-radius: 2px;
-    }
-    .fmc-body { padding: 1.5rem; }
-    .fmc-week {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #3A8C4E;
-      margin-bottom: 1rem;
-    }
-    .fmc-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.65rem 0;
-      border-bottom: 1px solid #F0EDE8;
-      font-size: 0.88rem;
-    }
-    .fmc-row:last-of-type { border-bottom: none; }
-    .fmc-store { color: #3D3930; font-weight: 500; }
-    .fmc-detail { color: #8A8480; font-size: 0.78rem; }
-    .fmc-savings { color: #3A8C4E; font-weight: 600; }
-    .fmc-savings.negative { color: #B05A1A; }
-    .fmc-divider { height: 1px; background: #E8E4DE; margin: 1rem 0; }
-    .fmc-total-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 0.5rem 0;
-    }
-    .fmc-total-label {
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #3D3930;
-    }
-    .fmc-total-amount {
-      font-family: 'Fraunces', serif;
-      font-size: 1.75rem;
-      font-weight: 300;
-      color: #1D5C2E;
-    }
-    .fmc-subtext {
-      font-size: 0.75rem;
-      color: #8A8480;
-      margin-top: 0.75rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid #F0EDE8;
-      line-height: 1.65;
-    }
-
-    /* ── PILOT STATS BAR ── */
-    .pilot-stats {
-      background: #F3F0EA;
-      padding: 1.75rem 2rem;
-      border-top: 3px solid #3A8C4E;
-    }
-    .pilot-stats-inner {
-      display: flex;
-      gap: 3rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .pilot-stat { display: flex; flex-direction: column; gap: 0.2rem; }
-    .pilot-stat-number {
-      font-family: 'Fraunces', serif;
-      font-size: 1.5rem;
-      font-weight: 300;
-      color: #1D5C2E;
-      line-height: 1;
-    }
-    .pilot-stat-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #6A6660;
-    }
-    .pilot-stat-divider {
-      width: 1px;
-      height: 36px;
-      background: #D6D1C8;
-      flex-shrink: 0;
-    }
-
-    /* ── PLATFORM SECTION ── */
-    .platform-section {
-      padding: 6rem 2rem;
-      background: var(--bg-alt);
-    }
-    .platform-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .platform-card {
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--accent);
-      background: var(--bg);
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.85rem;
-    }
-    .platform-card.ware { border-top-color: #4A94BB; }
-    .platform-card.paws { border-top-color: #C47D2E; }
-    .platform-card.care { border-top-color: #A45AB0; }
-    .platform-tag {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-    .platform-card h3 {
-      font-family: 'Fraunces', serif;
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: var(--dark);
-      line-height: 1.25;
-      margin: 0;
-    }
-    .platform-card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.8;
-      flex: 1;
-    }
-    .platform-link {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--accent);
-      text-decoration: none;
-      letter-spacing: 0.03em;
-      transition: opacity 0.2s;
-    }
-    .platform-link:hover { opacity: 0.7; }
-
-    /* ── THREE ENTITIES ── */
-    .entities-section {
-      background: var(--dark);
-      padding: 6rem 2rem;
-    }
-    .entities-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-    .entity-card { border-top: 2px solid rgba(255,255,255,0.12); padding-top: 2rem; }
-    .entity-number {
-      font-family: 'Fraunces', serif;
-      font-size: 2.5rem;
-      font-weight: 300;
-      color: var(--accent-lt);
-      opacity: 0.35;
-      line-height: 1;
-      margin-bottom: 1rem;
-    }
-    .entity-role {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--accent-lt);
-      margin-bottom: 0.6rem;
-    }
-    .entity-name {
-      font-family: 'Fraunces', serif;
-      font-size: 1.25rem;
-      font-weight: 400;
-      color: #FFFFFF;
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-    .entity-desc {
-      font-size: 0.9rem;
-      color: #9A9690;
-      line-height: 1.85;
-    }
-
-    /* ── SINCERE CALLOUT ── */
-    .sincere-callout { padding: 6rem 2rem; background: var(--bg); }
-    .sincere-bar {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      margin-top: 3rem;
-      border: 1px solid var(--border);
-    }
-    .sincere-item {
-      padding: 2rem 2.25rem;
-      border-right: 1px solid var(--border);
-    }
-    .sincere-item:last-child { border-right: none; }
-    .sincere-item-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-    }
-    .sincere-item p { font-size: 0.92rem; color: var(--muted); line-height: 1.8; }
-
-    /* ── CTA SECTION ── */
-    .cta-section {
-      background: #090806;
-      padding: 5rem 2rem;
-      text-align: center;
-    }
-    .cta-section h2 {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      font-weight: 300;
-      color: #FFFFFF;
-      line-height: 1.3;
-      max-width: 640px;
-      margin: 0 auto 0.75rem;
-    }
-    .cta-section h2 em { font-style: italic; color: var(--accent-lt); }
-    .cta-section p {
-      color: #9A9690;
-      font-size: 1rem;
-      max-width: 520px;
-      margin: 0 auto 2.5rem;
-      line-height: 1.75;
-    }
-    .cta-pair {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    @media (max-width: 960px) {
-      .engine-grid    { grid-template-columns: 1fr; }
-      .platform-grid  { grid-template-columns: 1fr; }
-      .entities-grid  { grid-template-columns: 1fr; }
-      .sincere-bar    { grid-template-columns: 1fr; }
-      .sincere-item   { border-right: none; border-bottom: 1px solid var(--border); }
-      .sincere-item:last-child { border-bottom: none; }
-      .pilot-stats-inner { gap: 1.5rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="css/spa.css" />
 </head>
 <body>
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="index.html">
+    <a class="nav-logo" href="#" data-section="home">
       <span class="mark-pipe1">(</span><span class="mark-pipe2">(</span> Sentir Solutions®
     </a>
     <div class="nav-links">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="brands.html" class="nav-link">Our Brands</a>
-      <a href="whollyfare.html" class="nav-link">WhollyFare®</a>
-      <a href="mission.html" class="nav-link">Our Mission</a>
-      <a href="about.html" class="nav-link">About Us</a>
-      <a href="investors.html" class="nav-link">Investors</a>
+      <a href="#" class="nav-link active" data-section="home">Home</a>
+      <a href="#" class="nav-link" data-section="brands">Our Brands</a>
+      <a href="#" class="nav-link" data-section="whollyfare">WhollyFare®</a>
+      <a href="#" class="nav-link" data-section="mission">Our Mission</a>
+      <a href="#" class="nav-link" data-section="about">About Us</a>
+      <a href="#" class="nav-link" data-section="investors">Investors</a>
       <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="nav-link cta" target="_blank" rel="noopener">Sentir Consulting ↗</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
-  <div class="nav-mobile-menu" id="nav-mobile-menu">
-    <a href="index.html">Home</a>
-    <a href="brands.html">Our Brands</a>
-    <a href="whollyfare.html">WhollyFare®</a>
-    <a href="mission.html">Our Mission</a>
-    <a href="about.html">About Us</a>
-    <a href="investors.html">Investors</a>
-    <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="mob-cta" target="_blank" rel="noopener">Sentir Consulting ↗</a>
-  </div>
+    <div class="nav-mobile-menu" id="nav-mobile-menu">
+      <a href="#" data-section="home">Home</a>
+      <a href="#" data-section="brands">Our Brands</a>
+      <a href="#" data-section="whollyfare">WhollyFare®</a>
+      <a href="#" data-section="mission">Our Mission</a>
+      <a href="#" data-section="about">About Us</a>
+      <a href="#" data-section="investors">Investors</a>
+      <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="mob-cta" target="_blank" rel="noopener">Sentir Consulting ↗</a>
+    </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- QUICK JUMP BAR (brands section only) -->
+  <div class="quick-jump" id="quickJump">
+    <span class="qj-label">Jump to</span>
+    <a href="#brand-fare" class="qj-link fare">WhollyFare®</a>
+    <a href="#brand-ware" class="qj-link ware">WhollyWare™</a>
+    <a href="#brand-paws" class="qj-link paws">WhollyPaws™</a>
+    <a href="#brand-care" class="qj-link care">WhollyCare™</a>
+    <a href="#consulting" class="qj-link consulting">Consulting</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HOME SECTION
+  ═══════════════════════════════════════════ -->
+  <div class="page-section active" id="section-home">
+<!-- HERO -->
   <section class="hero">
     <p class="hero-eyebrow">Sentir Solutions® &nbsp;·&nbsp; Charlottesville, Virginia &nbsp;·&nbsp; Est. 2026</p>
     <h1>We build things people<br /><em>can actually trust.</em></h1>
@@ -590,45 +299,1642 @@
       <a href="investors.html" class="btn-ghost">For Investors →</a>
     </div>
   </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       BRANDS SECTION
+  ═══════════════════════════════════════════ -->
+  <div class="page-section" id="section-brands">
+<!-- QUICK JUMP BAR -->
+  <div class="quick-jump" id="quickJump">
+    <span class="qj-label">Jump to</span>
+    <a href="#brand-fare" class="qj-link fare">WhollyFare®</a>
+    <a href="#brand-ware" class="qj-link ware">WhollyWare™</a>
+    <a href="#brand-paws" class="qj-link paws">WhollyPaws™</a>
+    <a href="#brand-care" class="qj-link care">WhollyCare™</a>
+    <a href="#consulting" class="qj-link consulting">Consulting</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Sentir Solutions® &nbsp;·&nbsp; The Wholly Platform &nbsp;·&nbsp; Four Brands, One Engine</p>
+    <h1>The Sincere Strategy®<br /><em>applied to every shelf in the house.</em></h1>
+    <p class="hero-sub">
+      Prices aren't coming down. Your bills can. The Wholly Brands are the actualization of the Sincere Strategy® — one for every category of household spend. Not just groceries. Every shelf. WhollyFare proved the model works. WhollyWare, WhollyPaws, and WhollyCare carry it to the rest of your life.
+    </p>
+    <div class="hero-actions">
+      <a href="#org-tree" class="btn-primary">See the Platform Map</a>
+      <a href="#consumer-brands" class="btn-ghost">Full Brand Details</a>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <!-- ORG TREE -->
+  <section id="org-tree" class="tree-section">
+    <div class="container">
+      <p class="section-label fade-in">Platform Map</p>
+      <h2 class="fade-in">The complete entity map.<br /><em>Click any node to visit.</em></h2>
+      <div class="divider fade-in"></div>
+
+      <div class="org-wrap fade-in">
+        <!-- SVG: connector lines only. Nodes are HTML overlaid on top. -->
+        <!-- ViewBox: 900 × 460. Node grid:
+             Root         x=300 y=10  w=300 h=80  → center-bottom (450, 90)
+             Consulting   x=30  y=168 w=240 h=80  → center-top (150, 168)
+             Platform hub x=320 y=168 w=320 h=80  → center-top (480, 168), center-bottom (480, 248)
+             WhollyFare   x=190 y=320 w=160 h=120 → center-top (270, 320)
+             WhollyWare   x=360 y=320 w=160 h=120 → center-top (440, 320)
+             WhollyPaws   x=530 y=320 w=160 h=120 → center-top (610, 320)
+             WhollyCare   x=700 y=320 w=160 h=120 → center-top (780, 320)  -->
+        <svg class="org-svg" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg">
+          <!-- Root → junction -->
+          <line x1="450" y1="90" x2="450" y2="130" stroke="#4A4540" stroke-width="1.5"/>
+          <!-- Junction horizontal: consulting ← → platform -->
+          <line x1="150" y1="130" x2="480" y2="130" stroke="#4A4540" stroke-width="1.5"/>
+          <!-- Junction → Consulting -->
+          <line x1="150" y1="130" x2="150" y2="168" stroke="#4A4540" stroke-width="1.5"/>
+          <!-- Junction → Platform hub -->
+          <line x1="480" y1="130" x2="480" y2="168" stroke="#4A4540" stroke-width="1.5"/>
+          <!-- Platform hub → brand junction -->
+          <line x1="480" y1="248" x2="480" y2="290" stroke="#4A4540" stroke-width="1.5"/>
+          <!-- Brand horizontal -->
+          <line x1="270" y1="290" x2="780" y2="290" stroke="#4A4540" stroke-width="1.5"/>
+          <!-- Brand drops (colour-coded) -->
+          <line x1="270" y1="290" x2="270" y2="320" stroke="#3A8C4E" stroke-width="1.5"/>
+          <line x1="440" y1="290" x2="440" y2="320" stroke="#4A94BB" stroke-width="1.5"/>
+          <line x1="610" y1="290" x2="610" y2="320" stroke="#C47D2E" stroke-width="1.5"/>
+          <line x1="780" y1="290" x2="780" y2="320" stroke="#A45AB0" stroke-width="1.5"/>
+        </svg>
+
+        <!-- ROOT: Sentir Solutions® (non-clickable hub) -->
+        <div class="on on-root">
+          <span class="on-label">Sentir Solutions®</span>
+          <span class="on-sub">Holding Company</span>
+        </div>
+
+        <!-- CONSULTING -->
+        <a class="on on-consulting" href="https://sentirsolutions.github.io/sentir-consulting-site/" target="_blank" rel="noopener" title="Visit Sentir Consulting">
+          <span class="on-status">● Live</span>
+          <span class="on-label">Sentir Consulting</span>
+          <span class="on-sub">AI Strategy Practice</span>
+          <span class="on-visit">sentirsolutions.github.io/sentir-consulting-site ↗</span>
+        </a>
+
+        <!-- WHOLLY PLATFORM HUB (non-clickable) -->
+        <div class="on on-platform">
+          <span class="on-label">The Wholly Platform</span>
+          <span class="on-sub">Consumer Brands</span>
+        </div>
+
+        <!-- WHOLLYFARE -->
+        <a class="on on-brand on-fare" href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" target="_blank" rel="noopener" title="Open WhollyFare®">
+          <span class="on-status">● Live</span>
+          <span class="on-label">WhollyFare®</span>
+          <span class="on-sub">Meals &amp; Groceries</span>
+          <span class="on-visit">Open app ↗</span>
+        </a>
+
+        <!-- WHOLLYWARE -->
+        <a class="on on-brand on-ware" href="whollyware/" target="_blank" rel="noopener" title="WhollyWare™">
+          <span class="on-status">Coming Soon</span>
+          <span class="on-label">WhollyWare™</span>
+          <span class="on-sub">Household Goods</span>
+          <span class="on-visit">Preview ↗</span>
+        </a>
+
+        <!-- WHOLLYPAWS -->
+        <a class="on on-brand on-paws" href="whollypaws/" target="_blank" rel="noopener" title="WhollyPaws™">
+          <span class="on-status">Coming Soon</span>
+          <span class="on-label">WhollyPaws™</span>
+          <span class="on-sub">Pet Care</span>
+          <span class="on-visit">Preview ↗</span>
+        </a>
+
+        <!-- WHOLLYCARE -->
+        <a class="on on-brand on-care" href="whollycare/" target="_blank" rel="noopener" title="WhollyCare™">
+          <span class="on-status">Coming Soon</span>
+          <span class="on-label">WhollyCare™</span>
+          <span class="on-sub">Personal Care</span>
+          <span class="on-visit">Preview ↗</span>
+        </a>
+      </div>
+
+      <!-- Mobile fallback -->
+      <div class="tree-mobile-list fade-in">
+        <a class="tml-link" href="https://sentirsolutions.github.io/sentir-consulting-site/" target="_blank" rel="noopener">
+          <div><div class="tml-name">Sentir Consulting</div><div class="tml-sub">AI Strategy Practice · Live</div></div>
+          <span class="tml-arrow">↗</span>
+        </a>
+        <a class="tml-link" href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" target="_blank" rel="noopener">
+          <div><div class="tml-name">WhollyFare®</div><div class="tml-sub">Meals &amp; Groceries · Live</div></div>
+          <span class="tml-arrow">↗</span>
+        </a>
+        <a class="tml-link" href="whollyware/" target="_blank" rel="noopener">
+          <div><div class="tml-name">WhollyWare™</div><div class="tml-sub">Household Goods · Coming Soon</div></div>
+          <span class="tml-arrow">↗</span>
+        </a>
+        <a class="tml-link" href="whollypaws/" target="_blank" rel="noopener">
+          <div><div class="tml-name">WhollyPaws™</div><div class="tml-sub">Pet Care · Coming Soon</div></div>
+          <span class="tml-arrow">↗</span>
+        </a>
+        <a class="tml-link" href="whollycare/" target="_blank" rel="noopener">
+          <div><div class="tml-name">WhollyCare™</div><div class="tml-sub">Personal Care · Coming Soon</div></div>
+          <span class="tml-arrow">↗</span>
+        </a>
+      </div>
+
+      <p class="tree-hint fade-in">Scroll down for full brand details ↓</p>
+    </div>
+  </section>
+
+  <!-- CONSUMER BRANDS SECTION -->
+  <section id="consumer-brands">
+    <div class="container">
+      <p class="section-label fade-in">The Wholly Platform</p>
+      <h2 class="fade-in">Four brands. One engine.<br /><em>Every category of household spending.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead fade-in">
+        Four brands, one founding principle — the Sincere Strategy®. Each brand applies the same constraint engine — safety before savings, net costs always shown, zero paid placements.
+      </p>
+
+      <!-- BRAND CARDS -->
+      <div class="brand-cards">
+
+        <div class="brand-card" id="brand-fare">
+          <div class="brand-card-header fare-header">
+            <div class="brand-card-mark">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 6 C24 6 14 14 14 24 C14 30 18 36 24 42 C30 36 34 30 34 24 C34 14 24 6 24 6Z" stroke="white" stroke-width="2" fill="none"/>
+                <line x1="24" y1="20" x2="24" y2="40" stroke="white" stroke-width="1.5"/>
+                <line x1="20" y1="26" x2="28" y2="26" stroke="white" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div>
+              <div class="brand-card-name">WhollyFare®</div>
+              <div class="brand-card-tagline">The meal plan that pays you back.</div>
+            </div>
+            <div class="brand-card-status live">Live</div>
+          </div>
+          <div class="brand-card-body">
+            <p>WhollyFare® builds a weekly dinner plan from your local grocery stores' actual sale circulars — cross-comparing Kroger, Food Lion, Aldi, and Harris Teeter. Net savings after gas costs. Health constraints are hard rules, never traded for a lower price. The engine is running.</p>
+            <div class="brand-card-stats">
+              <div class="brand-stat"><span class="brand-stat-num">4</span><span class="brand-stat-label">stores compared</span></div>
+              <div class="brand-stat"><span class="brand-stat-num">8+</span><span class="brand-stat-label">weeks of live data</span></div>
+              <div class="brand-stat"><span class="brand-stat-num">~$78</span><span class="brand-stat-label">weekly vs. HelloFresh</span></div>
+            </div>
+          </div>
+          <div class="brand-card-footer">
+            <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" class="brand-btn" target="_blank" rel="noopener">Open App →</a>
+            <a href="whollyfare.html" class="brand-btn-ghost">Platform view →</a>
+          </div>
+        </div>
+
+        <div class="brand-card" id="brand-ware">
+          <div class="brand-card-header ware-header">
+            <div class="brand-card-mark">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polyline points="6,26 24,8 42,26" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="12" y="25" width="24" height="16" rx="1" stroke="white" stroke-width="2.5" fill="none"/>
+                <rect x="19" y="30" width="10" height="11" rx="1" stroke="white" stroke-width="2" fill="none"/>
+              </svg>
+            </div>
+            <div>
+              <div class="brand-card-name">WhollyWare™</div>
+              <div class="brand-card-tagline">The household staple plan that pays you back.</div>
+            </div>
+            <div class="brand-card-status coming-soon">Coming Soon</div>
+          </div>
+          <div class="brand-card-body">
+            <p>WhollyWare cross-compares prices for household staples — paper goods, laundry, cleaning supplies, personal care — across Walmart, Target, Costco, Kroger, and Dollar General. The stuff you buy every week and never comparison-shop. Net savings after gas. Always.</p>
+            <div class="brand-card-stats">
+              <div class="brand-stat"><span class="brand-stat-num">12+</span><span class="brand-stat-label">categories tracked</span></div>
+              <div class="brand-stat"><span class="brand-stat-num">5</span><span class="brand-stat-label">retailers compared</span></div>
+              <div class="brand-stat"><span class="brand-stat-num">$5–17</span><span class="brand-stat-label">per month</span></div>
+            </div>
+          </div>
+          <div class="brand-card-footer">
+            <a href="whollyware/" class="brand-btn" target="_blank" rel="noopener">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="brand-card" id="brand-paws">
+          <div class="brand-card-header paws-header">
+            <div class="brand-card-mark">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="24" cy="31" rx="11" ry="10" fill="white" opacity="0.9"/>
+                <ellipse cx="11" cy="20" rx="4.5" ry="6" fill="white" opacity="0.7"/>
+                <ellipse cx="19" cy="14.5" rx="4.5" ry="6" fill="white" opacity="0.7"/>
+                <ellipse cx="29" cy="14.5" rx="4.5" ry="6" fill="white" opacity="0.7"/>
+                <ellipse cx="37" cy="20" rx="4.5" ry="6" fill="white" opacity="0.7"/>
+              </svg>
+            </div>
+            <div>
+              <div class="brand-card-name">WhollyPaws™</div>
+              <div class="brand-card-tagline">The pet care plan that puts health first.</div>
+            </div>
+            <div class="brand-card-status coming-soon">Coming Soon</div>
+          </div>
+          <div class="brand-card-body">
+            <p>WhollyPaws finds the best prices on pet food and supplies — filtered for your pet's specific dietary needs, breed requirements, and vet-prescribed diets. Hard ingredient constraints, never traded for a lower price. Net savings after delivery or gas.</p>
+            <div class="brand-card-stats">
+              <div class="brand-stat"><span class="brand-stat-num">8+</span><span class="brand-stat-label">pet categories</span></div>
+              <div class="brand-stat"><span class="brand-stat-num">6</span><span class="brand-stat-label">retailers compared</span></div>
+              <div class="brand-stat"><span class="brand-stat-num">$4–14</span><span class="brand-stat-label">per month</span></div>
+            </div>
+          </div>
+          <div class="brand-card-footer">
+            <a href="whollypaws/" class="brand-btn" target="_blank" rel="noopener">Learn More →</a>
+          </div>
+        </div>
+
+        <div class="brand-card" id="brand-care">
+          <div class="brand-card-header care-header">
+            <div class="brand-card-mark">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 42 Q10 28 18 12 Q30 4 44 10 Q42 26 30 36 Q24 40 18 42Z" fill="white" opacity="0.9"/>
+                <path d="M8 34 Q4 26 9 19 Q13 26 8 34Z" fill="white" opacity="0.6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="brand-card-name">WhollyCare™</div>
+              <div class="brand-card-tagline">Personal care that's actually personal.</div>
+            </div>
+            <div class="brand-card-status coming-soon">Coming Soon</div>
+          </div>
+          <div class="brand-card-body">
+            <p>WhollyCare cross-compares personal care and beauty prices across CVS, Walgreens, Target, Ulta, and Walmart — filtered by your skin sensitivities, ingredient exclusions, and values (cruelty-free, vegan, etc.). The beauty industry hides conflicts. WhollyCare surfaces them.</p>
+            <div class="brand-card-stats">
+              <div class="brand-stat"><span class="brand-stat-num">10+</span><span class="brand-stat-label">care categories</span></div>
+              <div class="brand-stat"><span class="brand-stat-num">5</span><span class="brand-stat-label">retailers compared</span></div>
+              <div class="brand-stat"><span class="brand-stat-num">$4–14</span><span class="brand-stat-label">per month</span></div>
+            </div>
+          </div>
+          <div class="brand-card-footer">
+            <a href="whollycare/" class="brand-btn" target="_blank" rel="noopener">Learn More →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SINCERE STRATEGY -->
+  <section class="sincere-section">
+    <div class="container">
+      <p class="section-label fade-in">The Sincere Strategy®</p>
+      <h2 class="fade-in">One founding principle.<br /><em>Every brand. No exceptions.</em></h2>
+      <div class="divider fade-in"></div>
+      <div class="sincere-grid fade-in">
+        <div class="sincere-item">
+          <div class="sincere-num">01</div>
+          <div class="sincere-title">Zero paid placements</div>
+          <div class="sincere-body">No brand pays to appear in results across any Wholly product. Revenue is subscriptions only.</div>
+        </div>
+        <div class="sincere-item">
+          <div class="sincere-num">02</div>
+          <div class="sincere-title">Safety before savings</div>
+          <div class="sincere-body">Health and ingredient constraints run before price comparison — in every product, for every household.</div>
+        </div>
+        <div class="sincere-item">
+          <div class="sincere-num">03</div>
+          <div class="sincere-title">Net savings, always</div>
+          <div class="sincere-body">Gas and delivery costs are in the math. Gross savings is not the number that matters.</div>
+        </div>
+        <div class="sincere-item">
+          <div class="sincere-num">04</div>
+          <div class="sincere-title">Radical transparency</div>
+          <div class="sincere-body">Every rejection is logged and shown to the user. You see exactly why a product didn't appear.</div>
+        </div>
+        <div class="sincere-item">
+          <div class="sincere-num">05</div>
+          <div class="sincere-title">No data sales</div>
+          <div class="sincere-body">Your household data is never sold, shared, or used for targeting. It is yours. Period.</div>
+        </div>
+        <div class="sincere-item">
+          <div class="sincere-num">06</div>
+          <div class="sincere-title">Local-first</div>
+          <div class="sincere-body">Plans and comparisons are built from your actual stores' actual prices. Not national averages.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       WHOLLYFARE SECTION
+  ═══════════════════════════════════════════ -->
+  <div class="page-section" id="section-whollyfare">
+<!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">WhollyFare® &nbsp;·&nbsp; The Engine &nbsp;·&nbsp; Live · Charlottesville, VA</p>
+    <h1>"The meal plan<br />that pays<br /><em>you back."</em></h1>
+    <p class="hero-sub">
+      Prices aren't coming down. Your grocery bill can. WhollyFare® is the proof — live, in the real world, with real families, at real stores. It had to be built first. It had to work first. It does. Everything else follows from this.
+    </p>
+    <div class="hero-actions">
+      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" class="btn-primary" target="_blank" rel="noopener">Open WhollyFare® ↗</a>
+      <a href="#how" class="btn-ghost">How It Works</a>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="how-section">
+    <div class="container">
+      <p class="section-label fade-in">The Workflow</p>
+      <h2 class="fade-in">From sale circular<br /><em>to dinner table.</em></h2>
+      <div class="divider fade-in"></div>
+      <div class="steps-grid fade-in">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h4>Circulars come in</h4>
+          <p>Every Wednesday, Tim pulls sale data from ~10 grocery chains across the Charlottesville region — Kroger via live API (239+ items), and Food Lion, Aldi, Harris Teeter, Giant, Lidl, Walmart, Whole Foods, and Wegmans via Claude Vision PDF extraction. What's on sale this week at your actual stores — not national averages, not estimates.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h4>Constraints run first</h4>
+          <p>Before a single item reaches the optimizer, the constraint engine filters the full inventory against the household's dietary profile — allergens, diagnoses, lifestyle rules. Hard exclusions. No exceptions. Every rejection is logged.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h4>The plan is built</h4>
+          <p>Five dinners, assembled from what passes constraints and is actually on sale this week. Protein variety enforced. Meal rationale shown. The Sunday Buy-Off lets households approve, swap, or skip each meal before anything gets locked.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h4>Found Money, honestly</h4>
+          <p>The shopping list breaks down by store. The Found Money Ledger shows gross savings, trip costs (at $0.22/mile), and net savings. If a store's savings don't cover the drive, we flag it and suggest skipping. Gross numbers are never the headline.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSTRAINT ENGINE -->
+  <section class="constraint-section">
+    <div class="container">
+      <p class="section-label light fade-in">The Core</p>
+      <h2 class="light fade-in">Safety before savings.<br /><em>Always. Without exception.</em></h2>
+      <div class="divider fade-in"></div>
+      <div class="constraint-grid fade-in">
+        <div class="constraint-narrative">
+          <p>
+            <strong>The constraint engine is not a filter. It is a precondition.</strong> Before the meal planner sees a single sale item, every item in the week's circular has already passed through the household's dietary profile — allergens, health conditions, lifestyle exclusions, member-specific rules.
+          </p>
+          <p>
+            This is not a toggle the user can switch off to see better deals. It is not a preference. It is a hard wall that runs every time, on every item, before any optimization happens. A family member's tree nut allergy is not traded for a cheaper dinner. A CKD patient's potassium restrictions are not relaxed to hit a savings target.
+          </p>
+          <p>
+            <strong>Every rejection is logged and shown.</strong> If chicken breast was excluded because one member has a poultry sensitivity, that is surfaced. If a particular brand was rejected because it contains a listed allergen, the household sees it. Radical transparency is a founding commitment — there are no black boxes in how plans are built.
+          </p>
+          <p>
+            This is also the architectural decision that makes the next three Wholly brands straightforward to build. The same constraint engine that handles dietary profiles handles ingredient exclusions in WhollyCare, vet diet restrictions in WhollyPaws, and any filter a household can define. The engine is the platform. WhollyFare is its first application.
+          </p>
+        </div>
+        <!-- FILTER MOCK -->
+        <div>
+          <div class="filter-mock">
+            <div class="fm-header">
+              <div class="fm-header-title">This Week's Circular — Constraint Review</div>
+            </div>
+            <div class="fm-body">
+              <div class="fm-week">Kroger Barracks Rd &nbsp;·&nbsp; May 21, 2026</div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Salmon Fillet, 1 lb</div>
+                  <div class="fm-item-store">$6.99 sale · Seafood</div>
+                </div>
+                <div>
+                  <div class="fm-badge pass">✓ Pass</div>
+                </div>
+              </div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Chicken Thighs, 3 lb</div>
+                  <div class="fm-item-store">$5.49 sale · Poultry</div>
+                </div>
+                <div>
+                  <div class="fm-badge pass">✓ Pass</div>
+                </div>
+              </div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Planters Mixed Nuts, 16 oz</div>
+                  <div class="fm-item-store">$7.29 sale · Snacks</div>
+                </div>
+                <div>
+                  <div>
+                    <div class="fm-badge reject">✗ Rejected</div>
+                    <div class="fm-reject-reason">Chas: tree nut allergy (profile rule)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Ground Turkey, 1 lb</div>
+                  <div class="fm-item-store">$4.79 sale · Poultry</div>
+                </div>
+                <div>
+                  <div class="fm-badge pass">✓ Pass</div>
+                </div>
+              </div>
+              <div class="fm-item">
+                <div>
+                  <div class="fm-item-name">Dannon Greek Yogurt, 32 oz</div>
+                  <div class="fm-item-store">$5.99 sale · Dairy</div>
+                </div>
+                <div>
+                  <div>
+                    <div class="fm-badge reject">✗ Rejected</div>
+                    <div class="fm-reject-reason">Abby: dairy exclusion (lifestyle rule)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="fm-divider"></div>
+              <div class="fm-summary">
+                <span>47 items reviewed</span>
+                <span><strong>39 passed</strong> &nbsp;·&nbsp; 8 rejected</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROOF -->
+  <section class="proof-section">
+    <div class="container">
+      <p class="section-label fade-in">The Data</p>
+      <h2 class="fade-in">Eight weeks of real receipts.<br /><em>The model works.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead fade-in">
+        WhollyFare was not launched with projections. It was launched with a pilot — one household, ~10 major grocery chains, Charlottesville, Virginia. The goal was simple: generate undeniable Found Money data before building anything else. Here is what that looks like.
+      </p>
+      <div class="proof-grid fade-in">
+        <div class="proof-callout">
+          <h4>The Charlottesville Pilot</h4>
+          <p>Tim Hislop, Abby, and Chas — three members, ~10 grocery chains, two dietary profiles in the constraint engine. Running since Phase 1 launch, tracked weekly. Real circulars, real receipts, real numbers.</p>
+          <span class="proof-stat">~10 chains</span>
+          <span class="proof-stat-label">Kroger · Food Lion · Aldi · Harris Teeter · Giant · Lidl · Walmart · Whole Foods · Wegmans +</span>
+        </div>
+        <div class="proof-callout">
+          <h4>Cross-Grocer vs. Single-Store</h4>
+          <p>The savings argument is simple: a meal plan built from ~10 stores' sale circulars, filtered for your household, finds deals no single-store shop can match. The cross-grocer optimizer finds the lowest available price for each ingredient across all participating stores — net of the trip cost to get there.</p>
+          <span class="proof-stat">$0</span>
+          <span class="proof-stat-label">Revenue from placements, affiliates, or data</span>
+        </div>
+        <div class="proof-callout">
+          <h4>vs. HelloFresh (every week)</h4>
+          <p>HelloFresh charges approximately $142 for five dinners for a family of three. WhollyFare's plan for the same week costs roughly $64 in groceries — using the same stores you already shop, with your own ingredients, from what's actually on sale. The ledger shows the gap, every week.</p>
+          <span class="proof-stat">~$78</span>
+          <span class="proof-stat-label">Typical weekly delta vs. HelloFresh (net)</span>
+        </div>
+        <div class="proof-callout">
+          <h4>Why Phase 1 matters for investors</h4>
+          <p>Investors in consumer platforms ask one question before any other: does this work in the real world, or only in a deck? Phase 1 exists to answer that question with receipts. Eight weeks of actual data from an actual household. That data is the argument that unlocks Phase 2, Phase 3, and the investment that scales the platform nationally.</p>
+          <span class="proof-stat">239+</span>
+          <span class="proof-stat-label">Items pulled via Kroger API in week one</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IT UNLOCKS -->
+  <section class="unlocks-section">
+    <div class="container">
+      <p class="section-label light fade-in">The Platform Thesis</p>
+      <h2 class="light fade-in">If it works for food,<br /><em>it works everywhere.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead light fade-in">
+        WhollyFare's architecture was designed from the start to be a platform, not a product. The constraint engine, the circular ingestion pipeline, the trip cost math, the Found Money ledger — none of these are food-specific. They are infrastructure. Here is what that infrastructure unlocks.
+      </p>
+      <div class="unlocks-grid fade-in">
+        <div class="unlock-card">
+          <div class="unlock-tag">WhollyWare™</div>
+          <h4>Household goods,<br/>same engine.</h4>
+          <p>Paper goods, laundry, cleaning supplies — the same circular ingestion, the same unit price comparison, the same trip cost math. Constraint filtering applied to ingredient exclusions and brand ethics instead of dietary rules. Phase 2.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">WhollyPaws™</div>
+          <h4>Pet care, constraint-first.</h4>
+          <p>Multi-pet profiles, vet diet support, ingredient-safe filtering. The constraint engine handles pet dietary restrictions the same way it handles household member allergens — as hard rules that never bend for savings. Phase 2.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">WhollyCare™</div>
+          <h4>Personal care, filtered<br/>to your ingredients.</h4>
+          <p>Ingredient avoidance, ethical commitments, skin and sensitivity rules — the constraint engine knows your profile. It filters every product at every store against your rules before the savings engine runs. Phase 2.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">Phase 3 · Regional Scale</div>
+          <h4>Automated circular parsing<br/>at scale.</h4>
+          <p>The manual + PDF extraction workflow is a POC scaffold. Phase 3 replaces it with automated circular parsing, direct retail data feeds, and a React + FastAPI backend that scales to 15+ chains and 50,000+ households.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">Phase 4 · Series A</div>
+          <h4>National. 50,000+<br/>households.</h4>
+          <p>Receipt auto-capture, preference learning, delivery hub integration (Instacart, Shipt), community sharing. $2M+ ARR milestone. The platform thesis proven at scale — not just one household in Charlottesville.</p>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-tag">Phase 5 · Wholesale</div>
+          <h4>Costco. Sam's Club.<br/>Amazon Fresh.</h4>
+          <p>Bulk-unit math, membership economics, hybrid trip planning. The Sincere Strategy applied to wholesale — the category where price opacity is highest and household savings are largest. The horizon play.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SINCERE RULES FOR FOOD -->
+  <section class="rules-section">
+    <div class="container">
+      <p class="section-label fade-in">The Commitment</p>
+      <h2 class="fade-in">The Sincere Strategy,<br /><em>applied to your dinner table.</em></h2>
+      <div class="divider fade-in"></div>
+      <div class="rules-grid fade-in">
+        <div class="rule-card">
+          <div class="rule-icon">🚫</div>
+          <div class="rule-text">
+            <h4>Zero paid placements. Ever.</h4>
+            <p>No food brand pays to appear in a WhollyFare plan. No grocer pays to be recommended. If an item appears in your meal plan, it earned its place on price, availability, and suitability — nothing else.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">🛡️</div>
+          <div class="rule-text">
+            <h4>Health constraints are hard rules.</h4>
+            <p>Dietary restrictions, allergen profiles, and health conditions are preconditions, not preferences. The constraint engine runs before optimization. A $0.50 saving never overrides a household rule.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">👁️</div>
+          <div class="rule-text">
+            <h4>Every rejection is shown.</h4>
+            <p>If an item was excluded from your plan, you see exactly why. The rejection log is part of the product, not a hidden internal record. Radical transparency is a founding commitment, not a feature.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">⛽</div>
+          <div class="rule-text">
+            <h4>Net savings. Never gross.</h4>
+            <p>The Found Money Ledger shows gross savings minus trip costs at $0.22/mile. We flag stores where the drive costs more than the savings. We say so. Even when it makes the headline number smaller.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">📍</div>
+          <div class="rule-text">
+            <h4>Local-first. Your stores.</h4>
+            <p>Plans are built from your actual stores' actual sale circulars — this week's data, not national averages. Kroger Barracks Road. Food Lion Pantops. Aldi Rio Road. Harris Teeter Barracks Road. Giant. Lidl. Walmart. Whole Foods. Wegmans. Your town.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <div class="rule-icon">🔒</div>
+          <div class="rule-text">
+            <h4>Your data stays yours.</h4>
+            <p>WhollyFare knows your household's health constraints and buying patterns. That data belongs to your household. It is never sold, never shared, never used for targeting. Ever.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>The proof of concept<br />is <em>running right now.</em></h2>
+    <p>WhollyFare is live on Streamlit Cloud. Sign in, add your stores, enter your household constraints, and get this week's plan. Real circulars. Real savings. Real data.</p>
+    <div class="cta-pair">
+      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" class="btn-white" target="_blank" rel="noopener">Open WhollyFare® ↗</a>
+      <a href="investors.html" class="btn-white-outline">For Investors →</a>
+      <a href="brands.html" class="btn-white-outline">The full platform →</a>
+    </div>
+  </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       MISSION SECTION
+  ═══════════════════════════════════════════ -->
+  <div class="page-section" id="section-mission">
+<!-- HERO (dark) -->
+  <section class="hero">
+    <p class="hero-eyebrow">Sentir Solutions® &nbsp;·&nbsp; The Sincere Strategy® &nbsp;·&nbsp; Why We Exist</p>
+    <h1>The businesses that earn trust<br /><em>are the ones worth building.</em></h1>
+    <p class="hero-sub">
+      AI is arriving faster than most businesses are ready for. The cost of living is rising faster than most families can absorb. We built Sentir Solutions to meet both of those realities — with care, with honesty, and without the conflicts of interest that compromise most of the alternatives. It's a narrow road. We think it's the one worth traveling.
+    </p>
+    <div class="hero-actions">
+      <a href="#why-we-exist" class="btn-primary">Why We Exist</a>
+      <a href="#sincere" class="btn-ghost">The Sincere Strategy®</a>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <!-- WHY WE EXIST -->
+  <section id="why-we-exist" class="dark">
+    <div class="container">
+      <p class="section-label light fade-in">Why We Exist</p>
+      <h2 class="light fade-in">Two forces. One response.<br /><em>Genuine help.</em></h2>
+      <div class="divider fade-in"></div>
+
+      <div class="two-col fade-in">
+        <div>
+          <p style="font-size:0.75rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6FCFA0; margin-bottom:1rem;">For Virginia Businesses</p>
+          <p style="color:#C0BCB7; line-height:1.9; margin-bottom:1rem;">
+            AI is coming. That's not a prediction — it's already here, and it's moving faster than most
+            business owners have time to understand. The people who built $10M–$50M companies over
+            twenty years of hard work deserve straight answers about what that means for their business,
+            their people, and their valuation.
+          </p>
+          <p style="color:#C0BCB7; line-height:1.9;">
+            Not a sales pitch. Not a tool subscription. Not a consultant who replaces the team that got
+            you here. Real answers. Real help. From someone who has seen what works at scale and cares
+            enough to say when the honest answer is "not yet."
+          </p>
+        </div>
+        <div>
+          <p style="font-size:0.75rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#6FCFA0; margin-bottom:1rem;">For American Households</p>
+          <p style="color:#C0BCB7; line-height:1.9; margin-bottom:1rem;">
+            People can't afford stuff. Groceries, household staples, pet food, personal care — everything
+            costs more, and the tools that claim to help are mostly funded by the brands they're supposed
+            to help you compare. Coupon apps. Loyalty programs. Cashback cards. All of them have a
+            conflict of interest. None of them are fully on your side.
+          </p>
+          <p style="color:#C0BCB7; line-height:1.9;">
+            We built the Wholly platform to be the thing that is actually, completely, structurally
+            on your side. Your data, your health constraints, your local stores, your real savings —
+            net of gas. No exceptions.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top:3.5rem; padding:2.5rem; background:rgba(255,255,255,0.05); border-left:3px solid #6FCFA0;" class="fade-in">
+        <p style="font-family:'Fraunces',serif; font-size:1.45rem; font-weight:300; font-style:italic; color:#FFFFFF; line-height:1.6; max-width:780px;">
+          "AI is coming. People can't afford stuff. We are here to help — honestly, carefully,
+          and without compromise. That is the whole of it."
+        </p>
+        <p style="font-size:0.8rem; color:#8A8480; margin-top:1.25rem; letter-spacing:0.06em; text-transform:uppercase;">Sentir Solutions — Founding Statement, 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TWO BUSINESSES. ONE RULE. -->
+  <section id="two-businesses">
+    <div class="container">
+      <p class="section-label fade-in">The Company</p>
+      <h2 class="fade-in">Two businesses.<br /><em>One rule.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead fade-in">
+        Sentir Solutions is the parent of two distinct businesses — a consulting practice that serves
+        established Virginia companies, and a consumer platform that serves households. The same founding
+        principle runs through both: the person being served always comes first.
+      </p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; margin-top:3rem;" class="two-col fade-in">
+        <div>
+          <p style="font-size:0.75rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem;">Sentir Consulting</p>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.35rem; font-weight:400; color:var(--dark); margin-bottom:1rem; line-height:1.4;">The sincere version<br /><em>of business consulting.</em></h3>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1rem;">
+            We work with Virginia businesses — $5M to $50M — navigating the AI transition. We increase EBITDA,
+            strengthen operations, and protect valuation. And we do it without replacing the people who built
+            the business. Upskilling the trusted workforce is the sincere path. That is what we do.
+          </p>
+          <p style="color:var(--muted); line-height:1.8;">
+            No vendor relationships that shape our recommendations. No generic playbooks sold as custom insight.
+            We tell clients what we actually see — including when the honest answer is "not yet."
+          </p>
+          <div style="margin-top:1.75rem;">
+            <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="btn-outline" target="_blank" rel="noopener">Sentir Consulting ↗</a>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:0.75rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem;">The Wholly Platform</p>
+          <h3 style="font-family:'Fraunces',serif; font-size:1.35rem; font-weight:400; color:var(--dark); margin-bottom:1rem; line-height:1.4;">The sincere version<br /><em>of household savings.</em></h3>
+          <p style="color:var(--muted); line-height:1.8; margin-bottom:1rem;">
+            WhollyFare and the Wholly brands help households manage the cost of living — groceries, household
+            staples, pet care, personal care — using real sale data from real local stores, filtered for
+            each household's health constraints, with gas costs shown honestly.
+          </p>
+          <p style="color:var(--muted); line-height:1.8;">
+            Zero paid placements. No affiliate fees. No data sales. The subscription is the revenue model —
+            which means our incentive is always to save you more than we cost.
+          </p>
+          <div style="margin-top:1.75rem;">
+            <a href="brands.html" class="btn-outline">See the brands</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SINCERE STRATEGY SECTION (dark) -->
+  <section id="sincere" class="dark">
+    <div class="container">
+      <p class="section-label light fade-in">The Founding Principle</p>
+      <h2 class="light fade-in">The Sincere Strategy®<br /><em>is structural, not stylistic.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead light fade-in">
+        Every principle below is also a business rule. Competitors built on ad revenue,
+        affiliate fees, or data sales cannot adopt these rules without dismantling their own
+        revenue model. The moat compounds with every household we serve.
+      </p>
+
+      <div class="sincere-principles fade-in">
+        <div class="principle">
+          <div class="principle-icon">🚫</div>
+          <div class="principle-text">
+            <strong>Zero paid placements. Ever.</strong>
+            Revenue is subscriptions only. We never take money to influence what you buy.
+            No brand can pay to appear in a WhollyFare plan, a WhollyWare recommendation,
+            or any Wholly product.
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🛡️</div>
+          <div class="principle-text">
+            <strong>Health before savings, always.</strong>
+            Dietary constraints are absolute hard rules, never traded for a better deal.
+            The constraint engine runs before the optimizer. A $0.50 saving never
+            overrides a household member's allergen profile or health condition.
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">👁️</div>
+          <div class="principle-text">
+            <strong>Radical transparency.</strong>
+            Every ingredient rejection is logged and shown to you. If something was excluded
+            from your plan, you see exactly why. No black boxes. Radical transparency
+            is not a feature — it's a founding principle.
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">📍</div>
+          <div class="principle-text">
+            <strong>Local-first, always.</strong>
+            Plans built from your actual stores' actual sale circulars, not national averages,
+            not generic estimates. Your town, your stores, your prices. The week's plan
+            is built from what's actually on sale where you actually shop.
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">⛽</div>
+          <div class="principle-text">
+            <strong>Honest trip costs.</strong>
+            We show you net savings after gas. We flag stores where savings don't cover
+            the drive — even if it means a lower savings headline. Don't burn gas to
+            save pennies. We say so when it happens.
+          </div>
+        </div>
+        <div class="principle">
+          <div class="principle-icon">🔒</div>
+          <div class="principle-text">
+            <strong>Your data is yours.</strong>
+            We know your household's health constraints, dietary needs, and spending habits.
+            That data stays yours. Never sold, never shared, never used for targeting. Ever.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE MOAT EXPLAINED -->
+  <section id="moat" class="moat-section">
+    <div class="container">
+      <p class="section-label fade-in">Why It's Durable</p>
+      <h2 class="fade-in">Competitors cannot copy this<br /><em>without destroying their own model.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead fade-in">
+        The Sincere Strategy is not a positioning choice. It's a structural commitment that makes
+        certain revenue streams permanently off-limits. That constraint is exactly what makes it
+        a moat — and exactly why incumbents can't follow.
+      </p>
+      <p class="lead fade-in">
+        The same logic applies to consulting. When an advisor's recommendations are shaped by vendor
+        relationships, software commissions, or a bias toward billable complexity, the client pays twice —
+        once in fees, once in bad outcomes. Sentir Consulting is built without those dependencies.
+        The moat is the same: sincerity is structural, and incumbents cannot adopt it without dismantling their own model.
+      </p>
+
+      <div class="moat-callout fade-in">
+        <blockquote>
+          "Affiliates, sponsored placements, and data sales are our competitors' business model.
+           Ours is you paying us a fair subscription because we save you more than we cost.
+           That's the asymmetry. It's structural and it's durable."
+        </blockquote>
+        <p class="attribution">— Sentir Solutions founding thesis, May 2026</p>
+      </div>
+
+      <div class="moat-explanation fade-in">
+        <div class="moat-pillar">
+          <h4>The incumbent problem</h4>
+          <p>
+            Most grocery and household savings tools — coupon apps, store loyalty programs,
+            cashback services — are funded by the retailers and brands they claim to help you
+            compare. Their incentive is to drive you toward higher-margin products and sponsored
+            placements, not to find you the best deal.
+          </p>
+        </div>
+        <div class="moat-pillar">
+          <h4>Why they can't switch</h4>
+          <p>
+            To adopt the Sincere Strategy, a competitor would have to eliminate affiliate revenue,
+            refuse all paid placements, and return user data to the household. That's not a product
+            update — it's a business model replacement. Their investors won't allow it.
+            Their growth metrics depend on it. The moat is real.
+          </p>
+        </div>
+        <div class="moat-pillar">
+          <h4>Why subscriptions work</h4>
+          <p>
+            A household that saves $1,500 per year from WhollyFare's Full Table tier pays $348 per
+            year for the subscription. The value case is undeniable. When savings exceed cost by 4x,
+            retention is structural — not dependent on lock-in, habit loops, or dark patterns.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-pair fade-in">
+        <a href="brands.html" class="btn-primary">See the brands</a>
+        <a href="investors.html" class="btn-outline">For investors</a>
+        <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="btn-outline" target="_blank" rel="noopener">Talk to us ↗</a>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════ -->
+  <div class="page-section" id="section-about">
+<!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Sentir Solutions® &nbsp;·&nbsp; Tim Hislop &nbsp;·&nbsp; Founder &amp; CEO</p>
+    <h1>"Built by someone who's stood<br /><em>on both sides of the shelf."</em></h1>
+    <p class="hero-sub">
+      Two careers. One insight. Tim Hislop spent a decade on the grocery floor — from stock clerk to night manager — and twenty more years helping businesses of every size optimize their operations with emerging technology. Sentir Solutions is what happens when both careers finally converge.
+    </p>
+    <div class="hero-actions">
+      <a href="#story" class="btn-primary">The Story</a>
+      <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="btn-ghost" target="_blank" rel="noopener">Work with Tim ↗</a>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <!-- THE STORY -->
+  <section id="story" class="story-section">
+    <div class="container">
+      <p class="section-label fade-in">The Background</p>
+      <h2 class="fade-in">From the stock room<br /><em>to the strategy room.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead fade-in">
+        The Wholly platform wasn't built by someone who read about the grocery industry.
+        It was built by someone who lived it — from the overnight stock shift at 15,
+        to brokering deals into grocery chains in his late twenties, to 20+ years of
+        technology and AI strategy work that gave him the tools to finally fix what he saw.
+      </p>
+
+      <div class="story-grid fade-in">
+
+        <!-- Era 1 -->
+        <div class="era-label">
+          <span class="era-years">Ages 15–23</span>
+          <span class="era-title">On the floor</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot"></div>
+          <div class="era-content">
+            <p>
+              Tim's first grocery job was at First Great American at 15 — a summer shift that
+              turned into a decade-long education in how grocery retail actually works from the
+              inside out. He moved to Grand Union at 16, where he rose from stock clerk to night
+              manager and front-end manager over seven years.
+            </p>
+            <p>
+              He learned the floor: what moves, what margins look like, what gets faced vs.
+              what gets buried, and how pricing decisions flow from the corporate level to the
+              shelf label to the customer's cart — often with very little of that information
+              passing through in any legible form.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">First Great American</span>
+              <span class="era-role">Grand Union — Stock Clerk → Night Manager</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Era 2 -->
+        <div class="era-label">
+          <span class="era-years">Ages 23–26</span>
+          <span class="era-title">Sunshine state</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot"></div>
+          <div class="era-content">
+            <p>
+              After Grand Union, Tim moved to Florida and joined Publix — widely regarded as
+              one of the best-run grocery operations in the country. Night manager work again,
+              this time inside a machine that had refined nearly every operational detail
+              of the grocery experience. He saw what excellence in retail operations looks like
+              when it's executed at scale with genuine customer focus.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">Publix — Night Manager</span>
+              <span class="era-role">Florida</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Era 3 -->
+        <div class="era-label">
+          <span class="era-years">Ages 27–30</span>
+          <span class="era-title">The other side of the shelf</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot"></div>
+          <div class="era-content">
+            <p>
+              At 27, Tim moved into food brokerage — selling product into grocery chains and
+              learning, for the first time, exactly how the vendor side of the shelf worked.
+              What vendors push is not always what families need. What earns shelf space is not
+              always what earns the best value. The incentives are layered, opaque, and rarely
+              aligned with the household making the purchase.
+            </p>
+            <p>
+              This was the education that made everything else click. He had now seen the full
+              loop: what gets produced, how it gets to the shelf, how it gets priced, and how
+              families decide to buy it — or don't.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">Food Broker</span>
+              <span class="era-role">Vendor Sales into Grocery Chains</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Era 4 -->
+        <div class="era-label">
+          <span class="era-years">Age 30+</span>
+          <span class="era-title">The pivot to technology</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot"></div>
+          <div class="era-content">
+            <p>
+              At 30, Tim pivoted into technology and strategy — and spent the next 20+ years
+              helping organizations optimize their operations using emerging technology, including AI.
+              His clients have ranged from small businesses to enterprise organizations to federal
+              government agencies. The through-line: using rigorous technology to eliminate
+              inefficiency, surface better decisions, and implement systems that scale.
+            </p>
+            <p>
+              He founded Sentir Consulting as the vehicle for that work. It is the operating
+              practice that has been running since before the Wholly platform existed — and the
+              revenue that funds its development now.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">Technology &amp; Strategy Consulting</span>
+              <span class="era-role">AI Implementation</span>
+              <span class="era-role">Small Business · Enterprise · Federal Government</span>
+              <span class="era-role">Founder, Sentir Consulting</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Era 5 -->
+        <div class="era-label">
+          <span class="era-years">2026</span>
+          <span class="era-title">The insight becomes a product</span>
+        </div>
+        <div style="position:relative;">
+          <div class="era-dot" style="background: var(--dark);"></div>
+          <div class="era-content">
+            <p>
+              After decades in both worlds, the gap was obvious. The tools that help businesses
+              optimize purchasing, constrain by policy, and surface the best deals have never
+              been brought to the household. Grocery stores have sophisticated pricing engines.
+              Families have a paper circular and a gut feeling.
+            </p>
+            <p>
+              WhollyFare is the bridge. And Sentir Solutions is the platform that scales it
+              across every category of household spending — starting with food, and extending
+              to household goods, pet care, and personal care through the Wholly brand family.
+            </p>
+            <div class="era-roles">
+              <span class="era-role">Founder, Sentir Solutions®</span>
+              <span class="era-role">WhollyFare® Phase 1 — Live, Charlottesville VA</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY NOW -->
+  <section class="why-now">
+    <div class="container">
+      <p class="section-label light fade-in">Why Now</p>
+      <h2 class="light fade-in">The technology finally<br /><em>matches the vision.</em></h2>
+      <div class="divider fade-in"></div>
+      <p class="lead light fade-in">
+        The insight has existed for decades. The tools to act on it at household scale — affordably,
+        in real time, with real store data — have only recently arrived.
+      </p>
+
+      <div class="insight-card fade-in">
+        <p>
+          <strong>AI has reached the point where constraint engines, price intelligence, and
+          dietary filtering can run in real time.</strong> On real store data. For real families.
+          At subscription prices that save more than they cost.
+        </p>
+        <p>
+          Large language models can extract structured item data from grocery store circulars —
+          PDFs, web scrapes, raw promotional text — and normalize it into a usable pricing
+          engine in minutes. Constraint reasoning that would have required a team of dietitians
+          and programmers a decade ago now runs as a software layer on top of that data.
+        </p>
+        <p>
+          The timing is not an accident. This is a platform that required two things to be true
+          simultaneously: deep operational knowledge of how household retail works, and AI tools
+          capable of running constraint-first optimization at consumer scale. Both are now present.
+          <strong>That convergence is what WhollyFare is.</strong>
+        </p>
+        <p>
+          The grocery floor taught him what families actually need — not what retailers want them to buy. The consulting practice taught him what businesses actually need — not what vendors want them to purchase. The Sincere Strategy is the answer to both questions. Sentir Solutions is where those answers live.
+        </p>
+        <p>
+          His grocery floor experience became WhollyFare and the Wholly platform — constraint-first pricing intelligence for every household. His AI and strategy career became Sentir Consulting — helping business owners increase EBITDA, eliminate repetitive tasks, and upskill the trusted workforce who built the business alongside them. Sentir Solutions is the holding company that makes both possible: the soul, the engine, and the actualization, all under one roof.
+        </p>
+      </div>
+
+      <div class="cta-pair fade-in">
+        <a href="brands.html" class="btn-primary">See the platform</a>
+        <a href="https://sentirsolutions.github.io/sentir-consulting-site/" class="btn-ghost" target="_blank" rel="noopener">Work with Tim ↗</a>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       INVESTORS SECTION
+  ═══════════════════════════════════════════ -->
+  <div class="page-section" id="section-investors">
+<!-- HERO -->
+  <section class="hero">
+    <p class="hero-eyebrow">Sentir Solutions® &nbsp;·&nbsp; Investor Overview &nbsp;·&nbsp; May 2026</p>
+    <h1>Three entities.<br />One founding principle.<br /><em>No compromises.</em></h1>
+    <p class="hero-sub">
+      This isn't a conglomerate. It's a philosophy with three expressions —
+      a holding company, a consulting practice, and a consumer platform —
+      each one reinforcing the others, each one built on the same unbreakable foundation.
+    </p>
+    <div class="hero-actions">
+      <a href="#entities" class="btn-primary">The Portfolio</a>
+      <a href="#roadmap" class="btn-ghost">5-Phase Roadmap</a>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <!-- THE THREE ENTITIES (INTERACTIVE) -->
+  <section id="entities">
+    <div class="container">
+      <p class="section-label">The Portfolio</p>
+      <h2>Not three separate bets.<br /><em>One compounding strategy.</em></h2>
+      <div class="divider"></div>
+      <p class="lead">Sentir Consulting generates revenue today. That revenue funds the Wholly platform. The Wholly platform proves the Sincere Strategy works at scale. That proof makes every entity more valuable. Select each to explore the proof.</p>
+
+      <!-- TAB ROW -->
+      <div class="etab-row">
+        <button class="etab etab-foundation active" onclick="switchEntity('foundation')">
+          <div class="etab-num">01</div>
+          <div class="etab-label">The Foundation</div>
+          <div class="etab-name">Sentir Solutions®</div>
+          <div class="etab-arrow"></div>
+        </button>
+        <button class="etab etab-engine" onclick="switchEntity('engine')">
+          <div class="etab-num">02</div>
+          <div class="etab-label">The Engine</div>
+          <div class="etab-name">Sentir Consulting</div>
+          <div class="etab-arrow"></div>
+        </button>
+        <button class="etab etab-actual" onclick="switchEntity('actual')">
+          <div class="etab-num">03</div>
+          <div class="etab-label">The Actualization</div>
+          <div class="etab-name">The Wholly Brands</div>
+          <div class="etab-arrow"></div>
+        </button>
+      </div>
+
+      <!-- PANEL: FOUNDATION -->
+      <div class="entity-panel panel-foundation" id="panel-foundation">
+        <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#4A90D9;margin-bottom:0.5rem;">The Foundation &mdash; Sentir Solutions®</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;color:#1B3A6B;margin-bottom:0.75rem;line-height:1.35;">The holding company owns the strategy.<br /><em>The strategy is the asset.</em></h3>
+        <p style="color:var(--muted);max-width:680px;line-height:1.85;font-size:0.95rem;">Sentir Solutions owns the Sincere Strategy®, four brand trademarks, and the intellectual architecture behind every product in the portfolio. It is the structural guarantee that no brand under this roof can be compromised by an advertiser, an affiliate relationship, or a data deal — because the prohibition is embedded in ownership, not in a marketing brief.</p>
+        <div class="panel-grid">
+          <div>
+            <p style="font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Proof Points</p>
+            <div class="proof-grid">
+              <div class="proof-pt">
+                <div class="proof-pt-num">4</div>
+                <div class="proof-pt-lbl">Wholly brand trademarks owned: WhollyFare®, WhollyWare™, WhollyPaws™, WhollyCare™</div>
+              </div>
+              <div class="proof-pt">
+                <div class="proof-pt-num">$0</div>
+                <div class="proof-pt-lbl">Outside capital raised to date — consulting revenue self-funds the build. No investor runway being burned.</div>
+              </div>
+              <div class="proof-pt">
+                <div class="proof-pt-num">1 rule</div>
+                <div class="proof-pt-lbl">Sincere Strategy® governs every entity. Zero paid placements, health before savings, radical transparency. Non-negotiable.</div>
+              </div>
+              <div class="proof-pt">
+                <div class="proof-pt-num">Structural</div>
+                <div class="proof-pt-lbl">Moat: competitors cannot adopt the Sincere Strategy without replacing their own revenue model. Their investors won't allow it.</div>
+              </div>
+            </div>
+          </div>
+          <div class="calc-box">
+            <div class="calc-title">Platform Exit Value Calculator</div>
+            <div class="calc-field">
+              <label>Active paying households</label>
+              <input type="range" id="f-hh" min="1000" max="100000" step="1000" value="10000" oninput="calcF()" />
+              <div class="calc-fval" id="f-hh-v">10,000 households</div>
+            </div>
+            <div class="calc-field">
+              <label>Avg subscription tier</label>
+              <div class="tier-row">
+                <button class="tier-btn" onclick="setFTier(7,this)">$7/mo</button>
+                <button class="tier-btn on" onclick="setFTier(19,this)">$19/mo</button>
+                <button class="tier-btn" onclick="setFTier(29,this)">$29/mo</button>
+              </div>
+            </div>
+            <div class="calc-hr"></div>
+            <div class="calc-row"><span class="calc-lbl">Monthly Recurring Revenue</span><span class="calc-val" id="f-mrr">$190,000</span></div>
+            <div class="calc-row"><span class="calc-lbl">Annual Recurring Revenue</span><span class="calc-val" id="f-arr">$2.28M</span></div>
+            <div class="calc-row"><span class="calc-lbl">Exit Value at 8&times; ARR</span><span class="calc-val xl" id="f-exit">$18.2M</span></div>
+            <p class="calc-note">8&times; ARR is conservative for subscription platforms with &lt;5% monthly churn. Strategic acquirer multiples (grocer, health system) typically run higher — especially for a platform that a competitor structurally cannot replicate.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL: ENGINE -->
+      <div class="entity-panel panel-engine" id="panel-engine" style="display:none;">
+        <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:0.5rem;">The Engine &mdash; Sentir Consulting</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;color:var(--dark);margin-bottom:0.75rem;line-height:1.35;">Consulting generates the revenue.<br /><em>That revenue funds the platform.</em></h3>
+        <p style="color:var(--muted);max-width:680px;line-height:1.85;font-size:0.95rem;">Two decades of AI strategy for Virginia businesses that want to grow without gutting the team that built the place. We increase EBITDA, eliminate repetitive work, and upskill the trusted workforce — the people the owner would never replace. No vendor relationships that shape our recommendations. No generic playbooks. That's the Sincere Strategy applied to consulting. The practice generates real income while the platform is being built. No outside capital required to reach Phase 2.</p>
+        <div class="panel-grid">
+          <div>
+            <p style="font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Proof Points</p>
+            <div class="proof-grid">
+              <div class="proof-pt">
+                <div class="proof-pt-num">20+</div>
+                <div class="proof-pt-lbl">Years of AI strategy experience across federal, enterprise, and small-to-mid market clients</div>
+              </div>
+              <div class="proof-pt">
+                <div class="proof-pt-num">~2,800</div>
+                <div class="proof-pt-lbl">Virginia businesses in the $5M&ndash;$50M range — the primary consulting target market</div>
+              </div>
+              <div class="proof-pt">
+                <div class="proof-pt-num">3&ndash;5%</div>
+                <div class="proof-pt-lbl">EBITDA improvement target per engagement — measurable and documentable for the client</div>
+              </div>
+              <div class="proof-pt">
+                <div class="proof-pt-num">Phase 2</div>
+                <div class="proof-pt-lbl">Fully fundable from consulting revenue alone — no external capital required to prove product-market fit</div>
+              </div>
+            </div>
+          </div>
+          <div class="calc-box">
+            <div class="calc-title">Self-Funding Model</div>
+            <div class="calc-field">
+              <label>Annual consulting revenue</label>
+              <input type="range" id="e-rev" min="100000" max="2000000" step="50000" value="500000" oninput="calcE()" />
+              <div class="calc-fval" id="e-rev-v">$500,000</div>
+            </div>
+            <div class="calc-field">
+              <label>Platform reinvestment rate</label>
+              <input type="range" id="e-rate" min="10" max="50" step="5" value="25" oninput="calcE()" />
+              <div class="calc-fval" id="e-rate-v">25%</div>
+            </div>
+            <div class="calc-hr"></div>
+            <div class="calc-row"><span class="calc-lbl">Annual platform budget</span><span class="calc-val" id="e-budget">$125,000</span></div>
+            <div class="calc-row"><span class="calc-lbl">Retained consulting profit</span><span class="calc-val" id="e-retained">$375,000</span></div>
+            <div class="calc-row"><span class="calc-lbl">Phase 2 runway (est. $15K/mo)</span><span class="calc-val xl" id="e-runway">8.3 mo</span></div>
+            <p class="calc-note">Phase 2 estimated burn: ~$15,000/month (infrastructure, tooling, contractor support for 5&ndash;10 pilot households). Consulting covers the runway while the platform earns its proof points.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PANEL: ACTUALIZATION -->
+      <div class="entity-panel panel-actual" id="panel-actual" style="display:none;">
+        <p style="font-size:0.7rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:#3A8C4E;margin-bottom:0.5rem;">The Actualization &mdash; The Wholly Brands</p>
+        <h3 style="font-family:'Fraunces',serif;font-size:1.45rem;font-weight:400;color:var(--dark);margin-bottom:0.75rem;line-height:1.35;">WhollyFare proved the model.<br /><em>Three more brands extend it.</em></h3>
+        <p style="color:var(--muted);max-width:680px;line-height:1.85;font-size:0.95rem;">The constraint engine, local-first pricing, net savings after trip costs, and zero paid placements — the full Sincere Strategy stack — is category-agnostic. WhollyFare proved it works for groceries with a live product and real pilot data. WhollyWare, WhollyPaws, and WhollyCare extend the same architecture to every shelf in a household. One platform. Four revenue streams. One structural moat.</p>
+        <div class="panel-grid">
+          <div>
+            <p style="font-size:0.68rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:0.75rem;">Proof Points &mdash; Live Today</p>
+            <div class="proof-grid">
+              <div class="proof-pt">
+                <div class="proof-pt-num">Live</div>
+                <div class="proof-pt-lbl">WhollyFare® is a working product — real households, real receipts, real savings tracked weekly in Charlottesville VA</div>
+              </div>
+              <div class="proof-pt">
+                <div class="proof-pt-num">239+</div>
+                <div class="proof-pt-lbl">Items ingested via Kroger API — automated live pricing, no manual entry required for the platform's primary store</div>
+              </div>
+              <div class="proof-pt">
+                <div class="proof-pt-num">$27.99</div>
+                <div class="proof-pt-lbl">Net Found Money, pilot week of May 21 2026. Gross $30.25 minus $2.26 gas. Harris Teeter skipped — savings didn't cover the drive.</div>
+              </div>
+              <div class="proof-pt">
+                <div class="proof-pt-num">4&times;</div>
+                <div class="proof-pt-lbl">Consumer verticals addressable from one platform — groceries, household goods, pet care, personal care</div>
+              </div>
+            </div>
+          </div>
+          <div class="calc-box">
+            <div class="calc-title">Household Savings Calculator</div>
+            <div class="calc-field">
+              <label>Weekly household grocery spend</label>
+              <input type="range" id="a-spend" min="100" max="500" step="25" value="250" oninput="calcA()" />
+              <div class="calc-fval" id="a-spend-v">$250 / week</div>
+            </div>
+            <div class="calc-field">
+              <label>Subscription tier</label>
+              <div class="tier-row">
+                <button class="tier-btn" onclick="setATier(0,0.05,this)">Free</button>
+                <button class="tier-btn" onclick="setATier(7,0.10,this)">$7/mo</button>
+                <button class="tier-btn on" onclick="setATier(19,0.15,this)">$19/mo</button>
+                <button class="tier-btn" onclick="setATier(29,0.20,this)">$29/mo</button>
+              </div>
+            </div>
+            <div class="calc-hr"></div>
+            <div class="calc-row"><span class="calc-lbl">Projected annual savings</span><span class="calc-val" id="a-saved">$1,950</span></div>
+            <div class="calc-row"><span class="calc-lbl">Annual subscription cost</span><span class="calc-val" id="a-sub">$228</span></div>
+            <div class="calc-row"><span class="calc-lbl">Net savings to household</span><span class="calc-val xl" id="a-net">$1,722</span></div>
+            <p class="calc-note">Savings rates by tier: Free (price visibility, ~5%), Meal Planner (10%), Health Guard (15%), Full Table (20%). Based on Phase 1 pilot data. A household keeping $1,722/year on a $228 subscription doesn't cancel.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOAT BAR -->
+      <div class="moat-bar">
+        <p><strong>Why competitors can't copy this.</strong> Affiliates, sponsored placements, and data sales are competitors' business model. Ours is a subscription &mdash; you pay us because we save you more than we cost. To adopt the Sincere Strategy, a competitor would have to eliminate affiliate revenue, refuse all paid placements, and return user data to the household. That's a business model replacement, not a product update. Their investors won't allow it. <strong>The moat is structural and it's durable.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY STATS -->
+  <section class="dark" style="padding-top: 5rem; padding-bottom: 5rem;">
+    <div class="container">
+      <p class="section-label light">By the Numbers</p>
+      <h2 class="light">The opportunity is large.<br /><em>The proof is real.</em></h2>
+      <div class="divider"></div>
+
+      <div class="investor-grid">
+        <div class="inv-stat">
+          <div class="num">$1,500+</div>
+          <div class="lbl">Annual household savings projected from WhollyFare Phase 1 pilot data — net of gas costs</div>
+        </div>
+        <div class="inv-stat">
+          <div class="num">4×</div>
+          <div class="lbl">Consumer verticals addressable with one platform — food, household goods, pet care, personal care</div>
+        </div>
+        <div class="inv-stat">
+          <div class="num">$29/mo</div>
+          <div class="lbl">Full Table subscription price for a household receiving $125+/month in real found savings</div>
+        </div>
+        <div class="inv-stat">
+          <div class="num">$2M+</div>
+          <div class="lbl">ARR target at Phase 4 national scale — 50,000+ households, 15+ grocer chains</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section id="roadmap" style="background: var(--bg-alt);">
+    <div class="container">
+      <p class="section-label">Platform Roadmap</p>
+      <h2>Three tracks.<br /><em>One direction.</em></h2>
+      <div class="divider"></div>
+      <p class="lead">Sentir Solutions runs three parallel tracks simultaneously. Consulting generates real income today &mdash; no outside capital required to reach Phase 2. WhollyFare proves the platform model with real households and real receipts. The Wholly Brands are built on top of the same application framework WhollyFare already built, which means each new vertical is faster and cheaper than the last. The company can walk and chew gum. That is structural, not aspirational.</p>
+
+      <div class="track-legend">
+        <div class="tl-item"><span class="tl-dot tl-consult"></span>Sentir Consulting &mdash; cash engine</div>
+        <div class="tl-item"><span class="tl-dot tl-wf"></span>WhollyFare&reg; &mdash; platform proof</div>
+        <div class="tl-item"><span class="tl-dot tl-brands"></span>Wholly Brands &mdash; derivative builds</div>
+      </div>
+
+      <div class="parallel-grid">
+        <div class="pg-col-head ph-col"></div>
+        <div class="pg-col-head c-col">Sentir Consulting</div>
+        <div class="pg-col-head w-col">WhollyFare&reg;</div>
+        <div class="pg-col-head b-col">Wholly Brands</div>
+
+        <div class="pg-phase active-phase">
+          <span class="ph-num">1</span>
+          <span class="ph-time">Now &mdash; 8 wks</span>
+          <span class="phase-badge badge-active">&bull; Live</span>
+        </div>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>Virginia clients, 2+ active engagements. EBITDA-focused AI strategy. Self-funding the company &mdash; no outside capital needed to operate.</p>
+        </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>Hislop family pilot. ~10 major grocery chains across the Charlottesville region. Kroger live API + Claude Vision PDF extraction. Goal: undeniable Found Money from real receipts.</p>
+        </div>
+        <div class="pg-cell b-cell b-quiet">
+          <p>Application framework being built as part of WhollyFare. Constraint engine and household profile system designed for reuse from day one.</p>
+        </div>
+
+        <div class="pg-phase">
+          <span class="ph-num">2</span>
+          <span class="ph-time">Months 2&ndash;5</span>
+          <span class="phase-badge badge-next">Next</span>
+        </div>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>3&ndash;5 active clients. Consulting revenue covers Phase 2 platform burn (~$15K/mo) with margin. No capital consumption.</p>
+        </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>5&ndash;10 pilot households. Health Guard, pantry tracker, Coupon Vault. Retention + savings data built for the seed round conversation.</p>
+        </div>
+        <div class="pg-cell b-cell b-quiet">
+          <p>WhollyWare&trade; spec finalized. Shared constraint engine validated across household types. Build estimated at 6&ndash;8 weeks on top of the framework.</p>
+        </div>
+
+        <div class="pg-phase">
+          <span class="ph-num">3</span>
+          <span class="ph-time">Months 6&ndash;18</span>
+          <span class="phase-badge badge-future">Post-Seed</span>
+        </div>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>Practice scales independently. Client base expands regionally. Can be retained as platform EBITDA or structured as a carve-out &mdash; investor&#39;s choice.</p>
+        </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>React + FastAPI replaces Streamlit. Automated circular parsing. Recipe Library. Price Intelligence. Health System B2B. 1,000+ households. $500K ARR target.</p>
+        </div>
+        <div class="pg-cell b-cell b-active">
+          <div class="cell-stripe b-stripe"></div>
+          <p><strong>WhollyWare&trade; launches.</strong> Household software on the WhollyFare framework &mdash; same constraint engine, same Sincere Strategy rails. Weeks to ship, not quarters.</p>
+        </div>
+
+        <div class="pg-phase">
+          <span class="ph-num">4</span>
+          <span class="ph-time">Months 18&ndash;36</span>
+          <span class="phase-badge badge-future">Series A</span>
+        </div>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>Profitable on its own. Strategic options: operate as platform differentiator, spin off, or fold into acquisition package. No platform capital required either way.</p>
+        </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>15+ grocer chains. 50,000+ households. Preference learning, receipt auto-capture, community features. $2M+ ARR target.</p>
+        </div>
+        <div class="pg-cell b-cell b-active">
+          <div class="cell-stripe b-stripe"></div>
+          <p><strong>WhollyPaws&trade; launches.</strong> Pet wellness vertical on proven framework. <strong>WhollyCare&trade; begins</strong> &mdash; personal care, same architecture, faster build.</p>
+        </div>
+
+        <div class="pg-phase">
+          <span class="ph-num">5</span>
+          <span class="ph-time">Horizon</span>
+          <span class="phase-badge badge-future">Post-A</span>
+        </div>
+        <div class="pg-cell c-cell">
+          <div class="cell-stripe c-stripe"></div>
+          <p>A profitable AI consultancy with a 5-year track record is an asset in any acquisition package. Acquirer gets the platform and the practice that proves the Sincere Strategy scales to enterprise.</p>
+        </div>
+        <div class="pg-cell w-cell">
+          <div class="cell-stripe w-stripe"></div>
+          <p>Wholesale + Delivery. Costco, Sam&#39;s Club, Amazon Fresh. Bulk-unit math. Every shelf in every house. The platform covers the full household spend stack.</p>
+        </div>
+        <div class="pg-cell b-cell b-active">
+          <div class="cell-stripe b-stripe"></div>
+          <p><strong>WhollyCare&trade; full launch.</strong> Four Wholly Brands live on one platform. An acquirer buys a portfolio on proven infrastructure &mdash; not four separate products to integrate.</p>
+        </div>
+      </div>
+
+      <div class="framework-callout">
+        <strong>The framework advantage.</strong> WhollyFare&#39;s constraint engine, circular parsing, household profile system, and Sincere Strategy guardrails are fully reusable. Each Wholly Brand is a new vertical on existing infrastructure &mdash; not a new company to build from scratch. Development time drops with every launch. The platform compounds. The moat widens.
+      </div>
+    </div>
+  </section>
+
+    <!-- INVESTMENT STRUCTURE -->
+  <section>
+    <div class="container">
+      <p class="section-label">Investment Structure</p>
+      <h2>Seed through strategic acquisition —<br /><em>a clear path at each stage.</em></h2>
+      <div class="divider"></div>
+
+      <div class="round-grid">
+        <div class="round-card">
+          <h4>Seed Round</h4>
+          <div class="round-size">$5M – $15M</div>
+          <p>Funds Phase 3 regional scale: React + FastAPI rebuild, automated circular parsing, Recipe Library, WhollyWare launch, first regional expansion beyond Charlottesville. Milestone: $500K ARR and 1,000+ active households.</p>
+        </div>
+        <div class="round-card">
+          <h4>Series A</h4>
+          <div class="round-size">$25M – $50M</div>
+          <p>Funds national expansion, WhollyPaws launch, preference learning infrastructure, receipt auto-capture. Deliverable: $2M+ ARR across 50,000+ households. WhollyCare development begins in parallel.</p>
+        </div>
+        <div class="round-card">
+          <h4>Strategic Acquisition</h4>
+          <div class="round-size">$200M – $500M</div>
+          <p>Natural target for a large grocer, national retailer, or health system that wants a constraint-first household intelligence platform — and structurally cannot build the Sincere Strategy themselves without destroying their existing revenue model.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="dark" style="text-align: center;">
+    <div class="container">
+      <p class="section-label light" style="text-align:center;">Get in Touch</p>
+      <h2 class="light" style="max-width:600px; margin:0 auto 1rem;">
+        Building something this durable<br /><em>takes the right partners.</em>
+      </h2>
+      <p style="color:#9A9690; max-width:500px; margin:0 auto 2rem; line-height:1.85;">
+        If you're an investor, a potential pilot household, or a business that wants to
+        understand what the Sincere Strategy looks like in practice — we'd like to hear from you.
+      </p>
+      <a href="mailto:tim.hislop@gmail.com" class="btn-primary">tim.hislop@gmail.com</a>
+    </div>
+  </section>
+  </div>
 
   <!-- FOOTER -->
   <footer>
     <p>
-      © 2026 Sentir Solutions® LLC &nbsp;·&nbsp; Charlottesville, Virginia &nbsp;·&nbsp;
-      <a href="https://sentirsolutions.github.io/sentir-consulting-site/">Sentir Consulting</a> &nbsp;·&nbsp;
-      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app">WhollyFare®</a> &nbsp;·&nbsp;
-      <a href="whollyware/">WhollyWare™</a> &nbsp;·&nbsp;
-      <a href="whollypaws/">WhollyPaws™</a> &nbsp;·&nbsp;
-      <a href="whollycare/">WhollyCare™</a>
+      &copy; 2026 Sentir Solutions&reg; LLC &nbsp;&middot;&nbsp; Charlottesville, Virginia &nbsp;&middot;&nbsp;
+      <a href="https://sentirsolutions.github.io/sentir-consulting-site/">Sentir Consulting</a> &nbsp;&middot;&nbsp;
+      <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app">WhollyFare&reg;</a> &nbsp;&middot;&nbsp;
+      <a href="whollyware/">WhollyWare&trade;</a> &nbsp;&middot;&nbsp;
+      <a href="whollypaws/">WhollyPaws&trade;</a> &nbsp;&middot;&nbsp;
+      <a href="whollycare/">WhollyCare&trade;</a>
     </p>
-    <p style="margin-top:0.5rem; opacity:0.5;">The Sincere Strategy® · Zero paid placements · Revenue is subscriptions only</p>
+    <p style="margin-top:0.5rem; opacity:0.5;">The Sincere Strategy&reg; &middot; Zero paid placements &middot; Revenue is subscriptions only</p>
   </footer>
 
   <script>
-    const obs = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }),
-      { threshold: 0.07 }
-    );
-    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+    // ── SPA SECTION ROUTER ──
+    const SECTIONS = ['home','brands','whollyfare','mission','about','investors'];
+    const PAGE_MAP = {
+      'index.html': 'home',
+      'brands.html': 'brands',
+      'whollyfare.html': 'whollyfare',
+      'mission.html': 'mission',
+      'about.html': 'about',
+      'investors.html': 'investors'
+    };
+
+    function showSection(id, pushState) {
+      if (!SECTIONS.includes(id)) id = 'home';
+      // Hide all
+      document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+      // Show target
+      const target = document.getElementById('section-' + id);
+      if (target) target.classList.add('active');
+      // Update nav active
+      document.querySelectorAll('[data-section]').forEach(el => {
+        el.classList.toggle('active', el.dataset.section === id);
+      });
+      // Quick jump bar — brands only
+      const qj = document.getElementById('quickJump');
+      if (qj) qj.classList.toggle('qj-active', id === 'brands');
+      // Hash
+      if (pushState !== false) {
+        history.pushState({section: id}, '', '#' + id);
+      }
+      // Scroll top
+      window.scrollTo(0, 0);
+      // Close mobile menu
+      const mm = document.getElementById('nav-mobile-menu');
+      const hb = document.getElementById('nav-hamburger');
+      if (mm) mm.classList.remove('open');
+      if (hb) { hb.setAttribute('aria-expanded','false'); hb.textContent = '\u2630'; }
+      // Re-run fade-in observer on new section
+      reinitFadeIns();
+    }
+
+    // ── FADE-IN OBSERVER ──
+    let _obs;
+    function reinitFadeIns() {
+      if (_obs) _obs.disconnect();
+      _obs = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); _obs.unobserve(e.target); } }),
+        { threshold: 0.07 }
+      );
+      document.querySelectorAll('.active .fade-in:not(.visible)').forEach(el => _obs.observe(el));
+    }
+
+    // ── NAV CLICK HANDLER ──
+    document.querySelectorAll('[data-section]').forEach(el => {
+      el.addEventListener('click', e => {
+        e.preventDefault();
+        showSection(el.dataset.section);
+      });
+    });
+
+    // ── INTERCEPT ALL INTERNAL .html LINKS ──
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = (a.getAttribute('href') || '').trim();
+      if (PAGE_MAP[href]) {
+        e.preventDefault();
+        showSection(PAGE_MAP[href]);
+      }
+    });
+
+    // ── BROWSER BACK/FORWARD ──
+    window.addEventListener('popstate', () => {
+      const id = location.hash.replace('#','') || 'home';
+      showSection(id, false);
+    });
+
+    // ── INIT FROM HASH ──
+    const initId = location.hash.replace('#','') || 'home';
+    showSection(initId, false);
   </script>
 
   <script>
-    // Mobile nav toggle
+    // ── MOBILE NAV TOGGLE ──
     const _hb = document.getElementById('nav-hamburger');
     const _mm = document.getElementById('nav-mobile-menu');
     if (_hb && _mm) {
-      _hb.addEventListener('click', () => {
+      _hb.addEventListener('click', e => {
+        e.stopPropagation();
         const open = _mm.classList.toggle('open');
         _hb.setAttribute('aria-expanded', String(open));
-        _hb.textContent = open ? '✕' : '☰';
+        _hb.textContent = open ? '\u2715' : '\u2630';
       });
       document.addEventListener('click', e => {
         if (!e.target.closest('nav') && !e.target.closest('.nav-mobile-menu')) {
           _mm.classList.remove('open');
-          _hb.textContent = '☰';
+          _hb.textContent = '\u2630';
         }
       });
     }
+  </script>
+
+  <script>
+    // ── INVESTOR TAB SWITCHER ──
+    function switchEntity(id) {
+      ['foundation','engine','actual'].forEach(function(e) {
+        var panel = document.getElementById('panel-' + e);
+        var tab   = document.querySelector('.etab-' + e);
+        if (panel) panel.style.display = (e === id) ? 'block' : 'none';
+        if (tab)   tab.classList.toggle('active', e === id);
+      });
+    }
+    // ── FOUNDATION CALCULATOR ──
+    var fTier = 19;
+    function setFTier(val, btn) {
+      fTier = val;
+      btn.closest('.tier-row').querySelectorAll('.tier-btn').forEach(function(b){ b.classList.remove('on'); });
+      btn.classList.add('on'); calcF();
+    }
+    function calcF() {
+      var hh = parseInt(document.getElementById('f-hh').value);
+      document.getElementById('f-hh-v').textContent = hh.toLocaleString() + ' households';
+      var mrr = hh * fTier, arr = mrr * 12, exit = arr * 8;
+      document.getElementById('f-mrr').textContent  = '$' + mrr.toLocaleString();
+      document.getElementById('f-arr').textContent  = arr  >= 1e6 ? '$' + (arr/1e6).toFixed(2)  + 'M' : '$' + arr.toLocaleString();
+      document.getElementById('f-exit').textContent = exit >= 1e6 ? '$' + (exit/1e6).toFixed(1) + 'M' : '$' + exit.toLocaleString();
+    }
+    // ── ENGINE CALCULATOR ──
+    function calcE() {
+      var rev = parseInt(document.getElementById('e-rev').value);
+      var rate = parseInt(document.getElementById('e-rate').value);
+      document.getElementById('e-rev-v').textContent  = '$' + rev.toLocaleString();
+      document.getElementById('e-rate-v').textContent = rate + '%';
+      var budget = Math.round(rev * rate / 100), retained = rev - budget, runway = budget / 15000;
+      document.getElementById('e-budget').textContent   = '$' + budget.toLocaleString();
+      document.getElementById('e-retained').textContent = '$' + retained.toLocaleString();
+      document.getElementById('e-runway').textContent   = runway.toFixed(1) + ' mo';
+    }
+    // ── ACTUALIZATION CALCULATOR ──
+    var aTierCost = 19, aTierRate = 0.15;
+    function setATier(cost, rate, btn) {
+      aTierCost = cost; aTierRate = rate;
+      btn.closest('.tier-row').querySelectorAll('.tier-btn').forEach(function(b){ b.classList.remove('on'); });
+      btn.classList.add('on'); calcA();
+    }
+    function calcA() {
+      var weekly = parseInt(document.getElementById('a-spend').value);
+      document.getElementById('a-spend-v').textContent = '$' + weekly + ' / week';
+      var annual = weekly * 52, saved = Math.round(annual * aTierRate), subCost = aTierCost * 12, net = saved - subCost;
+      document.getElementById('a-saved').textContent = '$' + saved.toLocaleString();
+      document.getElementById('a-sub').textContent   = aTierCost === 0 ? 'Free' : '$' + subCost;
+      document.getElementById('a-net').textContent   = '$' + net.toLocaleString();
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      if (document.getElementById('f-hh')) calcF();
+      if (document.getElementById('e-rev')) calcE();
+      if (document.getElementById('a-spend')) calcA();
+    });
   </script>
 </body>
 </html>
