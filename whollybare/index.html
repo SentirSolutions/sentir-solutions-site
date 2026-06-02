@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WhollyPaws™ — Smart Pet Savings. Safe First.</title>
-  <meta name="description" content="WhollyPaws finds the best prices on pet food and supplies across every store you shop — filtered first by what's safe for your specific pet. Breed, age, allergens. Always safe before savings." />
+  <title>WhollyBare™ — Personal Care & Beauty, Honestly Priced</title>
+  <meta name="description" content="WhollyBare cross-compares personal care and beauty prices across CVS, Walgreens, Ulta, and Target — filtered first by your ingredient preferences. Fragrance-free, cruelty-free, paraben-free. What you care about is a hard rule." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --dark:      #1E0E04;
-      --mid:       #3D2208;
-      --rich:      #5C3A0E;
-      --warm:      #7A4E1A;
-      --accent:    #C47D2E;
-      --accent-lt: #E0A86A;
-      --cta:       #C47D2E;
-      --cta-lt:    #D99040;
-      --bg:        #FAF7F2;
+      --dark:      #130420;
+      --mid:       #251040;
+      --rich:      #3A1A5C;
+      --warm:      #5E2E82;
+      --accent:    #A45AB0;
+      --accent-lt: #C98AD4;
+      --cta:       #8E44A8;
+      --cta-lt:    #A45AB0;
+      --bg:        #F8F4FC;
       --bg-alt:    #FFFFFF;
-      --bg-warm:   #F5EFE4;
-      --border:    #DEC9A8;
-      --border-lt: #EDE0CC;
-      --text:      #1E120A;
-      --muted:     #6B5240;
-      --muted-lt:  #9A8070;
+      --bg-soft:   #F1EAF8;
+      --border:    #D0BADE;
+      --border-lt: #E4D4F0;
+      --text:      #180828;
+      --muted:     #5A3E6A;
+      --muted-lt:  #9070A8;
       --max:       1100px;
     }
     html { scroll-behavior: smooth; }
@@ -35,23 +35,21 @@
     /* ── NAV ── */
     nav { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .nav-paw {
-      width: 34px; height: 34px; flex-shrink: 0;
-    }
-    .nav-wordmark { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.15rem; color: #FFFFFF; letter-spacing: 0.01em; line-height: 1; }
+    .nav-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .nav-mark svg { width: 18px; height: 18px; }
+    .nav-wordmark { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.15rem; color: #FFFFFF; letter-spacing: 0.01em; }
     .nav-wordmark sup { font-size: 0.6em; font-family: 'Inter', sans-serif; opacity: 0.7; vertical-align: super; }
-    .nav-links { display: flex; align-items: center; gap: 0; }
+    .nav-links { display: flex; align-items: center; }
     .nav-link { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; padding: 0.4rem 0.9rem; border-radius: 3px; transition: color 0.2s; white-space: nowrap; }
     .nav-link:hover { color: #FFFFFF; }
-    .nav-link.active { color: #FFFFFF; }
     .nav-waitlist { background: var(--accent); color: #FFFFFF; font-weight: 600; font-size: 0.82rem; padding: 0.5rem 1.1rem; border-radius: 4px; text-decoration: none; margin-left: 0.75rem; transition: background 0.2s; white-space: nowrap; }
     .nav-waitlist:hover { background: var(--cta-lt); }
 
     /* ── HERO ── */
     .hero { background: linear-gradient(150deg, var(--dark) 0%, var(--mid) 50%, var(--rich) 100%); padding: 5.5rem 2rem 5rem; position: relative; overflow: hidden; }
-    .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 85% 40%, rgba(196,125,46,0.12) 0%, transparent 70%); pointer-events: none; }
-    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(196,125,46,0.15); border: 1px solid rgba(196,125,46,0.3); border-radius: 20px; padding: 5px 14px; margin-bottom: 1.5rem; }
+    .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 80% 40%, rgba(164,90,176,0.15) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 400px; gap: 4rem; align-items: center; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(164,90,176,0.15); border: 1px solid rgba(164,90,176,0.3); border-radius: 20px; padding: 5px 14px; margin-bottom: 1.5rem; }
     .hero-eyebrow span { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-lt); }
     .hero h1 { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.1rem, 4vw, 3.2rem); color: #FFFFFF; line-height: 1.12; margin-bottom: 1.25rem; }
     .hero h1 em { font-style: italic; color: var(--accent-lt); }
@@ -61,37 +59,36 @@
     .btn-cta:hover { background: var(--cta-lt); }
     .btn-ghost { display: inline-block; background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); text-decoration: none; font-size: 0.88rem; padding: 12px 22px; border-radius: 5px; transition: all 0.2s; }
     .btn-ghost:hover { border-color: rgba(255,255,255,0.45); color: #FFFFFF; }
-    .hero-tagline { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; color: rgba(255,255,255,0.45); }
+    .hero-tagline { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; color: rgba(255,255,255,0.4); }
 
-    /* Hero card mockup */
-    .hero-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.75rem; backdrop-filter: blur(4px); }
-    .hero-card-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-lt); margin-bottom: 1rem; }
-    .pet-row { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem; background: rgba(255,255,255,0.06); border-radius: 8px; margin-bottom: 0.6rem; border: 1px solid rgba(255,255,255,0.07); }
-    .pet-icon { font-size: 1.4rem; flex-shrink: 0; }
-    .pet-info { flex: 1; }
-    .pet-name { font-size: 0.85rem; font-weight: 600; color: #FFFFFF; line-height: 1.2; }
-    .pet-detail { font-size: 0.75rem; color: rgba(255,255,255,0.5); }
-    .pet-badge { font-size: 0.68rem; font-weight: 600; padding: 3px 8px; border-radius: 10px; background: rgba(196,125,46,0.25); color: var(--accent-lt); border: 1px solid rgba(196,125,46,0.3); flex-shrink: 0; }
-    .pet-badge.safe { background: rgba(58,140,78,0.2); color: #7DD99A; border-color: rgba(58,140,78,0.3); }
-    .hero-card-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 1rem 0; }
-    .savings-row { display: flex; justify-content: space-between; align-items: center; }
-    .savings-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
-    .savings-amount { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 300; color: var(--accent-lt); }
-    .savings-sub { font-size: 0.72rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem; }
+    /* Hero card */
+    .hero-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.75rem; }
+    .hero-card-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-lt); margin-bottom: 1.25rem; }
+    .filter-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 0.76rem; font-weight: 500; padding: 4px 11px; border-radius: 14px; background: rgba(164,90,176,0.2); border: 1px solid rgba(164,90,176,0.3); color: var(--accent-lt); margin: 0 4px 6px 0; }
+    .filter-tag.active { background: rgba(164,90,176,0.35); }
+    .hc-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 1.1rem 0; }
+    .product-row { display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0.85rem; border-radius: 6px; margin-bottom: 0.5rem; }
+    .product-row.pass { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.07); }
+    .product-row.out { background: rgba(200,50,150,0.06); border: 1px solid rgba(200,50,150,0.1); }
+    .product-name { font-size: 0.83rem; color: #FFFFFF; font-weight: 500; }
+    .product-row.out .product-name { color: rgba(255,255,255,0.4); text-decoration: line-through; }
+    .product-price { font-size: 0.82rem; color: var(--accent-lt); font-weight: 600; }
+    .product-row.out .product-price { display: none; }
+    .product-reason { font-size: 0.7rem; color: rgba(200,80,150,0.8); }
 
     /* ── STAT BAR ── */
     .stat-bar { background: var(--mid); padding: 1.5rem 2rem; }
-    .stat-bar-inner { max-width: var(--max); margin: 0 auto; display: flex; gap: 0; }
+    .stat-bar-inner { max-width: var(--max); margin: 0 auto; display: flex; }
     .stat-item { flex: 1; text-align: center; padding: 0.5rem 1rem; position: relative; }
     .stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 15%; bottom: 15%; width: 1px; background: rgba(255,255,255,0.1); }
     .stat-num { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 300; color: var(--accent-lt); line-height: 1.1; }
-    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); letter-spacing: 0.04em; margin-top: 0.2rem; }
+    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; margin-top: 0.2rem; }
 
     /* ── SECTIONS ── */
     .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
     section { padding: 5rem 2rem; }
     section.on-white { background: var(--bg-alt); }
-    section.on-warm { background: var(--bg-warm); }
+    section.on-soft { background: var(--bg-soft); }
     section.on-dark { background: var(--dark); }
 
     .section-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
@@ -105,12 +102,24 @@
     .lead-text { font-size: 1rem; color: var(--muted); line-height: 1.9; max-width: 580px; margin-bottom: 2.5rem; }
     .lead-text.light { color: rgba(255,255,255,0.6); }
 
-    /* ── FEATURE GRID ── */
+    /* ── FILTER CATEGORIES ── */
+    .filter-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+    .filter-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 2rem; position: relative; }
+    .filter-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+    .filter-card.dark-top::before { background: var(--dark); }
+    .filter-card.mid-top::before { background: var(--mid); }
+    .filter-card.accent-top::before { background: var(--accent); }
+    .filter-big-icon { font-size: 1.8rem; margin-bottom: 0.85rem; }
+    .filter-card h3 { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 400; color: var(--dark); margin-bottom: 0.6rem; }
+    .filter-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.8; }
+    .filter-tags-list { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 1rem; }
+    .filter-chip { font-size: 0.73rem; padding: 3px 9px; border-radius: 12px; background: var(--bg-soft); border: 1px solid var(--border-lt); color: var(--muted); }
+
+    /* ── FEATURES ── */
     .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-    .feature-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 2rem; position: relative; }
-    .feature-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--accent); }
-    .feature-icon { font-size: 1.6rem; margin-bottom: 1rem; }
-    .feature-card h3 { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 400; color: var(--dark); margin-bottom: 0.5rem; line-height: 1.3; }
+    .feature-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 2rem; }
+    .feature-icon { font-size: 1.5rem; margin-bottom: 0.85rem; }
+    .feature-card h3 { font-family: 'Fraunces', serif; font-size: 1.02rem; font-weight: 400; color: var(--dark); margin-bottom: 0.45rem; line-height: 1.3; }
     .feature-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.8; }
 
     /* ── HOW IT WORKS ── */
@@ -118,35 +127,14 @@
     .steps::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 12px); right: calc(12.5% + 12px); height: 1px; background: var(--border); z-index: 0; }
     .step { padding: 0 1.25rem; text-align: center; position: relative; z-index: 1; }
     .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--bg-alt); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
-    .step-num span { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 300; color: var(--accent); line-height: 1; }
+    .step-num span { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 300; color: var(--accent); }
     .step h4 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 0.98rem; color: var(--dark); margin-bottom: 0.5rem; line-height: 1.3; }
     .step p { font-size: 0.83rem; color: var(--muted); line-height: 1.75; }
-
-    /* ── CONSTRAINT SECTION ── */
-    .constraint-split { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-    .constraint-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.75rem; }
-    .constraint-item { display: flex; gap: 1rem; align-items: flex-start; }
-    .constraint-check { width: 22px; height: 22px; border-radius: 50%; background: rgba(196,125,46,0.15); border: 1.5px solid var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
-    .constraint-check svg { width: 11px; height: 11px; }
-    .constraint-text h4 { font-size: 0.9rem; font-weight: 600; color: var(--dark); margin-bottom: 0.2rem; }
-    .constraint-text p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
-    .constraint-visual { background: var(--bg-warm); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; }
-    .cv-header { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-lt); margin-bottom: 1.25rem; }
-    .cv-row { display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0.85rem; border-radius: 6px; margin-bottom: 0.5rem; font-size: 0.84rem; }
-    .cv-row.pass { background: rgba(58,140,78,0.08); border: 1px solid rgba(58,140,78,0.15); }
-    .cv-row.fail { background: rgba(200,50,50,0.06); border: 1px solid rgba(200,50,50,0.12); text-decoration-line: none; }
-    .cv-row-name { color: var(--text); font-weight: 500; }
-    .cv-row.fail .cv-row-name { color: var(--muted-lt); }
-    .cv-row-status { font-size: 0.72rem; font-weight: 600; }
-    .cv-row.pass .cv-row-status { color: #3A8C4E; }
-    .cv-row.fail .cv-row-status { color: #B84040; }
-    .cv-reason { font-size: 0.72rem; color: var(--muted-lt); margin-left: 0.5rem; }
-    .cv-price { font-size: 0.82rem; color: var(--muted); }
 
     /* ── PRICING ── */
     .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
     .price-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 2rem; position: relative; }
-    .price-card.featured { border-color: var(--accent); box-shadow: 0 4px 24px rgba(196,125,46,0.14); }
+    .price-card.featured { border-color: var(--accent); box-shadow: 0 4px 24px rgba(164,90,176,0.14); }
     .price-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--border); }
     .price-card.featured::before { background: var(--accent); }
     .price-tier { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-lt); margin-bottom: 0.85rem; }
@@ -156,7 +144,7 @@
     .price-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.75; padding-top: 1rem; border-top: 1px solid var(--border-lt); }
     .price-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--accent); color: #FFFFFF; padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem; vertical-align: middle; }
 
-    /* ── SINCERE STRATEGY ── */
+    /* ── SINCERE ── */
     .sincere-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.06); margin-top: 2.5rem; }
     .sincere-item { padding: 2rem; background: rgba(255,255,255,0.03); }
     .sincere-icon { font-size: 1.25rem; margin-bottom: 0.75rem; }
@@ -165,46 +153,41 @@
 
     /* ── WAITLIST ── */
     .waitlist-box { max-width: 620px; margin: 0 auto; text-align: center; }
-    .waitlist-box h2 { margin-bottom: 0.75rem; }
     .waitlist-box p { font-size: 0.97rem; color: var(--muted); max-width: 440px; margin: 0 auto 2rem; line-height: 1.85; }
 
     /* ── FOOTER ── */
-    footer { background: #100800; padding: 3rem 2rem 2rem; }
+    footer { background: #080114; padding: 3rem 2rem 2rem; }
     .footer-inner { max-width: var(--max); margin: 0 auto; }
     .footer-top { display: flex; gap: 3rem; justify-content: space-between; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 1.75rem; }
     .footer-brand .footer-wordmark { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.2rem; color: #FFFFFF; margin-bottom: 0.6rem; }
     .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.35); line-height: 1.75; max-width: 240px; }
-    .footer-col h5 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
-    .footer-col a { display: block; font-size: 0.84rem; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 0.5rem; transition: color 0.2s; }
+    .footer-col h5 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: 0.84rem; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 0.5rem; transition: color 0.2s; }
     .footer-col a:hover { color: var(--accent-lt); }
     .footer-bottom { display: flex; justify-content: space-between; align-items: center; }
-    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.25); }
-    .footer-sincere { font-size: 0.75rem; color: rgba(255,255,255,0.2); font-style: italic; }
+    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.22); }
+    .footer-sincere { font-size: 0.75rem; color: rgba(255,255,255,0.18); font-style: italic; }
 
-    /* ── FADE-IN ── */
     .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
     .fade-in.visible { opacity: 1; transform: none; }
 
     @media (max-width: 960px) {
       .hero-inner { grid-template-columns: 1fr; }
       .hero-card { display: none; }
-      .feature-grid { grid-template-columns: 1fr 1fr; }
+      .filter-grid, .feature-grid { grid-template-columns: 1fr 1fr; }
       .steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .steps::before { display: none; }
-      .constraint-split { grid-template-columns: 1fr; gap: 2.5rem; }
       .pricing-grid { grid-template-columns: 1fr 1fr; }
       .sincere-grid { grid-template-columns: 1fr; }
       .footer-top { flex-direction: column; gap: 2rem; }
       .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
     }
     @media (max-width: 640px) {
-      .feature-grid { grid-template-columns: 1fr; }
+      .filter-grid, .feature-grid, .pricing-grid { grid-template-columns: 1fr; }
       .steps { grid-template-columns: 1fr; }
-      .pricing-grid { grid-template-columns: 1fr; }
-      .stat-bar-inner { flex-wrap: wrap; }
       nav { padding: 0 1rem; }
       .nav-links .nav-link { display: none; }
-      .nav-links .nav-link.nav-waitlist { display: flex; }
+      .nav-links .nav-waitlist { display: flex; }
     }
 
     /* ── PLATFORM DROPDOWN ── */
@@ -246,18 +229,17 @@
 <!-- NAV -->
 <nav>
   <a class="nav-brand" href="#">
-    <svg class="nav-paw" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="24" cy="31" rx="11" ry="10" fill="#C47D2E"/>
-      <ellipse cx="11" cy="20" rx="4.5" ry="6" fill="#C47D2E" opacity="0.8"/>
-      <ellipse cx="19" cy="14.5" rx="4.5" ry="6" fill="#C47D2E" opacity="0.8"/>
-      <ellipse cx="29" cy="14.5" rx="4.5" ry="6" fill="#C47D2E" opacity="0.8"/>
-      <ellipse cx="37" cy="20" rx="4.5" ry="6" fill="#C47D2E" opacity="0.8"/>
-    </svg>
-    <span class="nav-wordmark">WhollyPaws<sup>™</sup></span>
+    <div class="nav-mark">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 42 Q10 28 18 12 Q30 4 44 10 Q42 26 30 36 Q24 40 18 42Z" fill="white" opacity="0.9"/>
+        <path d="M8 34 Q4 26 9 19 Q13 26 8 34Z" fill="white" opacity="0.6"/>
+      </svg>
+    </div>
+    <span class="nav-wordmark">WhollyBare<sup>™</sup></span>
   </a>
   <div class="nav-links">
+    <a href="#ingredients" class="nav-link">Ingredients</a>
     <a href="#how-it-works" class="nav-link">How It Works</a>
-    <a href="#safe-first" class="nav-link">Safe First</a>
     <a href="#pricing" class="nav-link">Pricing</a>
     <div class="nav-dropdown">
       <button class="nav-dropdown-trigger">Platform ▾</button>
@@ -268,11 +250,11 @@
         <div class="dropdown-group-label">Wholly Brands</div>
         <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" target="_blank" rel="noopener">WhollyFare® ↗</a>
       <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollyware/">WhollyWare™</a>
-      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollypaws/" class="current-brand">WhollyPaws™ ← you are here</a>
-      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollybare/">WhollyBare™</a>
+      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollypaws/">WhollyPaws™</a>
+      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollycare/" class="current-brand">WhollyBare™ ← you are here</a>
       </div>
     </div>
-    <a href="mailto:tim.hislop@gmail.com?subject=WhollyPaws%20Waitlist" class="nav-waitlist">Join Waitlist →</a>
+    <a href="mailto:tim.hislop@gmail.com?subject=WhollyBare%20Waitlist" class="nav-waitlist">Join Waitlist →</a>
   </div>
 </nav>
 
@@ -281,52 +263,52 @@
   <div class="hero-inner">
     <div>
       <div class="hero-eyebrow">
-        <span>Pet price intelligence &nbsp;·&nbsp; Health constraints, always honored</span>
+        <span>Personal care price intelligence &nbsp;·&nbsp; Ingredient transparency</span>
       </div>
-      <h1>Their needs don't change.<br /><em>What you spend on them can.</em></h1>
-      <p class="hero-sub">Your pet's dietary needs are not negotiable. WhollyPaws finds the best prices on food and supplies across every store you actually shop — filtered for your pet's specific health profile, net of gas costs. Safety first. Savings second.</p>
+      <h1>The beauty industry marks it up.<br /><em>We mark it down.</em></h1>
+      <p class="hero-sub">The beauty industry hides ingredient conflicts behind aspirational marketing. WhollyBare cross-compares personal care and beauty prices across CVS, Walgreens, Target, Ulta, and Walmart — filtered for your skin, your sensitivities, and your values. Honest ingredients. Honest savings.</p>
       <div class="hero-actions">
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyPaws%20Waitlist" class="btn-cta">Join the Waitlist →</a>
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyBare%20Waitlist" class="btn-cta">Join the Waitlist →</a>
         <a href="#how-it-works" class="btn-ghost">See How It Works</a>
       </div>
-      <p class="hero-tagline">The pet care plan that puts health first and savings second.</p>
+      <p class="hero-tagline">The personal care plan that puts safety before savings.</p>
     </div>
 
     <div class="hero-card">
-      <div class="hero-card-label">This Week's Pet Savings</div>
-      <div class="pet-row">
-        <div class="pet-left">
-          <span class="pet-emoji">🐕</span>
-          <div>
-            <div class="pet-name">Biscuit (Labrador, 4yr)</div>
-            <div class="pet-note">Grain-free · No chicken</div>
-          </div>
+      <div class="hero-card-label">Shampoo — 3 options</div>
+      <div class="product-row best">
+        <div class="product-left">
+          <div class="product-name">Vanicream Gentle Shampoo</div>
+          <div class="product-store">CVS · 12 fl oz</div>
         </div>
-        <div class="pet-badge pet-badge-ok">✓ Safe</div>
-      </div>
-      <div class="price-compare-row">
-        <div class="store-item"><div class="store-name">PetSmart</div><div class="store-price">$54.99</div></div>
-        <div class="store-item best"><div class="store-name">Chewy ✓</div><div class="store-price">$44.99</div></div>
-        <div class="store-item"><div class="store-name">Walmart</div><div class="store-price">$48.50</div></div>
-      </div>
-      <div class="hero-card-divider"></div>
-      <div class="pet-row" style="margin-top:0.5rem">
-        <div class="pet-left">
-          <span class="pet-emoji">🐈</span>
-          <div>
-            <div class="pet-name">Luna (Domestic, 2yr)</div>
-            <div class="pet-note">Renal diet · Low phosphorus</div>
-          </div>
+        <div class="product-right">
+          <div class="product-price">$9.49</div>
+          <div class="product-badge safe">✓ Safe</div>
         </div>
-        <div class="pet-badge" style="background:rgba(220,70,70,0.15);color:#e07070;border-color:rgba(220,70,70,0.3);">⚠ Review</div>
       </div>
-      <div class="hero-card-divider"></div>
-      <div class="savings-row">
-        <div>
-          <div class="savings-label">Found Money this week</div>
-          <div class="savings-sub">vs. single-store, after delivery</div>
+      <div class="product-row">
+        <div class="product-left">
+          <div class="product-name">Pantene Pro-V Smooth</div>
+          <div class="product-store">Target · 12 fl oz</div>
         </div>
-        <div class="savings-amount">−$14.20</div>
+        <div class="product-right">
+          <div class="product-price">$6.99</div>
+          <div class="product-badge removed">✗ Removed</div>
+        </div>
+      </div>
+      <div class="product-row">
+        <div class="product-left">
+          <div class="product-name">Free &amp; Clear Shampoo</div>
+          <div class="product-store">Walmart · 12 fl oz</div>
+        </div>
+        <div class="product-right">
+          <div class="product-price">$8.12</div>
+          <div class="product-badge safe">✓ Safe</div>
+        </div>
+      </div>
+      <div class="hero-card-why">
+        <div class="why-label">Why Pantene was removed</div>
+        <div class="why-text">Contains dimethicone — flagged for your silicone sensitivity profile.</div>
       </div>
     </div>
   </div>
@@ -334,70 +316,70 @@
 
 <!-- STAT BAR -->
 <div class="stat-bar">
-  <div class="stat-item"><span class="stat-num">8+</span><span class="stat-label">pet food categories tracked</span></div>
-  <div class="stat-item"><span class="stat-num">6</span><span class="stat-label">major retailers compared</span></div>
-  <div class="stat-item"><span class="stat-num">Net</span><span class="stat-label">savings after delivery or gas</span></div>
+  <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">personal care categories</span></div>
+  <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">major retailers compared</span></div>
+  <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">ingredient-level filtering</span></div>
   <div class="stat-item"><span class="stat-num">Zero</span><span class="stat-label">sponsored brand results, ever</span></div>
 </div>
 
-<!-- HOW IT WORKS -->
-<section id="how-it-works" class="steps-section">
+<!-- INGREDIENT TRANSPARENCY -->
+<section id="ingredients" class="ingredients-section">
   <div class="container">
-    <p class="section-label fade-in">How It Works</p>
-    <h2 class="fade-in">Your pet's health profile.<br /><em>Then the price comparison.</em></h2>
+    <p class="section-label fade-in">Ingredient Intelligence</p>
+    <h2 class="fade-in">The label says "gentle."<br /><em>The ingredient list tells the truth.</em></h2>
     <div class="divider fade-in"></div>
-    <div class="steps fade-in">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-title">Build your pet profile</div>
-        <div class="step-body">Species, breed, age, weight, dietary restrictions, vet-prescribed diets. As many pets as your household has. Each profile is independent.</div>
+    <p class="lead fade-in">WhollyBare reads every ingredient list — not just the marketing claims. Your sensitivity profile is a hard filter. Products that fail it are removed before any price comparison begins. You never see a product that isn't safe for you.</p>
+    <div class="ingredient-grid fade-in">
+      <div class="ingredient-card">
+        <div class="ingredient-icon">🌿</div>
+        <div class="ingredient-title">Fragrance sensitivities</div>
+        <div class="ingredient-body">"Fragrance" is a legal catch-all for hundreds of undisclosed chemicals. WhollyBare flags products with fragrance for sensitivity profiles — not just perfume-free label claims.</div>
       </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-title">Health filter runs first</div>
-        <div class="step-body">Before any price is shown, every product is checked against each pet's constraints. Failing products are removed — not ranked lower. Removed.</div>
+      <div class="ingredient-card">
+        <div class="ingredient-icon">🧪</div>
+        <div class="ingredient-title">Sulfate & silicone tracking</div>
+        <div class="ingredient-body">SLS, SLES, dimethicone, cyclomethicone — tracked by INCI name, not marketing label. "Natural" on the front does not override the ingredient list on the back.</div>
       </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-title">See the real comparison</div>
-        <div class="step-body">Only safe products appear. Prices pulled from PetSmart, Chewy, Walmart, Target, Petco, and your local stores. Unit cost per pound or per serving.</div>
+      <div class="ingredient-card">
+        <div class="ingredient-icon">⚗️</div>
+        <div class="ingredient-title">Preservative profiles</div>
+        <div class="ingredient-body">Parabens, phenoxyethanol, formaldehyde-releasing agents — each tracked individually. Your profile can exclude specific preservatives while allowing others.</div>
       </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-title">Net savings, honestly</div>
-        <div class="step-body">Delivery costs and gas are in the math. If ordering online saves $8 but shipping costs $10, we say so. You get the number that matters.</div>
+      <div class="ingredient-card">
+        <div class="ingredient-icon">🌱</div>
+        <div class="ingredient-title">Values-based filtering</div>
+        <div class="ingredient-body">Cruelty-free, vegan, reef-safe, EWG-verified — WhollyBare applies values filters the same way it applies sensitivity filters. Hard constraints, not suggestions.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SAFE FIRST -->
-<section id="safe-first" class="safe-section dark">
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="steps-section dark">
   <div class="container">
-    <p class="section-label light fade-in">Safety First</p>
-    <h2 class="light fade-in">Your pet can't read the label.<br /><em>We can.</em></h2>
+    <p class="section-label light fade-in">How It Works</p>
+    <h2 class="light fade-in">Safety filter first.<br /><em>Price comparison second.</em></h2>
     <div class="divider fade-in"></div>
-    <p class="lead light fade-in">WhollyPaws runs every ingredient list through your pet's health profile before any price comparison happens. This is not a preference filter. It is a constraint engine. A product that fails is not shown — at any price.</p>
-    <div class="safe-grid fade-in">
-      <div class="safe-item">
-        <div class="safe-icon">🌾</div>
-        <div class="safe-title">Grain-free diets</div>
-        <div class="safe-body">Corn, wheat, soy, barley — tracked by ingredient, not just label claim. "Grain-free" on the bag doesn't mean grain-free in the formula.</div>
+    <div class="steps fade-in">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-title">Build your care profile</div>
+        <div class="step-body">Skin type, known sensitivities, ingredient exclusions, values (vegan, cruelty-free, etc.), and the stores you actually shop. One profile per person in your household.</div>
       </div>
-      <div class="safe-item">
-        <div class="safe-icon">🐔</div>
-        <div class="safe-title">Protein exclusions</div>
-        <div class="safe-body">Chicken, beef, lamb, fish — individual protein allergies tracked per pet. Multi-pet households with different restrictions handled independently.</div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-title">Ingredient check runs first</div>
+        <div class="step-body">Every product in the comparison is filtered against your profile before any price is shown. Products that fail are removed — with a reason logged, visible to you.</div>
       </div>
-      <div class="safe-item">
-        <div class="safe-icon">💊</div>
-        <div class="safe-title">Vet-prescribed diets</div>
-        <div class="safe-body">Renal, hepatic, urinary, cardiac — prescription diet requirements are hard constraints. Your vet's instructions are in the filter, not in a note field.</div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-title">See what's safe and affordable</div>
+        <div class="step-body">Only products that pass your profile appear. Prices pulled from CVS, Walgreens, Target, Ulta, Walmart, and Amazon. Unit price per ounce, always.</div>
       </div>
-      <div class="safe-item">
-        <div class="safe-icon">📋</div>
-        <div class="safe-title">Full rejection log</div>
-        <div class="safe-body">Every product that didn't appear in your results has a reason. You can see it. Radical transparency is not optional — it's structural.</div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-title">Shop with confidence</div>
+        <div class="step-body">Your shopping list is pre-filtered. No reading ingredient lists in the aisle. No second-guessing. The work was done before you left the house.</div>
       </div>
     </div>
   </div>
@@ -417,53 +399,53 @@
         <div class="price-period">forever</div>
         <ul class="price-features">
           <li>Cross-store price comparison</li>
-          <li>One pet profile</li>
-          <li>Basic food categories</li>
-          <li>Net savings after gas shown</li>
+          <li>3 product categories</li>
+          <li>Basic ingredient flag alerts</li>
+          <li>Net savings shown honestly</li>
         </ul>
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyPaws%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyBare%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
       </div>
 
       <div class="price-card">
-        <div class="price-tier">Paw Tracker</div>
+        <div class="price-tier">Care Tracker</div>
         <div class="price-amount">$4<span>/mo</span></div>
-        <div class="price-period">up to 3 pets</div>
+        <div class="price-period">all categories</div>
         <ul class="price-features">
-          <li>All food & supply categories</li>
-          <li>Up to 3 pet profiles</li>
+          <li>All personal care categories</li>
           <li>Weekly price alerts</li>
-          <li>Vet-brand preference tracking</li>
+          <li>Brand & product favorites</li>
+          <li>Price history tracking</li>
         </ul>
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyPaws%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyBare%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
       </div>
 
       <div class="price-card featured">
         <div class="price-badge">Most Popular</div>
-        <div class="price-tier">Health Shield</div>
+        <div class="price-tier">Safety Shield</div>
         <div class="price-amount">$9<span>/mo</span></div>
-        <div class="price-period">full constraint engine</div>
+        <div class="price-period">full ingredient engine</div>
         <ul class="price-features">
-          <li>Everything in Paw Tracker</li>
+          <li>Everything in Care Tracker</li>
           <li>Full ingredient-level filtering</li>
-          <li>Vet-prescribed diet support</li>
+          <li>Sensitivity & values profiles</li>
           <li>Hard exclusions — never overridden</li>
           <li>Rejection log for every product</li>
         </ul>
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyPaws%20Waitlist" class="price-cta">Join Waitlist</a>
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyBare%20Waitlist" class="price-cta">Join Waitlist</a>
       </div>
 
       <div class="price-card">
-        <div class="price-tier">Full Pack</div>
+        <div class="price-tier">Full Beauty</div>
         <div class="price-amount">$14<span>/mo</span></div>
-        <div class="price-period">unlimited pets</div>
+        <div class="price-period">complete platform</div>
         <ul class="price-features">
-          <li>Everything in Health Shield</li>
-          <li>Unlimited pet profiles</li>
-          <li>Medication & supplement tracking</li>
-          <li>Reorder calendar & reminders</li>
+          <li>Everything in Safety Shield</li>
+          <li>Multi-person household profiles</li>
+          <li>Restock calendar & reminders</li>
+          <li>EWG &amp; certification tracking</li>
           <li>CSV export & shopping list</li>
         </ul>
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyPaws%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
+        <a href="mailto:tim.hislop@gmail.com?subject=WhollyBare%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
       </div>
 
     </div>
@@ -474,9 +456,9 @@
 <!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <h2 class="fade-in">Your pet deserves honest prices<br /><em>and honest ingredients.</em></h2>
-    <p class="cta-sub fade-in">WhollyPaws is in development. Join the waitlist for early access.</p>
-    <a href="mailto:tim.hislop@gmail.com?subject=WhollyPaws%20Waitlist" class="btn-cta fade-in">Join the Waitlist →</a>
+    <h2 class="fade-in">Personal care that's actually<br /><em>personal. And honest.</em></h2>
+    <p class="cta-sub fade-in">WhollyBare is in development. Join the waitlist for early access.</p>
+    <a href="mailto:tim.hislop@gmail.com?subject=WhollyBare%20Waitlist" class="btn-cta fade-in">Join the Waitlist →</a>
   </div>
 </section>
 
@@ -484,8 +466,8 @@
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <div class="footer-wordmark">WhollyPaws<sup>™</sup></div>
-      <p>Pet price intelligence. Health constraints always honored. Net savings after delivery or gas. Part of the Sentir Solutions® family.</p>
+      <div class="footer-wordmark">WhollyBare<sup>™</sup></div>
+      <p>Personal care price intelligence. Ingredient-level filtering. Net savings honestly shown. Part of the Sentir Solutions® family.</p>
     </div>
     <div class="footer-col">
       <h5>Platform</h5>
@@ -500,7 +482,7 @@
   </div>
   <div class="footer-bottom">
     <div class="footer-copy">© 2026 Sentir Solutions® LLC · Charlottesville, VA</div>
-    <div class="footer-sincere">The Sincere Strategy® — zero paid placements, health before savings, net savings always.</div>
+    <div class="footer-sincere">The Sincere Strategy® — zero paid placements, safety before savings, net savings always.</div>
   </div>
 </footer>
 

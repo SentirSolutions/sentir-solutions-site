@@ -3,509 +3,428 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WhollyCare™ — Personal Care, Honestly Priced</title>
-  <meta name="description" content="WhollyCare cross-compares personal care and beauty prices across CVS, Walgreens, Ulta, and Target — filtered first by your ingredient preferences. Fragrance-free, cruelty-free, paraben-free. What you care about is a hard rule." />
+  <title>WhollyCare® — The Advocate in Your Pocket. Free.</title>
+  <meta name="description" content="WhollyCare arms families with what the healthcare system already knows — what to ask your doctor, how to appeal an insurance denial, how to navigate to the right specialist. Free. Always." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
-      --dark:      #130420;
-      --mid:       #251040;
-      --rich:      #3A1A5C;
-      --warm:      #5E2E82;
-      --accent:    #A45AB0;
-      --accent-lt: #C98AD4;
-      --cta:       #8E44A8;
-      --cta-lt:    #A45AB0;
-      --bg:        #F8F4FC;
+      --dark:      #081420;
+      --mid:       #0D2338;
+      --rich:      #0E3A52;
+      --warm:      #155C78;
+      --accent:    #1A8FA8;
+      --accent-lt: #3DBDD8;
+      --cta:       #0E7A96;
+      --cta-lt:    #1A8FA8;
+      --bg:        #F4F8FA;
       --bg-alt:    #FFFFFF;
-      --bg-soft:   #F1EAF8;
-      --border:    #D0BADE;
-      --border-lt: #E4D4F0;
-      --text:      #180828;
-      --muted:     #5A3E6A;
-      --muted-lt:  #9070A8;
+      --bg-soft:   #EBF4F8;
+      --border:    #B8D4DE;
+      --border-lt: #D4E8F0;
+      --text:      #0C1E28;
+      --muted:     #3A606E;
+      --muted-lt:  #7AAABB;
+      --free:      #0E8C5A;
+      --free-lt:   #12A86C;
       --max:       1100px;
     }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
 
-    /* ── NAV ── */
+    /* NAV */
     nav { position: sticky; top: 0; z-index: 100; background: var(--dark); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
     .nav-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--accent); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .nav-mark svg { width: 18px; height: 18px; }
     .nav-wordmark { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.15rem; color: #FFFFFF; letter-spacing: 0.01em; }
     .nav-wordmark sup { font-size: 0.6em; font-family: 'Inter', sans-serif; opacity: 0.7; vertical-align: super; }
-    .nav-links { display: flex; align-items: center; }
+    .nav-links { display: flex; align-items: center; gap: 0.25rem; }
     .nav-link { font-size: 0.82rem; color: rgba(255,255,255,0.55); text-decoration: none; padding: 0.4rem 0.9rem; border-radius: 3px; transition: color 0.2s; white-space: nowrap; }
     .nav-link:hover { color: #FFFFFF; }
-    .nav-waitlist { background: var(--accent); color: #FFFFFF; font-weight: 600; font-size: 0.82rem; padding: 0.5rem 1.1rem; border-radius: 4px; text-decoration: none; margin-left: 0.75rem; transition: background 0.2s; white-space: nowrap; }
-    .nav-waitlist:hover { background: var(--cta-lt); }
+    .nav-free-badge { background: var(--free); color: #FFFFFF; font-weight: 700; font-size: 0.75rem; padding: 0.3rem 0.85rem; border-radius: 4px; letter-spacing: 0.05em; margin-left: 0.5rem; white-space: nowrap; }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero { background: linear-gradient(150deg, var(--dark) 0%, var(--mid) 50%, var(--rich) 100%); padding: 5.5rem 2rem 5rem; position: relative; overflow: hidden; }
-    .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 80% 40%, rgba(164,90,176,0.15) 0%, transparent 70%); pointer-events: none; }
-    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 400px; gap: 4rem; align-items: center; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(164,90,176,0.15); border: 1px solid rgba(164,90,176,0.3); border-radius: 20px; padding: 5px 14px; margin-bottom: 1.5rem; }
-    .hero-eyebrow span { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-lt); }
-    .hero h1 { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.1rem, 4vw, 3.2rem); color: #FFFFFF; line-height: 1.12; margin-bottom: 1.25rem; }
+    .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 80% 40%, rgba(26,143,168,0.12) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: var(--max); margin: 0 auto; position: relative; z-index: 1; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(14,140,90,0.2); border: 1px solid rgba(14,140,90,0.4); border-radius: 20px; padding: 5px 14px; margin-bottom: 1.5rem; }
+    .hero-eyebrow span { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #3DDBA8; }
+    .hero h1 { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(2.2rem, 4.5vw, 3.6rem); color: #FFFFFF; line-height: 1.1; margin-bottom: 1.5rem; max-width: 780px; }
     .hero h1 em { font-style: italic; color: var(--accent-lt); }
-    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.68); max-width: 480px; line-height: 1.85; margin-bottom: 2rem; }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .hero-sub { font-size: 1.05rem; color: rgba(255,255,255,0.7); max-width: 600px; line-height: 1.9; margin-bottom: 2rem; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin-bottom: 3rem; }
     .btn-cta { display: inline-block; background: var(--accent); color: #FFFFFF; text-decoration: none; font-size: 0.9rem; font-weight: 600; padding: 13px 30px; border-radius: 5px; transition: background 0.2s; }
     .btn-cta:hover { background: var(--cta-lt); }
     .btn-ghost { display: inline-block; background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.2); text-decoration: none; font-size: 0.88rem; padding: 12px 22px; border-radius: 5px; transition: all 0.2s; }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.45); color: #FFFFFF; }
-    .hero-tagline { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; color: rgba(255,255,255,0.4); }
+    .btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: #FFF; }
+    .hero-quotes { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; max-width: 900px; }
+    .hq { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.09); border-radius: 8px; padding: 1.1rem 1.25rem; }
+    .hq-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-lt); margin-bottom: 0.4rem; }
+    .hq-text { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.55; }
+    @media(max-width:640px){ .hero-quotes { grid-template-columns:1fr; } }
 
-    /* Hero card */
-    .hero-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1); border-radius: 14px; padding: 1.75rem; }
-    .hero-card-label { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-lt); margin-bottom: 1.25rem; }
-    .filter-tag { display: inline-flex; align-items: center; gap: 5px; font-size: 0.76rem; font-weight: 500; padding: 4px 11px; border-radius: 14px; background: rgba(164,90,176,0.2); border: 1px solid rgba(164,90,176,0.3); color: var(--accent-lt); margin: 0 4px 6px 0; }
-    .filter-tag.active { background: rgba(164,90,176,0.35); }
-    .hc-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 1.1rem 0; }
-    .product-row { display: flex; align-items: center; justify-content: space-between; padding: 0.65rem 0.85rem; border-radius: 6px; margin-bottom: 0.5rem; }
-    .product-row.pass { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.07); }
-    .product-row.out { background: rgba(200,50,150,0.06); border: 1px solid rgba(200,50,150,0.1); }
-    .product-name { font-size: 0.83rem; color: #FFFFFF; font-weight: 500; }
-    .product-row.out .product-name { color: rgba(255,255,255,0.4); text-decoration: line-through; }
-    .product-price { font-size: 0.82rem; color: var(--accent-lt); font-weight: 600; }
-    .product-row.out .product-price { display: none; }
-    .product-reason { font-size: 0.7rem; color: rgba(200,80,150,0.8); }
+    /* FREE BANNER */
+    .free-banner { background: var(--free); padding: 1rem 2rem; text-align: center; }
+    .free-banner p { max-width: var(--max); margin: 0 auto; color: #FFFFFF; font-size: 0.9rem; font-weight: 600; }
+    .free-banner p strong { font-weight: 700; }
 
-    /* ── STAT BAR ── */
-    .stat-bar { background: var(--mid); padding: 1.5rem 2rem; }
-    .stat-bar-inner { max-width: var(--max); margin: 0 auto; display: flex; }
-    .stat-item { flex: 1; text-align: center; padding: 0.5rem 1rem; position: relative; }
-    .stat-item:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 15%; bottom: 15%; width: 1px; background: rgba(255,255,255,0.1); }
-    .stat-num { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 300; color: var(--accent-lt); line-height: 1.1; }
-    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; margin-top: 0.2rem; }
-
-    /* ── SECTIONS ── */
-    .container { max-width: var(--max); margin: 0 auto; padding: 0 2rem; }
+    /* SECTIONS */
     section { padding: 5rem 2rem; }
-    section.on-white { background: var(--bg-alt); }
-    section.on-soft { background: var(--bg-soft); }
-    section.on-dark { background: var(--dark); }
+    .section-inner { max-width: var(--max); margin: 0 auto; }
+    .section-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.75rem; }
+    .section-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(1.7rem,3vw,2.5rem); color: var(--text); line-height: 1.2; margin-bottom: 1rem; }
+    .section-title em { font-style: italic; color: var(--accent); }
+    .section-sub { font-size: 1rem; color: var(--muted); max-width: 600px; line-height: 1.85; margin-bottom: 2.5rem; }
 
-    .section-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
-    .section-eyebrow.light { color: var(--accent-lt); }
-    h2 { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(1.65rem, 3vw, 2.35rem); color: var(--dark); line-height: 1.15; margin-bottom: 0.6rem; }
-    h2 em { font-style: italic; color: var(--warm); }
-    h2.light { color: #FFFFFF; }
-    h2.light em { color: var(--accent-lt); }
-    .rule { width: 44px; height: 2px; background: var(--accent); margin: 1rem 0 1.75rem; }
-    .rule.light { background: var(--accent-lt); }
-    .lead-text { font-size: 1rem; color: var(--muted); line-height: 1.9; max-width: 580px; margin-bottom: 2.5rem; }
-    .lead-text.light { color: rgba(255,255,255,0.6); }
+    /* FOUNDING STORY */
+    .story { background: var(--dark); }
+    .story .section-label { color: var(--accent-lt); }
+    .story .section-title { color: #FFFFFF; }
+    .story blockquote { border-left: 3px solid var(--accent); padding-left: 1.5rem; margin: 2rem 0; }
+    .story blockquote p { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.2rem; color: rgba(255,255,255,0.85); line-height: 1.7; }
+    .story-body { font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.95; max-width: 720px; }
+    .story-body + .story-body { margin-top: 1.25rem; }
+    .story-attr { margin-top: 2rem; font-size: 0.85rem; color: rgba(255,255,255,0.4); font-style: italic; }
 
-    /* ── FILTER CATEGORIES ── */
-    .filter-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-    .filter-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 2rem; position: relative; }
-    .filter-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
-    .filter-card.dark-top::before { background: var(--dark); }
-    .filter-card.mid-top::before { background: var(--mid); }
-    .filter-card.accent-top::before { background: var(--accent); }
-    .filter-big-icon { font-size: 1.8rem; margin-bottom: 0.85rem; }
-    .filter-card h3 { font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 400; color: var(--dark); margin-bottom: 0.6rem; }
-    .filter-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.8; }
-    .filter-tags-list { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 1rem; }
-    .filter-chip { font-size: 0.73rem; padding: 3px 9px; border-radius: 12px; background: var(--bg-soft); border: 1px solid var(--border-lt); color: var(--muted); }
+    /* THREE JOBS */
+    .jobs { background: var(--bg-alt); }
+    .jobs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem; }
+    @media(max-width:768px){ .jobs-grid { grid-template-columns:1fr; } }
+    .job-card { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 12px; padding: 2rem 1.75rem; position: relative; }
+    .job-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; border-radius: 12px 12px 0 0; background: var(--accent); }
+    .job-num { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem; }
+    .job-title { font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 400; color: var(--text); margin-bottom: 0.5rem; }
+    .job-trigger { font-size: 0.82rem; color: var(--muted); font-style: italic; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+    .job-outputs { list-style: none; }
+    .job-outputs li { font-size: 0.88rem; color: var(--muted); padding: 0.35rem 0; padding-left: 1.25rem; position: relative; line-height: 1.55; }
+    .job-outputs li::before { content: '→'; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
 
-    /* ── FEATURES ── */
-    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-    .feature-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 2rem; }
-    .feature-icon { font-size: 1.5rem; margin-bottom: 0.85rem; }
-    .feature-card h3 { font-family: 'Fraunces', serif; font-size: 1.02rem; font-weight: 400; color: var(--dark); margin-bottom: 0.45rem; line-height: 1.3; }
-    .feature-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.8; }
+    /* NOT / IS */
+    .not-is { background: var(--bg); }
+    .not-is-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    @media(max-width:640px){ .not-is-grid { grid-template-columns:1fr; } }
+    .ni-box { border-radius: 10px; padding: 2rem; }
+    .ni-not { background: #FEF2F2; border: 1px solid #FECACA; }
+    .ni-is  { background: #ECFDF5; border: 1px solid #A7F3D0; }
+    .ni-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem; }
+    .ni-not .ni-label { color: #991B1B; }
+    .ni-is  .ni-label { color: #065F46; }
+    .ni-list { list-style: none; }
+    .ni-list li { font-size: 0.92rem; padding: 0.4rem 0; padding-left: 1.5rem; position: relative; line-height: 1.5; }
+    .ni-not .ni-list li::before { content: '✕'; position: absolute; left: 0; color: #DC2626; font-weight: 700; font-size: 0.8rem; top: 0.5rem; }
+    .ni-is  .ni-list li::before { content: '✓'; position: absolute; left: 0; color: #059669; font-weight: 700; font-size: 0.8rem; top: 0.5rem; }
+    .ni-not .ni-list li { color: #7F1D1D; }
+    .ni-is  .ni-list li { color: #064E3B; }
 
-    /* ── HOW IT WORKS ── */
-    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 2.5rem; position: relative; }
-    .steps::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 12px); right: calc(12.5% + 12px); height: 1px; background: var(--border); z-index: 0; }
-    .step { padding: 0 1.25rem; text-align: center; position: relative; z-index: 1; }
-    .step-num { width: 56px; height: 56px; border-radius: 50%; background: var(--bg-alt); border: 2px solid var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; }
-    .step-num span { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 300; color: var(--accent); }
-    .step h4 { font-family: 'Fraunces', serif; font-weight: 400; font-size: 0.98rem; color: var(--dark); margin-bottom: 0.5rem; line-height: 1.3; }
-    .step p { font-size: 0.83rem; color: var(--muted); line-height: 1.75; }
+    /* DENIAL SPOTLIGHT */
+    .denial { background: var(--mid); }
+    .denial .section-label { color: var(--accent-lt); }
+    .denial .section-title { color: #FFFFFF; }
+    .denial .section-sub { color: rgba(255,255,255,0.6); max-width: 600px; }
+    .denial-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 3rem; }
+    @media(max-width:640px){ .denial-stats { grid-template-columns:1fr; } }
+    .dstat { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 1.5rem; text-align: center; }
+    .dstat-num { font-family: 'Fraunces', serif; font-size: 2.4rem; font-weight: 300; color: var(--accent-lt); line-height: 1; margin-bottom: 0.4rem; }
+    .dstat-label { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.4; }
+    .denial-output { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 2rem; max-width: 680px; }
+    .denial-output-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-lt); margin-bottom: 1rem; }
+    .denial-output ul { list-style: none; }
+    .denial-output ul li { font-size: 0.9rem; color: rgba(255,255,255,0.72); padding: 0.5rem 0; padding-left: 1.5rem; position: relative; border-bottom: 1px solid rgba(255,255,255,0.06); line-height: 1.5; }
+    .denial-output ul li:last-child { border-bottom: none; }
+    .denial-output ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent-lt); font-weight: 600; }
 
-    /* ── PRICING ── */
-    .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
-    .price-card { background: var(--bg-alt); border: 1px solid var(--border-lt); padding: 2rem; position: relative; }
-    .price-card.featured { border-color: var(--accent); box-shadow: 0 4px 24px rgba(164,90,176,0.14); }
-    .price-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--border); }
-    .price-card.featured::before { background: var(--accent); }
-    .price-tier { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-lt); margin-bottom: 0.85rem; }
-    .price-card.featured .price-tier { color: var(--accent); }
-    .price-amount { font-family: 'Fraunces', serif; font-size: 2.1rem; font-weight: 300; color: var(--dark); line-height: 1; }
-    .price-period { font-size: 0.78rem; color: var(--muted-lt); margin: 0.3rem 0 1rem; }
-    .price-desc { font-size: 0.87rem; color: var(--muted); line-height: 1.75; padding-top: 1rem; border-top: 1px solid var(--border-lt); }
-    .price-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: var(--accent); color: #FFFFFF; padding: 2px 8px; border-radius: 3px; margin-left: 0.5rem; vertical-align: middle; }
+    /* SINCERITY TABLE */
+    .sincerity { background: var(--bg-alt); }
+    .sincerity-table { width: 100%; border-collapse: collapse; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+    .sincerity-table th { background: var(--dark); color: rgba(255,255,255,0.7); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.9rem 1.25rem; text-align: left; }
+    .sincerity-table td { padding: 1rem 1.25rem; font-size: 0.88rem; color: var(--muted); border-bottom: 1px solid var(--border-lt); vertical-align: top; line-height: 1.55; }
+    .sincerity-table tr:last-child td { border-bottom: none; }
+    .sincerity-table tr:nth-child(even) td { background: var(--bg-soft); }
+    .sincerity-table td:first-child { font-weight: 600; color: var(--text); width: 35%; }
 
-    /* ── SINCERE ── */
-    .sincere-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(255,255,255,0.06); margin-top: 2.5rem; }
-    .sincere-item { padding: 2rem; background: rgba(255,255,255,0.03); }
-    .sincere-icon { font-size: 1.25rem; margin-bottom: 0.75rem; }
-    .sincere-item h4 { font-size: 0.92rem; font-weight: 600; color: #FFFFFF; margin-bottom: 0.4rem; }
-    .sincere-item p { font-size: 0.84rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
+    /* MANIFESTO */
+    .manifesto { background: var(--dark); }
+    .manifesto .section-label { color: var(--accent-lt); }
+    .manifesto-body { font-size: 1.05rem; color: rgba(255,255,255,0.72); line-height: 2; max-width: 760px; }
+    .manifesto-body + .manifesto-body { margin-top: 1.5rem; }
+    .manifesto-close { margin-top: 3rem; font-family: 'Fraunces', serif; font-style: italic; font-size: 1.4rem; font-weight: 300; color: #FFFFFF; line-height: 1.5; max-width: 680px; border-left: 3px solid var(--accent); padding-left: 1.5rem; }
 
-    /* ── WAITLIST ── */
-    .waitlist-box { max-width: 620px; margin: 0 auto; text-align: center; }
-    .waitlist-box p { font-size: 0.97rem; color: var(--muted); max-width: 440px; margin: 0 auto 2rem; line-height: 1.85; }
+    /* CTA */
+    .cta-section { background: var(--bg-soft); border-top: 1px solid var(--border); }
+    .cta-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+    .cta-pill { display: inline-block; background: var(--free); color: #FFFFFF; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1.1rem; border-radius: 20px; margin-bottom: 1.25rem; }
+    .cta-title { font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(1.6rem,3vw,2.2rem); color: var(--text); margin-bottom: 0.75rem; line-height: 1.2; }
+    .cta-sub { font-size: 0.95rem; color: var(--muted); line-height: 1.8; margin-bottom: 2rem; }
+    .waitlist-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto 1rem; }
+    .waitlist-form input { flex: 1; padding: 12px 16px; border: 1px solid var(--border); border-radius: 5px; font-size: 0.9rem; background: #FFFFFF; color: var(--text); outline: none; }
+    .waitlist-form input:focus { border-color: var(--accent); }
+    .waitlist-form button { background: var(--accent); color: #FFFFFF; border: none; padding: 12px 22px; border-radius: 5px; font-size: 0.88rem; font-weight: 600; cursor: pointer; white-space: nowrap; transition: background 0.2s; }
+    .waitlist-form button:hover { background: var(--cta-lt); }
+    .cta-note { font-size: 0.78rem; color: var(--muted-lt); }
+    @media(max-width:480px){ .waitlist-form { flex-direction: column; } }
 
-    /* ── FOOTER ── */
-    footer { background: #080114; padding: 3rem 2rem 2rem; }
-    .footer-inner { max-width: var(--max); margin: 0 auto; }
-    .footer-top { display: flex; gap: 3rem; justify-content: space-between; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.07); margin-bottom: 1.75rem; }
-    .footer-brand .footer-wordmark { font-family: 'Fraunces', serif; font-weight: 400; font-size: 1.2rem; color: #FFFFFF; margin-bottom: 0.6rem; }
-    .footer-brand p { font-size: 0.82rem; color: rgba(255,255,255,0.35); line-height: 1.75; max-width: 240px; }
-    .footer-col h5 { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1rem; }
-    .footer-col a { display: block; font-size: 0.84rem; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 0.5rem; transition: color 0.2s; }
-    .footer-col a:hover { color: var(--accent-lt); }
-    .footer-bottom { display: flex; justify-content: space-between; align-items: center; }
-    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.22); }
-    .footer-sincere { font-size: 0.75rem; color: rgba(255,255,255,0.18); font-style: italic; }
-
-    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.5s ease, transform 0.5s ease; }
-    .fade-in.visible { opacity: 1; transform: none; }
-
-    @media (max-width: 960px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-card { display: none; }
-      .filter-grid, .feature-grid { grid-template-columns: 1fr 1fr; }
-      .steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
-      .steps::before { display: none; }
-      .pricing-grid { grid-template-columns: 1fr 1fr; }
-      .sincere-grid { grid-template-columns: 1fr; }
-      .footer-top { flex-direction: column; gap: 2rem; }
-      .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
-    }
-    @media (max-width: 640px) {
-      .filter-grid, .feature-grid, .pricing-grid { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr; }
-      nav { padding: 0 1rem; }
-      .nav-links .nav-link { display: none; }
-      .nav-links .nav-waitlist { display: flex; }
-    }
-
-    /* ── PLATFORM DROPDOWN ── */
-    .nav-dropdown { position: relative; }
-    .nav-dropdown-trigger {
-      background: none; border: 1px solid rgba(255,255,255,0.18);
-      color: rgba(255,255,255,0.75); font-size: 0.82rem; font-family: inherit;
-      cursor: pointer; padding: 0.35rem 0.75rem; border-radius: 6px;
-      transition: background 0.2s, color 0.2s; letter-spacing: 0.02em;
-    }
-    .nav-dropdown-trigger:hover { background: rgba(255,255,255,0.1); color: white; }
-    .nav-dropdown-menu {
-      display: none; position: absolute; top: calc(100% + 10px); right: 0;
-      background: #0e0e1a; border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px; padding: 0.5rem; min-width: 210px;
-      z-index: 200; box-shadow: 0 12px 40px rgba(0,0,0,0.5);
-    }
-    .nav-dropdown.open .nav-dropdown-menu { display: block; }
-    .nav-dropdown-menu a {
-      display: block; padding: 0.5rem 0.85rem; color: rgba(255,255,255,0.7);
-      text-decoration: none; font-size: 0.83rem; border-radius: 6px;
-      transition: background 0.15s, color 0.15s;
-    }
-    .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: white; }
-    .nav-dropdown-menu a.current-brand {
-      color: white; font-weight: 600;
-      background: rgba(255,255,255,0.07); cursor: default; pointer-events: none;
-    }
-    .dropdown-group-label {
-      font-size: 0.68rem; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: rgba(255,255,255,0.28);
-      padding: 0.6rem 0.85rem 0.25rem;
-    }
-    .dropdown-divider { border-top: 1px solid rgba(255,255,255,0.08); margin: 0.4rem 0; }
+    /* FOOTER */
+    footer { background: var(--dark); padding: 2.5rem 2rem; border-top: 1px solid rgba(255,255,255,0.07); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.5rem; }
+    .footer-brand { font-family: 'Fraunces', serif; font-size: 1rem; color: rgba(255,255,255,0.8); }
+    .footer-brand span { font-size: 0.78rem; font-family: 'Inter', sans-serif; color: rgba(255,255,255,0.35); margin-left: 0.5rem; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
+    .footer-links a { font-size: 0.8rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(255,255,255,0.75); }
+    .footer-copy { width: 100%; font-size: 0.75rem; color: rgba(255,255,255,0.25); margin-top: 0.5rem; }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <a class="nav-brand" href="#">
+  <a href="../" class="nav-brand">
     <div class="nav-mark">
-      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 42 Q10 28 18 12 Q30 4 44 10 Q42 26 30 36 Q24 40 18 42Z" fill="white" opacity="0.9"/>
-        <path d="M8 34 Q4 26 9 19 Q13 26 8 34Z" fill="white" opacity="0.6"/>
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       </svg>
     </div>
-    <span class="nav-wordmark">WhollyCare<sup>™</sup></span>
+    <span class="nav-wordmark">WhollyCare<sup>®</sup></span>
   </a>
   <div class="nav-links">
-    <a href="#ingredients" class="nav-link">Ingredients</a>
     <a href="#how-it-works" class="nav-link">How It Works</a>
-    <a href="#pricing" class="nav-link">Pricing</a>
-    <div class="nav-dropdown">
-      <button class="nav-dropdown-trigger">Platform ▾</button>
-      <div class="nav-dropdown-menu">
-        <div class="dropdown-group-label">Sentir Solutions</div>
-        <a href="https://sentirsolutions.github.io/sentir-solutions-site/">Sentir Solutions® — Home</a>
-        <div class="dropdown-divider"></div>
-        <div class="dropdown-group-label">Wholly Brands</div>
-        <a href="https://whollyfare-website-whlrpy4dnreymq3gbjjkup.streamlit.app/" target="_blank" rel="noopener">WhollyFare® ↗</a>
-      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollyware/">WhollyWare™</a>
-      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollypaws/">WhollyPaws™</a>
-      <a href="https://sentirsolutions.github.io/sentir-solutions-site/whollycare/" class="current-brand">WhollyCare™ ← you are here</a>
-      </div>
-    </div>
-    <a href="mailto:tim.hislop@gmail.com?subject=WhollyCare%20Waitlist" class="nav-waitlist">Join Waitlist →</a>
+    <a href="#denial" class="nav-link">Insurance Denials</a>
+    <a href="#manifesto" class="nav-link">Our Why</a>
+    <span class="nav-free-badge">FREE</span>
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <div>
-      <div class="hero-eyebrow">
-        <span>Personal care price intelligence &nbsp;·&nbsp; Ingredient transparency</span>
-      </div>
-      <h1>The beauty industry marks it up.<br /><em>We mark it down.</em></h1>
-      <p class="hero-sub">The beauty industry hides ingredient conflicts behind aspirational marketing. WhollyCare cross-compares personal care and beauty prices across CVS, Walgreens, Target, Ulta, and Walmart — filtered for your skin, your sensitivities, and your values. Honest ingredients. Honest savings.</p>
-      <div class="hero-actions">
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyCare%20Waitlist" class="btn-cta">Join the Waitlist →</a>
-        <a href="#how-it-works" class="btn-ghost">See How It Works</a>
-      </div>
-      <p class="hero-tagline">The personal care plan that puts safety before savings.</p>
+    <div class="hero-eyebrow"><span>Free. No subscription. No advertising. Ever.</span></div>
+    <h1>The healthcare system wasn't built<br>to explain itself. <em>We will.</em></h1>
+    <p class="hero-sub">WhollyCare arms families with what the system already knows — what questions to ask your doctor, how to appeal an insurance denial, and how to navigate to the right specialist when the door keeps closing.</p>
+    <div class="hero-actions">
+      <a href="#waitlist" class="btn-cta">Get Early Access — It's Free</a>
+      <a href="#how-it-works" class="btn-ghost">See How It Works</a>
     </div>
-
-    <div class="hero-card">
-      <div class="hero-card-label">Shampoo — 3 options</div>
-      <div class="product-row best">
-        <div class="product-left">
-          <div class="product-name">Vanicream Gentle Shampoo</div>
-          <div class="product-store">CVS · 12 fl oz</div>
-        </div>
-        <div class="product-right">
-          <div class="product-price">$9.49</div>
-          <div class="product-badge safe">✓ Safe</div>
-        </div>
+    <div class="hero-quotes">
+      <div class="hq">
+        <div class="hq-label">Appointment Prep</div>
+        <div class="hq-text">"What questions should I bring? What tests make sense? What do I say if my concern is dismissed?"</div>
       </div>
-      <div class="product-row">
-        <div class="product-left">
-          <div class="product-name">Pantene Pro-V Smooth</div>
-          <div class="product-store">Target · 12 fl oz</div>
-        </div>
-        <div class="product-right">
-          <div class="product-price">$6.99</div>
-          <div class="product-badge removed">✗ Removed</div>
-        </div>
+      <div class="hq">
+        <div class="hq-label">Insurance Denials</div>
+        <div class="hq-text">"They said no. Now what? Here's your appeal window, the right language, and a draft letter."</div>
       </div>
-      <div class="product-row">
-        <div class="product-left">
-          <div class="product-name">Free &amp; Clear Shampoo</div>
-          <div class="product-store">Walmart · 12 fl oz</div>
-        </div>
-        <div class="product-right">
-          <div class="product-price">$8.12</div>
-          <div class="product-badge safe">✓ Safe</div>
-        </div>
-      </div>
-      <div class="hero-card-why">
-        <div class="why-label">Why Pantene was removed</div>
-        <div class="why-text">Contains dimethicone — flagged for your silicone sensitivity profile.</div>
+      <div class="hq">
+        <div class="hq-label">Specialist Navigation</div>
+        <div class="hq-text">"My PCP isn't helping. What kind of specialist do I need — and how do I actually get there?"</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STAT BAR -->
-<div class="stat-bar">
-  <div class="stat-item"><span class="stat-num">10+</span><span class="stat-label">personal care categories</span></div>
-  <div class="stat-item"><span class="stat-num">5</span><span class="stat-label">major retailers compared</span></div>
-  <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">ingredient-level filtering</span></div>
-  <div class="stat-item"><span class="stat-num">Zero</span><span class="stat-label">sponsored brand results, ever</span></div>
+<div class="free-banner">
+  <p>WhollyCare is <strong>completely free</strong> — no subscription, no advertising, no pharmaceutical partnerships, no data sales. This is our commitment, not a pricing tier.</p>
 </div>
 
-<!-- INGREDIENT TRANSPARENCY -->
-<section id="ingredients" class="ingredients-section">
-  <div class="container">
-    <p class="section-label fade-in">Ingredient Intelligence</p>
-    <h2 class="fade-in">The label says "gentle."<br /><em>The ingredient list tells the truth.</em></h2>
-    <div class="divider fade-in"></div>
-    <p class="lead fade-in">WhollyCare reads every ingredient list — not just the marketing claims. Your sensitivity profile is a hard filter. Products that fail it are removed before any price comparison begins. You never see a product that isn't safe for you.</p>
-    <div class="ingredient-grid fade-in">
-      <div class="ingredient-card">
-        <div class="ingredient-icon">🌿</div>
-        <div class="ingredient-title">Fragrance sensitivities</div>
-        <div class="ingredient-body">"Fragrance" is a legal catch-all for hundreds of undisclosed chemicals. WhollyCare flags products with fragrance for sensitivity profiles — not just perfume-free label claims.</div>
+<section class="story" id="why">
+  <div class="section-inner">
+    <div class="section-label">Why We Built This</div>
+    <blockquote>
+      <p>"We figured it out. Painfully. Over years. And what we figured out is exactly what WhollyCare is going to tell you the first time you ask."</p>
+    </blockquote>
+    <p class="story-body">My wife's health issues were dismissed and minimized for years before we learned how to advocate in a way the system had to respond to. My daughter's disability and allergies required knowing exactly what to say, to whom, and when — information that exists in the system, but that nobody hands you.</p>
+    <p class="story-body">We got there. But we had the time, the temperament, and eventually the knowledge to fight. Most families don't have all three. The healthcare system isn't designed against you — it's designed around people who already know how to navigate it. WhollyCare gives everyone else the same map.</p>
+    <p class="story-body">I built WhollyFare because grocery stores weren't honest with families about pricing. I'm building WhollyCare for the same reason: the healthcare system isn't honest with families either. Same founding principle. Completely different stakes.</p>
+    <p class="story-attr">— Tim Hislop, Founder · Sentir Solutions® LLC</p>
+  </div>
+</section>
+
+<section class="jobs" id="how-it-works">
+  <div class="section-inner">
+    <div class="section-label">How WhollyCare Works</div>
+    <h2 class="section-title">Three jobs. <em>All free.</em></h2>
+    <p class="section-sub">WhollyCare doesn't diagnose. It doesn't guess. It does the one thing the system has never bothered to do: it tells you what to say next.</p>
+    <div class="jobs-grid">
+      <div class="job-card">
+        <div class="job-num">Job 01</div>
+        <div class="job-title">Appointment Preparation</div>
+        <div class="job-trigger">"I have this symptom. Help me walk in prepared."</div>
+        <ul class="job-outputs">
+          <li>Questions to ask your doctor — specific, not generic</li>
+          <li>Tests the evidence typically supports for this presentation</li>
+          <li>Language to use so your doctor understands what you're describing</li>
+          <li>What to say if your concern is dismissed or minimized</li>
+          <li>What to bring to make the most of eleven minutes</li>
+        </ul>
       </div>
-      <div class="ingredient-card">
-        <div class="ingredient-icon">🧪</div>
-        <div class="ingredient-title">Sulfate & silicone tracking</div>
-        <div class="ingredient-body">SLS, SLES, dimethicone, cyclomethicone — tracked by INCI name, not marketing label. "Natural" on the front does not override the ingredient list on the back.</div>
+      <div class="job-card">
+        <div class="job-num">Job 02</div>
+        <div class="job-title">Insurance Denial Advocacy</div>
+        <div class="job-trigger">"They said no. Now what?"</div>
+        <ul class="job-outputs">
+          <li>What the denial letter actually means — translated</li>
+          <li>Your appeal window (federal law requires 180 days)</li>
+          <li>Medical necessity language your doctor needs to support the appeal</li>
+          <li>A draft appeal letter — review with your doctor before sending</li>
+          <li>Your right to external independent review if the internal appeal fails</li>
+          <li>State insurance commissioner contact if your rights are violated</li>
+        </ul>
       </div>
-      <div class="ingredient-card">
-        <div class="ingredient-icon">⚗️</div>
-        <div class="ingredient-title">Preservative profiles</div>
-        <div class="ingredient-body">Parabens, phenoxyethanol, formaldehyde-releasing agents — each tracked individually. Your profile can exclude specific preservatives while allowing others.</div>
-      </div>
-      <div class="ingredient-card">
-        <div class="ingredient-icon">🌱</div>
-        <div class="ingredient-title">Values-based filtering</div>
-        <div class="ingredient-body">Cruelty-free, vegan, reef-safe, EWG-verified — WhollyCare applies values filters the same way it applies sensitivity filters. Hard constraints, not suggestions.</div>
+      <div class="job-card">
+        <div class="job-num">Job 03</div>
+        <div class="job-title">Specialist Navigation</div>
+        <div class="job-trigger">"My PCP isn't helping. What's next?"</div>
+        <ul class="job-outputs">
+          <li>What type of specialist makes sense for this presentation</li>
+          <li>How to get a referral when your PCP is resistant</li>
+          <li>What to say to the referral coordinator</li>
+          <li>What to bring to the specialist appointment</li>
+          <li>How to get a second opinion without alienating your current doctor</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section id="how-it-works" class="steps-section dark">
-  <div class="container">
-    <p class="section-label light fade-in">How It Works</p>
-    <h2 class="light fade-in">Safety filter first.<br /><em>Price comparison second.</em></h2>
-    <div class="divider fade-in"></div>
-    <div class="steps fade-in">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-title">Build your care profile</div>
-        <div class="step-body">Skin type, known sensitivities, ingredient exclusions, values (vegan, cruelty-free, etc.), and the stores you actually shop. One profile per person in your household.</div>
+<section class="not-is">
+  <div class="section-inner">
+    <div class="section-label">What WhollyCare Is and Isn't</div>
+    <h2 class="section-title">We live on the <em>right side</em> of the line.</h2>
+    <p class="section-sub">There's a clear line between patient education and medical advice. WhollyCare lives permanently on the education side — not as a compromise, but as the product philosophy.</p>
+    <div class="not-is-grid">
+      <div class="ni-box ni-not">
+        <div class="ni-label">WhollyCare Is Not</div>
+        <ul class="ni-list">
+          <li>A symptom checker — those tell you what you might have, which terrifies people and is often wrong</li>
+          <li>A diagnosis tool — we are not practicing medicine</li>
+          <li>Ad-supported health content — no pharma banners next to anxiety articles</li>
+          <li>A replacement for your doctor — a preparation tool for the visit</li>
+          <li>A subscription — free means free</li>
+          <li>Affiliated with any insurer, hospital system, or pharmaceutical company</li>
+        </ul>
       </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-title">Ingredient check runs first</div>
-        <div class="step-body">Every product in the comparison is filtered against your profile before any price is shown. Products that fail are removed — with a reason logged, visible to you.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-title">See what's safe and affordable</div>
-        <div class="step-body">Only products that pass your profile appear. Prices pulled from CVS, Walgreens, Target, Ulta, Walmart, and Amazon. Unit price per ounce, always.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-title">Shop with confidence</div>
-        <div class="step-body">Your shopping list is pre-filtered. No reading ingredient lists in the aisle. No second-guessing. The work was done before you left the house.</div>
+      <div class="ni-box ni-is">
+        <div class="ni-label">WhollyCare Is</div>
+        <ul class="ni-list">
+          <li>Patient education — "here are the questions to ask" is education; "you have X" is medical advice</li>
+          <li>Advocacy-first — "what to say" not "what you have"</li>
+          <li>Evidence-based — every recommendation shows its source</li>
+          <li>Honest about limits — if we don't know, we say so</li>
+          <li>Completely free — no tier above free, no upsell, no data sale</li>
+          <li>On your side — revenue never comes from the institutions you're navigating</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing" class="pricing-section">
-  <div class="container">
-    <p class="section-label fade-in">Pricing</p>
-    <h2 class="fade-in">Start free.<br /><em>Pay only for what you use.</em></h2>
-    <div class="divider fade-in"></div>
-    <div class="pricing-grid fade-in">
-
-      <div class="price-card">
-        <div class="price-tier">Free</div>
-        <div class="price-amount">$0</div>
-        <div class="price-period">forever</div>
-        <ul class="price-features">
-          <li>Cross-store price comparison</li>
-          <li>3 product categories</li>
-          <li>Basic ingredient flag alerts</li>
-          <li>Net savings shown honestly</li>
-        </ul>
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyCare%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
+<section class="denial" id="denial">
+  <div class="section-inner">
+    <div class="section-label">The Insurance Denial Problem</div>
+    <h2 class="section-title">They're counting on you <em>not knowing.</em></h2>
+    <p class="section-sub">Insurance companies deny claims knowing most people never appeal. Of those who do, nearly half win. The information that changes that outcome exists — it's just never been handed to you.</p>
+    <div class="denial-stats">
+      <div class="dstat">
+        <div class="dstat-num">~80%</div>
+        <div class="dstat-label">of denied claims are never appealed — insurers build this into their math</div>
       </div>
-
-      <div class="price-card">
-        <div class="price-tier">Care Tracker</div>
-        <div class="price-amount">$4<span>/mo</span></div>
-        <div class="price-period">all categories</div>
-        <ul class="price-features">
-          <li>All personal care categories</li>
-          <li>Weekly price alerts</li>
-          <li>Brand & product favorites</li>
-          <li>Price history tracking</li>
-        </ul>
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyCare%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
+      <div class="dstat">
+        <div class="dstat-num">40–60%</div>
+        <div class="dstat-label">of appealed denials are reversed — the system works when you push back</div>
       </div>
-
-      <div class="price-card featured">
-        <div class="price-badge">Most Popular</div>
-        <div class="price-tier">Safety Shield</div>
-        <div class="price-amount">$9<span>/mo</span></div>
-        <div class="price-period">full ingredient engine</div>
-        <ul class="price-features">
-          <li>Everything in Care Tracker</li>
-          <li>Full ingredient-level filtering</li>
-          <li>Sensitivity & values profiles</li>
-          <li>Hard exclusions — never overridden</li>
-          <li>Rejection log for every product</li>
-        </ul>
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyCare%20Waitlist" class="price-cta">Join Waitlist</a>
+      <div class="dstat">
+        <div class="dstat-num">180 days</div>
+        <div class="dstat-label">federal appeal window most people don't know they have (ACA requirement)</div>
       </div>
-
-      <div class="price-card">
-        <div class="price-tier">Full Beauty</div>
-        <div class="price-amount">$14<span>/mo</span></div>
-        <div class="price-period">complete platform</div>
-        <ul class="price-features">
-          <li>Everything in Safety Shield</li>
-          <li>Multi-person household profiles</li>
-          <li>Restock calendar & reminders</li>
-          <li>EWG &amp; certification tracking</li>
-          <li>CSV export & shopping list</li>
-        </ul>
-        <a href="mailto:tim.hislop@gmail.com?subject=WhollyCare%20Waitlist" class="price-cta price-cta-ghost">Join Waitlist</a>
-      </div>
-
     </div>
-    <p class="pricing-note">No ads. No sponsored brand placements. No data sales. Revenue is subscriptions only — that's the Sincere Strategy®.</p>
+    <div class="denial-output">
+      <div class="denial-output-label">WhollyCare Output for a Denial</div>
+      <ul>
+        <li>What the denial letter actually means — translated from insurance language into English</li>
+        <li>Your appeal window and how to calculate it from the denial date</li>
+        <li>The medical necessity language your doctor needs in the supporting letter</li>
+        <li>A draft appeal letter — review it with your doctor before sending</li>
+        <li>Your right to external independent review if the internal appeal fails</li>
+        <li>State insurance commissioner contact if your rights are violated</li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-section">
-  <div class="container">
-    <h2 class="fade-in">Personal care that's actually<br /><em>personal. And honest.</em></h2>
-    <p class="cta-sub fade-in">WhollyCare is in development. Join the waitlist for early access.</p>
-    <a href="mailto:tim.hislop@gmail.com?subject=WhollyCare%20Waitlist" class="btn-cta fade-in">Join the Waitlist →</a>
+<section class="sincerity">
+  <div class="section-inner">
+    <div class="section-label">The Sincere Strategy® Applied to Healthcare</div>
+    <h2 class="section-title">The same principles. <em>Higher stakes.</em></h2>
+    <p class="section-sub">Every Sentir Solutions brand runs on the Sincere Strategy — transparency first, household first, zero conflicts of interest. WhollyCare applies it where it matters most.</p>
+    <table class="sincerity-table">
+      <thead>
+        <tr><th>Principle</th><th>What it means for WhollyCare</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Zero paid placements. Ever.</td>
+          <td>No pharmaceutical advertising. No insurance company sponsorships. No sponsored condition pages. Revenue from WhollyFare and our other brands funds this — never from the institutions you're navigating.</td>
+        </tr>
+        <tr>
+          <td>Safety is absolute.</td>
+          <td>WhollyCare never substitutes for emergency care. If a situation is urgent, we say so directly. Patient safety is not a tradeoff.</td>
+        </tr>
+        <tr>
+          <td>Show the evidence.</td>
+          <td>Every recommendation surfaces its source. We don't just give you an answer — we show you what it's based on.</td>
+        </tr>
+        <tr>
+          <td>Radical transparency.</td>
+          <td>If WhollyCare doesn't know something, it says so. No confident-sounding guesses. No false reassurance.</td>
+        </tr>
+        <tr>
+          <td>User data is never sold.</td>
+          <td>Your health questions, your family's situation, your insurance denials — none of it is ever shared, sold, or used for targeting.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<!-- FOOTER -->
+<section class="manifesto" id="manifesto">
+  <div class="section-inner">
+    <div class="section-label">The WhollyCare Manifesto</div>
+    <p class="manifesto-body">The healthcare system is not designed against you. It's designed around people who already know how to navigate it. Doctors who have eleven minutes. Insurers who know that eight out of ten people never appeal a denial — and count on it. Websites that surface your worst fear first because fear drives clicks.</p>
+    <p class="manifesto-body">Most families are not those people. They are trying to describe a symptom in the right words and not being heard. They are reading a denial letter and not knowing they have 180 days to fight it. They are watching someone they love go through a system that speaks a language nobody taught them.</p>
+    <p class="manifesto-body">WhollyCare doesn't diagnose. It doesn't pretend to be a doctor. It does something the system has never bothered to do: it tells you what to say next. What questions to bring. What tests to ask for. What the denial letter actually means. What kind of specialist to request. What your rights are — because you have them, and they're real, and almost nobody tells you.</p>
+    <p class="manifesto-body">This is the Sincere Strategy applied to health. No pharmaceutical advertising. No insurance company partnerships. No sponsored condition pages. Revenue from people who trust us — never from the institutions they're navigating.</p>
+    <div class="manifesto-close">We are building WhollyCare so that knowing how to ask is not a privilege.</div>
+  </div>
+</section>
+
+<section class="cta-section" id="waitlist">
+  <div class="section-inner">
+    <div class="cta-inner">
+      <div class="cta-pill">Free. Always.</div>
+      <h2 class="cta-title">Get notified when WhollyCare launches.</h2>
+      <p class="cta-sub">WhollyCare is coming after WhollyFare proves the Sincere Strategy works. Leave your email and we'll let you know when the advocate is ready.</p>
+      <div class="waitlist-form">
+        <input type="email" placeholder="your@email.com" />
+        <button type="button">Notify Me</button>
+      </div>
+      <p class="cta-note">No spam. No marketing. Just a note when it's ready. Your email is never shared.</p>
+    </div>
+  </div>
+</section>
+
 <footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <div class="footer-wordmark">WhollyCare<sup>™</sup></div>
-      <p>Personal care price intelligence. Ingredient-level filtering. Net savings honestly shown. Part of the Sentir Solutions® family.</p>
+  <div class="footer-inner">
+    <div class="footer-brand">WhollyCare® <span>a Sentir Solutions® Company</span></div>
+    <div class="footer-links">
+      <a href="../">Sentir Solutions</a>
+      <a href="../whollyfare.html">WhollyFare®</a>
+      <a href="../whollybare/">WhollyBare™</a>
+      <a href="../whollypaws/">WhollyPaws™</a>
+      <a href="../whollyware/">WhollyWare™</a>
     </div>
-    <div class="footer-col">
-      <h5>Platform</h5>
-      <a href="https://sentirsolutions.github.io/sentir-solutions-site/" target="_blank" rel="noopener">Sentir Solutions</a>
-      <a href="https://sentirsolutions.github.io/sentir-solutions-site/brands.html" target="_blank" rel="noopener">Wholly Brands</a>
-      <a href="https://sentirsolutions.github.io/whollyfare-website/" target="_blank" rel="noopener">WhollyFare®</a>
-    </div>
-    <div class="footer-col">
-      <h5>Contact</h5>
-      <a href="mailto:tim.hislop@gmail.com">tim.hislop@gmail.com</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-copy">© 2026 Sentir Solutions® LLC · Charlottesville, VA</div>
-    <div class="footer-sincere">The Sincere Strategy® — zero paid placements, safety before savings, net savings always.</div>
+    <p class="footer-copy">© 2026 Sentir Solutions® LLC · Charlottesville, VA · "We arm people with truth and the ability to question human decisions — including the expensive ones."</p>
   </div>
 </footer>
 
-<script>
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-</script>
-
-  <script>
-    // Platform dropdown toggle
-    const trigger = document.querySelector('.nav-dropdown-trigger');
-    const dropdown = document.querySelector('.nav-dropdown');
-    if (trigger && dropdown) {
-      trigger.addEventListener('click', function(e) {
-        e.stopPropagation();
-        dropdown.classList.toggle('open');
-      });
-      document.addEventListener('click', function() {
-        dropdown.classList.remove('open');
-      });
-    }
-  </script>
 </body>
 </html>
