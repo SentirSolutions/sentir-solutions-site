@@ -1159,7 +1159,7 @@
         <div class="moat-pillar">
           <h4>Why subscriptions work</h4>
           <p>
-            A household that saves $1,500 per year from WhollyFare's Full Table tier pays $348 per
+            A household that saves $1,500 per year from WhollyFare's Full membership pays $228 per
             year for the subscription. The value case is undeniable. When savings exceed cost by 4x,
             retention is structural — not dependent on lock-in, habit loops, or dark patterns.
           </p>
@@ -1470,17 +1470,18 @@
               <div class="calc-fval" id="f-hh-v">10,000 households</div>
             </div>
             <div class="calc-field">
-              <label>Avg subscription tier</label>
+              <label>Blended ARPU / paying household</label>
               <div class="tier-row">
-                <button class="tier-btn" onclick="setFTier(7,this)">$7/mo</button>
-                <button class="tier-btn on" onclick="setFTier(19,this)">$19/mo</button>
-                <button class="tier-btn" onclick="setFTier(29,this)">$29/mo</button>
+                <button class="tier-btn" onclick="setFTier(9,this)">$9/mo</button>
+                <button class="tier-btn on" onclick="setFTier(14,this)">$14 blended</button>
+                <button class="tier-btn" onclick="setFTier(19,this)">$19/mo</button>
               </div>
             </div>
             <div class="calc-hr"></div>
-            <div class="calc-row"><span class="calc-lbl">Monthly Recurring Revenue</span><span class="calc-val" id="f-mrr">$190,000</span></div>
-            <div class="calc-row"><span class="calc-lbl">Annual Recurring Revenue</span><span class="calc-val" id="f-arr">$2.28M</span></div>
-            <div class="calc-row"><span class="calc-lbl">Exit Value at 8&times; ARR</span><span class="calc-val xl" id="f-exit">$18.2M</span></div>
+            <div class="calc-row"><span class="calc-lbl">Monthly Recurring Revenue</span><span class="calc-val" id="f-mrr">$140,000</span></div>
+            <div class="calc-row"><span class="calc-lbl">Annual Recurring Revenue</span><span class="calc-val" id="f-arr">$1.68M</span></div>
+            <div class="calc-row"><span class="calc-lbl">Exit Value at 8&times; ARR</span><span class="calc-val xl" id="f-exit">$13.4M</span></div>
+            <p class="calc-note">Default assumes a blended $14 ARPU across the $9 and $19 tiers — not everyone at top. Simpler, lower pricing is expected to lift top-tier adoption, so the $19 case (~$190K MRR) is more reachable than under the old $29 tier.</p>
             <p class="calc-note">8&times; ARR is conservative for subscription platforms with &lt;5% monthly churn. Strategic acquirer multiples (grocer, health system) typically run higher — especially for a platform that a competitor structurally cannot replicate.</p>
           </div>
         </div>
@@ -1576,16 +1577,15 @@
               <label>Subscription tier</label>
               <div class="tier-row">
                 <button class="tier-btn" onclick="setATier(0,0.05,this)">Free</button>
-                <button class="tier-btn" onclick="setATier(7,0.10,this)">$7/mo</button>
+                <button class="tier-btn" onclick="setATier(9,0.12,this)">$9/mo</button>
                 <button class="tier-btn on" onclick="setATier(19,0.15,this)">$19/mo</button>
-                <button class="tier-btn" onclick="setATier(29,0.20,this)">$29/mo</button>
               </div>
             </div>
             <div class="calc-hr"></div>
             <div class="calc-row"><span class="calc-lbl">Projected annual savings</span><span class="calc-val" id="a-saved">$1,950</span></div>
             <div class="calc-row"><span class="calc-lbl">Annual subscription cost</span><span class="calc-val" id="a-sub">$228</span></div>
             <div class="calc-row"><span class="calc-lbl">Net savings to household</span><span class="calc-val xl" id="a-net">$1,722</span></div>
-            <p class="calc-note">Savings rates by tier: Free (price visibility, ~5%), Meal Planner (10%), Health Guard (15%), Full Table (20%). Based on Phase 1 pilot data. A household keeping $1,722/year on a $228 subscription doesn't cancel.</p>
+            <p class="calc-note">Savings rates by tier: Free (price visibility, ~5%), Plus $9/mo (~12%), Full $19/mo (~15%). Based on Phase 1 pilot data. A household keeping $1,722/year on a $228 subscription doesn't cancel.</p>
           </div>
         </div>
       </div>
@@ -1615,8 +1615,8 @@
           <div class="lbl">Consumer verticals addressable with one platform — food, household goods, pet care, personal care</div>
         </div>
         <div class="inv-stat">
-          <div class="num">$29/mo</div>
-          <div class="lbl">Full Table subscription price for a household receiving $125+/month in real found savings</div>
+          <div class="num">$19/mo</div>
+          <div class="lbl">Full membership price for a household receiving $125+/month in real found savings</div>
         </div>
         <div class="inv-stat">
           <div class="num">$2M+</div>
@@ -1924,7 +1924,7 @@
       });
     }
     // ── FOUNDATION CALCULATOR ──
-    var fTier = 19;
+    var fTier = 14;
     function setFTier(val, btn) {
       fTier = val;
       btn.closest('.tier-row').querySelectorAll('.tier-btn').forEach(function(b){ b.classList.remove('on'); });
