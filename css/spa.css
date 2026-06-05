@@ -148,6 +148,10 @@ a.on:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2
 .on-paws .on-status { color: rgba(224,168,106,0.7); } .on-care .on-status { color: rgba(201,138,212,0.7); }
 .on-fare .on-visit { color: #6FCFA0; } .on-ware .on-visit { color: #7FB8D4; }
 .on-paws .on-visit { color: #E0A86A; } .on-care .on-visit { color: #C98AD4; }
+/* WhollyCare — stands apart: own branch off the root, free, teal */
+.on-whollycare { left: 74%; top: 36.52%; width: 22%; height: 17.39%; background: #081420; border: 1px solid rgba(26,143,168,0.4); border-top: 2px solid #1A8FA8; }
+.on-whollycare .on-status { color: #1A8FA8; } .on-whollycare .on-label { color: #EAF6F9; }
+.on-whollycare .on-sub { color: rgba(234,246,249,0.6); opacity: 1; } .on-whollycare .on-visit { color: #1A8FA8; }
 .tree-hint { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 1.25rem; }
 .tree-mobile-list { display: none; flex-direction: column; gap: 0.75rem; margin-top: 2rem; }
 .tml-link { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; background: var(--bg); border: 1px solid var(--border); text-decoration: none; border-radius: 2px; transition: background 0.15s; }
