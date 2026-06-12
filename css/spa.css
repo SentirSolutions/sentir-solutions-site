@@ -52,7 +52,7 @@
   --fare-accent: #3A8C4E; --fare-lt:     #6FCFA0;
   --ware-dark:   #071624; --ware-mid:    #0D2236; --ware-accent: #4A94BB;
   --paws-dark:   #1E0E04; --paws-mid:    #3D2208; --paws-accent: #C47D2E;
-  --care-dark:   #130420; --care-mid:    #251040; --care-accent: #A45AB0;
+  --care-dark:   #130420; --care-mid:    #251040; --care-accent: #2F6FA5;
 }
 
 .engine-section { background: var(--dark); padding: 6rem 2rem; }
@@ -92,7 +92,7 @@
 .platform-card { border: 1px solid var(--border); border-top: 3px solid var(--accent); background: var(--bg); padding: 2rem; display: flex; flex-direction: column; gap: 0.85rem; }
 .platform-card.ware { border-top-color: #4A94BB; }
 .platform-card.paws { border-top-color: #C47D2E; }
-.platform-card.care { border-top-color: #A45AB0; }
+.platform-card.care { border-top-color: #2F6FA5; }
 .platform-tag { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
 .platform-card h3 { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 400; color: var(--dark); line-height: 1.25; margin: 0; }
 .platform-card p { font-size: 0.9rem; color: var(--muted); line-height: 1.8; flex: 1; }
@@ -149,9 +149,9 @@ a.on:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(0,0,0,0.2
 .on-fare .on-visit { color: #6FCFA0; } .on-ware .on-visit { color: #7FB8D4; }
 .on-paws .on-visit { color: #E0A86A; } .on-care .on-visit { color: #C98AD4; }
 /* WhollyCare — stands apart: own branch off the root, free, teal */
-.on-whollycare { left: 74%; top: 36.52%; width: 22%; height: 17.39%; background: #081420; border: 1px solid rgba(26,143,168,0.4); border-top: 2px solid #1A8FA8; }
-.on-whollycare .on-status { color: #1A8FA8; } .on-whollycare .on-label { color: #EAF6F9; }
-.on-whollycare .on-sub { color: rgba(234,246,249,0.6); opacity: 1; } .on-whollycare .on-visit { color: #1A8FA8; }
+.on-whollycare { left: 74%; top: 36.52%; width: 22%; height: 17.39%; background: #081420; border: 1px solid rgba(47,111,165,0.4); border-top: 2px solid #2F6FA5; }
+.on-whollycare .on-status { color: #2F6FA5; } .on-whollycare .on-label { color: #EAF6F9; }
+.on-whollycare .on-sub { color: rgba(234,246,249,0.6); opacity: 1; } .on-whollycare .on-visit { color: #2F6FA5; }
 .tree-hint { text-align: center; font-size: 0.8rem; color: var(--muted); margin-top: 1.25rem; }
 .tree-mobile-list { display: none; flex-direction: column; gap: 0.75rem; margin-top: 2rem; }
 .tml-link { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; background: var(--bg); border: 1px solid var(--border); text-decoration: none; border-radius: 2px; transition: background 0.15s; }

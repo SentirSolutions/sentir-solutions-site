@@ -22,7 +22,7 @@
   --fare-accent:  #3A8C4E;   /* WhollyFare green */
   --ware-accent:  #4A94BB;   /* WhollyWare blue */
   --paws-accent:  #C47D2E;   /* WhollyPaws amber */
-  --care-accent:  #A45AB0;   /* WhollyCare plum */
+  --care-accent:  #2F6FA5;   /* WhollyCare plum */
 }
 
 html { scroll-behavior: smooth; }
@@ -409,7 +409,7 @@ p { line-height: 1.85; }
 .brand-fare .brand-card-header  { background: linear-gradient(135deg,#1E3A25 0%,#2C3A2F 100%); border-top: 3px solid var(--fare-accent); }
 .brand-ware .brand-card-header  { background: linear-gradient(135deg,#112A40 0%,#1A3D5C 100%); border-top: 3px solid var(--ware-accent); }
 .brand-paws .brand-card-header  { background: linear-gradient(135deg,#3D2208 0%,#5C3A0E 100%); border-top: 3px solid var(--paws-accent); }
-.brand-care .brand-card-header  { background: linear-gradient(135deg,#2E0A3D 0%,#4A1A5C 100%); border-top: 3px solid var(--care-accent); }
+.brand-care .brand-card-header  { background: linear-gradient(135deg,#11293F 0%,#1C4569 100%); border-top: 3px solid var(--care-accent); }
 
 /* ── PLATFORM THESIS PILLARS ── */
 .platform-grid {
