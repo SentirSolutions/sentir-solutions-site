@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nobody Is Minding the Store — Sentir Solutions®</title>
+<meta name="description" content="Our system reliably produces outcomes nobody chose, that nobody would defend out loud, and that no one in the chain has to feel responsible for. The founding argument behind WhollyCare®." />
+<meta property="og:title" content="Nobody Is Minding the Store" />
+<meta property="og:description" content="A note on how I think about government, and why I'd like to be argued out of it." />
+<meta property="og:type" content="article" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --dark: #1B3A6B;
+    --muted: #8A8480;
+    --accent: #4A90D9;
+    --light: #C0BCB7;
+    --white: #FFFFFF;
+    --bg-dark: #081420;
+    --bg-light: #F5F3F0;
+    --care-teal: #2F6FA5;
+    --ink: #17222E;
+    --rule: #DCD8D3;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------------- nav ---------------- */
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(245, 243, 240, 0.94);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.95rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .mark-pipe1, .mark-pipe2 {
+    color: var(--accent);
+    font-weight: 400;
+  }
+  .mark-pipe2 { margin-left: -0.24em; opacity: 0.55; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-size: 0.83rem;
+    font-weight: 400;
+  }
+
+  .nav-link {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+  .nav-link:hover { color: var(--dark); }
+
+  .nav-link.cta {
+    color: var(--dark);
+    font-weight: 500;
+  }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+  }
+
+  /* ---------------- article ---------------- */
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  header.article-head {
+    padding: 4.5rem 0 0;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0 0 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 3.5rem);
+    line-height: 1.06;
+    letter-spacing: -0.022em;
+    color: var(--dark);
+    margin: 0 0 1.1rem;
+  }
+
+  .deck {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.15rem, 2.6vw, 1.4rem);
+    line-height: 1.45;
+    color: #4C5A68;
+    margin: 0 0 2rem;
+  }
+
+  .byline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem 1rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    padding-bottom: 2.4rem;
+    border-bottom: 2px solid var(--dark);
+  }
+
+  .byline strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .byline .dot { opacity: 0.4; }
+
+  article { padding: 3rem 0 0; }
+
+  article p {
+    margin: 0 0 1.5rem;
+  }
+
+  .lede {
+    font-size: 1.16rem;
+    line-height: 1.65;
+    color: var(--ink);
+  }
+
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 3.6rem 0 1.3rem;
+  }
+
+  article strong { font-weight: 600; color: #0F1A24; }
+  article em { font-style: italic; }
+
+  .pullquote {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.28rem, 3vw, 1.6rem);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.42;
+    color: var(--dark);
+    border-left: 3px solid var(--accent);
+    padding: 0.3rem 0 0.3rem 1.6rem;
+    margin: 2.6rem 0;
+  }
+
+  ul {
+    margin: 0 0 1.8rem;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.15rem;
+  }
+
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--rule);
+    border: 0;
+    margin: 3.2rem 0;
+  }
+
+  /* ------------- wholly care callout ------------- */
+
+  .care-note {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--care-teal);
+    padding: 2rem 2rem 1.7rem;
+    margin: 3.4rem 0 1rem;
+    border-radius: 3px;
+  }
+
+  .care-note .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--care-teal);
+    font-weight: 600;
+    margin: 0 0 0.9rem;
+  }
+
+  .care-note h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.42rem;
+    line-height: 1.28;
+    color: var(--dark);
+    margin: 0 0 0.9rem;
+  }
+
+  .care-note p {
+    font-size: 0.97rem;
+    line-height: 1.68;
+    color: #40505F;
+    margin: 0 0 1rem;
+  }
+
+  .care-note p:last-of-type { margin-bottom: 1.3rem; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--care-teal);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 0.72rem 1.4rem;
+    border-radius: 2px;
+    transition: background 0.18s ease;
+  }
+  .btn-primary:hover { background: #24578A; }
+
+  /* ---------------- sources ---------------- */
+
+  .sources {
+    margin-top: 3.4rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.83rem;
+    line-height: 1.68;
+    color: var(--muted);
+  }
+
+  .sources .section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 600;
+    margin: 0 0 0.7rem;
+  }
+
+  .sources a { color: var(--accent); text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+
+  /* ---------------- footer ---------------- */
+
+  footer {
+    background: var(--bg-dark);
+    color: var(--light);
+    margin-top: 5rem;
+    padding: 3.6rem 0 3rem;
+  }
+
+  .footer-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .footer-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0 0 0.5rem;
+  }
+
+  .footer-tag {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.28rem;
+    color: var(--light);
+    margin: 0 0 2rem;
+    line-height: 1.35;
+  }
+
+  .footer-meta {
+    font-size: 0.78rem;
+    color: #6E7E8C;
+    line-height: 1.8;
+    padding-top: 1.6rem;
+    border-top: 1px solid rgba(192, 188, 183, 0.16);
+  }
+
+  .footer-meta a { color: var(--accent); text-decoration: none; }
+  .footer-meta a:hover { text-decoration: underline; }
+
+  /* ---------------- print ---------------- */
+
+  @media print {
+    nav, footer, .care-note .btn-primary { display: none; }
+    body { background: #fff; font-size: 11pt; }
+    .wrap { max-width: 100%; }
+    h2 { color: #000; }
+    a { color: #000; text-decoration: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <span class="mark-pipe1">(</span><span class="mark-pipe2">(</span> Sentir Solutions&reg;
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="../index.html">Home</a>
+      <a class="nav-link" href="../brands.html">Our Brands</a>
+      <a class="nav-link" href="../mission.html">Our Mission</a>
+      <a class="nav-link cta" href="https://sentirsolutions.github.io/sentir-consulting-site/" target="_blank" rel="noopener">Sentir Consulting &#8599;</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="article-head">
+    <p class="eyebrow">Writing &middot; Sentir Solutions&reg; &middot; Charlottesville, Virginia</p>
+    <h1>Nobody Is Minding the Store</h1>
+    <p class="deck">A note on how I think about government, and why I'd like to be argued out of it.</p>
+    <div class="byline">
+      <span><strong>Tim Hislop</strong></span>
+      <span class="dot">&middot;</span>
+      <span>August 2026</span>
+      <span class="dot">&middot;</span>
+      <span>12 min read</span>
+      <span class="dot">&middot;</span>
+      <span>The argument behind WhollyCare&reg;</span>
+    </div>
+  </header>
+
+  <article>
+
+    <p class="lede">Let me start by giving away the strongest thing you could use against me.</p>
+
+    <p>I do not think anyone in the United States government is trying to hurt you. Not in the sense of a room, a plan, or a decision to trade your health for someone's money. I've held the harder version of that view at times, and I've let it go, because it doesn't survive contact with the evidence and because it turns out I don't need it.</p>
+
+    <p>I'm saying this first because I know what happens when someone opens with the other version. You file them, and reasonably so. So take that off the table: no conspiracy, no plan, nobody rubbing their hands. What I want to argue is narrower and, I think, worse.</p>
+
+    <p class="pullquote">Our system reliably produces outcomes nobody chose, that nobody would defend out loud, and that no one in the chain has to feel responsible for. Not because bad people captured it. Because of how it's built.</p>
+
+    <p>If that's too abstract, here's the case I'd point to.</p>
+
+    <h2>The law nobody objected to</h2>
+
+    <p>In April 2016, Congress passed the Ensuring Patient Access and Effective Drug Enforcement Act. It went through the Senate by unanimous consent and the House by voice vote. No recorded opposition. It was signed into law without ceremony.</p>
+
+    <p>What it did was change one word's worth of legal standard. Before the law, the DEA could freeze a suspicious shipment of controlled substances if it posed an "imminent danger" to public health. After, the agency had to meet a substantially higher bar. In practice, the tool the DEA had been using to stop pill floods before they reached communities became close to unusable. Immediate suspension orders against distributors, already declining, fell off a cliff.</p>
+
+    <p>The bill's chief House sponsor, Tom Marino, was later nominated as drug czar. He withdrew after a joint <em>Washington Post</em> and <em>60 Minutes</em> investigation showed the legislation had been shaped with heavy involvement from the pharmaceutical distribution industry, and that a former DEA attorney who had worked on the agency's enforcement cases had gone to work for the industry and helped draft it. Forty-three state attorneys general — from both parties — subsequently called for the law's repeal.</p>
+
+    <p>Now hold the important part: <strong>the process worked exactly as designed.</strong> Industry had a concentrated, urgent, well-funded interest in a narrow technical change. Nobody else had an interest in that change at all, because nobody else knew the phrase "immediate suspension order" existed. Members of Congress voted for a bill titled <em>Ensuring Patient Access</em>, which sounds like something you'd vote for. Committee staff had no reason to dig. There was no villain to catch. Every individual actor did something defensible within their role.</p>
+
+    <p>And several hundred thousand people died in the epidemic that followed.</p>
+
+    <p>I'm not claiming that law caused the crisis; it didn't, the crisis was already running. I'm claiming it removed a brake, that the people who removed it knew what they were removing, that everyone else didn't, and that this asymmetry is not an accident of that one bill. It's the operating principle.</p>
+
+    <h2>What accountability looked like</h2>
+
+    <p>People will tell you the system worked, eventually. Everybody got sued. So let's look at what "held accountable" actually meant.</p>
+
+    <p>Purdue Pharma pled guilty to federal crimes twice — in 2007 and again in 2020. Three of its top executives pled guilty in 2007 to misbranding. They paid personal fines. None of them spent a day in prison. The Sackler family's settlement, approved in late 2025 after the Supreme Court threw out an earlier version that would have shielded them without consent, has them paying roughly seven billion dollars over fifteen years. The three largest drug distributors — McKesson, Cardinal Health, and AmerisourceBergen — agreed to pay about twenty-one billion, spread over eighteen years.</p>
+
+    <p>Large numbers. Now notice what's missing from all of them.</p>
+
+    <p>No individual has gone to prison for the opioid epidemic. Not one. The payments are corporate, spread over decades, tax-treated as business expenses in part, and funded out of continuing operations. Meanwhile, a person who sells pills on a street corner in Ohio faces a mandatory minimum, and the sentence doesn't wait fifteen years or get paid in installments.</p>
+
+    <p>I want to be careful here, because there's a real legal answer to this: proving individual criminal intent inside a corporation is genuinely hard, corporate liability exists precisely because responsibility diffuses, and prosecutors declining hard cases isn't the same as a fix. All true.</p>
+
+    <p>But look at what it produces. A fine assessed after the fact isn't accountability — it's a <strong>price</strong>. And once something has a price, it becomes a line on a spreadsheet, weighed against revenue, and the calculation gets made in advance. That's not a failure of the enforcement system. It's the enforcement system functioning as a pricing mechanism for harm, which is a different thing than a deterrent, and everyone involved knows it.</p>
+
+    <p>Ask yourself the version of the question that actually stings: <em>if I did this, at my scale, would I be paying a fine?</em></p>
+
+    <h2>The mechanism, which is boring and therefore ignored</h2>
+
+    <p>This isn't my idea. Economists have described it since the 1960s and it holds up embarrassingly well.</p>
+
+    <p>A thousand people who each stand to gain ten million dollars will beat twenty million people who each stand to lose two hundred, every single time. Not because they're more powerful in some mystical sense — because for the first group, showing up is worth a career, and for the second group, showing up is worth an afternoon nobody has. Concentrated interests organize. Diffuse ones don't. The result isn't corruption. It's arithmetic.</p>
+
+    <p>Layer on a second thing, which is about how minds work rather than how money works. We treat harm we cause as morally different from harm we allow, even when the second is larger and more certain. Cutting someone's health coverage reads as <em>inaction</em> — we just stopped paying — which quietly converts a decision into weather. No one did anything to anybody. That framing does enormous work, and it's available to every actor in the chain.</p>
+
+    <p>Put those together and you get a machine that reliably generates decisions with real body counts, made by people who are each behaving reasonably, defended by nobody, and owned by no one.</p>
+
+    <p>That's my whole thesis. It doesn't require malice. Malice would honestly be an improvement, because malice requires attention, and attention is the thing that's missing.</p>
+
+    <h2>What follows, and what doesn't</h2>
+
+    <p>You can apply this without agreeing with me about any particular policy.</p>
+
+    <p>Look at where costs land versus where benefits concentrate. Look at who wrote the technical language. Look for changes small enough that nobody covered them. Look for the harms that will arrive late, diffusely, and attributable to no one — those are the ones the system is worst at pricing, because our institutions run on election cycles and news cycles and neither has a slot for "this kills fourteen thousand people a year starting in 2029."</p>
+
+    <p>What I am <em>not</em> saying: that the people involved are stupid, or that markets are bad, or that any particular party owns this. The 2016 law passed with unanimous consent. Both parties own it. If your first instinct on reading this was to slot it into a team, that instinct is the thing I'm arguing against.</p>
+
+    <h2>Where I'd be wrong</h2>
+
+    <p>This is the part I care most about, and the part almost nobody includes, which is why I'm including it.</p>
+
+    <p><strong>I have already been wrong about a piece of this.</strong> I assumed American life expectancy was falling. It isn't. The CDC's most recent data has it at a record high — 79.0 years — driven mostly by a genuine collapse in overdose deaths from their 2022 peak. I expected the number to confirm me and it didn't. So when I tell you to follow the evidence, understand that I've had to eat some.</p>
+
+    <p>Here's what would move me further:</p>
+
+    <ul>
+      <li><strong>If the mechanism doesn't predict.</strong> If you can show me policy fights where the diffuse side wins as often as the concentrated one, the theory is decoration.</li>
+      <li><strong>If the coverage losses don't produce the mortality.</strong> CBO projects around ten million more uninsured; the modeling literature predicts a measurable death toll. If we get to 2032 and the excess mortality isn't there, I should downgrade this hard rather than explain it away.</li>
+      <li><strong>If the gap closes.</strong> My real claim is that the aggregate hides divergence — the top pulling away while the bottom stalls. If the life expectancy gap between richest and poorest counties narrows over the next decade, my story is wrong regardless of what the average does.</li>
+      <li><strong>If self-correction works.</strong> The 2016 law got exposed, and the exposure was real journalism producing real consequences. If that keeps happening at a rate that matters, then the system has an immune response and I'm underweighting it.</li>
+    </ul>
+
+    <p>I'd rather find out I'm wrong than be right. I have a family.</p>
+
+    <h2>And if I'm right</h2>
+
+    <p>Being right about a mechanism isn't a prophecy. It's a set of things you should be able to watch happen. So here's what I'm on the hook for.</p>
+
+    <p><strong>The next one will look like the last one.</strong> Somewhere in the next few years, a bill with a reassuring title will make a narrow technical change — a threshold, a definition, a standard of proof — in a domain where exactly one industry is organized and nobody else knows the terminology exists. It will pass with little or no recorded opposition. It will be covered by nobody. The harm will show up three to eight years later and be attributed to something else. Watch for it in AI liability, in pharmacy benefit management, in medical device approval, in data brokerage. I don't know which. I'm confident about the shape.</p>
+
+    <p><strong>The settlements will keep being installments.</strong> No individual will do time. The payments will be corporate, staged over a decade or more, and absorbed as cost of doing business.</p>
+
+    <p><strong>It will keep happening across party changes.</strong> This is the prediction I'm least comfortable with and most sure of, and it's the one that separates what I'm arguing from ordinary partisanship. If the mechanism is structural, then changing which team holds power will not change the pattern — because both teams face the same asymmetry between organized money and unorganized people. If we swap administrations and this stops, I was describing a party. If it continues, I was describing a machine.</p>
+
+    <p><strong>And the gap will widen before the average moves.</strong> National life expectancy may well keep rising. Watch the distance between the top and bottom instead.</p>
+
+    <p class="pullquote">A diagnosis with no treatment is just a complaint.</p>
+
+    <p>If this is structural, then the fix is not electing better people. Better people enter this system constantly and it metabolizes them, because the incentives are load-bearing and the individuals are not. What would actually work is unglamorous and technical, which is why nobody campaigns on it:</p>
+
+    <ul>
+      <li><strong>Make the price a person.</strong> Corporate fines are absorbed. Individual criminal liability for executives who authorize known harm is not absorbable, because you cannot pay a prison sentence in installments over eighteen years.</li>
+      <li><strong>Publish provenance.</strong> Require that substantive statutory language carry a record of who drafted it. Not a scandal mechanism — a sunlight mechanism. The 2016 law would have been much harder to pass with a byline attached.</li>
+      <li><strong>Score the long harm.</strong> Require mortality and morbidity scoring on a twenty-year horizon for legislation touching health, environment, or drug enforcement. Right now the accounting window is shorter than the harm window, which guarantees the harm falls outside the accounting.</li>
+      <li><strong>Assign somebody the job.</strong> The deepest problem in everything above is that no one in the chain is tasked with representing the diffuse side. Every concentrated interest has paid advocates. The twenty million people losing two hundred dollars each have nobody whose job it is to show up for them. That role does not currently exist. It could.</li>
+    </ul>
+
+    <p>That last one is the whole thing, actually. Every failure I've described is the same failure: an absence where an advocate should be. Not a villain in the room — an empty chair.</p>
+
+    <p>And here's why that's the optimistic version rather than the bleak one. If this were malice, you'd need to defeat someone. It isn't. It's a machine, and the thing about machines is that they were built, which means they can be rebuilt. The people who wrote the 2016 law understood exactly which lever to move. That's not just how it went wrong. It's proof that levers exist and that moving them works.</p>
+
+    <h2>The actual point</h2>
+
+    <p>I'm not asking you to be angry. Anger is cheap and it burns out and it mostly gets aimed at whoever's convenient.</p>
+
+    <p>I'm asking you to notice that the question <em>"is anyone actually running this calculation with our interests as the objective?"</em> is a legitimate question, that it requires accusing no one of anything, and that when you ask it honestly the answer is very often no. Not because someone said no. Because nobody was assigned the job.</p>
+
+    <p>That's the thing I'd want people to carry. Not a prediction about how it ends — I don't have one, and anyone who tells you they do is selling something. Just the habit of asking who's minding the store, and being willing to sit with the answer when it turns out that nobody is.</p>
+
+    <p>Tell me where this is wrong. I mean that literally — it's the only way I get less wrong, and there's no version of the future I want that we get to without a lot of people being willing to do that for each other.</p>
+
+    <div class="care-note">
+      <p class="section-label">Why this sits on our site</p>
+      <h3>WhollyCare&reg; is the fourth remedy, built.</h3>
+      <p>The essay above ends on a structural gap: nobody in the chain is assigned the job of representing the person absorbing the cost. Every concentrated interest has paid advocates. The people on the other side of the ledger have no one.</p>
+      <p>WhollyCare&reg; exists because we decided not to wait for that role to be created somewhere else. Free health advocacy, no paid placements, constraints declared before optimization — the Sincere Strategy&reg; applied to the one decision where the information asymmetry is worst and the stakes are highest.</p>
+      <p>It is a small answer to a large problem. It is also an actual chair, with an actual person in it.</p>
+      <a class="btn-primary" href="../whollycare/">See WhollyCare&reg; &rarr;</a>
+    </div>
+
+    <div class="sources">
+      <p class="section-label">Sources</p>
+      Everything above is public record.
+      <a href="https://www.congress.gov/bill/114th-congress/senate-bill/483" target="_blank" rel="noopener">S.483, 114th Congress</a> &middot;
+      <a href="https://www.washingtonpost.com/graphics/2017/investigations/dea-drug-industry-congress/" target="_blank" rel="noopener">Washington Post / 60 Minutes investigation, October 2017</a> &middot;
+      <a href="https://www.acpjournals.org/doi/10.7326/ANNALS-25-00716" target="_blank" rel="noopener">Annals of Internal Medicine coverage-mortality modeling</a> &middot;
+      <a href="https://www.cdc.gov/nchs/products/databriefs/db548.htm" target="_blank" rel="noopener">CDC NCHS Data Brief 548</a> &middot;
+      <a href="https://ccf.georgetown.edu/2025/08/14/new-cbo-health-coverage-estimates-of-budget-reconciliation-law/" target="_blank" rel="noopener">CBO health coverage estimates</a> &middot;
+      Purdue bankruptcy plan confirmed November 2025 &middot; National opioid distributor settlement.
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-mark">Sentir Solutions&reg;</p>
+    <p class="footer-tag">We build things people <em>can actually trust.</em></p>
+    <div class="footer-meta">
+      The Sincere Strategy&reg; &mdash; zero paid placements, constraints before optimization, radical transparency. Always.<br />
+      Charlottesville, Virginia &middot; Est. 2026 &middot;
+      <a href="../index.html">sentirsolutions.com</a><br />
+      Views expressed are the author's own and are not made on behalf of any employer or client.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
