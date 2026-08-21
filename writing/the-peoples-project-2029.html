@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The People's Project 2029 &mdash; Sentir Solutions&reg;</title>
+<meta name="description" content="A governing agenda for the people who have to live with the results. Point and counterpoint with Project 2025, with every claim checkable and a list of what would prove it wrong." />
+<meta property="og:title" content="The People's Project 2029" />
+<meta property="og:description" content="A governing agenda for the people who have to live with the results." />
+<meta property="og:type" content="article" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --dark: #1B3A6B;
+    --muted: #8A8480;
+    --accent: #4A90D9;
+    --light: #C0BCB7;
+    --white: #FFFFFF;
+    --bg-dark: #081420;
+    --bg-light: #F5F3F0;
+    --care-teal: #2F6FA5;
+    --ink: #17222E;
+    --rule: #DCD8D3;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.72;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------------- nav ---------------- */
+
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(245, 243, 240, 0.94);
+    backdrop-filter: saturate(180%) blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.95rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .nav-logo {
+    font-family: 'Fraunces', serif;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--dark);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+
+  .mark-pipe1, .mark-pipe2 {
+    color: var(--accent);
+    font-weight: 400;
+  }
+  .mark-pipe2 { margin-left: -0.24em; opacity: 0.55; }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-size: 0.83rem;
+    font-weight: 400;
+  }
+
+  .nav-link {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+  .nav-link:hover { color: var(--dark); }
+
+  .nav-link.cta {
+    color: var(--dark);
+    font-weight: 500;
+  }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+  }
+
+  /* ---------------- article ---------------- */
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  header.article-head {
+    padding: 4.5rem 0 0;
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 0 0 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(2.4rem, 6vw, 3.5rem);
+    line-height: 1.06;
+    letter-spacing: -0.022em;
+    color: var(--dark);
+    margin: 0 0 1.1rem;
+  }
+
+  .deck {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.15rem, 2.6vw, 1.4rem);
+    line-height: 1.45;
+    color: #4C5A68;
+    margin: 0 0 2rem;
+  }
+
+  .byline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem 1rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    padding-bottom: 2.4rem;
+    border-bottom: 2px solid var(--dark);
+  }
+
+  .byline strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .byline .dot { opacity: 0.4; }
+
+  article { padding: 3rem 0 0; }
+
+  article p {
+    margin: 0 0 1.5rem;
+  }
+
+  .lede {
+    font-size: 1.16rem;
+    line-height: 1.65;
+    color: var(--ink);
+  }
+
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.76rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 3.6rem 0 1.3rem;
+  }
+
+  article strong { font-weight: 600; color: #0F1A24; }
+  article em { font-style: italic; }
+
+  .pullquote {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.28rem, 3vw, 1.6rem);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.42;
+    color: var(--dark);
+    border-left: 3px solid var(--accent);
+    padding: 0.3rem 0 0.3rem 1.6rem;
+    margin: 2.6rem 0;
+  }
+
+  ul {
+    margin: 0 0 1.8rem;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.15rem;
+  }
+
+  ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--rule);
+    border: 0;
+    margin: 3.2rem 0;
+  }
+
+  /* ------------- wholly care callout ------------- */
+
+  .care-note {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--care-teal);
+    padding: 2rem 2rem 1.7rem;
+    margin: 3.4rem 0 1rem;
+    border-radius: 3px;
+  }
+
+  .care-note .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--care-teal);
+    font-weight: 600;
+    margin: 0 0 0.9rem;
+  }
+
+  .care-note h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 1.42rem;
+    line-height: 1.28;
+    color: var(--dark);
+    margin: 0 0 0.9rem;
+  }
+
+  .care-note p {
+    font-size: 0.97rem;
+    line-height: 1.68;
+    color: #40505F;
+    margin: 0 0 1rem;
+  }
+
+  .care-note p:last-of-type { margin-bottom: 1.3rem; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--care-teal);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 0.72rem 1.4rem;
+    border-radius: 2px;
+    transition: background 0.18s ease;
+  }
+  .btn-primary:hover { background: #24578A; }
+
+  /* ---------------- sources ---------------- */
+
+  .sources {
+    margin-top: 3.4rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.83rem;
+    line-height: 1.68;
+    color: var(--muted);
+  }
+
+  .sources .section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 600;
+    margin: 0 0 0.7rem;
+  }
+
+  .sources a { color: var(--accent); text-decoration: none; }
+  .sources a:hover { text-decoration: underline; }
+
+  /* ---------------- footer ---------------- */
+
+  footer {
+    background: var(--bg-dark);
+    color: var(--light);
+    margin-top: 5rem;
+    padding: 3.6rem 0 3rem;
+  }
+
+  .footer-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .footer-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 0 0 0.5rem;
+  }
+
+  .footer-tag {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.28rem;
+    color: var(--light);
+    margin: 0 0 2rem;
+    line-height: 1.35;
+  }
+
+  .footer-meta {
+    font-size: 0.78rem;
+    color: #6E7E8C;
+    line-height: 1.8;
+    padding-top: 1.6rem;
+    border-top: 1px solid rgba(192, 188, 183, 0.16);
+  }
+
+  .footer-meta a { color: var(--accent); text-decoration: none; }
+  .footer-meta a:hover { text-decoration: underline; }
+
+  /* ---------------- print ---------------- */
+
+  @media print {
+    nav, footer, .care-note .btn-primary { display: none; }
+    body { background: #fff; font-size: 11pt; }
+    .wrap { max-width: 100%; }
+    h2 { color: #000; }
+    a { color: #000; text-decoration: none; }
+  }
+
+  /* ---------- manifesto additions ---------- */
+
+  .toc {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    padding: 1.9rem 2rem 1.6rem;
+    margin: 2.6rem 0 3.4rem;
+    border-radius: 3px;
+  }
+  .toc .section-label {
+    font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600; margin: 0 0 1rem;
+  }
+  .toc ol { margin: 0; padding-left: 1.15rem; font-size: 0.93rem; line-height: 1.55; }
+  .toc ol li { margin-bottom: 0.5rem; padding-left: 0; }
+  .toc ol li::before { display: none; }
+  .toc a { color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
+  .toc a:hover { border-bottom-color: var(--accent); color: var(--dark); }
+  .toc .toc-group {
+    font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--muted); font-weight: 600; margin: 1.3rem 0 0.7rem;
+  }
+  .toc .toc-group:first-child { margin-top: 0; }
+  .toc ul { margin: 0 0 0 0; padding-left: 0; list-style: none; }
+  .toc ul li { padding-left: 0; margin-bottom: 0.42rem; }
+  .toc ul li::before { display: none; }
+
+  /* chapter openers (markdown H1) */
+  article h2.chapter {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.75rem, 4.4vw, 2.35rem);
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: -0.018em;
+    color: var(--dark);
+    text-transform: none;
+    margin: 4.4rem 0 1.6rem;
+    padding-top: 2.2rem;
+    border-top: 2px solid var(--dark);
+  }
+
+  /* section heads (markdown H2) */
+  article h3.section {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.3rem, 3vw, 1.62rem);
+    font-weight: 400;
+    line-height: 1.24;
+    color: var(--dark);
+    margin: 3.1rem 0 1.15rem;
+    text-transform: none;
+    letter-spacing: -0.01em;
+  }
+
+  /* sub heads (markdown H3) */
+  article h4.sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 2.4rem 0 1rem;
+  }
+
+  article ol { margin: 0 0 1.8rem; padding-left: 1.3rem; }
+  article ol li { margin-bottom: 1.05rem; }
+
+  p.billhead {
+    background: var(--white);
+    border-left: 4px solid var(--dark);
+    padding: 1.1rem 1.4rem;
+    margin: 2.2rem 0 1.2rem;
+    border-radius: 3px;
+    font-size: 0.97rem;
+  }
+  p.billhead strong { color: var(--dark); }
+
+  .pullquote p { margin: 0 0 1.15rem; }
+  .pullquote p:last-child { margin-bottom: 0; }
+
+  .pdf-link {
+    display: inline-block;
+    background: var(--dark);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 0.66rem 1.3rem;
+    border-radius: 2px;
+    transition: background 0.18s ease;
+  }
+  .pdf-link:hover { background: #12294D; }
+
+  .top-link {
+    display: block; margin-top: 1.1rem;
+    font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--muted); text-decoration: none;
+  }
+  .top-link:hover { color: var(--dark); }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="../index.html">
+      <span class="mark-pipe1">(</span><span class="mark-pipe2">(</span> Sentir Solutions&reg;
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="../index.html">Home</a>
+      <a class="nav-link" href="../brands.html">Our Brands</a>
+      <a class="nav-link" href="../mission.html">Our Mission</a>
+      <a class="nav-link cta" href="https://sentirsolutions.github.io/sentir-consulting-site/" target="_blank" rel="noopener">Sentir Consulting &#8599;</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+  <header class="article-head">
+    <p class="eyebrow">Writing &middot; Sentir Solutions&reg; &middot; Charlottesville, Virginia</p>
+    <h1>The People's Project 2029</h1>
+    <p class="deck">A governing agenda for the people who have to live with the results.</p>
+    <div class="byline">
+      <span><strong>Tim Hislop</strong></span>
+      <span class="dot">&middot;</span>
+      <span>August 2026</span>
+      <span class="dot">&middot;</span>
+      <span>86 min read</span>
+      <span class="dot">&middot;</span>
+      <span>Draft &mdash; argue with it</span>
+    </div>
+  </header>
+
+  <article>
+
+<div class="toc">
+<p class="section-label">What's in here</p>
+<p class="toc-group"><a href="#foreword-whose-plan-is-it">Foreword: whose plan is it?</a></p>
+<ul>
+<li><a href="#the-ledger">The ledger</a></li>
+<li><a href="#what-this-document-is">What this document is</a></li>
+<li><a href="#four-things-i-ll-grant-them-up-front">Four things I'll grant them up front</a></li>
+<li><a href="#where-the-argument-turns">Where the argument turns</a></li>
+<li><a href="#four-principles">Four principles</a></li>
+</ul>
+<p class="toc-group"><a href="#first-when-did-we-make-health-care-a-profit-margin">First: when did we make health care a profit margin?</a></p>
+<ul>
+</ul>
+<p class="toc-group"><a href="#point-counterpoint">Point / Counterpoint</a></p>
+<ul>
+<li><a href="#1-healthcare">1. Healthcare</a></li>
+<li><a href="#2-public-health-and-science">2. Public health and science</a></li>
+<li><a href="#3-the-safety-net">3. The safety net</a></li>
+<li><a href="#4-housing">4. Housing</a></li>
+<li><a href="#5-work-and-wages">5. Work and wages</a></li>
+<li><a href="#6-energy-ai-and-data-centers">6. Energy, AI, and data centers</a></li>
+<li><a href="#7-education-and-debt">7. Education and debt</a></li>
+<li><a href="#8-rights">8. Rights</a></li>
+<li><a href="#9-immigration">9. Immigration</a></li>
+<li><a href="#10-america-in-the-world">10. America in the world</a></li>
+<li><a href="#11-concentrated-interests">11. Concentrated interests</a></li>
+<li><a href="#12-taxes">12. Taxes</a></li>
+<li><a href="#13-trade">13. Trade</a></li>
+</ul>
+<p class="toc-group"><a href="#final-chapter-the-people-who-d-have-to-fix-it">Final chapter: the people who'd have to fix it</a></p>
+<ul>
+<li><a href="#what-the-abdication-looks-like">What the abdication looks like</a></li>
+<li><a href="#why-this-is-the-emergency">Why this is the emergency</a></li>
+<li><a href="#who-s-actually-there">Who's actually there</a></li>
+<li><a href="#what-the-job-has-become">What the job has become</a></li>
+<li><a href="#the-money-around-it">The money around it</a></li>
+<li><a href="#the-trading">The trading</a></li>
+<li><a href="#why-nobody-ever-loses">Why nobody ever loses</a></li>
+<li><a href="#what-we-do">What we do</a></li>
+<li><a href="#the-thing-underneath">The thing underneath</a></li>
+</ul>
+<p class="toc-group"><a href="#what-would-prove-me-wrong">What would prove me wrong</a></p>
+<ul>
+</ul>
+<p class="toc-group"><a href="#why-this-should-make-sense-to-people-who-didn-t-vote-for-my-">Why this should make sense to people who didn't vote for my side</a></p>
+<ul>
+</ul>
+</div>
+
+<p style="margin-bottom:2.6rem"><a class="pdf-link" href="the-peoples-project-2029.pdf">Download the PDF &darr;</a></p>
+
+<h2 class="chapter" id="foreword-whose-plan-is-it">Foreword: whose plan is it?</h2>
+<p>In 1981 the Heritage Foundation published <em>Mandate for Leadership</em>, a plan for what a president should do with the executive branch. It is now in its ninth edition, and the most recent one has a name people recognize.</p>
+<p>It's a serious document, written by people who believe what they wrote. I'd rather engage it than caricature it, and a fair amount of it below I end up agreeing with.</p>
+<p>But it's worth reading with one question in mind: what does it ask, and of whom?</p>
+<p>It asks career civil servants to become terminable at will. It asks aid recipients to lose programs. It asks Medicaid enrollees to prove eligibility more often. It asks people seeking abortion medication to be prosecuted under a statute from 1873.</p>
+<p>What's harder to find is the passage asking something of the people at the top — where the largest firms give something up, or where concentrated wealth pays more, waits longer, or proves anything. Its authors would say that's the point: that growth comes from getting out of the way, and that asking less of capital is the mechanism, not an oversight. That's a real argument and I'll take it seriously later on.</p>
+<p>Still, a plan can be written in complete good faith and have a direction. This one's direction is visible without guessing at anyone's motives: <strong>most of what it asks falls on people who don't have a lobbyist.</strong></p>
+<p>That's the difference this document is named for. Theirs is a plan for what a president should do with the government. This is a plan about what the government owes the people it governs.</p>
+<p><strong>And a disclosure, since it saves us both time:</strong> I lean left on most of this. You'll be able to tell. What I've tried to do is make every claim checkable and every concession real, so you can disagree with my conclusions without having to distrust my numbers. Where the evidence cuts against me, I've said so — there's a fair amount of that below, and a section at the end listing what would prove me wrong.</p>
+<hr class="divider" />
+<h3 class="section" id="the-ledger">The ledger</h3>
+<p>Here's the part that doesn't require guessing at anyone's motives. Specific promises were made, on video, with dates. The outcomes are measured by federal statistical agencies. Both are checkable.</p>
+<p>This ledger runs in both directions, including where promises were kept and where the numbers went the other way. A ledger that only records misses isn't a ledger.</p>
+<h4 class="sub">What was promised</h4>
+<blockquote class="pullquote">
+<p><em>"Starting on day one, we will end inflation and make America affordable again, to bring down the prices of all goods."</em> — Bozeman, Montana, August 9, 2024</p>
+<p><em>"A vote for Trump means your groceries will be cheaper."</em> — Pittsburgh, November 4, 2024</p>
+<p><em>"If you vote for me, I will cut your energy and electricity prices in half within 12 months."</em> — Indiana, Pennsylvania, September 23, 2024</p>
+<p><em>"Under the Trump economic plan, we will cut your energy prices in half."</em> — Wilmington, North Carolina, September 21, 2024 — followed by: <strong>"Mark it down, and you can get very angry at me if we don't do it."</strong></p>
+</blockquote>
+<p>That last line invites the comparison, so let's make it.</p>
+<h4 class="sub">What actually happened</h4>
+<p><strong>Electricity: up 10.6%.</strong> January 2025 to June 2026, the average residential price went from about 17.9 cents to 19.8 cents per kilowatt-hour. It did not fall in any month. Measured against a promise to cut it in half within a year, this is the clearest gap in the record, and the one least affected by outside events.</p>
+<p><strong>Prices did not come down; they went up about 5%.</strong> Overall CPI rose 5.11% from January 2025 through July 2026. "Prices will come down, and they'll come down fast" described a deflation that has not occurred and was never likely to.</p>
+<p><strong>Health insurance: the largest measured hit, and the most directly attributable.</strong> The enhanced premium tax credits expired at the end of 2025 because Congress let them expire. For 2026, the average marketplace enrollee's net monthly premium went from $113 to $178 — <strong>up 58%</strong> — and the average deductible went from $2,759 to a record <strong>$3,786, up 37%</strong>. Effectuated enrollment is projected to fall from 22.3 million to around 17.5 million — roughly five million fewer people covered.</p>
+<p><em>One qualifier in fairness: about 4 percentage points of the roughly 20% gross rate increase is attributable to the expiring credits. The rest is medical cost trend that would have happened regardless. But the net premium and the coverage loss are policy, and they have a date on them.</em></p>
+<p><strong>Beef up 26.9%. Coffee up 10.3%. Fruits and vegetables up 5.1%.</strong> Ground chuck went from $5.50 a pound to $6.98.</p>
+<p><strong>Tariffs are a tax you pay.</strong> The average statutory tariff rate is now around 11–12%, the highest since roughly the 1940s. Estimates of the household cost run about <strong>$1,000 to $1,100 a year</strong>. And on the central question of who pays, the peer-reviewed evidence from the 2018–19 round was unambiguous: studies in the <em>Quarterly Journal of Economics</em> and by Federal Reserve Bank of New York economists found <strong>complete pass-through to U.S. prices</strong> — the tariff was borne by Americans, not by foreign exporters.</p>
+<p><strong>Real wages: flat.</strong> Real average hourly earnings rose about half a percent over nineteen months. Not a collapse. But they entered the period growing at 1% a year and are now running slightly negative. Nobody got better off.</p>
+<h4 class="sub">What genuinely improved — and I'm not going to hide it</h4>
+<p><strong>Eggs fell 57%.</strong> From $4.95 a dozen in January 2025 to $2.14 in June 2026 — cheaper than when the administration took office, and down about 66% from the March 2025 peak. That's real and people feel it at the register.</p>
+<p><strong>Gasoline fell about 8% in year one</strong>, bottoming at $2.83 a gallon in January 2026 — the cheapest month of the whole period, saving the average household roughly $177 over 2025.</p>
+<p><strong>Inflation in year one was moderate</strong> — about 2.4%, slower than the pace inherited — with the price level actually <em>falling</em> in several months of late 2025.</p>
+<p><strong>Core inflation is fine.</strong> Excluding food and energy, prices rose 2.5% over the last year, near the Federal Reserve's target. Core <em>goods</em> rose 0.8%. Used cars fell 1.9%. Prescription drugs fell 3.1%. Bread fell. New vehicles and furniture — the categories most exposed to tariffs — barely moved.</p>
+<p><strong>And tariff costs have so far reached consumers only partially.</strong> One large study tracking 359,000 products found only about 24% pass-through after seven months, with U.S. firms absorbing much of the rest in their margins. That is meaningfully better than the worst-case models assumed, and it comes from researchers who are not friendly to tariffs.</p>
+<h4 class="sub">The part that usually gets skipped</h4>
+<p><strong>Most of these outcomes, good and bad, were not caused by anyone in Washington.</strong> Leaving that out would be doing the same thing I'm objecting to.</p>
+<ul>
+<li><strong>The egg collapse is bird flu, not policy.</strong> Prices spiked when avian influenza killed the flocks and fell when the flocks were rebuilt. If the administration gets no blame for the 2025 spike, it gets no credit for the 2026 collapse. The rule has to run both directions or it isn't a rule.</li>
+<li><strong>The 2026 gasoline spike is a war, not policy.</strong> Military action in the Middle East in February 2026 and the effective closure of the Strait of Hormuz took Brent crude from $61 to $118 a barrel — by the EIA's account the largest quarterly increase in inflation-adjusted terms in data going back to 1988. Blaming the White House for four-dollar gas would be dishonest.</li>
+<li><strong>The year-one gasoline decline wasn't policy either.</strong> Domestic drilling rigs actually <em>fell</em> more than 6% over the year, because sub-$60 oil makes new wells unprofitable. "Drill, baby, drill" did not produce more drilling. Cheap crude produced less of it.</li>
+<li><strong>Year-one disinflation was mostly the Federal Reserve</strong>, continuing a path already underway.</li>
+</ul>
+<p>So here is what survives that filter, and it is enough:</p>
+<p><strong>The energy promise wasn't missed. It was never possible, and that was public before a single vote was cast.</strong></p>
+<p>In October 2024, fact-checkers put the pledge — cut energy prices in half within twelve months — to energy economists. The answer came back the same from all of them: oil is priced globally, new wells take years to produce, and no federal lever cuts an electricity bill in half on that timeline. It was published. It was available to anyone who wanted to check.</p>
+<p>So this is not a forecast that went wrong, and it's not a plan that ran into bad luck. <strong>It was a promise made to people who had no way of knowing it was impossible, by people who had every way of finding out.</strong> <em>"Mark it down, and you can get very angry at me if we don't do it."</em> Electricity went up 10.6% and never fell in a single month.</p>
+<p>Consider it marked down.</p>
+<p><strong>And the insurance numbers aren't weather.</strong> Premium credits expired because Congress let them expire — a decision, made by people whose names are recorded, with a date attached.</p>
+<p>That's the honest ledger. Two clear misses, several genuine wins, and a lot of noise in between that belongs to bird flu, OPEC, and the Federal Reserve rather than to anybody's policy. It's a smaller indictment than a partisan would want. I think it's a more useful one.</p>
+<hr class="divider" />
+<h3 class="section" id="what-this-document-is">What this document is</h3>
+<p>Not an 800-page manual. I'm not a policymaker and this isn't a policy shop.</p>
+<p>It's a set of positions, laid directly against theirs, so you can see where I think they're right and where I think they're wrong — and argue with me.</p>
+<p><strong>Every section works the same way.</strong> Here's a specific failure. Here's who gained. Here's who paid. Here's what I'd do. No section opens with a value, because values are cheap and every side claims the same four.</p>
+<p><strong>I concede things throughout.</strong> That's not manners. If you can't say where your opponents are right, nobody has any reason to believe you about where they're wrong.</p>
+<p><strong>And there's a section at the end listing what would prove me wrong.</strong> It's there because I've been wrong in writing before — I once argued a case from intent, the evidence didn't support it, and I dropped it. That's also why this foreword doesn't tell you what anyone was thinking. What a plan <em>does</em> is observable. What its authors intended isn't, and I've stopped pretending otherwise.</p>
+<hr class="divider" />
+<h3 class="section" id="four-things-i-ll-grant-them-up-front">Four things I'll grant them up front</h3>
+<p><strong>Government really is unaccountable.</strong> When a policy fails, nobody is fired, nobody resigns, nothing changes. The anger underneath their document is legitimate and is not a character flaw in the people who feel it.</p>
+<p><strong>It takes too long to build anything.</strong> Housing, transmission, infrastructure. The delay mostly protects people who already have theirs.</p>
+<p><strong>Congress gave away its own authority.</strong> Legislators prefer vague statutes and deniability. That started long before 2025 and both parties like it.</p>
+<p><strong>Some programs survive because they have a constituency, not because they work.</strong> My side needs to be able to say that out loud.</p>
+<hr class="divider" />
+<h3 class="section" id="where-the-argument-turns">Where the argument turns</h3>
+<p>Their diagnosis of unaccountability is right. Their cure points the wrong way.</p>
+<p>If the problem is that government answers to nobody, the fix is to make it answer to <strong>the governed</strong>. Their fix makes it answer to <strong>one person</strong>.</p>
+<p>That's the entire disagreement. Everything below is a version of it.</p>
+<hr class="divider" />
+<h3 class="section" id="four-principles">Four principles</h3>
+<p><strong>1. Your rights govern your own life. They stop where they start governing someone else's.</strong></p>
+<p><strong>2. Whoever profits pays the cost.</strong> The public does not underwrite somebody else's margin.</p>
+<p><strong>3. Help is a bridge, not a destination.</strong> Generous, bounded, with the off-ramp built before the on-ramp — and never a system where earning more leaves a family worse off.</p>
+<p><strong>4. Government has to be able to do the job, and someone has to answer for it.</strong> A state that can't act and a state that never answers are two failures, not a tradeoff.</p>
+<hr class="divider" />
+<h2 class="chapter" id="first-when-did-we-make-health-care-a-profit-margin">First: when did we make health care a profit margin?</h2>
+<p>We never decided to. That's the part that should bother you.</p>
+<p><strong>Before the war, medicine was mostly charity.</strong> Hospitals were religious orders, municipal institutions, community nonprofits. When Blue Cross began at Baylor in 1929 as a prepaid plan for schoolteachers, it was nonprofit and community-rated — everyone paid the same whether sick or well.</p>
+<p><strong>1943.</strong> Wartime wage controls meant employers couldn't compete on pay. The War Labor Board ruled that contributions to health plans didn't count as wages. Employers competed on benefits instead, and coverage tripled by the end of the war. Nobody designed employer-based health insurance. <strong>It was a workaround for a price control.</strong></p>
+<p><strong>1954.</strong> The tax code excluded employer health contributions from taxable income, turning the accident into a permanent subsidy. The workaround was now cheaper than cash wages, and it never came up for reconsideration again.</p>
+<p><strong>1965.</strong> Medicare and Medicaid covered the elderly and the poor. Sit with what that means: the two groups most certain to need care were the two the market would not insure. That was the market's verdict on itself, delivered sixty years ago, and we've argued ever since as though it never happened.</p>
+<p><strong>1973.</strong> The HMO Act put federal weight behind managed care. On a White House tape, the appeal is explained to Nixon in one line — the less care they give, the more money they make. Whatever you think of the policy, the incentive was understood in the room at the time.</p>
+<p><strong>The 1990s.</strong> Blue Cross plans began converting from nonprofit to for-profit. Insurers built to spread risk became companies with shareholders and quarterly targets. The purpose changed and the name stayed.</p>
+<p><strong>1997.</strong> The FDA opened the door to direct-to-consumer drug advertising. The United States and New Zealand are the only two countries on earth that permit it.</p>
+<p><strong>2003.</strong> Medicare Part D expressly barred Medicare from negotiating drug prices — the largest purchaser in the country, forbidden by law from asking for a discount. Partially undone in 2022, for a short list of drugs, nineteen years later.</p>
+<p><strong>2018.</strong> CVS buys Aetna. Cigna buys Express Scripts. The insurer, the price negotiator, and the pharmacy become one company.</p>
+<p><strong>Nine decisions across eighty years, each with a defensible reason at the time, not one of them a vote on whether medicine should be a profit center.</strong></p>
+<p>And the machinery is expensive. Administrative complexity is the single largest component of what we overspend relative to peer countries: <strong>about $1,055 per person on insurance administration and health system financing, against $193 in comparable countries.</strong> That's not care. That's the cost of running the billing.</p>
+<p><strong>So when someone asks how we'd pay for covering everyone, the honest answer is that we already are.</strong> We spend more per person than any nation on earth and cover fewer people. The money exists. The question is who currently collects it — and the answer is an industry that will fight hard to keep collecting it. That is not a cost argument. It's a power argument wearing a cost argument's clothes.</p>
+<hr class="divider" />
+<h2 class="chapter" id="point-counterpoint">Point / Counterpoint</h2>
+<h3 class="section" id="1-healthcare">1. Healthcare</h3>
+<p><strong>Their position.</strong> Move Medicare toward private plans as the default, cut federal administrative discretion, return regulation to the states, let competition discipline prices. Government involvement is the cost driver; more market fixes it.</p>
+<p><strong>Mine.</strong> We are the only wealthy country that decided health coverage is optional. Universal coverage is the goal. I'll take a hybrid to get there — a public plan people can buy into, expanded in steps — because a one-shot transition that disrupts coverage for 150 million people is how you lose the thing entirely. <strong>The bridge is negotiable. The far bank isn't.</strong></p>
+<p><strong>Why.</strong> About 18% of GDP, nearly double the OECD average, roughly 1.5 times per person what second-place Switzerland spends. Life expectancy of 79 against an OECD average of 81. On avoidable deaths — the ones a working system is supposed to prevent — we rank second-worst among peer countries, behind only Mexico. Twenty-seven million people uncovered.</p>
+<p>We pay premium prices for below-average results and call it a free market. It isn't one. A market requires that you can walk away, and nobody walks away from an ambulance.</p>
+<p><strong>And for anyone unmoved by the moral argument: not covering people costs more than covering them.</strong></p>
+<p><em>We already pay — we just pay late, at the worst price.</em> Hospitals absorbed roughly $43 billion in uncompensated care in a recent year and about $745 billion since 2000. That doesn't evaporate; it returns as higher premiums and higher taxes. An uninsured person doesn't get no care. They get emergency care, at the most expensive point in the illness, after the cheap window has closed. We chose the costliest possible delivery method and told ourselves we were saving money.</p>
+<p><em>It's a tax on starting a business.</em> Tie insurance to a job and people stay in jobs they'd otherwise leave. When the ACA made coverage available outside employment, self-employment rose 1.4 to 1.8 percentage points among people with pre-existing conditions and no other option — and fell back when the exchanges looked unstable. Every person who wanted to start something and didn't, because of a spouse's insulin, is a business that doesn't exist. That's a market-efficiency argument, and my side almost never makes it.</p>
+<p><em>It shrinks the tax base.</em> People who die at 74 stop paying taxes ten years early. People too sick to work don't earn, don't spend, don't contribute. Health is an input to the economy, not just a line item in it.</p>
+<p><strong>The nearer fix, while we build the bridge.</strong> An Inspector General report in June 2026 examined Medicare Advantage denials of nursing facility admissions. Plans denied 12% of requests — and <strong>overturned 95% of them when patients appealed.</strong> One contractor handling half of all such requests overturned 97%. Nursing home residents were denied at 40%, against 11% for everyone else. Read that again. <strong>Ninety-five percent.</strong> When patients pushed back, the company reversed itself nineteen times out of twenty.</p>
+<p>A decision you reverse nineteen times out of twenty was never a medical judgment. It was a filter — and it works precisely because most people don't appeal. Most people are sick. Most people are eighty years old in a hospital bed being told they can't go to the rehab facility their doctor ordered. Most people don't have a lawyer, or a week, or the strength.</p>
+<p><strong>That's not a system with a flaw in it. That's the design.</strong> Every unappealed denial is money, and the denial rate for nursing home residents — 40%, against 11% for everyone else — tells you the company knows exactly which patients can't fight. It targeted the people least able to push back, and it was right about them. So: <strong>denials that get overturned should cost the denier</strong>, appeals should be automatic for inpatient and post-acute admissions, and the company that negotiates drug prices should not also own the pharmacy — the three largest middlemen handle roughly 80% of the 6.6 billion prescriptions filled in this country.</p>
+<p class="billhead"><strong>THE BILL — the Universal Coverage and Care Integrity Act.</strong></p>
+<ol>
+<li><strong>Medicare buy-in, phased by age.</strong> Open Medicare as a purchasable option to ages 60–64 in year one, 50+ in year three, all ages by year six. Premiums set to cover cost; income-scaled subsidies. Employers may buy in on behalf of employees. Nothing is taken away from anyone — the private market either competes or it doesn't, and we find out which.</li>
+<li><strong>Make the enhanced premium credits permanent</strong> and index them, ending the cliff that raised net premiums 58% in a single year.</li>
+<li><strong>Automatic external review.</strong> Any denial of an inpatient or post-acute admission triggers independent review by default. The patient never has to know to ask.</li>
+<li><strong>Denials that reverse cost the denier.</strong> Plans publish their appeal-reversal rate quarterly. Above a set threshold, the plan pays restitution plus the full cost of external review for every subsequent denial, and above a higher threshold it loses new enrollment for a year.</li>
+<li><strong>Structural separation of the drug middlemen.</strong> An entity that negotiates drug prices for a health plan may not own or control the pharmacies that dispense them. Ban spread pricing outright; require flat-fee service contracts and pass-through of 100% of rebates.</li>
+<li><strong>Uncap Medicare drug negotiation</strong> — all drugs after the exclusivity window, not a list of ten.</li>
+<li><strong>Transparency with a penalty that exceeds compliance cost</strong>, which the current one does not.</li>
+</ol>
+<p><strong>One concession.</strong> Every country that got to universal did it differently, and several kept private insurers. "Universal" doesn't require single payer. It requires that nobody is uncovered. I care about the outcome, not the model — and anyone who says there's only one way hasn't looked at how the other thirty countries did it.</p>
+<hr class="divider" />
+<h3 class="section" id="2-public-health-and-science">2. Public health and science</h3>
+<p><strong>Their position.</strong> Public health agencies are captured by industry and overconfident in their own authority; the advisory committees function as rubber stamps; the childhood schedule deserves re-examination from first principles.</p>
+<p><strong>Mine.</strong> A real part of that critique is correct, and my side's refusal to admit it is a large part of why the argument was lost. But an institution isn't repaired by discarding the evidence base underneath it. <strong>The answer to "they got things wrong" is better science, not less of it.</strong></p>
+<h4 class="sub">Where the critics are right</h4>
+<p><strong>School closures were a serious, measurable failure.</strong> Research covering 2.1 million students across 10,000 schools found remote instruction was a primary driver of widening achievement gaps — and critically, <strong>math gaps did not widen where schools stayed open</strong>, which means the losses track the closure decision, not the virus. Ashish Jha, who ran the White House COVID response, has said plainly: <em>"I was wrong. Schools are not a major source of spread,"</em> and that keeping his own kids out that long was "crazy."</p>
+<p><strong>The six-foot rule had no evidentiary basis.</strong> Anthony Fauci testified to Congress in January 2024 that it "sort of just appeared" and was "an empiric decision that wasn't based on data." That number was the operative constraint that kept schools and businesses at reduced capacity for a year.</p>
+<p><strong>CDC overstated outdoor transmission.</strong> The agency said under 10% of documented transmission occurred outdoors; the underlying figure counted Singapore dormitory cases as "outdoor." Epidemiologists put the real number below 1%. Outdoor mask rules followed from a statistic the agency had reason to doubt.</p>
+<p><strong>The mask reversal was handled dishonestly.</strong> Officials told the public masks didn't work while privately intending to preserve supply for hospitals. Harvard's Kennedy School teaches it as a case study titled "A 'Noble Lie'?" That is not a fringe framing. It was a large withdrawal from a trust account that was not refilled. <em>(In fairness, the other side misused this literature too — Cochrane's editor-in-chief had to publicly state that its 2023 review did not show "masks don't work," which is what it was widely reported to have shown.)</em></p>
+<p><strong>Natural immunity was dismissed rather than measured.</strong> A 65-study meta-analysis in <em>The Lancet</em> found protection from prior infection against severe disease at 90% at ten months — "at least on a par" with two mRNA doses. U.S. mandate policy gave documented prior infection essentially zero credit, unlike much of Europe, and never revisited it.</p>
+<p><strong>The myocarditis signal was real and initially downplayed.</strong> CDC's own data showed roughly 63 cases per million second doses in males 12–17 and 50 per million in males 18–24, against 1 per million in women over 30. The risk was concentrated by age and sex, outcomes were usually mild, and the rate has since fallen to background — but the communication lagged the evidence, and treating the question as bad faith made the eventual acknowledgment look like a concession extracted rather than volunteered.</p>
+<p><strong>Dissent was suppressed by name.</strong> In October 2020 the NIH Director wrote to Fauci about the Great Barrington Declaration authors: <em>"This proposal from the three fringe epidemiologists… there needs to be a quick and devastating published takedown of its premises."</em> Those three held positions at Harvard, Stanford, and Oxford. Note the through-line: two of them now run federal health agencies. <strong>The suppression created the personnel.</strong></p>
+<p><strong>And in June 2020, more than a thousand public health professionals signed a letter supporting mass protests as a public health necessity while continuing to oppose other gatherings.</strong> Whatever one thinks of the cause, a great many people read that as the rules being negotiable for the right politics — and it's hard to argue they read it wrong. That damage was self-inflicted.</p>
+<h4 class="sub">Where I think the critics have it wrong</h4>
+<p><strong>The conflict-of-interest claim is a real problem described with a fake statistic.</strong> The "97% of advisers have conflicts" figure comes from a 2009 Inspector General report and refers to <strong>paperwork defects</strong> — forms with missing initials or information in the wrong box. What that report actually found was serious enough without inflating it: 58% of members had potential conflicts the agency hadn't identified, 32% had conflicts identified but unresolved, 3% voted when they should have recused.</p>
+<p>Here's what happened next, and it is the whole story in one line. Independent research published in <em>JAMA</em> tracked disclosed conflicts on the vaccine advisory committee over twenty-four years: <strong>42.8% in the early 2000s, down to about 5% by 2024.</strong> Personal income conflicts under 1% since 2016.</p>
+<p><strong>The institution heard the criticism and largely fixed it over two decades. The reform then became the argument for demolition, described with a statistic that never meant what it was said to mean.</strong></p>
+<p><strong>On autism, the evidence is about as settled as evidence gets.</strong> A Danish cohort of <strong>657,461 children</strong> followed for over five million person-years found a hazard ratio of 0.93 — no increased risk — <em>including</em> in the highest-risk subgroups: children with autistic siblings, children with elevated risk scores, and the specific post-vaccination windows. A meta-analysis covering <strong>1,266,327 children</strong> found nothing. Aggregate across the field: more than 40 studies, 5.6 million people, seven countries. A 2025 Danish study of <strong>1,224,176 children</strong> examined aluminum adjuvant exposure against <strong>50 chronic conditions</strong> — autism and ADHD among them — and found no association with any of them.</p>
+<p>In November 2025 the CDC's vaccine safety page was changed from "Vaccines do not cause autism" to language saying a link "cannot be ruled out." The chairman of the Senate health committee — a Republican physician — called it "wrong, irresponsible, and actively makes Americans sicker."</p>
+<p><strong>And the hepatitis B birth dose has a specific, unglamorous reason to exist.</strong> Infants infected at birth develop chronic infection about 90% of the time; older children and adults, 5–10%. That age gradient is the entire rationale. About 14% of pregnant women don't get the recommended screening, and roughly 70% of the two million Americans living with hepatitis B don't know it. The birth dose is a net under the screening failures. Since universal recommendation in 1991, childhood infections fell about 99%.</p>
+<h4 class="sub">The measured outcome</h4>
+<p><strong>Measles: 2,289 cases in 2025 and 2,566 through mid-August 2026 — the highest annual total since 1991</strong>, against 285 in 2024. Three deaths in 2025, the first U.S. measles deaths since 2015, all unvaccinated. Ninety-three percent of 2026 cases were unvaccinated or unknown. The Americas lost regional measles elimination status in November 2025; the U.S. comes up for review this November.</p>
+<p><strong>Kindergarten vaccination exemptions hit 4.2%, a record</strong>, with 24 states above 5%. MMR coverage is 92.4% against the 95% needed for herd immunity.</p>
+<p><strong>Two honest caveats.</strong> The coverage decline <strong>predates 2025</strong> — it runs from about 2019 and is driven substantially by pandemic disruption. Federal policy accelerated and legitimized an existing trend; it didn't create it. And <strong>2026 has had zero measles deaths</strong> and a lower hospitalization rate than 2025 despite more cases. Say the true thing.</p>
+<p><strong>Current legal status, because this matters:</strong> in March 2026 a federal court held that the January 2026 schedule changes were "contrary to law" and "arbitrary and capricious," and that the reconstituted advisory committee violated the Federal Advisory Committee Act. Most of the changes are <strong>enjoined and not in effect.</strong> The 2024 schedule is restored pending appeal. Anyone telling you the childhood schedule has been rewritten is ahead of the facts.</p>
+<p class="billhead"><strong>THE BILL — the Public Health Evidence and Integrity Act.</strong></p>
+<ol>
+<li><strong>Put the vaccine advisory committee in statute.</strong> Fixed staggered terms, minimum qualification requirements, no mass removal, and the balance requirement written into law rather than left to a charter any secretary can rewrite.</li>
+<li><strong>Recommendations must follow a published evidence review.</strong> Any change to the childhood schedule requires a public docket, a written scientific basis, a comment period, and a recorded vote. No changes by memo.</li>
+<li><strong>Conflict rules tightened and published</strong> — including the post-service window that current disclosure misses entirely, where an adviser takes industry money <em>after</em> the vote. The critique was right once. Finish the job.</li>
+<li><strong>Fund the injury compensation program properly.</strong> Raise the $250,000 cap that hasn't moved since 1988 and index it, add special masters, and set a one-year adjudication target. A claimant waiting three years against 1988 dollars has a real grievance no matter who raises it.</li>
+<li><strong>Fund independent safety research</strong> at NIH with a firewall from both industry and the political appointees of the day. "Study it more" is a reasonable demand; refusing it looks like fear.</li>
+<li><strong>A standing after-action requirement.</strong> Every federal emergency health directive gets an independent retrospective within two years, published whatever it finds. Six-foot spacing lasted a year without anyone being required to ask whether it worked.</li>
+</ol>
+<p><strong>And the old approach.</strong> Reform the conflict rules further and publish them — the critique was right once. Fund vaccine injury compensation properly; the $250,000 cap hasn't moved since 1988 and claimants wait two to three years, which is a legitimate grievance regardless of who raises it. Fund the safety research, because "study it more" is a reasonable demand and refusing it looks like fear. And restore the rule that recommendations follow evidence through a public process — <strong>which is not a partisan position, it's the only thing that makes a recommendation worth anything.</strong></p>
+<p><em>One number worth holding onto: when Americans are asked whether vaccines cause autism, 13% say yes, 36% say no, and </em><em>51% say they aren't sure.</em><em> That majority isn't persuaded of anything. It's uncertain, and therefore movable — in either direction. That's who this section is written for.</em></p>
+<hr class="divider" />
+<h3 class="section" id="3-the-safety-net">3. The safety net</h3>
+<p><strong>Their position.</strong> Work requirements, tighter eligibility, less federal administration, more state discretion. Aid creates dependency; conditions restore self-sufficiency.</p>
+<p><strong>Mine.</strong> Help is a bridge. Fund it generously, bound it honestly, and build the ladder before telling anyone to climb. I don't believe in permanent handouts. I also don't believe in letting someone drown because the rescue boat requires a form.</p>
+<p><strong>Why.</strong> The current system already punishes work, and nobody designed it that way — which is the point. Federal Reserve modeling of a single parent with a small child in Washington, DC found that between $11,000 and $65,000 in earnings, the household ends up with <strong>the same net resources at both ends</strong>. At one threshold, losing the childcare subsidy produces an effective marginal tax rate of <strong>358%</strong>. Earn one more dollar, end up poorer. <em>(That's a modeled household in an unusually generous jurisdiction — which is exactly why the cliff is so steep there. It illustrates a structure, not a typical family.)</em></p>
+<p>No legislator voted for a 358% marginal rate. It's the residue of a dozen programs stacked on one household, each with its own cutoff.</p>
+<p>And the paperwork does most of the excluding. When Medicaid restarted eligibility checks, more than 25 million people were disenrolled, and roughly <strong>69% lost coverage for procedural reasons</strong> — not because anyone found them ineligible. About 22% of workers eligible for the Earned Income Tax Credit never claim it.</p>
+<p class="billhead"><strong>THE BILL — the No Cliffs Act.</strong></p>
+<ol>
+<li><strong>A statutory ceiling.</strong> No combination of federal benefits and taxes may produce an effective marginal rate above 100% for any household. Phase-outs taper; they never fall off a cliff. This is arithmetic, not ideology, and it deserves a bipartisan bill number.</li>
+<li><strong>An annual cliff audit.</strong> CBO and GAO jointly publish every interaction in federal law that produces a rate above 80%, by household type and income, every year. You cannot fix what nobody is required to measure.</li>
+<li><strong>Presumptive eligibility from data the government already holds.</strong> If IRS records establish income eligibility, enrollment is automatic and the burden of disproving it sits with the agency.</li>
+<li><strong>Ex parte renewal as the default.</strong> No recertification paperwork where the data already exists. Sixty-nine percent of Medicaid disenrollments were procedural — that is a design failure, not a program working.</li>
+<li><strong>Emergency aid without a means test at the moment of rescue.</strong> A person underwater cannot fill out a form. Verification happens afterward.</li>
+<li><strong>Every program carries measured outcomes and an expiration date</strong> requiring affirmative reauthorization on evidence. My side needs to be able to vote for this one.</li>
+</ol>
+<p><strong>The principle behind it.</strong> Make it illegal by statute for federal benefits to combine into an effective marginal rate above 100% — that's arithmetic, not ideology, and it deserves a bipartisan bill number. Presumptive eligibility and automatic renewal where the government already has the income data, which it does. Emergency help unconditional and fast; ongoing support with a defined term and a funded ladder.</p>
+<p><strong>Where I agree with them:</strong> every program carries measured outcomes and an expiration date requiring affirmative renewal. <strong>If a program doesn't move people, defending it isn't compassion — it's inertia wearing compassion's coat.</strong></p>
+<hr class="divider" />
+<h3 class="section" id="4-housing">4. Housing</h3>
+<p><strong>Their position.</strong> Cut federal housing programs, deregulate, leave it to states and localities.</p>
+<p><strong>Mine.</strong> Half the deregulatory instinct is right and it's aimed at the wrong regulations. The binding constraint isn't federal — it's local zoning, the most protected regulation in America, because the people it benefits are the ones who show up to the hearing.</p>
+<p><strong>Why.</strong> In 2024, <strong>22.7 million renter households — 49% of all renters — spent more than 30% of income on housing</strong>, and 12.1 million spent more than half. Among renters earning under $30,000, 83% are cost-burdened, and after housing they have about $210 a month left for everything else, down from $410 in 2019. The median home costs about five times median income, against roughly 3.2 times in the 1990s.</p>
+<p>Multi-family housing is legal on about 12% of residential land nationally. Single-family is allowed by right on roughly 95%.</p>
+<p class="billhead"><strong>THE BILL — the Homes Where People Work Act.</strong></p>
+<ol>
+<li><strong>Condition federal transportation and infrastructure formula funds</strong> on legalizing multifamily housing <em>as of right</em> within a defined radius of transit stops and major job centers. Not a mandate — a condition. Federal money is a privilege and a community that locks out housing can decline it.</li>
+<li><strong>As-of-right means as-of-right.</strong> Copy Oregon, not California. If a project meets the code, it gets a permit — no discretionary review, no design board, no hearing where the people who already own decide who else may. Oregon moved middle housing from 8% to 11% of permits; California's version kept discretionary review and Los Angeles approved <strong>38 units</strong>. The veto is the whole variable.</li>
+<li><strong>Shot clocks with consequences.</strong> A permit decision within 90 days or the application is deemed approved.</li>
+<li><strong>Double the Low-Income Housing Tax Credit allocation</strong> and set aside a share for factory-built and modular construction.</li>
+<li><strong>Federal preemption of parking minimums</strong> near transit — the single cheapest reform available, and one nobody campaigns on because it isn't emotive.</li>
+<li><strong>A national eviction right to counsel</strong>, funded. It costs less than the homelessness it prevents.</li>
+</ol>
+<p><strong>The evidence for the design.</strong> Legalize the buildings, and copy the design that worked. Oregon changed what could be built as-of-right: middle housing went from 8% to 11% of permits statewide, and Portland quadrupled production to about 400 homes a year — 26% of all permits — at roughly $300,000 less per unit than a detached house. California passed a similar-sounding law that left discretionary review in place, and Los Angeles approved <strong>38 units</strong>. Same goal, opposite results. The difference is the veto.</p>
+<p><strong>And be honest about Minneapolis</strong>, which is the case everyone cites: a Pew analysis found large gains, a 2025 synthetic-control study found little divergence from comparable cities, and 87% of the units permitted came from corridor apartment upzoning while <strong>only 1% came from the fourplex legalization the city is famous for.</strong> Cite the mechanism that worked, not the one with better press.</p>
+<hr class="divider" />
+<h3 class="section" id="5-work-and-wages">5. Work and wages</h3>
+<p><strong>Their position.</strong> No federal minimum wage increase; let states decide. Flexibility beats mandates.</p>
+<p><strong>Mine.</strong> Index it and stop having this fight every decade. Make benefits portable.</p>
+<p><strong>Why.</strong> The federal minimum has been $7.25 since July 2009 — <strong>seventeen years, the longest stretch without an increase since the minimum wage was created in 1938</strong>, and its lowest real value in about seventy years. Full-time at that rate is $15,080 a year against a federal poverty line of $15,650 for one person. Never voting on it <em>is</em> the policy. It was chosen by not choosing.</p>
+<p>Since 1979, net productivity rose 93.2% while pay for production and nonsupervisory workers rose 33.7%.</p>
+<p><strong>The honest caveat</strong>, because leaving it out is how this argument gets destroyed: economists dispute what that gap means. Stansbury and Summers found productivity growth still passes through to typical pay at close to one-for-one — meaning the accurate claim is that <strong>other forces are pushing pay down at the same time</strong>, not that the link is broken. Say the accurate version. It's still damning.</p>
+<p class="billhead"><strong>THE BILL — the Wage Floor and Portable Benefits Act.</strong></p>
+<ol>
+<li><strong>Index the minimum wage regionally and never vote on it again.</strong> Set it against local cost of living by metropolitan area, adjust annually by formula. The current arrangement — where a raise requires an act of Congress and therefore hasn't happened in seventeen years — <em>is</em> the policy, and it was chosen by not choosing.</li>
+<li><strong>Portable benefits.</strong> Health coverage, retirement, and paid leave attach to the person, not the employer, funded by pro-rata employer contributions per hour worked regardless of classification. This makes the labor market more flexible, which is their argument, and workers less trapped, which is mine. Same bill.</li>
+<li><strong>Wage theft prosecuted as theft.</strong> Criminal liability above a threshold, treble damages, and a DOL enforcement budget scaled to the size of the problem. More money is taken from workers annually in unpaid wages than in all robberies combined, and we fund the response to one of those.</li>
+<li><strong>Non-competes void</strong> below a salary threshold, permanently, by statute rather than by rule that the next administration erases.</li>
+<li><strong>Sectoral wage boards</strong> — optional, state-elected — for industries where firm-level bargaining has collapsed.</li>
+</ol>
+<p><strong>The reasoning.</strong> Index the minimum regionally to cost of living. Make health coverage, retirement, and leave attach to the person rather than the employer — that makes the labor market more flexible, which is their argument, and makes workers less trapped, which is mine. Same policy. Keep non-competes dead for ordinary workers. And enforce wage theft as theft: more money is taken from workers annually in unpaid wages than in all robberies combined, and we fund the response to one.</p>
+<hr class="divider" />
+<h3 class="section" id="6-energy-ai-and-data-centers">6. Energy, AI, and data centers</h3>
+<p><strong>Their position.</strong> Build, permit fast, get out of the way.</p>
+<p><strong>Mine.</strong> Build — and the people making the money pay for it. <strong>This is where I part with most of my own side</strong>, which is increasingly running on "no." I don't think <em>no</em> is a position. Blocking a facility in Ohio doesn't reduce demand for computing; it relocates it somewhere with weaker rules, and the county ends up with no tax base, no leverage, and the same electricity bill. That's spending your only bargaining chip for nothing.</p>
+<p><strong>Why.</strong> In the PJM grid, capacity prices went from $28.92 per megawatt-day for 2024/25 to $325 for 2028/29 — <strong>roughly eleven times in four years.</strong> PJM's own independent market monitor attributed <strong>$21.3 billion of $47.2 billion</strong> in recent auction costs to data center demand forecasts — 45% — including <strong>$6.2 billion for facilities that don't exist yet.</strong> New Jersey residential rates rose 17–20% in June 2025, which state regulators attributed mainly to those auctions.</p>
+<p>Louisiana granted about <strong>$3.3 billion</strong> in tax exemptions over twenty years for a facility with 500-odd permanent jobs — roughly <strong>$6.6 million per job</strong>. A proposed New York deal runs $801 million for 125 jobs. Analysts find taxpayer costs routinely exceed $1 million per permanent job.</p>
+<p>In Newton County, Georgia, one facility uses about 10% of the county's daily water while residents' wells lose pressure. Nine more applications are pending. County water rates are set to rise 33% over two years.</p>
+<p><strong>This is the same machine as every other section:</strong> a dozen firms with billions at stake tend to beat several million ratepayers each losing fifteen dollars a month. Not because anyone is corrupt — because showing up is worth a career to one side and an afternoon to the other.</p>
+<p class="billhead"><strong>THE BILL — the Large Load Cost Allocation Act.</strong></p>
+<ol>
+<li><strong>A federal floor for large-load tariffs</strong>, set at FERC, applying to any new interconnection above 25 MW: a minimum contract term of ten years, minimum demand charges at 85% of contracted capacity, collateral posted per megawatt, and a campus-aggregation rule so a developer can't split one facility into sub-threshold pieces. Twenty-three states have some version; several require no minimum term at all. A floor stops the race to the bottom.</li>
+<li><strong>Additionality.</strong> New large loads must contract for <em>new</em> generation rather than absorbing existing capacity. If you want the power, bring the power.</li>
+<li><strong>Speculative load posts collateral.</strong> Six point two billion dollars of capacity cost was incurred for facilities that do not exist. If your forecast moves the auction, you fund the reserve against it — refundable when you build, forfeit when you don't.</li>
+<li><strong>Water in writing.</strong> Mandatory consumptive-use disclosure, closed-loop cooling required in stressed basins, and no permit exceeding a defined share of local supply.</li>
+<li><strong>Clawbacks on every abatement</strong>, tied to verified permanent employment, with the money returned to the jurisdiction that granted it. At $6.6 million per job, buying the jobs outright would be cheaper.</li>
+<li><strong>Published terms and a seat.</strong> Every agreement public before signing, and a defined share of value returned locally — lower residential rates, fiber, training pipelines. Not a veto. A seat.</li>
+</ol>
+<p><strong>In plain terms.</strong> They pay their own grid costs. They contract for new generation rather than eating existing capacity. They post collateral against speculative demand forecasts. They disclose water use and run closed-loop where water is short. Every abatement carries a clawback tied to jobs that actually appear.</p>
+<p><strong>This isn't theoretical.</strong> Ohio requires large loads to pay 85% of contracted capacity as a minimum monthly charge on an eight-year term with exit fees. Virginia's new rate class requires fourteen-year contracts, 85% minimum demand charges, $1.5 million per megawatt in collateral, and a campus-aggregation rule so a developer can't split one facility into sub-threshold pieces. About 23 states have adopted some version — <strong>but the designs vary enormously and several require no minimum term at all.</strong> "We have a tariff" is not the same as "ratepayers are protected." Read the tariff.</p>
+<p><strong>Notice who agrees.</strong> Texas's Republican agriculture commissioner opposes these. Republican county commissioners are worried about their aquifers. One Texas candidate called it "the most cross-partisan issue I've ever seen in my life." <em>Don't socialize a billionaire's power bill onto a retiree in Lubbock</em> is a conservative sentence in structure — property rights, no corporate welfare, pay your own way. It needs no translation.</p>
+<hr class="divider" />
+<h3 class="section" id="7-education-and-debt">7. Education and debt</h3>
+<p><strong>Their position.</strong> Cut federal involvement; shrink or eliminate the Department of Education.</p>
+<p><strong>Mine.</strong> Half right on the diagnosis. Guaranteed federal lending let colleges raise prices indefinitely because someone would always pay. But the fix isn't abandoning the field — it's making schools carry risk on the loans they induce.</p>
+<p><strong>Why.</strong> Tuition rose roughly 1,181% since 1980 against about 239% general inflation. That's not primarily a federal failure — it's institutional, and the institutions have been relaxed about it because they bear none of the downside. Outstanding student debt is $1.858 trillion across about 42.6 million federal borrowers, with an average balance of $40,467 — <strong>but a median between $20,000 and $25,000</strong>, less than half the mean. Anyone using the average to describe the typical borrower overstates it by roughly double, and I'd rather say so than get caught.</p>
+<p>Childcare averaged $13,184 nationally in 2025 — 10% of income for a two-parent household, <strong>33% for a single parent</strong>, against a federal affordability benchmark of 7%. Infant care costs more than in-state public college tuition in 38 states and DC.</p>
+<p class="billhead"><strong>THE BILL — the Skin in the Game Act.</strong></p>
+<ol>
+<li><strong>Institutional risk-sharing.</strong> A school whose graduates can't repay absorbs a percentage of the loss, scaled to program-level outcomes. Nothing else has disciplined tuition, because nothing else has given the institution a downside.</li>
+<li><strong>Mortgage-style disclosure at the point of signing.</strong> Program-level median earnings, completion rate, and median debt, on one page, signed before a loan is issued.</li>
+<li><strong>Fund the alternatives at parity.</strong> Apprenticeships, trades, and two-year credentials funded at the same per-student rate as the four-year subsidy. We spent forty years implying everyone should go to college, mostly to families whose kids borrowed to prove it.</li>
+<li><strong>Childcare as a taper, not a cliff.</strong> Sliding-scale support phasing out gradually — see the No Cliffs Act, and see the 358%.</li>
+<li><strong>Cap the borrowing a school can induce</strong> relative to its own outcomes, so the lending stops where the value does.</li>
+</ol>
+<p><strong>The mechanism.</strong> Let a school whose graduates can't repay absorb part of the loss, and watch how fast the price conversation changes. Disclose program-level earnings, completion, and median debt at the point of signing, the way a mortgage requires. Fund trades, apprenticeships, and two-year credentials at parity with the four-year subsidy — we spent forty years implying everyone should go to college, mostly to families whose kids took on debt to prove it. And treat childcare as a bridge with a taper, not a cliff.</p>
+<hr class="divider" />
+<h3 class="section" id="8-rights">8. Rights</h3>
+<p><strong>Their position.</strong> Enforce abortion restrictions federally, including the Comstock Act against mailed medication without new legislation. Religious expression belongs in public life and the courts were wrong to exclude it. Any federal firearm limit is an infringement.</p>
+<p><strong>Mine.</strong> Principle 1, applied consistently, including where consistency costs me.</p>
+<h4 class="sub">Your body</h4>
+<p>What happens inside your body is governed by you. A pregnancy doesn't reach into anyone else's body. A legislature reaching into yours does.</p>
+<p>The practical cost is already measurable: a study of more than <strong>22 million residency applications</strong> found applications to programs in ban states fell 4.2% in one cycle against under 1% elsewhere. These laws are draining the physician pipeline out of the states that passed them.</p>
+<p><em>One thing I won't claim: maternity ward closures are not primarily caused by abortion bans. That trend runs back past 2016 and is driven by obstetric unit economics, rural birth volume, and Medicaid underpayment. The residency finding is clean. The ward-closure claim isn't, and I'd rather have one argument that holds than two that don't.</em></p>
+<h4 class="sub">Who you are</h4>
+<p><strong>We will never tell you who to be. And as a society, we accept you.</strong></p>
+<p>That's the position. Both halves of it, because they're different things.</p>
+<p>The first half is the easy one — it's just principle 1. The state doesn't get a vote on who you are. Same rule that keeps a legislature out of an exam room keeps it out of this, and <strong>you don't get to apply that rule only to the people whose lives you already recognize.</strong> That's not a principle, it's a preference with better branding.</p>
+<p>The second half is the one I actually care about. There's a version of leaving people alone that's really just indifference — <em>fine, do what you want, stay over there.</em> That's tolerance, and tolerance is thin. It says <em>I'll allow you.</em> It doesn't say <em>you're one of us.</em></p>
+<p>We're saying the second thing.</p>
+<p>If it isn't the choice I'd make, that's fine — nobody appointed me. I don't have to understand a person's life to accept that it's theirs, and I don't have to share it to count them as mine. <strong>You are a member of this country and nobody has to earn that by being legible to me.</strong> A society isn't a set of people who happen to be standing near each other under a common set of rules. It's people who decided they're in it together.</p>
+<p>That's the same claim this whole document ends on. The poor are still our people. So are the people who'd throw this in the trash. So are you, whoever you are, and there's no asterisk.</p>
+<p><strong>On sports, I'll grant the debate is real.</strong> Competition is a closed system with rules, and where a rule affects someone else's fair shot it's a legitimate question rather than a rights question. Have the argument, sport by sport, on evidence, and let governing bodies who know their sport work it out.</p>
+<p><strong>But look at the scale.</strong> In December 2024, the president of the NCAA testified that of more than <strong>500,000 college athletes, he believed fewer than ten were transgender.</strong> Fewer than ten. That's the crisis consuming this much of the country's political attention.</p>
+<p>I'm not saying the question is illegitimate. I'm saying it has been inflated to roughly a thousand times its actual size, on purpose, because it's easier to run against ten college athletes than to explain why premiums went up 58%. <strong>A country with 22.7 million cost-burdened renter households is not being kept awake by the swim team.</strong></p>
+<h4 class="sub">Church and state</h4>
+<p>Separation, enforced in both directions. No state-mandated religious display or instruction in public schools — <strong>and</strong> no state interference in what a congregation teaches, hires, or believes. The wall protects the church from capture as much as it protects anyone from the church. My side forgets the second half and should stop.</p>
+<p>Four states now require the Ten Commandments in classrooms. In April 2026 a federal appeals court upheld the Texas version <strong>by one vote, 9–8</strong>, treating a 1980 Supreme Court decision that struck down a nearly identical law as no longer binding. The dissent's objection was simple: only the Supreme Court gets to overrule the Supreme Court. A cert petition was filed August 18, 2026.</p>
+<p><strong>Whoever holds power writes the prayer.</strong> That's a reason for a believer to want the wall standing, not just a reason for me.</p>
+<h4 class="sub">Guns</h4>
+<p>Almost nobody argues the Second Amendment covers a shoulder-fired missile. Which means essentially everyone in this argument already agrees a line exists somewhere. The disagreement has never really been <em>whether</em> — only <em>where</em>. That's a much more productive argument to have, and the line belongs on what a weapon can do, not on who owns it and not on what it looks like.</p>
+<p>The 1994 ban failed partly because it defined its targets cosmetically — a rifle could qualify on a two-of-five feature test that included <strong>a bayonet mount</strong>. Gun owners read that as unserious. They were right.</p>
+<p>And I'll follow the evidence where it's inconvenient: RAND rates the case that assault weapon bans reduce mass shootings as <strong>inconclusive</strong>. The stronger finding is on <strong>magazine capacity</strong>, where one study associated limits with a 48% reduction in mass shooting incidents. Argue what the evidence supports, not what polls best.</p>
+<p><strong>And define "mass shooting" before arguing about it.</strong> In 2024 one respected tracker counted <strong>502</strong> and another counted <strong>3</strong>. Both are honestly derived from published data; they count different things. A lot of this debate is two people using the same word for different phenomena and concluding the other is lying.</p>
+<p><strong>And the thing nobody campaigns on: 62% of gun deaths are suicides</strong> — 27,593 of 44,447 in 2024. Almost no political energy goes there, and the measures with the best evidence behind them don't take anyone's rifle.</p>
+<hr class="divider" />
+<h4 class="sub">The legislation</h4>
+<p class="billhead"><strong>THE BILL — the Personal Liberty Act.</strong> One statute, because these belong together and separating them is how each gets picked off alone.</p>
+<ol>
+<li><strong>Codify bodily autonomy in federal law.</strong> Statutory protection for abortion access up to viability and for contraception, preempting state criminalization of patients and providers. Repeal the Comstock Act's application to medication by mail — an 1873 statute should not be governing an exam room in 2029.</li>
+<li><strong>Protect the provider pipeline.</strong> Federal residency funding conditioned on programs being able to train physicians in the full standard of care, plus loan forgiveness for OB-GYNs practicing in maternity care shortage areas. Applications to programs in ban states fell 4.2% in a single cycle; that's the damage, and it compounds.</li>
+<li><strong>Religious neutrality in public schools</strong>, enforced both ways: no state-mandated religious display or instruction, and an explicit protection for what congregations teach, hire, and believe. Restore a workable Establishment Clause standard by statute since the Court discarded the old one.</li>
+<li><strong>Full anti-discrimination protection</strong> in employment, housing, credit, and health care, covering sexual orientation and gender identity. This is the "we accept you" half, written down.</li>
+<li><strong>Medical decisions stay between a patient and a doctor</strong>, with no carve-out for whichever group is politically convenient this decade.</li>
+</ol>
+<p class="billhead"><strong>THE BILL — the Gun Violence Reduction Act</strong>, written to the evidence rather than to the polling.</p>
+<ol>
+<li><strong>Magazine capacity limits</strong>, which is where the research is actually strongest — one study associated limits with a 48% reduction in mass shooting incidents. Not a cosmetic feature test. No bayonet mounts.</li>
+<li><strong>Universal background checks</strong>, including private sales, with a functioning instant system and real funding for record submission by states.</li>
+<li><strong>Waiting periods</strong> for first-time purchases — among the best-evidenced interventions available, and one that takes no one's rifle.</li>
+<li><strong>Voluntary do-not-sell registries</strong>, letting a person place themselves on a list they can leave only after a delay. Sixty-two percent of gun deaths are suicides — 27,593 of 44,447 — and almost no political energy goes there.</li>
+<li><strong>Extreme risk protection orders with real due process</strong>: adversarial hearing, defined evidentiary standard, automatic expiration, and a fast path to restoration.</li>
+<li><strong>A standard federal definition of "mass shooting"</strong> for statistical reporting. One tracker counted 502 in 2024 and another counted 3. Both were honest. We cannot legislate against a thing the government has never defined.</li>
+</ol>
+<hr class="divider" />
+<h3 class="section" id="9-immigration">9. Immigration</h3>
+<p><strong>Their position.</strong> Mass deportation infrastructure, sharp reductions in legal immigration, enforcement as the organizing principle.</p>
+<p><strong>Mine.</strong> Start with a question worth sitting with.</p>
+<p>Almost every American has someone in the family who came from somewhere else. So: what made them the good kind? That they worked hard — as the family down the street does? That they paid taxes and raised their kids right — as that family does? That they came legally? Hold that one; it turns out to be more complicated than it sounds.</p>
+<p>I don't think there's a coherent version where one family is a striver and an identical family two doors down is an invasion. Either the quality is in the person or it's in the paperwork. If it's the paperwork, then the argument was never really about character — which is worth knowing before we have it.</p>
+<p><strong>Nearly everyone's ancestors were, at the time, somebody's unwanted foreigner.</strong></p>
+<h4 class="sub">What the historical record shows</h4>
+<p><strong>1751.</strong> Benjamin Franklin, on German immigrants: <em>"Why should the Palatine Boors be suffered to swarm into our Settlements, and by herding together establish their Language and Manners to the Exclusion of ours?"</em> In the same essay he sorts the world's population by complexion and concludes that Germans, Spaniards, Italians, French, Russians, and Swedes are all <em>"of what we call a swarthy Complexion."</em> <strong>In 1751, Germans were not white.</strong> Franklin quietly dropped those passages from later editions after German voters cost him an election.</p>
+<p><strong>1856.</strong> The American Party platform: a <strong>21-year</strong> residency requirement for citizenship, and exclusion of "all paupers, and persons convicted of crime." Their private admission test excluded all Roman Catholics from office — <em>"whether they be of native or Foreign Birth."</em> Native-born Catholics counted too, which tells you it was never about foreignness.</p>
+<p><strong>1882.</strong> The Chinese Exclusion Act. Section 14: <em>"no State court or court of the United States shall admit Chinese to citizenship."</em> The first federal statute barring an entire nationality from becoming American.</p>
+<p><strong>1924.</strong> This is the one that ends the argument. The Johnson-Reed Act set quotas by national origin, calculated from the <strong>1890 census</strong> — a thirty-four-year-old count chosen because the Southern and Eastern European migration happened <em>after</em> it. The resulting annual quotas: <strong>Great Britain 65,721. Germany 25,957. Italy 5,802.</strong> Britain and Germany together took over 60% of the total, and Italy — the largest single migration stream of the preceding generation — got 5,802.</p>
+<p><strong>It's hard to explain that with a theory about volume.</strong> Reducing a number is simple — cut every quota by the same percentage. Instead Congress reached back three decades for a census and built a surname-based ancestry calculation. That's a lot of machinery for a goal a single percentage would have accomplished.</p>
+<p><em>In fairness, the committee chairman is on record saying "it makes no difference from whence they come — too many come." Some restrictionist historians take that as evidence the motive was volume. It's a real quote. It also sits alongside a statute weighted eleven-to-one in Britain's favor over Italy, which is evidence about the law rather than the rhetoric.</em></p>
+<p>The committee's expert was the superintendent of the Eugenics Record Office, appointed "Expert Eugenics Agent" to the House committee, whose data the chairman called "biologically and statistically thorough." <strong>His own tables contradicted his testimony</strong> — he claimed institutionalized populations skewed Southern and Eastern European; the numbers showed German and Irish predominance. The case for the law failed on its own evidence and passed anyway.</p>
+<p><strong>1938.</strong> After Kristallnacht, Gallup asked Americans two questions. Did they disapprove of Nazi treatment of Jews? <strong>94% said yes.</strong> Should the United States admit more Jewish refugees from Germany? <strong>71% said no.</strong></p>
+<p>Those two numbers sit oddly together. Americans weren't confused about the moral facts of what was happening; they declined to admit the people it was happening to. The following year, 67% opposed admitting 10,000 refugee children. In 1940, asked about refugee children from England and France, opposition fell roughly twenty-five points. <strong>Same war, same age children, different origin.</strong></p>
+<p><strong>And it never stopped.</strong> 1958: 55% opposed admitting Hungarian refugees fleeing a Soviet crackdown — the most sympathetic case of the Cold War. 1975: 49% opposed Vietnamese refugees. 1980: 71% opposed Cuban refugees. Every group now considered foundational was, on arrival, opposed by a majority.</p>
+<p><strong>One correction against my own side, because I've heard people overclaim this.</strong> "America First" is not the property of the 1940 isolationist committee. Wilson, Harding, and Coolidge all campaigned on it; it goes back to the 1880s. Anyone who says the phrase belongs to that committee is wrong.</p>
+<p>What <em>is</em> documented is narrower and still worth knowing: the Klan marched under the slogan in the 1920s, and the 1940 committee's most prominent speaker used its platform in Des Moines to name "the British, the Jewish and the Roosevelt administration" as the groups pushing the country toward war, citing their "large ownership and influence in our motion pictures, our press, our radio and our government." That's the company the phrase kept in the last century. It doesn't settle anything about who uses it now, and I'm not going to pretend it does.</p>
+<h4 class="sub">"They won't do the jobs" — what the evidence actually shows</h4>
+<p><strong>In 2011, North Carolina had 489,095 unemployed residents and about 6,500 open farm jobs.</strong> 268 people applied. 245 were hired — over 90% of applicants. 163 showed up the first day. <strong>Seven finished the season.</strong> The growers' association spent more than $100,000 on recruitment and compliance to pay $87,000 in wages to those seven.</p>
+<p><strong>In fiscal 2025, out of roughly 415,000 certified agricultural guest worker positions, 182 were filled by domestic workers. That's 0.04%.</strong> At wages above most state minimums.</p>
+<p><strong>And now the actual test, which just ran.</strong> The restrictionist argument has always been that there's no labor shortage — only wages set too low, and that if immigrant labor were removed, wages would rise and Americans would take the jobs. That is a real argument, made by serious people, and it makes a falsifiable prediction.</p>
+<p>A National Bureau of Economic Research study covering October 2023 through November 2025 examined employment across areas with differing enforcement intensity. Employment of likely-undocumented workers fell 1.3 to 1.4 percentage points. <strong>Wages did not rise.</strong> Employment of U.S.-born workers overall showed no gain — the confidence interval rules out any increase above 0.3 points — and <strong>employment of U.S.-born men fell.</strong></p>
+<p><strong>The prediction was tested and it didn't hold.</strong> Employers didn't raise wages to attract Americans; demand contracted instead. A separate analysis of 86 cities found 668,000 jobs lost, construction down 2.2%, and consumer spending in enforcement areas down 6.9%.</p>
+<p><em>Two caveats I'll carry: the NBER paper is a working paper and hasn't cleared peer review, and researchers at the Center for Immigration Studies point out that national native employment rose during the same period. Both can be true — national aggregates reflect the whole economy, while these studies compare places with heavy enforcement to places without. That's a real methodological dispute, not a gotcha in either direction.</em></p>
+<p>And at the same moment enforcement was removing workers, the federal wage floor for their legal replacements was <strong>cut by 10 to 27%</strong> in major states. That is difficult to reconcile with a theory about raising American wages.</p>
+<h4 class="sub">What's true, checkable, and gets left out</h4>
+<p>Immigrants are <strong>19.1% of the labor force</strong>. They founded or co-founded <strong>59% of American billion-dollar startups</strong> — 455 of 775 — and <strong>46.2% of Fortune 500 companies</strong> were started by immigrants or their children. They are 68% of hired crop farmworkers, 26.3% of construction workers, <strong>28% of physicians</strong>, and 30% of direct long-term care workers.</p>
+<p>In Texas, which records immigration status at arrest, homicide conviction rates per 100,000 for 2013–2022 were <strong>2.2 for illegal immigrants, 1.2 for legal immigrants, and 3.0 for the native-born.</strong> <em>(Critics note that immigration status is often identified only after arrest, which could undercount. Cato restricted the analysis to homicide precisely because that's where Texas investigates status most thoroughly. The finding is robust for homicide and genuinely less certain for lesser offenses.)</em></p>
+<h4 class="sub">Where I'll concede, because these are the real arguments</h4>
+<p><strong>"They came legally" mostly means there was nothing to violate.</strong> Numerical caps didn't exist until 1921. The requirement to obtain a visa before arrival started in 1924. About 1% of the 25 million Europeans who came through Ellis Island were turned away. But I'll grant the counter: that a rule is recent doesn't make it illegitimate.</p>
+<p><strong>The scale numbers are real and I'm not going to duck them.</strong> The foreign-born share of the population is 14.8% — <strong>exactly matching the 1890 peak</strong>, after falling to 4.7% in 1970. The unauthorized population reached a record 14 million in 2023. Anyone who disputes these is arguing in bad faith.</p>
+<p><em>Though notice: 1890 was the previous peak, and the country's answer to it was Johnson-Reed. If you're arguing from that number, you're arguing from the same demographic fact that produced the quotas.</em></p>
+<p><strong>And the strongest version of the case against me doesn't mention race at all.</strong> It says today's immigrants are much like yesterday's — but the country isn't. A mature welfare state, a post-industrial labor market with weak low-skill mobility, and institutions that no longer assimilate the way they did. On that account the historical parallel is true and beside the point. <strong>That argument deserves an answer rather than a smear</strong>, and people who make it are not the 1924 committee. My answer is that it's a case for managing immigration better rather than having less of it, and that the specific policies on offer — mass removal, narrowing legal pathways, cutting the guest worker wage floor — don't actually follow from the premise.</p>
+<p><strong>The distributional argument also deserves a straight answer.</strong> George Borjas argues that even where the aggregate wage effect is small, immigration transfers substantial income from workers to employers. The canonical natural experiment — the Mariel boatlift — has been fought to a draw: Card found no effect, Borjas found a large one, and subsequent work showed both results turn on sample restrictions small enough that measurement error dominates. <strong>Anyone telling you it's settled is selling something.</strong></p>
+<p>But notice where Borjas's mechanism points. <strong>If your wages are down, look at who signs the check.</strong> The person setting your pay is not the guy picking crops for twelve hours — he's being underpaid by the same firm, and that's precisely why he was hired. Horizontal blame is cheap and it's aimed at the wrong floor of the building.</p>
+<h4 class="sub">What we do</h4>
+<p class="billhead"><strong>THE BILL — the Immigration System Repair Act.</strong></p>
+<ol>
+<li><strong>An Article I immigration court</strong>, independent of the Justice Department, with enough judges, clerks, and interpreters to clear a 3.2-million-case backlog on a published schedule. This is the cheapest, least ideological item in this entire document. It doesn't happen because a working system would deprive both parties of a grievance.</li>
+<li><strong>Clear the green card backlog and end per-country caps.</strong> A Mexican sibling of a US citizen who filed <em>legally</em> is waiting about twenty-five years. People cross illegally because the legal door takes a quarter century.</li>
+<li><strong>Enforcement aimed at the demand side.</strong> Penalties on employers scaled to exceed what they saved, with liability that reaches the parent company rather than stopping at a labor contractor.</li>
+<li><strong>Visa portability.</strong> A worker who can leave a bad employer cannot be used to undercut anyone. Tying status to one employer is what makes the labor cheap.</li>
+<li><strong>Raise the guest worker wage floor rather than cutting it.</strong> It was cut 10–27% in major states at the same moment enforcement was removing workers. If the concern is American wages, that is the lever, and it was pulled the wrong way.</li>
+<li><strong>Earned legalization</strong> for people who have been here working for years: a defined path, a defined cost, background checks, back taxes, a waiting period. Not absolution — a process.</li>
+<li><strong>Fund the border as a functioning port of entry</strong> — scanners, officers, asylum officers who can decide cases in months rather than years. A country decides who enters. Saying so plainly is not a concession.</li>
+</ol>
+<p><strong>The core of it.</strong> 3.2 million pending immigration court cases. A Mexican sibling of a U.S. citizen who filed <strong>legally</strong> is waiting about twenty-five years. People cross illegally because the legal door takes a quarter century. Judges, clerks, capacity — this is the cheapest, least ideological item in this entire document, and it doesn't happen because a working system would deprive both parties of a grievance.</p>
+<p><strong>Enforce against employers.</strong> The demand side is where the leverage is and where enforcement almost never lands. Make the penalty exceed the savings.</p>
+<p><strong>Match visas to real labor demand, with portability.</strong> A worker who can leave a bad employer can't be used to undercut anyone. And <strong>raise</strong> the guest worker wage floor rather than cutting it — if the concern is American wages, that's the lever.</p>
+<p><strong>Border enforcement is legitimate.</strong> A country decides who enters. Saying so plainly isn't a concession, and my side's reluctance to say it has cost more elections than any other single position.</p>
+<p><strong>Legalization for people who've been here working for years.</strong> Not absolution — a defined path with a defined cost. And a practical point: removing 68% of crop labor and a quarter of construction labor is not something anyone proposing it has costed out publicly.</p>
+<hr class="divider" />
+<h3 class="section" id="10-america-in-the-world">10. America in the world</h3>
+<p><strong>Their position.</strong> Foreign aid is waste, captured by contractors, serving other countries at American expense. Fold it into State, cut it dramatically, and demand reciprocity.</p>
+<p><strong>Mine.</strong> They identified real problems and chose a remedy that will take a generation to undo.</p>
+<p><strong>What we were.</strong> PEPFAR — created by <strong>George W. Bush</strong>, a Republican, in 2003 — is credited with <strong>26 million lives saved</strong> and 7.8 million babies born HIV-free. Whatever else is true about American power in this century, that happened, and it happened on a bipartisan basis for twenty years.</p>
+<p><strong>What happened.</strong> Between January and July 2025, <strong>5,341 programs were terminated and 898 retained — an 86% elimination rate</strong>, covering about $75.9 billion. USAID was reduced to a statutory shell of 15 positions. It was never abolished by statute; Congress never voted. In September 2025 the Supreme Court allowed roughly <strong>$4 billion</strong> in appropriated funds to lapse via "pocket rescission," in an order that expressly said it was not deciding the merits.</p>
+<p><strong>What we can actually measure — and I'm going to be careful here, because most of what's circulating is projection.</strong></p>
+<p>The widely cited figures — 14 million additional deaths by 2030, and similar — are <strong>model outputs, not body counts</strong>. They come from real researchers using standard methods, and they've drawn serious methodological criticism. I'm not going to lead with a number that's contested when the measured evidence is strong enough.</p>
+<p><strong>What is measured:</strong> an analysis of PEPFAR reporting from <strong>31,746 facilities across 55 countries</strong> found, comparing late 2024 to late 2025 — HIV testing down 17% (14 million fewer tests), treatment initiations down 16%, <strong>PrEP initiations down 33%</strong>, new diagnoses through community services down 35%, and healthcare workers down 22%. People already on treatment were largely retained. <strong>The collapse is in the pipeline — testing, diagnosis, prevention.</strong> That's an argument about future epidemiology, not a present body count, and saying so is the difference between an argument and a talking point.</p>
+<p>Also measured: international HIV funding fell from $8.8 billion to $7.3 billion in a single year, the lowest in nearly two decades. Global development assistance fell 23% in 2025 — the sharpest drop ever recorded.</p>
+<p><strong>And one more thing was destroyed: the ability to count.</strong> The Demographic and Health Surveys program, running since 1984 across 90+ countries, was terminated in February 2025. It supplied more than half of sub-Saharan Africa's child mortality data and more than half of maternal mortality data for the least developed countries. <strong>The instrument that would measure the consequences was defunded alongside the programs.</strong></p>
+<p><strong>Where the critics were right, and it's substantial.</strong> In fiscal 2022 the top ten contractors captured more than half of all USAID contract dollars, and contractors retained about 82 cents of every dollar. The agency itself pledged in 2021 to route 25% of funds directly to local partners within four years; by January 2025 it had reached <strong>12.1%</strong> — roughly half its own target, and it was publishing its own failure. Afghanistan reconstruction wasted, by the Inspector General's accounting, something like $26–29 billion.</p>
+<p><strong>But waste and fraud are different things, and the distinction matters.</strong> Audits of $10 billion in Afghanistan spending disallowed about 0.3% annually. Ukraine audits found essentially no missing expenditures. The critics' case is strong on money spent badly and weak on money stolen.</p>
+<p><strong>On the budget:</strong> foreign aid is about <strong>1% of federal spending.</strong> When Americans are told that, support for cutting it drops <strong>21 points</strong> — and among Republicans, 31 points. Even before being told, only 13% wanted to eliminate aid entirely while 43% wanted to scale it back. <strong>Nobody voted for 86%.</strong></p>
+<p><strong>Two claims I'm declining to make</strong>, because they're not supported and using them would be doing what I'm criticizing. <strong>China did not fill the vacuum</strong> — its aid budget didn't grow, its international cooperation spending actually fell about 17%, and its model is infrastructure loans rather than health grants. And I found no documented case of a country switching alignment because of this. The honest finding is worse than the vacuum story: <strong>nobody is filling it. The services simply stopped.</strong></p>
+<p class="billhead"><strong>THE BILL — the Global Compact and Accountability Act.</strong></p>
+<ol>
+<li><strong>Statutory compacts, time-limited.</strong> Five-year agreements on the Millennium Challenge Corporation model — created under a Republican president and built around exactly the dependency critique the critics raise — with a hard clock and no automatic renewal.</li>
+<li><strong>Fewer countries, fewer sectors, published results.</strong> Every compact carries defined outcomes measured by an independent evaluator, published whatever they show.</li>
+<li><strong>A real localization target with teeth.</strong> The agency pledged 25% direct-to-local and reached 12.1% while publishing its own failure. Write the target into statute with a consequence for missing it.</li>
+<li><strong>Restore the measurement.</strong> Refund the Demographic and Health Surveys, which ran since 1984 and supplied more than half of sub-Saharan Africa's child mortality data. <strong>The instrument that would measure the consequences was defunded alongside the programs.</strong> That is not a side effect; it is the thing that makes accountability impossible.</li>
+<li><strong>Rebuild PEPFAR as a standing authorization</strong>, not an annual hostage. Twenty-six million lives, created by a Republican administration, sustained on a bipartisan basis for twenty years.</li>
+<li><strong>Contractor concentration caps and pass-through disclosure.</strong> When the top ten contractors take more than half the money and retain 82 cents of every dollar, that is the critics' strongest point and they earned it.</li>
+</ol>
+<p><strong>The philosophy.</strong> Rebuild it as the serious critics wanted it built — which is not what happened. William Easterly, the most cited academic critic of foreign aid, argued for "searchers" over "planners": small, evaluated, accountable, feedback-driven programs instead of grand blueprints. <strong>An 86% termination executed in weeks without evaluation is a planner's blueprint run in reverse.</strong> So: hard time limits on compacts, on the model of the Millennium Challenge Corporation — created under Bush, and built around exactly the dependency critique the critics raise. Fewer countries, fewer sectors, published results, real localization targets with consequences for missing them. Finance outcomes, not inputs.</p>
+<p><strong>And notice what's already happening:</strong> the State Department began re-hiring for foreign assistance roles in December 2025, partly through contractors, for jobs held by people laid off months earlier. As one association official put it, it's "a recreation of the things that we just tore down."</p>
+<p>We were the country that showed up. That was worth something — not mainly as charity, but as position. It's not obvious you get that back by rehiring the contractors.</p>
+<hr class="divider" />
+<h3 class="section" id="11-concentrated-interests">11. Concentrated interests</h3>
+<p><strong>The failure.</strong> This is the mechanism underneath every section above, so it gets named directly. Research covering 1997–2014 found over 75% of U.S. industries grew more concentrated, with a median Herfindahl increase of 41%.</p>
+<p><strong>The honest counter, because this one is genuinely contested:</strong> the Richmond Fed found that while <em>national</em> concentration rose, <em>local</em> concentration — the market a customer actually shops in — fell across industries covering about 70% of U.S. employment. That's a real finding and it constrains the strong version of my claim. I'm also deliberately not using the famous statistic about corporate markups rising from 21% to 61% above cost, because a 2025 replication found it depends on sample restrictions that dropped 27% of observations and largely disappears on the full data. <strong>Using a rebutted number is how you lose an argument you were winning.</strong></p>
+<p><strong>The structural point survives all of that.</strong> Concentrated interests beat diffuse ones because attention is expensive. Twenty million people losing $15 a month will not organize. A dozen firms gaining $200 million will. It requires nobody to be corrupt, which is why it's so hard to fix and so easy to deny.</p>
+<p class="billhead"><strong>THE BILL — the Public Advocate and Disclosure Act.</strong></p>
+<ol>
+<li><strong>Fund the missing advocate.</strong> An Office of the Public Advocate with standing to intervene in every federal rate case, rulemaking, and major abatement negotiation, whose only job is representing the people who can't afford to show up. Several states already do this in utility proceedings and it measurably changes outcomes. Fund it as a fixed share of the regulatory budget so it can't be starved quietly.</li>
+<li><strong>Concentrated-benefit disclosure.</strong> Any bill or rule where the top ten beneficiaries capture more than a set share of the gain carries a published estimate of who they are, attached to the bill, before the vote. Not a prohibition — a label. Nobody has to be prevented from voting for it. They just have to do it in daylight.</li>
+<li><strong>Structural conflict prohibitions instead of post-hoc breakups.</strong> Separate the negotiator from the seller — in drug pricing, in ticketing, in ad markets. The recent record is sobering: the Google search remedy declined to divest anything structural and the FTC lost its Meta case outright. Rules that prevent the conflict are more durable than litigation that unwinds it a decade later.</li>
+<li><strong>Merger review that counts labor market effects</strong>, not only consumer prices.</li>
+</ol>
+<p><strong>Taking them one at a time.</strong></p>
+<p><strong>Fund the missing advocate.</strong> Every rate case, every rulemaking, every abatement negotiation gets a publicly funded party whose only job is representing the people who can't afford to show up. Several states already do this in utility proceedings and it measurably changes outcomes.</p>
+<p><strong>Concentrated-benefit disclosure.</strong> Any bill or rule where the top ten beneficiaries capture more than a set share of the gain carries a published estimate of who they are, attached to the bill, before the vote. Not a prohibition. A label.</p>
+<p><strong>And realistic expectations on antitrust.</strong> The recent record is sobering: the Google search remedy declined to divest Chrome or Android, and the FTC lost its Meta case outright in November 2025. Structural remedies are hard to win. <strong>Rules that prevent conflicts in the first place — separating the drug price negotiator from the pharmacy — are more durable than breakups litigated after the fact.</strong></p>
+<hr class="divider" />
+<h3 class="section" id="12-taxes">12. Taxes</h3>
+<p>This is the section I feel strongest about, so I'll be blunt about where I stand before I show my work.</p>
+<p><strong>Their position.</strong> Flatter rates, fewer brackets, lower taxes on capital. The premise is that money left at the top gets invested, and the investment reaches everyone else.</p>
+<p><strong>Mine.</strong> I don't believe the premise, and I don't think it's a close call empirically. But that's not really my argument, because <strong>the fight over rates is a distraction from the fight that matters.</strong> The posted rate is nearly irrelevant to what the very wealthy actually pay. What matters is a set of machines built into the code that let large fortunes grow, get spent, and pass to the next generation having never been taxed as income at all. I want those machines dismantled. I care about that far more than I care about the number in the top bracket.</p>
+<h4 class="sub">First, the premise</h4>
+<p>Fifty years of data, eighteen wealthy countries, thirty separate episodes where a country cut taxes on the rich substantially. Five years after each cut: <strong>the income share of the top 1% rose about 0.7 points, and there was no statistically significant effect on GDP per capita or on unemployment.</strong></p>
+<p>That's the whole record. The money stayed where it landed.</p>
+<p><strong>In fairness:</strong> that's a cross-country average, not a verdict on any single reform, and serious economists argue the 2017 corporate provisions did raise domestic investment. I think that's a real finding and I'd rather concede it than pretend the literature is unanimous. But "some investment responded" is a long way from "everyone benefits," and the distributional result is consistent across five decades.</p>
+<h4 class="sub">Machine one: the fortune that's never income</h4>
+<p>Here's how a large fortune is spent without ever being taxed.</p>
+<p>You hold appreciated stock. <strong>Appreciation isn't taxed until you sell</strong>, so you don't sell. You need money, so you <strong>borrow against the shares</strong> — a loan isn't income, so there's no tax. Interest accrues, but the portfolio typically grows faster. Then you die, and under <strong>section 1014 of the code, your heirs' cost basis resets to market value on the day of your death.</strong> Every dollar of gain accumulated across your lifetime is erased from the income tax base. Permanently. Nobody ever pays.</p>
+<p>Buy, borrow, die. It has a name because it's a strategy, not an accident.</p>
+<p><strong>Now the part that makes the argument stronger, which I only found by looking:</strong> the borrowing is the least important step. Two economists sympathetic to reform measured it and found that for the top 1%, <strong>new borrowing runs only 1–2% of economic income</strong> — far less than the story implies. Their conclusion was that the real strategy isn't buy-borrow-die but <em>buy, save, die</em>: the very wealthy simply consume a small fraction of what they have, so they rarely need to sell or borrow at all.</p>
+<p>Which means the loan is the vivid illustration, and <strong>the step-up at death is the actual loophole.</strong> That's a better argument than the one I started with, and it points at a cleaner fix.</p>
+<p><strong>The scale.</strong> Roughly <strong>$50 trillion</strong> in unrealized capital gains sits in American households, about <strong>$10 trillion of it</strong> held by the wealthiest one-twentieth of one percent. The Joint Committee on Taxation scores stepped-up basis at about <strong>$72.5 billion</strong> in forgone revenue for 2026 — roughly a quarter of all capital gains tax collected. CBO estimates that taxing gains at death would raise <strong>$536 billion over ten years.</strong></p>
+<p><strong>One thing I'll say clearly, and it will cost me with people on my side:</strong> you cannot look up "the effective tax rate on billionaires." Credentialed economists using the same IRS data get 8.2%, 23.8%, 31.5%, and 38%, depending on whether unrealized gains go in the denominator, whether corporate tax counts in the numerator, and how unobserved income gets assigned. Anybody quoting one of those as <em>the</em> number — in either direction — is picking. The most defensible finding I could locate is narrower and still damning: the income tax base captures only about <strong>60% of the top 1%'s actual economic income</strong>, versus nearly all of it for everyone else.</p>
+<p><strong>The fix, and its real problems.</strong> Deemed realization at death — treat death as a sale. <strong>Canada has done exactly this since 1972.</strong> But two honest cautions. First, Canada and Australia both ended the step-up <em>while abolishing their estate taxes</em>; the US would be stacking income tax on top of a 40% estate tax, which is the design conflict that killed the 1976 attempt at this. Second, the estate tax now reaches almost nobody — <strong>about 4,000 taxable estates in 2023, under 0.2% of deaths</strong>, with the 2026 exemption at $15 million per person. So the "step-up offsets the estate tax" defense holds for a few thousand families and fails for everything else.</p>
+<p>And a genuine obstacle: in <em>Moore</em> (2024), the Supreme Court explicitly reserved the questions of "taxes on holdings, wealth, or net worth" and "taxes on appreciation." At least four justices signaled sympathy to a constitutional requirement that income be <em>realized</em> before it's taxed. Taxing gains at death is on far safer ground than an annual wealth tax — but anyone promising this is easy is not being straight with you.</p>
+<h4 class="sub">Machine two: wealth that never stops</h4>
+<p>The common law had a rule against perpetuities — roughly, you couldn't control property from the grave forever. <strong>South Dakota repealed it in 1983.</strong> Delaware followed in 1995, then Alaska, Nevada, Wyoming and a dozen more. Some states didn't repeal it so much as make it meaningless: Nevada allows 365 years, Wyoming and Utah a thousand.</p>
+<p>Pair a perpetual trust with the generation-skipping transfer tax exemption and the arithmetic is remarkable. Allocate the exemption when the trust is funded and its <strong>inclusion ratio is zero — permanently exempt, no matter how much it later grows, for as long as the trust exists.</strong> Which is now forever.</p>
+<p><strong>The exemption in 2000 was about $1 million. In 2026 it is $15 million per person, $30 million per couple</strong>, made permanent and indexed. Shelter thirty million dollars once, and the compounding is untaxed across every generation that follows.</p>
+<p>This is a competition between states for trust business, and it works: repealing the rule raised a state's trust assets by roughly $6 billion apiece. The tell is in the detail — <strong>states that taxed the income of the trusts they attracted got no increase at all.</strong> It was never about trust law. It was about tax.</p>
+<h4 class="sub">Machine three: the insurance wrapper</h4>
+<p>Loans against a life insurance policy's cash value aren't taxable income. The death benefit passes free of income tax under section 101(a). Put the policy in an irrevocable trust and it's outside the taxable estate too. Combine all three and you have money that is never income, never taxed at death, and never subject to the generation-skipping tax.</p>
+<p>The industrial version is <strong>private placement life insurance.</strong> An 18-month Senate Finance investigation reported in 2024: <strong>3,061 policies, roughly $40 billion in face value, average policy $12.98 million.</strong> The average holder's income exceeded $7 million a year and net worth exceeded $100 million. Entry runs $1–2 million in premiums. Inside the wrapper: hedge funds and private equity — Citadel, Elliott, Blackstone, Carlyle, Bain. One marketing illustration showed a $10 million investment avoiding <strong>"$50 million in potential income, gift and estate taxes"</strong> over thirty years.</p>
+<p><strong>Now the finding that should end the argument: the Senate investigated for eighteen months and found no illegal conduct. None. Every bit of it is lawful.</strong></p>
+<p>People hear "no laws were broken" as an acquittal. It's the opposite. It means there is nothing to prosecute, nobody to indict, and no scandal to break — because the scandal already passed Congress. Three thousand families sheltering fortunes inside an insurance wrapper containing hedge funds is not a loophole somebody snuck through. <strong>It is the law working exactly as written, for exactly the people it was written for.</strong></p>
+<p>A teacher pays income tax on every dollar before she sees it. A family worth nine figures pays nothing on money that grows for thirty years inside a life insurance policy, and hands it to their children untaxed at the end. Both are following the rules. <strong>That is the problem with the rules.</strong></p>
+<p><strong>Now the correction I owe you</strong>, because I went looking for the version of this that gets described most often — policies bought on children at birth, borrowed against for life, never repaid — and the evidence doesn't support it as an elite strategy. Juvenile whole life is real and heavily marketed, including in maternity wards. But it performs terribly: a representative policy at $230 a year for twenty years returns about <strong>negative 1.9% annually</strong>, against roughly $11,000 in an index fund for the same money. Around <strong>80% of whole life policies are surrendered before death</strong> — the one event that destroys the entire tax advantage.</p>
+<p>So the honest version is sharper than the myth: <strong>the same section of the code produces a genuine multi-generational shelter for people with nine-figure net worth, and a bad deal sold to everyone else using the rich people's version as the sales pitch.</strong> Same rules. Opposite outcomes. That's not two problems, it's one.</p>
+<h4 class="sub">And the corporate side</h4>
+<p>In 2025, at least <strong>88 profitable large American corporations paid zero federal income tax on $105 billion of US pretax income</strong>, and collectively received $4.7 billion in rebates.</p>
+<p><strong>The strongest rebuttal, stated fully because it's partly right:</strong> book profit and taxable income are computed under different rule sets. A company that immediately expenses a $10 million factory shows large book profit and no taxable income — but it spent the money on productive capacity, and the deduction it took now isn't available later. That's <em>deferral</em>, not forgiveness, and calling it "paid nothing" overstates it in any single year.</p>
+<p><strong>The answer:</strong> look at five years, which nets out timing. Across 342 large profitable corporations from 2018 to 2022, the average effective federal rate was <strong>14.1%</strong> against a 21% statutory rate — and <strong>23 companies paid zero for five consecutive years.</strong> Timing differences don't run five years.</p>
+<p>Meanwhile the 15% corporate minimum tax passed in 2022 was projected to raise about $35 billion in 2024 and appears to have collected around <strong>$572 million</strong> — roughly one-sixtieth — after being progressively narrowed by regulation rather than repealed by vote.</p>
+<p>And carried interest is still there. Fund managers still take a fifth of other people's investment profits and pay capital gains rates on what is, in any plain reading, a fee for labor. Presidents of both parties have called for closing it. It has survived four decades. Its revenue value is small — somewhere between $14 billion and $100 billion over a decade, and the estimators disagree sharply — which is exactly why it's such good evidence. <strong>A provision this indefensible and this cheap to fix has survived because of who benefits, and for no other reason.</strong></p>
+<h4 class="sub">The legislation</h4>
+<p class="billhead"><strong>THE BILL — the Loophole Closure Act.</strong> Named for the thing itself, because "tax reform" is what people call it when they intend to open more of them.</p>
+<ul>
+<li><strong>Tax gains at death.</strong> End the step-up above a generous exemption — $10 million per person, indexed — with a fifteen-year installment option at the applicable federal rate for illiquid estates, family farms, and operating businesses, so nobody is forced to sell the thing to pay the tax on the thing. CBO scores deemed realization at <strong>$536 billion over ten years.</strong> Highest-value single fix in the package, and Canada has run it since 1972.</li>
+<li><strong>Cap the dynasty.</strong> For federal transfer-tax purposes, a trust's generation-skipping exemption expires after 50 years or two generations, whichever is longer; after that the tax applies on a recurring schedule. States may write whatever trust law they like — they just can't write it against the federal tax base. <strong>Repealing the rule against perpetuities raised a state's trust assets by roughly $6 billion apiece, and states that taxed those trusts got no increase at all.</strong> It was never about trust law.</li>
+<li><strong>Close the wrapper.</strong> Tax investment earnings inside private placement life insurance as they accrue rather than allowing tax-free compounding; require carriers to report policies to the IRS with penalties for non-compliance; apply it to existing contracts and to offshore ones. Right now PPLI ownership appears nowhere on a tax return and is detectable only on audit. A version of this bill already exists and has gone nowhere.</li>
+<li><strong>Same rate on work and ownership.</strong> A dollar earned by working and a dollar earned by owning get taxed alike above a threshold that leaves ordinary retirement saving and home sales alone. Carried interest then disappears as a special case rather than needing its own statute — which is useful, given that presidents of both parties have called for closing it and it has survived four decades.</li>
+<li><strong>A corporate minimum that survives contact with the regulators.</strong> Written in statute with the base defined in the text rather than delegated to Treasury guidance. The 2022 version was projected to raise $35 billion in 2024 and appears to have collected around <strong>$572 million</strong> — roughly one-sixtieth — after being narrowed by regulation rather than repealed by vote. If Congress means it, Congress writes it.</li>
+<li><strong>Fund enforcement at the top, with a floor.</strong> A statutory minimum enforcement budget dedicated to audits of returns above a high income threshold and to partnership and trust examinations, insulated from annual appropriations fights. No loophole matters if nobody checks — and the collections pay for the checking several times over.</li>
+<li><strong>A sunset on new preferences.</strong> Any newly created deduction, credit, or exclusion expires in ten years and requires an affirmative recorded vote to continue. The code got this way one permanent favor at a time.</li>
+</ul>
+<p><strong>Where I'll give them the point:</strong> each of these has a rationale and a constituency, and "close the loopholes" is the easiest applause line in politics precisely because it never names one. That's why I named four. Accelerated depreciation and the R&amp;D credit are genuinely defensible policy that economists across the spectrum support — I'm not going after those. And I'll pair all of it with their strongest argument: <strong>measure and sunset the spending first.</strong> You earn the right to ask anyone for another dollar by first proving you'll stop wasting the ones you have.</p>
+<p><strong>But I'm not going to pretend this is a technical disagreement.</strong> A system where a person can borrow against a fortune, live on the proceeds, die, and hand it forward with the gains erased — while someone earning $60,000 has tax withheld from every paycheck before they see it — isn't complicated. It's a choice. It was made in pieces, by people who understood what they were doing, over decades. And it can be unmade the same way.</p>
+<hr class="divider" />
+<h3 class="section" id="13-trade">13. Trade</h3>
+<p><em>[My read — tell me if this isn't it.]</em></p>
+<p><strong>Their position.</strong> Tariffs restore American manufacturing and are paid by foreign countries.</p>
+<p><strong>Mine.</strong> Tariffs are a tax Americans pay. But the grievance underneath them is real, and my side spent thirty years dismissing it.</p>
+<p><strong>Why.</strong> The peer-reviewed evidence from the 2018–19 round found essentially complete pass-through to U.S. prices. The current round runs about $1,000–1,100 per household by most estimates, and it's regressive in rate — the bottom tenth of households pays about 1.1% of income, the top tenth about 0.4%.</p>
+<p><strong>But the strongest argument on their side isn't about consumer prices at all</strong>, and it deserves stating: cheap goods were purchased partly with wage stagnation. Manufacturing fell from 23% of GDP in 1970 to 9.4% in 2025. Workers in exposed industries lost cumulative earnings equal to nearly half a year's pay. The China shock was worse than economists admitted at the time, and the people who said so were told they didn't understand comparative advantage.</p>
+<p><strong>That's true. And it's also a different argument than the one that was made.</strong> The promise was that prices would fall fast — not that prices would rise in exchange for a long-run industrial rebalancing. When the defense of a policy changes after the results come in, that's worth naming.</p>
+<p class="billhead"><strong>THE BILL — the Trade Adjustment That Actually Adjusts Act.</strong></p>
+<ol>
+<li><strong>A statutory national security test for tariffs.</strong> Narrow duties permitted for genuinely strategic goods — semiconductors, pharmaceutical precursors, rare earths — certified by an independent finding rather than declared by proclamation. Broad tariffs require an affirmative vote of Congress, because a consumption tax that raises household costs by roughly $1,000 a year should be voted on by the people who answer for it.</li>
+<li><strong>Restore congressional authority over trade.</strong> Emergency tariff powers sunset automatically absent a vote.</li>
+<li><strong>Place-based investment that goes to the places.</strong> Direct capital to the counties that took the shock — infrastructure, wage subsidies, and relocation support that people can actually use — rather than the retraining vouchers that were promised in 1994 and never funded.</li>
+<li><strong>Tariff revenue rebated to households</strong> on a per-capita basis while any broad tariff is in force, so the burden isn't borne quietly by the people least able to carry it.</li>
+</ol>
+<p><strong>The reasoning.</strong> Narrow tariffs where there's a genuine national security case — semiconductors, pharmaceuticals, rare earths. Not broad ones, which are a consumption tax nobody voted for. And invest in the places directly, since that's what was promised in 1994 and never delivered.</p>
+<hr class="divider" />
+<h2 class="chapter" id="final-chapter-the-people-who-d-have-to-fix-it">Final chapter: the people who'd have to fix it</h2>
+<p>Everything above assumes somebody is watching. That's the part I'm least confident about.</p>
+<p><strong>Nothing in this chapter is a party argument.</strong> I want that understood before the first number, because everything here applies to both of them, and where it doesn't I'll say which one and why. The people who benefit from the current arrangement are the people who'd have to change it, and that is true regardless of who's in the majority.</p>
+<p><strong>The Constitution was never designed to run on good intentions. It runs on ambition checking ambition</strong> — Madison's phrase, and his whole bet. Congress would guard its own power jealously, not because legislators are noble but because they'd want it for themselves.</p>
+<p>That bet is not paying off. And the reason isn't that one party captured Congress. It's that <strong>both parties found out abdication is free.</strong></p>
+<p><strong>Here's the shape of the problem in two numbers.</strong> In April 2026, Gallup found congressional approval at <strong>10%, with 86% disapproving</strong> — tying the worst disapproval ever recorded. Meanwhile, <strong>86% of Americans want to ban members of Congress from trading individual stocks</strong> and <strong>87% want congressional term limits</strong>, with almost no partisan gap on either.</p>
+<p>Two positions with roughly nine-in-ten support. Neither has become law. That's not gridlock — gridlock is what happens when the country is split. <strong>This is something else: near-unanimous public demand meeting the one obstacle a democracy has no clean answer for, which is that the people who'd be bound by the rule are the people who write it.</strong></p>
+<h3 class="section" id="what-the-abdication-looks-like">What the abdication looks like</h3>
+<p><strong>The power of the purse is becoming unenforceable.</strong> In September 2025 the Supreme Court allowed $4 billion in appropriated funds to lapse, on an emergency order that expressly declined to reach the merits. There's still been no merits ruling. But the Court has routed impoundment enforcement to the Comptroller General — <strong>an office with no power to compel anyone to spend anything</strong> — while narrowing the remedies available in district court. The GAO has issued at least four formal findings that specific withholdings broke the law. Nothing followed. <strong>Enforcement authority that cannot be exercised is not enforcement.</strong></p>
+<p><strong>War powers are a dead letter.</strong> Both parties, for fifty years.</p>
+<p><strong>Nominations, treaties, oversight</strong> — each traded away for the convenience of not having to vote.</p>
+<p><strong>And the deepest one: Congress prefers vague statutes.</strong> Write the law loosely, let the agency fill in the specifics, then hold hearings attacking the agency for the specifics. You get the credit and never the blame. Both parties like this arrangement exactly as it is, which is why neither will fix it without being made to.</p>
+<h3 class="section" id="why-this-is-the-emergency">Why this is the emergency</h3>
+<p>A president who claims power Congress won't defend isn't defeated by the next election. <strong>The claim outlives the man.</strong> Every power taken and not returned is inherited — by someone the current authors would not have chosen, doing things they would not endorse, using precedents they built.</p>
+<p>That's not a partisan warning — it's the one argument that works regardless of who you voted for, because it's true no matter who wins next. Every Republican who worries about a future Democratic president wielding these powers is worrying about exactly the right thing, and so is every Democrat in reverse.</p>
+<p><strong>The protection against any one person accumulating too much has never really been the character of the person. It's been the willingness of Congress to say no.</strong> That willingness is what has thinned out, over two decades, under both parties — and it's the thing that has to be rebuilt.</p>
+<h3 class="section" id="who-s-actually-there">Who's actually there</h3>
+<p>The average House member is about <strong>58</strong>. The average senator is about <strong>64</strong>. Roughly <strong>a quarter of Congress is over 70</strong>, and around <strong>27 members are over 80.</strong> The median American adult is in his or her late forties.</p>
+<p>Average House tenure is <strong>8.6 years</strong>; Senate, <strong>11.2</strong>. Senate service has roughly tripled since the 1880s, when the average was just under five years. Turnover used to be normal. It stopped being normal in the twentieth century, and nobody voted for that.</p>
+<p><strong>Six members of the current Congress have died in office</strong>, between March 2025 and July 2026 — three of them over 75.</p>
+<p><strong>Three honest corrections, because this section is where overclaiming is easiest.</strong></p>
+<p><em>It isn't the oldest Congress ever.</em> The current one is marginally <em>younger</em> than its predecessor on median age. The long trend is sharply up; the last two data points tick down. Say the trend, not the record.</p>
+<p><em>More members aren't dying than ever.</em> Deaths in office ran about 16 in the 2020s, 19 in the 2000s, and <strong>29 in the 1980s.</strong> What's notable is the clustering — six in a single Congress — and that razor-thin majorities make each one consequential. It is not a mortality crisis.</p>
+<p><em>And it isn't a party problem.</em> Republicans average 58, Democrats 59. That's the same number. Of the ten members who died across the last two Congresses, eight were Democrats — a fact I'd be hiding if I left it out, and one that cuts against any tidy story either way.</p>
+<p><strong>What is genuinely broken is that there's no mechanism at all.</strong> The Twenty-Fifth Amendment covers presidential incapacity. Nothing covers Congress. A member who can no longer do the job can resign or be expelled by a two-thirds vote — a remedy never once used for incapacity. Both parties have now had a public case: Feinstein and McConnell. Nothing followed either.</p>
+<h3 class="section" id="what-the-job-has-become">What the job has become</h3>
+<p>The median sitting House member seeking reelection raised <strong>$2.1 million</strong> last cycle. Spread across a two-year term, that's about <strong>$2,900 every single day.</strong> In a competitive seat: <strong>$7.9 million</strong>, roughly <strong>$10,900 a day.</strong> A sitting senator: <strong>$11.1 million</strong>, about <strong>$15,300 a day.</strong></p>
+<p>Nobody raises that in their spare time.</p>
+<p>A leaked orientation presentation for incoming members recommended a Washington day of roughly nine hours, of which <strong>four were "call time"</strong> — sitting in a cubicle asking people for money — against three to four hours of actual legislative work. Rep. Rick Nolan, a Democrat, said out loud what the recommendation was: <em>"30 hours is what they tell you you should spend."</em> Rep. David Jolly, a Republican, described the party call center as <em>"a cult-like boiler room on Capitol Hill."</em></p>
+<p>Both parties run these facilities, within blocks of the Capitol. <strong>One of them keeps a scoreboard in the hallway showing each member's totals.</strong> Both parties assess dues that members must raise to advance to better committees.</p>
+<p>That's the job. Not the one on the civics test.</p>
+<h3 class="section" id="the-money-around-it">The money around it</h3>
+<p><strong>Outside spending — money not given to candidates but spent on their behalf — went from $51.6 million in 2000 to $4.22 billion in 2024.</strong> Roughly eighty times, in a period when prices roughly doubled.</p>
+<p><strong>A precision point most commentary gets wrong, and it's worth getting right.</strong> <em>Citizens United</em> (2010) did not create super PACs and did not let corporations donate to candidates — that ban, from 1907, still stands. Super PACs came from <em>SpeechNow.org v. FEC</em>, a D.C. Circuit case decided two months later, which struck down limits on contributions to groups making only independent expenditures. Both decisions left disclosure intact. "Dark money" comes through a third door: 501(c)(4) nonprofits that don't disclose donors and can fund super PACs, so the disclosure shows a shell and the trail ends.</p>
+<p>Here is the structure in one sentence. <strong>You may give a candidate $3,500. You may give $50 million to a super PAC that exists to elect that candidate. Both are legal, and the difference between them is a legal fiction called "independence."</strong></p>
+<p><strong>Dark money hit a record $1.9 billion in 2024. About $1.2 billion of it benefited Democrats, against $664 million for Republicans.</strong> I'm putting that in because the party that campaigns hardest against dark money was its larger beneficiary in the most recent presidential cycle, and any version of this argument that leaves that out deserves to be dismissed.</p>
+<p><strong>One place the parties genuinely split, and I won't pretend otherwise:</strong> in June 2026 the Supreme Court struck down limits on coordinated party spending, 6–3. Republican committees brought the case; the Democratic committees filed to keep the caps. That was a real partisan divide. But note what happens next — the ruling frees <em>both</em> parties' committees equally, and I would not expect either to move to restore the caps after a cycle of enjoying them.</p>
+<h3 class="section" id="the-trading">The trading</h3>
+<p>The STOCK Act of 2012 requires members to report stock transactions over $1,000 within 45 days. <strong>The penalty for filing late is $200</strong>, routinely waived, with no public record of whether it's ever paid.</p>
+<p><strong>No member of Congress has ever been criminally prosecuted under it.</strong> Not one, in fourteen years. Part of the reason is structural: proving the information came from official duties runs into the Speech or Debate Clause, which shields much of what investigators would need.</p>
+<p>Compliance is what you'd expect. <strong>78 members violated the disclosure rules in one recent Congress; at least 62 in the next.</strong> One member was <strong>six and a half years late</strong> disclosing up to $8.56 million in transactions. Over 1,200 late filings in 2025 alone. Every tally finds violators in both parties in roughly equal proportion.</p>
+<p><strong>Now the part where I'll disappoint people on my own side.</strong> The claim that members systematically beat the market is <em>not</em> well supported. A 2004 study found abnormal returns in the Senate before the STOCK Act — but a 2013 study of 48,309 transactions found congressional portfolios <strong>underperformed</strong> an index fund, and a 2020 study covering the post-2012 period found no outperformance and no advantage from committee assignments. The popular trackers that generate "Congress beats the market" headlines aren't risk-adjusted and don't match benchmarks properly.</p>
+<p><strong>Which makes the honest version more damning, not less.</strong> The problem isn't that they're getting rich on inside information. It's that <strong>they might be, and we have built a system that makes it impossible to find out and costless to hide</strong> — a $200 fine, no prosecutions in fourteen years, and a disclosure regime a member can ignore for six years.</p>
+<p>And the fix keeps failing in a way that tells you everything. A genuine cross-ideological bill — Chip Roy and Alexandria Ocasio-Cortez, Brian Fitzpatrick and Pramila Jayapal, Tim Burchett and Seth Magaziner — would have banned ownership outright with a 180-day divestiture window. It collapsed. Leadership introduced a competing vehicle, the Speaker declined to schedule a clean vote, and both sides accused the other of sabotage. What eventually passed the House in July 2026 bans <em>purchases</em> but not ownership, exempts the president, and carried an unrelated voter-ID rider attached to it. A Democratic sponsor of the original: <em>"It's a terrible bill. It doesn't ban stock trading in Congress or anywhere else."</em></p>
+<p><strong>Line it up. Eighty-six percent of Americans want this — Republicans 87%, Democrats 88%. A real cross-ideological coalition wrote the bill. Fourteen years have passed since the last one. Zero members have ever been prosecuted. The fine is two hundred dollars and it gets waived.</strong></p>
+<p>There is no constituency for the other side. Nobody campaigns on the right of a member of Congress to trade a defense stock before a committee vote. There is no think tank defending it, no op-ed making the case, no voter anywhere demanding it be preserved.</p>
+<p><strong>And it still doesn't pass.</strong> Not because it's controversial — because the people who would be bound by it control whether it gets a vote. When a proposal with nine-in-ten support and no organized opposition fails for fourteen straight years, that isn't gridlock. <strong>That's a body protecting itself, in public, and daring you to do something about it.</strong></p>
+<h3 class="section" id="why-nobody-ever-loses">Why nobody ever loses</h3>
+<p>House incumbents win reelection around <strong>95%</strong> of the time — and I should say plainly that this isn't new. It was 96% in 1990 and 98% in 2000. What changed is where the competition went.</p>
+<p><strong>Swing districts fell from 164 in 1999 to 82 by 2023, and 77 in 2026.</strong> Members representing a district that leans to the other party went from <strong>40 to nine.</strong></p>
+<p><strong>And gerrymandering isn't the main cause.</strong> The best analysis attributes about 58% of the decline to voters sorting themselves geographically and 42% to redistricting. Anyone blaming this entirely on the other party's maps is wrong, and I'd rather say so than run an argument that falls apart on contact.</p>
+<p>The consequence: <strong>87% of House races are effectively decided in the primary — 380 of 435 seats. About 7% of eligible voters, 18 million people, cast the deciding votes.</strong> A hundred million Americans have no meaningful say in who represents them. In 169 districts, candidates faced no primary opponent at all.</p>
+<p>Money is the mechanism that keeps it that way. Senate incumbents outraise challengers roughly <strong>14 to 1</strong>. House incumbents, <strong>9 to 1</strong>.</p>
+<p><strong>The counter-evidence, which is real:</strong> 2026 has been unusually turbulent. Nine House incumbents lost primaries — six Democrats, three Republicans — the most in a non-redistricting year since 1970. Sixty-two members are retiring. Two sitting Republican senators lost.</p>
+<p>But look at <em>where</em> it happened. <strong>The turnover came through primaries, in safe seats, driven by the activist wings of both parties.</strong> That's churn, not accountability to a general electorate — and it does nothing about money, age, or self-dealing. It replaces individuals inside a structure that stays exactly the same.</p>
+<h3 class="section" id="what-we-do">What we do</h3>
+<p class="billhead"><strong>THE BILL — the Accountable Congress Act.</strong> Seven parts. Six are ordinary legislation. One needs an amendment, and I'll say which.</p>
+<p><strong>1. Force the votes onto the record.</strong></p>
+<p>No voice votes. No unanimous consent. Not on anything that moves money, changes an enforcement standard, or grants authority to the executive. Automatic roll call, published, permanent.</p>
+<p><strong>This is not a small reform, and here's the proof.</strong> In 2016 a law changed the standard the DEA needed to freeze suspicious opioid shipments. It passed the Senate by unanimous consent and the House by voice vote. <strong>No recorded opposition. No press coverage. No one to hold responsible.</strong> The chief sponsor later withdrew from a nomination when reporters found the distribution industry had helped write it. Forty-three state attorneys general, from both parties, asked for its repeal.</p>
+<p><strong>The missing vote wasn't a detail — it was the mechanism.</strong> Concentrated interests rarely need to win a public argument. They need to avoid having one. Every unrecorded vote is a place where a great many people can lose a little and nobody has to answer for it.</p>
+<p><strong>2. Make inaction cost something.</strong></p>
+<p>Right now, doing nothing is the safest thing a member of Congress can do, and power flows to the executive by default every time. So change the default:</p>
+<ul>
+<li><strong>Appropriations that lapse</strong> trigger automatic continuing resolutions at prior levels — no shutdown leverage, no crisis governance, and no more pretending a shutdown is anyone's plan.</li>
+<li><strong>Expiring authorities</strong> — surveillance powers, emergency declarations, war authorizations — expire for real. No rolling renewal by inattention. If it matters, vote for it.</li>
+<li><strong>Emergency declarations</strong> terminate automatically on a fixed schedule absent an affirmative vote. Some current national emergencies are older than the members voting on them.</li>
+</ul>
+<p><strong>3. Restore the purse with something behind it.</strong></p>
+<p>Give appropriations a claimant with standing who can sue and win. If Congress appropriates money and the executive declines to spend it, someone must be able to walk into court. Right now, functionally, nobody can.</p>
+<p><strong>4. Term limits — and I'm going to argue against myself first.</strong></p>
+<p><strong>87% of Americans favor congressional term limits</strong> — 90% of Republicans, 86% of Democrats. A four-point partisan gap on a constitutional amendment is close to unheard of. I want them, and the case is straightforward: when the job becomes a career, defending the seat replaces defending the institution.</p>
+<p><strong>But I've read the evidence from the states, and it's worse for my position than I expected. I'd rather tell you than have you find out from someone hostile.</strong></p>
+<p>Sixteen states limit legislative terms. What happened is measurable, and the most damaging finding is about <strong>where the power went.</strong> How much a legislature modified the governor's budget proposal, before and after limits took effect:</p>
+<ul>
+<li><strong>California: 16.2% → 6.7%</strong></li>
+<li><strong>Colorado: 10.3% → 2.1%</strong></li>
+</ul>
+<p>States without term limits moved the <em>other</em> direction over the same period. <strong>Term limits transferred budget power from the elected legislature to the governor.</strong> That is the opposite of what anyone voted for.</p>
+<p>The rest of the record is no better. Term-limited members are measurably <strong>less knowledgeable about both policy and process</strong>, and rely more on the executive branch and on lobbyists — who don't term out. Limits show <strong>no effect on the diversity</strong> of a legislature: not age, not race, not income, not professional background. The "citizen legislature" didn't materialize. And the research suggests limits <strong>increase partisan voting</strong> and reduce bipartisan collaboration — again, the opposite of the promise. Members don't go home; they run for the next office up.</p>
+<p>Two state legislatures repealed their own limits. Four state supreme courts struck them down.</p>
+<p><strong>And the constitutional obstacle is severe.</strong> In <em>U.S. Term Limits v. Thornton</em> (1995), the Supreme Court held 5–4 that <strong>states cannot impose term limits on their own members of Congress</strong>, invalidating provisions in 23 states. The only route left is a constitutional amendment: two-thirds of both houses — <em>the body being limited voting to limit itself</em> — plus ratification by 38 states.</p>
+<p><strong>Here's the current status, and it's the whole chapter in one fact.</strong> A term-limits amendment was introduced in January 2025. All twelve cosponsors are Republicans. It has never received a floor vote — <strong>in a chamber controlled by the party sponsoring it.</strong></p>
+<p>So the obstacle isn't partisanship. <strong>It's incumbency.</strong> Which is exactly what term limits are supposed to fix, and exactly why they can't pass.</p>
+<p><strong>Where that leaves me.</strong> I still want them — but only bolted to the thing that prevents the failure mode. <strong>Term limits plus capacity:</strong> properly funded committee staff, a restored Office of Technology Assessment, real nonpartisan analytical support, so the institution keeps its knowledge when the members turn over. Term limits alone hand the building to lobbyists and agency staff who never stood for election. That's not a reform, it's a transfer.</p>
+<p>If I could only have one, I'd take <strong>age and health transparency plus the stock ban</strong> over term limits, because they're achievable by statute and the evidence behind them is cleaner. But I'd rather have both, and I'd rather say the whole thing than sell you the applause line.</p>
+<p><strong>5. Anti-corruption, the unglamorous version.</strong></p>
+<p><strong>A real stock trading ban</strong> — ownership, not just purchases; members, spouses, and dependent children; blind trusts or index funds; penalties measured against the transaction, not a $200 late fee; and it covers the executive branch too. The version that keeps failing is the one written to look like the thing without being it.</p>
+<p><strong>A cooling-off period measured in years, that covers the executive branch.</strong> Right now a departing member can lobby the EPA the day they leave — the restriction only covers Congress. And it has to reach "strategic advisors" who direct lobbying campaigns without personally making the call, which is how most of it is done now. <strong>In 2025, 866 members and staffers moved to K Street — an all-time record, split almost evenly between the parties.</strong></p>
+<p><strong>Published meeting logs.</strong> Who came in the door, and about what.</p>
+<p>None of this is exotic. All of it polls across both parties. That's precisely why it never moves.</p>
+<p><strong>6. Publish who decided.</strong></p>
+<p>Every significant rule and enforcement action names a responsible official. The core grievance in this entire document is that nobody is ever accountable for anything. <strong>Start by writing the name down.</strong></p>
+<p><strong>7. Age and capacity, handled like adults.</strong></p>
+<p>Not a ban — a disclosure. Basic health and cognitive transparency for anyone holding federal office, on the same principle we apply to commercial pilots and federal judges, and a defined process for a chamber to act when a member can no longer serve. Right now there is none, and the only alternatives are a resignation nobody wants to demand or an expulsion vote nobody will take.</p>
+<p>I'd rather have that argument in public than keep watching offices run by staff while everyone politely looks away.</p>
+<p><strong>What needs what.</strong> Items 1, 2, 3, 5, 6 and 7 are statutes — an ordinary majority and a president's signature. Only <strong>term limits</strong> requires a constitutional amendment, and only because the Court closed the state-by-state route in 1995. That distinction matters: most of this list is achievable by the next Congress that wants to, and one item isn't. Anyone who bundles them together to argue the whole thing is impossible is doing that on purpose.</p>
+<h3 class="section" id="the-thing-underneath">The thing underneath</h3>
+<p>None of it works if Congress doesn't want its power back. That's the honest problem, and no procedural fix solves it by itself.</p>
+<p><strong>And I want to name the trap precisely, because it's the reason none of this has happened already.</strong> It isn't that nobody in Congress wants reform. Plenty of them say they do, and some mean it. The trap is narrower and harder: <strong>the reforms that advance are reliably the ones that help the people voting on them, and the reforms that die are reliably the ones that would cost them something.</strong></p>
+<p>Watch how it works. A stock trading ban with 86% support and a genuine left-right coalition dies, while a version that bans purchases but not ownership and exempts the president passes. Term limits with 87% support can't get a floor vote in a chamber run by the party sponsoring them. Coordinated spending limits fall, and neither party proposes restoring them once both are enjoying the result. A record year for the revolving door, split evenly between the parties, and no cooling-off bill moves.</p>
+<p>That's not hypocrisy exactly. It's something more durable, and worse: <strong>an institution where the incentive to fix the problem is held by the people the problem benefits.</strong> No amount of electing better individuals solves it, because it isn't about the individuals. We keep sending new people into the same building and getting the same building.</p>
+<p>Which is why the first item matters most. <strong>An institution whose members never have to say what they did can't be held to anything.</strong> Recorded votes aren't a procedural preference — they're the precondition for everything else on this list, and close to the only thing concentrated interests can't route around.</p>
+<p>Make them vote. Publish it. Then we find out who's actually there.</p>
+<p><strong>And if that sounds small against everything in this document — it is.</strong> That's the point. We are not one election away from fixing this, and we're not one villain away from it either. We're one institution away, and that institution has spent twenty years demonstrating that it would rather not.</p>
+<p><strong>The thing I'd want people to take from all of this: a republic doesn't usually fall to someone taking power. It goes quiet, when the branch that's supposed to say no decides it would rather not have to vote.</strong></p>
+<hr class="divider" />
+<h2 class="chapter" id="what-would-prove-me-wrong">What would prove me wrong</h2>
+<p>I've been wrong in writing before. I argued a case from intent once, the evidence didn't support it, and I dropped it. So here's what would falsify this:</p>
+<ol>
+<li>
+<p><strong>If data centers pay ring-fenced rates in Ohio and Virginia and residential bills climb at the same rate anyway</strong>, my cost-shifting explanation is wrong and something else is driving prices. Those are running experiments. Watch them.</p>
+</li>
+<li>
+<p><strong>If eliminating benefit cliffs doesn't increase earnings</strong> among affected households, the cliff wasn't the binding constraint and I've overweighted a modeling artifact.</p>
+</li>
+<li>
+<p><strong>If as-of-right upzoning produces no supply response</strong> across the Oregon cities over five years, the housing argument is in trouble. The Minneapolis evidence is already contested and I said so rather than waiting to be caught.</p>
+</li>
+<li>
+<p><strong>If states with strict large-load rules simply lose the facilities</strong>, then "they'll build anyway, so set terms" is wrong and the leverage I claim doesn't exist.</p>
+</li>
+<li>
+<p><strong>If enforcement-driven labor shortages do eventually raise wages and draw in American workers</strong> — on a longer time horizon than the studies so far cover — the immigration section needs a real rewrite, not a footnote.</p>
+</li>
+<li>
+<p><strong>If institutional risk-sharing on student loans mainly causes schools to stop admitting poorer students</strong> rather than to cut prices, the policy backfires on the people it's for and I'd drop it.</p>
+</li>
+<li>
+<p><strong>And the big one: if bills with concentrated benefits and diffuse costs <em>don't</em> pass disproportionately by unrecorded vote</strong>, the central mechanism of this entire document is wrong. That's a countable claim. Somebody should count it.</p>
+</li>
+</ol>
+<hr class="divider" />
+<h2 class="chapter" id="why-this-should-make-sense-to-people-who-didn-t-vote-for-my-">Why this should make sense to people who didn't vote for my side</h2>
+<p>Most of it isn't left or right.</p>
+<p><em>Pay your own way</em> isn't a progressive value. <em>Don't socialize private costs</em> isn't a progressive value. <em>Nobody should lose money by working more</em> isn't a progressive value. <em>Government should either do the job or stop pretending to</em> isn't a progressive value. <em>Make them vote on the record</em> isn't a progressive value. And <em>leave people alone</em> was the other side's value until about ten minutes ago, when they set it down.</p>
+<p>A lot of people are angry at government for accurate reasons, and they've mostly been offered one explanation: <strong>someone did this to you on purpose.</strong> It's a satisfying story and I think it's largely wrong — and because it's wrong, the remedies built on it don't work. You can't fix a structural problem by firing the villain when there isn't one.</p>
+<p>The likelier explanation is less satisfying and more useful. <strong>The system reliably produces outcomes nobody chose, that nobody will defend out loud, and that no one in the chain has to answer for.</strong></p>
+<p>The poor are still our people. So are the people who'd disagree with most of what's in here. That's not sentiment — it's just the observation that a society is the thing we're inside of together, and a country where a great many people lose a little so that a few can gain a lot, over and over, legally, with nobody accountable, gradually stops being one.</p>
+<p><strong>That's what this is for. Not to win the argument — to get somebody minding the store.</strong></p>
+<hr class="divider" />
+<p><em>Views expressed are the author's own and are not made on behalf of any employer or client.</em></p>
+
+    <a class="top-link" href="#top">&uarr; Back to top</a>
+  </article>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <p class="footer-mark">Sentir Solutions&reg;</p>
+    <p class="footer-tag">We build things people <em>can actually trust.</em></p>
+    <div class="footer-meta">
+      The Sincere Strategy&reg; &mdash; zero paid placements, constraints before optimization, radical transparency. Always.<br />
+      Charlottesville, Virginia &middot; Est. 2026 &middot;
+      <a href="../index.html">sentirsolutions.com</a><br />
+      Views expressed are the author's own and are not made on behalf of any employer or client.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
